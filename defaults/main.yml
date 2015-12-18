@@ -2,6 +2,9 @@
 # defaults file for ansible-docker
 config_docker_service: true  #defines if docker service should be configured
 config_docker_users: false  #defines if users should be added to docker group to allow non sudo access to docker
+docker_images:  #defines docker images to be installed
+  - centos
+  - ubuntu
 docker_opts:  #defines docker service options to be configured
   - '--dns {{ pri_dns }}'
   - '--dns {{ sec_dns }}'
