@@ -7,8 +7,8 @@ docker_images:  #defines docker images to be installed
     state: present  #defines state of container....present, started, reloaded, restarted, stopped, killed or absent
 #  - image: elasticsearch
 #    state: present
-  - image: fedora
-    state: present
+#  - image: fedora
+#    state: present
   - image: ubuntu
     state: present
 docker_opts:  #defines docker service options to be configured
