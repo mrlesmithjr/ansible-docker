@@ -1,0 +1,70 @@
+---
+- name: debian | updating apt-cache
+  apt:
+    update_cache: yes
+    cache_valid_time: 86400
+
+- name: debian | adding docker apt-key
+  apt_key:
+    keyserver: "{{ item.keyserver }}"
+    id: "{{ item.id }}"
+  with_items: docker_ubuntu_repo_info
+
+- name: debian | adding docker repo
+  apt_repository:
+    repo: "{{ item.repo }}"
+    state: present
+  with_items: docker_ubuntu_repo_info
+
+- name: debian | uninstalling old docker package (if exists)
+  apt:
+    name: lxc-docker
+    state: absent
+    purge: yes
+
+- name: debian | installing docker pre-reqs
+  apt:
+    name: "linux-image-extra-{{ ansible_kernel }}"
+    state: present
+
+- name: debian | installing docker
+  apt:
+    name: docker-engine
+    state: present
+  register: docker_installed
+
+- name: debian | ensuring docker is started
+  service:
+    name: docker
+    state: started
+  when: docker_installed.changed
+
+- name: debian | adding docker users (for use without sudo)
+  user:
+    name: "{{ item }}"
+    append: yes
+    groups: docker
+  with_items: docker_users
+  when: config_docker_users is defined and config_docker_users
+
+- name: debian | setting grub memory limit (if set)
+  lineinfile:
+    dest: /etc/default/grub
+    regexp: "^GRUB_CMDLINE_LINUX_DEFAULT"
+    line: 'GRUB_CMDLINE_LINUX_DEFAULT="cgroup_enable=memory swapaccount=1"'
+  register: grub_updated
+  when: docker_set_grub_memory_limit is defined and docker_set_grub_memory_limit
+
+- name: debian | updating grub (if updated)
+  command: update-grub
+  when: grub_updated.changed
+
+- name: debian | configuring docker service
+  template:
+    src: etc/default/docker.j2
+    dest: /etc/default/docker
+    owner: root
+    group: root
+    mode: 0644
+  notify: restart docker
+  when: config_docker_service is defined and config_docker_service
