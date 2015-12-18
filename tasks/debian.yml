@@ -81,4 +81,11 @@
     name: "{{ item }}"
     state: present
   with_items:
-    - docker-py 
+    - docker-py
+
+- name: debian | installing additonal packages
+  apt:
+    name: "{{ item }}"
+    state: present
+  with_items:
+    - bridge-utils
