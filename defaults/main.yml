@@ -1,16 +1,16 @@
 ---
 # defaults file for ansible-docker
-config_docker_service: true
-config_docker_users: false
+config_docker_service: true  #defines if docker service should be configured
+config_docker_users: false  #defines if users should be added to docker group to allow non sudo access to docker
 docker_opts:  #defines docker service options to be configured
   - '--dns {{ pri_dns }}'
   - '--dns {{ sec_dns }}'
-docker_set_grub_memory_limit: true
-docker_ubuntu_repo_info:
+docker_set_grub_memory_limit: true  #defines if docker memory limits should be added to grub boot loader
+docker_ubuntu_repo_info:  #defines docker ubuntu repo info for installing from
   - id: 58118E89F3A912897C070ADBF76221572C52609D
     keyserver: hkp://p80.pool.sks-keyservers.net:80
     repo: "deb https://apt.dockerproject.org/repo ubuntu-{{ ansible_distribution_release }} main"
-docker_users:
+docker_users:  #defines users to be added to docker group to allow non sudo access to docker
   - vagrant
-pri_dns: 8.8.8.8
-sec_dns: 8.8.4.4
+pri_dns: 8.8.8.8  #defines primary dns server for your site
+sec_dns: 8.8.4.4  #defines secondary dns server for your site
