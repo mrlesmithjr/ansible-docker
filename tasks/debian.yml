@@ -4,6 +4,14 @@
     update_cache: yes
     cache_valid_time: 86400
 
+- name: debian | installing pre-reqs
+  apt:
+    name: "{{ item }}"
+    state: present
+  with_items:
+    - apt-transport-https
+  when: ansible_distribution == "Debian"
+
 - name: debian | adding docker apt-key
   apt_key:
     keyserver: "{{ item.keyserver }}"
@@ -26,6 +34,7 @@
   apt:
     name: "linux-image-extra-{{ ansible_kernel }}"
     state: present
+  when: ansible_distribution == "Ubuntu"
 
 - name: debian | installing docker
   apt:
@@ -75,6 +84,15 @@
     state: present
   with_items:
     - python-pip
+  when: ansible_distribution == "Ubuntu"
+
+- name: debian | installing python packages
+  easy_install:
+    name: "{{ item }}"
+    state: present
+  with_items:
+    - pip
+  when: ansible_distribution == "Debian"
 
 - name: debian | installing python modules
   pip:

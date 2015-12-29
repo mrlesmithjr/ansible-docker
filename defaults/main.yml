@@ -18,7 +18,7 @@ docker_set_grub_memory_limit: true  #defines if docker memory limits should be a
 docker_ubuntu_repo_info:  #defines docker ubuntu repo info for installing from
   - id: 58118E89F3A912897C070ADBF76221572C52609D
     keyserver: hkp://p80.pool.sks-keyservers.net:80
-    repo: "deb https://apt.dockerproject.org/repo ubuntu-{{ ansible_distribution_release }} main"
+    repo: "deb https://apt.dockerproject.org/repo {{ ansible_distribution | lower }}-{{ ansible_distribution_release }} main"
 docker_users:  #defines users to be added to docker group to allow non sudo access to docker
   - vagrant
 pri_dns: 8.8.8.8  #defines primary dns server for your site
