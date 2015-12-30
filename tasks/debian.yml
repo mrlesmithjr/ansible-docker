@@ -4,6 +4,12 @@
     update_cache: yes
     cache_valid_time: 86400
 
+- name: uninstall python-pip (If installed) - Debian
+  apt:
+    name: python-pip
+    state: absent
+    when: ansible_distribution == "Debian"
+
 - name: debian | installing pre-reqs
   apt:
     name: "{{ item }}"
