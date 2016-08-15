@@ -33,11 +33,12 @@
 
 - name: config_docker | creating Docker systemd override
   template:
-    src: "etc/systemd/system/docker.service.d/docker.conf.j2"
-    dest: "/etc/systemd/system/docker.service.d/docker.conf"
+    src: "etc/systemd/system/docker.service.j2"
+    dest: "/etc/systemd/system/docker.service"
     owner: root
     group: root
     mode: 0644
+  notify: restart docker
   register: docker_systemd_override
   when: >
         ((ansible_distribution == "RedHat" or
@@ -60,6 +61,14 @@
 
 - name: docker | restarting systemd manager (when Docker systemd override is created)
   shell: "systemctl daemon-reload"
+  when: >
+        docker_systemd_override.changed or
+        docker_service_config.changed
+
+- name: docker | restarting docker service
+  service:
+    name: "docker"
+    state: "restarted"
   when: >
         docker_systemd_override.changed or
         docker_service_config.changed
