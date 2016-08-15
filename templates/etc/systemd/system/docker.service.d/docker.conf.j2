@@ -1,7 +1,11 @@
+{% if ansible_distribution == "RedHat" %}
 [Service]
-EnvironmentFile=-/etc/sysconfig/docker
-#EnvironmentFile=-/etc/sysconfig/docker-storage
-#EnvironmentFile=-/etc/sysconfig/docker-network
 TimeoutSec=300
-ExecStart=
-ExecStart=/usr/bin/docker daemon -H fd:// $DOCKER_OPTS
+ExecStart=/usr/bin/docker daemon {% for item in docker_opts %}{{ item }}{% if not loop.last %} {% endif %}{% endfor %}
+
+{% endif %}
+{% if ansible_distribution == "Ubuntu" %}
+[Service]
+ExecStart=/usr/bin/dockerd {% for item in docker_opts %}{{ item }}{% if not loop.last %} {% endif %}{% endfor %}
+
+{% endif %}
