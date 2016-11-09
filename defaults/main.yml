@@ -1,6 +1,6 @@
 ---
 # defaults file for ansible-docker
-config_docker_service: true  #defines if docker service should be configured
+config_docker_service: false  #defines if docker service should be configured
 docker_config_alt_data_dir: false  #defines if docker should be configured to store data in alternate location..ensure to enable -g option in docker_opts if true
 docker_alt_data_dir: /mnt/docker  #Ensure this exists if setting docker to alternate data directory...We do not create this to ensure any add'l mounts do not overlay this path..Service may fail to start if not.
 docker_images:  #defines docker images to be installed
