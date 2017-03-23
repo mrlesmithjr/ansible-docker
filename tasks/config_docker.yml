@@ -9,6 +9,11 @@
   notify: "restart docker"
   when: ansible_os_family == "Debian"
 
+- name: config_docker | Ensuring /etc/docker Folder Exists
+  file:
+    path: "/etc/docker"
+    state: "directory"
+
 - name: config_docker | Configuring Docker
   template:
     src: "etc/docker/daemon.json.j2"
