@@ -78,3 +78,8 @@ docker_ubuntu_repo_info:
 # Defines users to be added to docker group to allow non sudo access to docker
 docker_users:
   - 'vagrant'
+
+# Define Docker version to install
+# 1.11.0|1.11.1|1.11.2|1.12.0|1.12.1|1.12.2|1.12.3|1.12.4|1.12.5|1.12.6|1.13.0|1.13.1
+# 17.03.0|17.03.1|17.04.0
+docker_version: '17.04.0'

@@ -44,8 +44,8 @@
 
 - name: debian | installing docker
   apt:
-    name: docker-engine
-    state: present
+    name: "docker-engine={{ docker_version_debian }}"
+    state: "present"
   become: true
 
 - name: debian | setting grub memory limit (if set)
@@ -67,7 +67,7 @@
 - name: debian | installing additonal packages
   apt:
     name: "{{ item }}"
-    state: present
+    state: "present"
   become: true
   with_items:
     - bridge-utils

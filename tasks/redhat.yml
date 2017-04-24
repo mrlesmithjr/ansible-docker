@@ -16,14 +16,14 @@
 
 - name: redhat | installing Docker
   yum:
-    name: "docker-engine"
+    name: "docker-engine-{{ docker_version_redhat }}"
     state: present
   become: true
   when: ansible_distribution != "Fedora"
 
 - name: redhat | installing Docker
   dnf:
-    name: "docker-engine"
+    name: "docker-engine-{{ docker_version_redhat }}"
     state: present
   become: true
   when: ansible_distribution == "Fedora"
