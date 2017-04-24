@@ -38,7 +38,9 @@
     name: "linux-image-extra-{{ ansible_kernel }}"
     state: present
   become: true
-  when: ansible_distribution == "Ubuntu"
+  when: >
+        ansible_distribution == "Ubuntu" and
+        (ansible_distribution_version >= '14.04')
 
 - name: debian | installing docker
   apt:
