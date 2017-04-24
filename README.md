@@ -3,6 +3,11 @@ Role Name
 
 An [Ansible] role to install/configure [Docker]
 
+Build Status
+------------
+
+[![Build Status](https://travis-ci.org/mrlesmithjr/ansible-docker.svg?branch=master)](https://travis-ci.org/mrlesmithjr/ansible-docker)
+
 Requirements
 ------------
 
