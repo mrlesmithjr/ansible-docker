@@ -2,6 +2,9 @@
 # tasks file for ansible-docker
 - include: set_facts.yml
 
+- include: alpine.yml
+  when: ansible_os_family == "Alpine"
+
 - include: debian.yml
   when: ansible_os_family == "Debian"
 
@@ -10,6 +13,8 @@
 
 - include: config_docker.yml
   when: docker_config_service
+
+- include: service.yml
 
 - include: users.yml
   when: >
