@@ -31,9 +31,9 @@ docker_alt_data_dir: '/mnt/docker'
 docker_cluster_addr: "{{ hostvars[inventory_hostname]['ansible_' + docker_cluster_interface]['ipv4']['address'] }}"
 
 # Defines interface to capture address from for docker_cluster_addr
-docker_cluster_interface: "enp0s8"
+docker_cluster_interface: "{{ docker_swarm_interface }}"
 
-docker_cluster_port: '2376'
+docker_cluster_port: 2376
 
 # Defines if docker should be configured to store data in alternate location
 # ensure to enable -g option in docker_opts if true
@@ -46,19 +46,19 @@ docker_config_service: false
 docker_config_users: false
 
 # Defines docker images to be installed
-docker_images:
-    # Defines image name
-    # ex. docker hub image name
-  - name: 'centos'
-    # Defines state of image
-    # present|absent
-    state: 'present'
-#  - name: 'elasticsearch'
-#    state: 'present'
-#  - name: 'fedora'
-#    state: 'present'
-  - name: 'ubuntu'
-    state: 'present'
+docker_images: []
+  #   # Defines image name
+  #   # ex. docker hub image name
+  # - name: 'centos'
+  #   # Defines state of image
+  #   # present|absent
+  #   state: 'present'
+  # - name: 'elasticsearch'
+  #   state: 'present'
+  # - name: 'fedora'
+  #   state: 'present'
+  # - name: 'ubuntu'
+  #   state: 'present'
 
 # Defines if images defined in docker_images are managed
 docker_manage_images: false
@@ -128,6 +128,12 @@ docker_opts:
 # Use TLS; implied by –tlsverify
   # tls: false
 
+# Defines which repo to install from
+# Stable gives you reliable updates every quarter
+# Edge gives you new features every month
+# define as stable or edge
+docker_release_channel: 'stable'
+
 # Defines if docker memory limits should be added to grub boot loader
 docker_set_grub_memory_limit: true
 
@@ -137,18 +143,21 @@ docker_swarm_interface: 'enp0s8'
 
 # Defines docker ubuntu repo info for installing from
 docker_ubuntu_repo_info:
-  id: '58118E89F3A912897C070ADBF76221572C52609D'
-  keyserver: 'hkp://p80.pool.sks-keyservers.net:80'
-  repo: 'deb https://apt.dockerproject.org/repo {{ ansible_distribution | lower }}-{{ ansible_distribution_release }} main'
+  id: '0EBFCD88'
+  # keyserver: 'hkp://p80.pool.sks-keyservers.net:80'
+  repo: 'deb [arch=amd64] https://download.docker.com/linux/{{ ansible_distribution | lower }} {{ ansible_distribution_release }} {{ docker_release_channel }}'
+  url: 'https://download.docker.com/linux/ubuntu/gpg'
 
 # Defines users to be added to docker group to allow non sudo access to docker
-docker_users:
-  - 'vagrant'
+docker_users: []
+  # - 'vagrant'
 
 # Define Docker version to install
 # 1.11.0|1.11.1|1.11.2|1.12.0|1.12.1|1.12.2|1.12.3|1.12.4|1.12.5|1.12.6|1.13.0|1.13.1
-# 17.03.0|17.03.1|17.04.0
-docker_version: '17.04.0'
+# 17.03.0|17.03.1|17.04.0|17.05.0
+# Currently as of 06/03/2017 17.04.0 and 17.05.0 must be installed from the
+# edge channel. Change docker_release_channel: 'edge'
+docker_version: 17.03.1
 ```
 
 Dependencies
@@ -160,9 +169,12 @@ Example Playbook
 ----------------
 
 ```
+---
 - hosts: docker_hosts
-  become: true
   vars:
+    docker_swarm_interface: "eth1"
+    docker_config_service: true
+    pri_domain_name: 'test.vagrant.local'
   roles:
     - role: ansible-docker
   tasks:
