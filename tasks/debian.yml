@@ -14,7 +14,6 @@
     - 'apt-transport-https'
     - 'ca-certificates'
     - 'software-properties-common'
-  when: ansible_distribution == "Debian"
 
 - name: debian | adding docker apt-key
   apt_key:
