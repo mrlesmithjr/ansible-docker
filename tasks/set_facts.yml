@@ -19,8 +19,15 @@
     docker_version_debian: '{{ docker_version }}~ce-0~{{ ansible_distribution|lower }}-{{ ansible_distribution_release|lower }}'
   when: >
         ansible_os_family == "Debian" and
-        (docker_version >= '17.03')
+        (docker_version >= '17.03' and
+        docker_version < '17.06')
 
+- name: set_facts | Setting Docker Version To Install (Debian)
+  set_fact:
+    docker_version_debian: '{{ docker_version }}~ce-0~{{ ansible_distribution|lower }}'
+  when: >
+        ansible_os_family == "Debian" and
+        (docker_version >= '17.06')
 
 - name: set_facts | Setting Docker Version To Install (Fedora)
   set_fact:

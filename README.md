@@ -1,6 +1,21 @@
-# Role Name
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
 
-An [Ansible] role to install/configure [Docker]
+- [ansible-docker](#ansible-docker)
+  - [Build Status](#build-status)
+  - [Requirements](#requirements)
+  - [Role Variables](#role-variables)
+  - [Dependencies](#dependencies)
+  - [Example Playbook](#example-playbook)
+  - [License](#license)
+  - [Author Information](#author-information)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
+# ansible-docker
+
+An [Ansible](https://www.ansible.com) role to install/configure [Docker](https://www.docker.com)
 
 ## Build Status
 
@@ -185,10 +200,10 @@ docker_users: []
 
 # Define Docker version to install
 # 1.11.0|1.11.1|1.11.2|1.12.0|1.12.1|1.12.2|1.12.3|1.12.4|1.12.5|1.12.6|1.13.0|1.13.1
-# 17.03.0|17.03.1|17.04.0|17.05.0
+# 17.03.0|17.03.1|17.03.2|17.04.0|17.05.0|17.06.0
 # Currently as of 06/03/2017 17.04.0 and 17.05.0 must be installed from the
 # edge channel. Change docker_release_channel: 'edge'
-docker_version: 17.03.1
+docker_version: 17.06.0
 ```
 
 ## Dependencies
@@ -211,16 +226,13 @@ None
 
 ## License
 
-BSD
+MIT
 
 ## Author Information
 
 Larry Smith Jr.
 
--   @mrlesmithjr
--   <http://everythingshouldbevirtual.com>
+-   [@mrlesmithjr](https://www.twitter.com/mrlesmithjr)
+-   [EverythingShouldBeVirtual](http://everythingshouldbevirtual.com)
+-   [mrlesmithjr.com](http://mrlesmithjr.com)
 -   mrlesmithjr [at] gmail.com
-
-[ansible]: https://www.ansible.com
-
-[docker]: https://www.docker.com
