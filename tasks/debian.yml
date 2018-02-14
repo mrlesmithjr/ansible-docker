@@ -95,3 +95,6 @@
   become: true
   with_items:
     - bridge-utils
+  when: >
+    docker_install_bridge_utils is defined and
+    docker_install_bridge_utils

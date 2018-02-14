@@ -159,6 +159,9 @@ docker_linux_image_extra: true
 # Defines if docker memory limits should be added to grub boot loader
 docker_set_grub_memory_limit: true
 
+# Defines if Linux birdge-utils will get installed.
+docker_install_bridge_utils: true
+
 docker_swarm_addr: "{{ hostvars[inventory_hostname]['ansible_' + docker_swarm_interface]['ipv4']['address'] }}"
 
 docker_swarm_interface: 'enp0s8'
