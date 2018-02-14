@@ -153,6 +153,9 @@ docker_opts:
 # define as stable or edge
 docker_release_channel: 'stable'
 
+# Defines if the linux-image-extra-{{ ansible_kernel }} package should get installed (only >= Ubuntu 14.04).
+docker_linux_image_extra: true
+
 # Defines if docker memory limits should be added to grub boot loader
 docker_set_grub_memory_limit: true
 
