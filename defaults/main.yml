@@ -26,6 +26,9 @@ docker_config_service: false
 # Defines if users defined in docker_users should be added to docker group
 docker_config_users: false
 
+# Defines if various Python based Docker packages should get installed
+docker_manage_python_modules: true
+
 # Defines docker images to be installed
 docker_images: []
   #   # Defines image name
