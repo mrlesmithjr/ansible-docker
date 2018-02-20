@@ -64,11 +64,17 @@
         ansible_distribution == "Ubuntu" and
         (ansible_distribution_version >= '14.04')
 
+- name: debian | checking for existing docker
+  shell: dpkg-query -W 'docker-ce'
+  ignore_errors: true
+  register: has_docker
+
 - name: debian | installing docker
   apt:
     name: "docker-ce={{ docker_version_debian }}"
     state: "present"
   become: true
+  when: has_docker|failed
 
 - name: debian | setting grub memory limit (if set)
   lineinfile:
