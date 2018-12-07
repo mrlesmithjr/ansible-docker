@@ -62,7 +62,8 @@
   become: true
   when: >
         ansible_distribution == "Ubuntu" and
-        (ansible_distribution_version >= '14.04') and
+        (ansible_distribution_version >= '14.04' and
+        ansible_distribution_version <= '16.04') and
         docker_linux_image_extra is defined and
         docker_linux_image_extra
 
@@ -70,6 +71,7 @@
   shell: dpkg-query -W 'docker-ce'
   ignore_errors: true
   register: has_docker
+  changed_when: false
 
 - name: debian | installing docker
   apt:
