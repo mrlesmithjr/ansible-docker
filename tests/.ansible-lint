@@ -1,1 +1,4 @@
-skip_list: ['ANSIBLE0013','ANSIBLE0016']
+skip_list:
+  - "204"
+  - "305"
+  - "503"

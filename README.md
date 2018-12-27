@@ -1,8 +1,6 @@
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 
-**Table of Contents** _generated with [DocToc](https://github.com/thlorenz/doctoc)_
-
 - [ansible-docker](#ansible-docker)
   - [Build Status](#build-status)
   - [Requirements](#requirements)
@@ -58,5 +56,4 @@ Larry Smith Jr.
 
 - [@mrlesmithjr](https://www.twitter.com/mrlesmithjr)
 - [EverythingShouldBeVirtual](http://everythingshouldbevirtual.com)
-- [mrlesmithjr.com](http://mrlesmithjr.com)
 - [mrlesmithjr@gmail.com](mailto:mrlesmithjr@gmail.com)

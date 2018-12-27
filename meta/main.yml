@@ -2,8 +2,8 @@
 galaxy_info:
   author: Larry Smith Jr.
   description: >
-              An [Ansible](https://www.ansible.com) role to install/configure
-              [Docker](https://www.docker.com)
+    An [Ansible](https://www.ansible.com) role to install/configure
+    [Docker](https://www.docker.com)
 
   license: license (MIT)
   min_ansible_version: 1.2
@@ -24,7 +24,7 @@ galaxy_info:
         - jessie
         - stretch
 
-  categories:
+  galaxy_tags:
     - cloud
     - development
     - packaging
