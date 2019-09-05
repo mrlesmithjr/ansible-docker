@@ -66,12 +66,12 @@
   become: true
   register: result
   until: result is successful
-  when: >
-    ansible_distribution == "Ubuntu" and
-    (ansible_distribution_version >= '14.04' and
-    ansible_distribution_version <= '16.04') and
-    docker_linux_image_extra is defined and
-    docker_linux_image_extra
+  when:
+    - ansible_distribution == "Ubuntu"
+    - ansible_distribution_version >= '14.04'
+    - ansible_distribution_version <= '16.04'
+    - docker_linux_image_extra is defined
+    - docker_linux_image_extra
 
 - name: debian | checking for existing docker
   shell: dpkg-query -W 'docker-ce'
@@ -88,6 +88,11 @@
   until: result is successful
   when: has_docker is failed
 
+- name: debian | Checking For /etc/default/grub
+  stat:
+    path: /etc/default/grub
+  register: _docker_grub_check
+
 - name: debian | setting grub memory limit (if set)
   lineinfile:
     dest: /etc/default/grub
@@ -95,9 +100,10 @@
     line: 'GRUB_CMDLINE_LINUX_DEFAULT="cgroup_enable=memory swapaccount=1"'
   register: grub_updated
   become: true
-  when: >
-    docker_set_grub_memory_limit is defined and
-    docker_set_grub_memory_limit
+  when:
+    - _docker_grub_check['stat']['exists']
+    - docker_set_grub_memory_limit is defined
+    - docker_set_grub_memory_limit
 
 - name: debian | updating grub (if updated)
   command: update-grub
@@ -111,6 +117,6 @@
   become: true
   register: result
   until: result is successful
-  when: >
-    docker_install_bridge_utils is defined and
-    docker_install_bridge_utils
+  when:
+    - docker_install_bridge_utils is defined
+    - docker_install_bridge_utils

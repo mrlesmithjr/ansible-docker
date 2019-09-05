@@ -33,9 +33,9 @@
   become: true
   register: result
   until: result is successful
-  when: >
-    ansible_os_family == "RedHat" and
-    ansible_distribution != "Fedora"
+  when:
+    - ansible_os_family == "RedHat"
+    - ansible_distribution != "Fedora"
 
 - name: manage_python_modules | Installing Ansible Pre-Reqs (Fedora)
   dnf:
@@ -44,9 +44,9 @@
   become: true
   register: result
   until: result is successful
-  when: >
-    ansible_os_family == "RedHat" and
-    ansible_distribution == "Fedora"
+  when:
+    - ansible_os_family == "RedHat"
+    - ansible_distribution == "Fedora"
 
 - name: manage_python_modules | installing python pre-req packages (Fedora)
   dnf:
@@ -65,9 +65,9 @@
   become: true
   register: result
   until: result is successful
-  when: >
-    ansible_os_family == "RedHat" and
-    ansible_distribution == "Fedora"
+  when:
+    - ansible_os_family == "RedHat"
+    - ansible_distribution == "Fedora"
 
 - name: manage_python_modules | installing python modules
   pip:
