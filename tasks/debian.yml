@@ -88,6 +88,11 @@
   until: result is successful
   when: has_docker is failed
 
+- name: debian | Checking For /etc/default/grub
+  stat:
+    path: /etc/default/grub
+  register: _docker_grub_check
+
 - name: debian | setting grub memory limit (if set)
   lineinfile:
     dest: /etc/default/grub
@@ -96,6 +101,7 @@
   register: grub_updated
   become: true
   when:
+    - _docker_grub_check['stat']['exists']
     - docker_set_grub_memory_limit is defined
     - docker_set_grub_memory_limit
 
