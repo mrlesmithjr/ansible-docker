@@ -17,16 +17,16 @@
 - include: service.yml
 
 - include: users.yml
-  when: >
-    docker_config_users is defined and
-    docker_config_users
+  when:
+    - docker_config_users is defined
+    - docker_config_users
 
 - include: manage_python_modules.yml
-  when: >
-    docker_manage_python_modules is defined and
-    docker_manage_python_modules
+  when:
+    - docker_manage_python_modules is defined
+    - docker_manage_python_modules
 
 - include: images.yml
-  when: >
-    docker_manage_images and
-    docker_images is defined
+  when:
+    - docker_manage_images
+    - docker_images is defined
