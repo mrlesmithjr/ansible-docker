@@ -87,9 +87,11 @@
     - ansible_distribution_major_version == '7'
 
 - name: Installing Docker Version On Debian
-  debug: msg="Installing Docker Version {{ docker_version_debian }}"
+  debug:
+    msg: "Installing Docker Version {{ docker_version_debian }}"
   when: ansible_os_family == "Debian"
 
 - name: Installing Docker Version On RedHat
-  debug: msg="Installing Docker Version {{ docker_version_redhat }}"
+  debug:
+    msg: "Installing Docker Version {{ docker_version_redhat }}"
   when: ansible_os_family == "RedHat"
