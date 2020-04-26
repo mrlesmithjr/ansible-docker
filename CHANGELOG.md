@@ -1,3 +1,12 @@
+commit 5ed66996f5963b67bae0d7e539a3f90c8a2558c2
+Author: Larry Smith Jr <mrlesmithjr@gmail.com>
+Date:   Sun Apr 26 17:11:21 2020 -0400
+
+    Fixed Ubuntu 16.04 installation failures
+    
+    - Was selecting the incorrect version
+    - linux-image-extra doesn't work when linuxkit
+
 commit 558bcec30b2bfbdbc454252430c5c83032e8cc8c
 Author: Larry Smith Jr <mrlesmithjr@gmail.com>
 Date:   Sun Apr 26 16:34:44 2020 -0400
