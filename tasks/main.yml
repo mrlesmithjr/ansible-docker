@@ -21,11 +21,6 @@
     - docker_config_users is defined
     - docker_config_users
 
-- include: manage_python_modules.yml
-  when:
-    - docker_manage_python_modules is defined
-    - docker_manage_python_modules
-
 - include: images.yml
   when:
     - docker_manage_images
