@@ -1,16 +1,4 @@
 ---
-- name: redhat | Installing Pre-Reqs
-  package:
-    name:
-      - device-mapper-persistent-data
-      - libselinux-python
-      - lvm2
-      - yum-utils
-    state: present
-  become: true
-  register: result
-  until: result is successful
-
 - name: redhat | Uninstalling Old Docker Package (if exists)
   package:
     name:

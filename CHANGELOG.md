@@ -1,3 +1,11 @@
+commit c1366b2327082b4ef30208c19799a78d2d6e3f88
+Author: Larry Smith Jr <mrlesmithjr@gmail.com>
+Date:   Sun Apr 26 14:01:47 2020 -0400
+
+    Fixing Debian package to installl
+    
+    Ubuntu and Debian package selection is different
+
 commit e37f292faaccb6b806f468dd3076592361d327a1
 Author: Larry Smith Jr <mrlesmithjr@gmail.com>
 Date:   Sun Apr 26 13:05:29 2020 -0400
