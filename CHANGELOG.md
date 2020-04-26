@@ -1,3 +1,9 @@
+commit 77ee5862473575d4fbf57c14b023db18cd618589
+Author: Larry Smith Jr <mrlesmithjr@gmail.com>
+Date:   Sun Apr 26 16:23:30 2020 -0400
+
+    Removed RedHat pre-reqs
+
 commit c1366b2327082b4ef30208c19799a78d2d6e3f88
 Author: Larry Smith Jr <mrlesmithjr@gmail.com>
 Date:   Sun Apr 26 14:01:47 2020 -0400
