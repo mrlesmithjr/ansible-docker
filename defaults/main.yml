@@ -26,9 +26,6 @@ docker_config_service: false
 # Defines if users defined in docker_users should be added to docker group
 docker_config_users: false
 
-# Defines if various Python based Docker packages should get installed
-docker_manage_python_modules: true
-
 # Defines docker images to be installed
 docker_images:
   []
@@ -153,10 +150,6 @@ docker_opts:
 # Edge gives you new features every month
 # define as stable or edge
 docker_release_channel: stable
-
-# Defines if the linux-image-extra-{{ ansible_kernel }} package should get
-# installed (only >= Ubuntu 14.04 and <= 16.04).
-docker_linux_image_extra: true
 
 # Defines if docker memory limits should be added to grub boot loader
 docker_set_grub_memory_limit: true

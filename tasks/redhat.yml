@@ -1,48 +1,39 @@
 ---
-- name: redhat | Installing Pre-Reqs (Fedora)
-  dnf:
+- name: redhat | Uninstalling Old Docker Package (if exists)
+  package:
     name:
-      [
-        "device-mapper-persistent-data",
-        "libselinux-python",
-        "lvm2",
-        "yum-utils",
-      ]
-    state: present
-  become: true
-  register: result
-  until: result is successful
-  when: ansible_distribution == "Fedora"
-
-- name: redhat | Installing Pre-Reqs (!=Fedora)
-  yum:
-    name:
-      [
-        "device-mapper-persistent-data",
-        "libselinux-python",
-        "lvm2",
-        "yum-utils",
-      ]
-    state: present
+      - docker
+      - docker-client
+      - docker-client-latest
+      - docker-common
+      - docker-engine
+      - docker-latest
+      - docker-latest-logrotate
+      - docker-logrotate
+    state: absent
   become: true
   register: result
   until: result is successful
   when: ansible_distribution != "Fedora"
 
 - name: redhat | Uninstalling Old Docker Package (if exists)
-  yum:
+  package:
     name:
-      [
-        "container-selinux",
-        "docker-common",
-        "docker-engine",
-        "docker-selinux",
-        "docker",
-      ]
-    state: "absent"
+      - docker
+      - docker-client
+      - docker-client-latest
+      - docker-common
+      - docker-engine
+      - docker-engine-selinux
+      - docker-latest
+      - docker-latest-logrotate
+      - docker-logrotate
+      - docker-selinux
+    state: absent
   become: true
   register: result
   until: result is successful
+  when: ansible_distribution == "Fedora"
 
 - name: redhat | adding Docker repo
   template:
@@ -51,19 +42,11 @@
   become: true
 
 - name: redhat | installing Docker
-  yum:
-    name: "docker-ce-{{ docker_version_redhat }}"
+  package:
+    name:
+      - "docker-ce-{{ docker_version_redhat }}"
+      - containerd.io
     state: present
   become: true
   register: result
   until: result is successful
-  when: ansible_distribution != "Fedora"
-
-- name: redhat | installing Docker
-  dnf:
-    name: "docker-ce-{{ docker_version_redhat }}"
-    state: present
-  become: true
-  register: result
-  until: result is successful
-  when: ansible_distribution == "Fedora"

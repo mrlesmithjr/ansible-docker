@@ -1,7 +1,7 @@
 ---
 - name: debian | updating apt-cache
   apt:
-    update_cache: yes
+    update_cache: true
     cache_valid_time: 86400
   become: true
   register: result
@@ -10,7 +10,11 @@
 - name: debian | installing pre-reqs
   apt:
     name:
-      ["apt-transport-https", "ca-certificates", "software-properties-common"]
+      - apt-transport-https
+      - ca-certificates
+      - curl
+      - gnupg-agent
+      - software-properties-common
     state: present
   become: true
   register: result
@@ -50,30 +54,22 @@
 
 # We remove docker-engine as this is old package to install. The new package is
 # docker-ce
-- name: debian | uninstalling old docker package (if exists)
+- name: debian | uninstalling old docker packages (if exists)
   apt:
-    name: ["docker-engine", "lxc-docker"]
+    name:
+      - containerd
+      - docker
+      - docker-engine
+      - docker.io
+      - lxc-docker
+      - runc
     state: absent
-    purge: yes
+    purge: true
   become: true
   register: result
   until: result is successful
 
-- name: debian | installing docker pre-reqs
-  apt:
-    name: "linux-image-extra-{{ ansible_kernel }}"
-    state: present
-  become: true
-  register: result
-  until: result is successful
-  when:
-    - ansible_distribution == "Ubuntu"
-    - ansible_distribution_version >= '14.04'
-    - ansible_distribution_version <= '16.04'
-    - docker_linux_image_extra is defined
-    - docker_linux_image_extra
-
-- name: debian | checking for existing docker
+- name: debian | checking for existing docker # noqa 305
   shell: dpkg-query -W 'docker-ce'
   ignore_errors: true
   register: has_docker
@@ -81,7 +77,9 @@
 
 - name: debian | installing docker
   apt:
-    name: "docker-ce={{ docker_version_debian }}"
+    name:
+      - containerd.io
+      - "docker-ce={{ docker_version_debian }}"
     state: present
   become: true
   register: result
@@ -105,14 +103,14 @@
     - docker_set_grub_memory_limit is defined
     - docker_set_grub_memory_limit
 
-- name: debian | updating grub (if updated)
+- name: debian | updating grub (if updated) # noqa 503
   command: update-grub
   become: true
   when: grub_updated['changed']
 
-- name: debian | installing additonal packages
+- name: debian | Installing bridge-utils
   apt:
-    name: ["bridge-utils"]
+    name: bridge-utils
     state: present
   become: true
   register: result

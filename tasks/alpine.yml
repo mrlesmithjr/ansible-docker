@@ -9,7 +9,7 @@
   register: _apk_repos_updated
   until: _apk_repos_updated is successful
 
-- name: alpine | Updating APK Cache
+- name: alpine | Updating APK Cache # noqa 503
   apk:
     update_cache: true
   become: true

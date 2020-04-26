@@ -1,32 +1,27 @@
 ---
 # tasks file for ansible-docker
-- include: set_facts.yml
+- include_tasks: set_facts.yml
 
-- include: alpine.yml
+- include_tasks: alpine.yml
   when: ansible_os_family == "Alpine"
 
-- include: debian.yml
+- include_tasks: debian.yml
   when: ansible_os_family == "Debian"
 
-- include: redhat.yml
+- include_tasks: redhat.yml
   when: ansible_os_family == "RedHat"
 
-- include: config_docker.yml
-  when: docker_config_service
+- include_tasks: config_docker.yml
+  when: docker_config_service|bool
 
-- include: service.yml
+- include_tasks: service.yml
 
-- include: users.yml
+- include_tasks: users.yml
   when:
     - docker_config_users is defined
-    - docker_config_users
+    - docker_config_users|bool
 
-- include: manage_python_modules.yml
+- include_tasks: images.yml
   when:
-    - docker_manage_python_modules is defined
-    - docker_manage_python_modules
-
-- include: images.yml
-  when:
-    - docker_manage_images
+    - docker_manage_images|bool
     - docker_images is defined
