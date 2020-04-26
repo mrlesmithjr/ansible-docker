@@ -1,3 +1,15 @@
+commit e37f292faaccb6b806f468dd3076592361d327a1
+Author: Larry Smith Jr <mrlesmithjr@gmail.com>
+Date:   Sun Apr 26 13:05:29 2020 -0400
+
+    Fixed package installations
+    
+    - Updated packages to be removed prior to install. The packages have
+      been updated since this was added.
+    - Updated packages to install as this was updated as well.
+    - Fixed CentOS/Fedora package idempotency for uninstalling older
+      packages.
+
 commit 9ba82429fec2fc3645500c2a01eb22590866e739
 Author: Larry Smith Jr <mrlesmithjr@gmail.com>
 Date:   Sun Apr 26 13:04:55 2020 -0400
