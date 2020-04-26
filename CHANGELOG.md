@@ -1,3 +1,11 @@
+commit 1939d98e3fc5e588b57ee169b92a43822b90f75b
+Author: Larry Smith Jr <mrlesmithjr@gmail.com>
+Date:   Sun Apr 26 12:25:14 2020 -0400
+
+    Removed task to manage Python modules
+    
+    - This probably should not be here anyways
+
 commit 9eea439802a7581ffea61e36670ac5c6b95f672f
 Author: Larry Smith Jr <mrlesmithjr@gmail.com>
 Date:   Sun Apr 26 11:10:40 2020 -0400

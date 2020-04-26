@@ -73,7 +73,7 @@
     - docker_linux_image_extra is defined
     - docker_linux_image_extra
 
-- name: debian | checking for existing docker
+- name: debian | checking for existing docker # noqa 305
   shell: dpkg-query -W 'docker-ce'
   ignore_errors: true
   register: has_docker
@@ -105,7 +105,7 @@
     - docker_set_grub_memory_limit is defined
     - docker_set_grub_memory_limit
 
-- name: debian | updating grub (if updated)
+- name: debian | updating grub (if updated) # noqa 503
   command: update-grub
   become: true
   when: grub_updated['changed']
