@@ -1,3 +1,9 @@
+commit 05460a2d3a969aeb0fd4f499e194c0877f76fde3
+Author: Larry Smith Jr <mrlesmithjr@gmail.com>
+Date:   Sun Apr 26 17:43:43 2020 -0400
+
+    Fixed CentOS 7 fact for docker_version_redhat
+
 commit 5ed66996f5963b67bae0d7e539a3f90c8a2558c2
 Author: Larry Smith Jr <mrlesmithjr@gmail.com>
 Date:   Sun Apr 26 17:11:21 2020 -0400

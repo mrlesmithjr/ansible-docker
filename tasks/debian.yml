@@ -69,21 +69,6 @@
   register: result
   until: result is successful
 
-- name: debian | installing docker pre-reqs
-  apt:
-    name: "linux-image-extra-{{ ansible_kernel }}"
-    state: present
-  become: true
-  register: result
-  until: result is successful
-  when:
-    - ansible_distribution == "Ubuntu"
-    - ansible_distribution_version is version('14.04', '>=')
-    - ansible_distribution_version is version('16.04', '<=')
-    - docker_linux_image_extra is defined
-    - docker_linux_image_extra
-    - ('linuxkit' not in ansible_kernel)
-
 - name: debian | checking for existing docker # noqa 305
   shell: dpkg-query -W 'docker-ce'
   ignore_errors: true
