@@ -82,6 +82,7 @@
     - ansible_distribution_version is version('16.04', '<=')
     - docker_linux_image_extra is defined
     - docker_linux_image_extra
+    - ('linuxkit' not in ansible_kernel)
 
 - name: debian | checking for existing docker # noqa 305
   shell: dpkg-query -W 'docker-ce'
