@@ -1,3 +1,9 @@
+commit e69ebe2c74ee28fe10cb1f73688f837f0f59d4e6
+Author: Larry Smith Jr <mrlesmithjr@gmail.com>
+Date:   Sun Apr 26 16:24:09 2020 -0400
+
+    Disabled Fedora testing
+
 commit 77ee5862473575d4fbf57c14b023db18cd618589
 Author: Larry Smith Jr <mrlesmithjr@gmail.com>
 Date:   Sun Apr 26 16:23:30 2020 -0400

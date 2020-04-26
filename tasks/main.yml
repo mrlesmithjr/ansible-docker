@@ -12,16 +12,16 @@
   when: ansible_os_family == "RedHat"
 
 - include_tasks: config_docker.yml
-  when: docker_config_service
+  when: docker_config_service|bool
 
 - include_tasks: service.yml
 
 - include_tasks: users.yml
   when:
     - docker_config_users is defined
-    - docker_config_users
+    - docker_config_users|bool
 
 - include_tasks: images.yml
   when:
-    - docker_manage_images
+    - docker_manage_images|bool
     - docker_images is defined

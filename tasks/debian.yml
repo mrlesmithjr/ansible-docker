@@ -78,8 +78,8 @@
   until: result is successful
   when:
     - ansible_distribution == "Ubuntu"
-    - ansible_distribution_version >= '14.04'
-    - ansible_distribution_version <= '16.04'
+    - ansible_distribution_version is version('14.04', '>=')
+    - ansible_distribution_version is version('16.04', '<=')
     - docker_linux_image_extra is defined
     - docker_linux_image_extra
 
@@ -122,9 +122,9 @@
   become: true
   when: grub_updated['changed']
 
-- name: debian | installing additonal packages
+- name: debian | Installing bridge-utils
   apt:
-    name: ["bridge-utils"]
+    name: bridge-utils
     state: present
   become: true
   register: result
