@@ -1,7 +1,7 @@
 ---
 - name: debian | updating apt-cache
   apt:
-    update_cache: yes
+    update_cache: true
     cache_valid_time: 86400
   become: true
   register: result
@@ -10,7 +10,11 @@
 - name: debian | installing pre-reqs
   apt:
     name:
-      ["apt-transport-https", "ca-certificates", "software-properties-common"]
+      - apt-transport-https
+      - ca-certificates
+      - curl
+      - gnupg-agent
+      - software-properties-common
     state: present
   become: true
   register: result
@@ -50,11 +54,17 @@
 
 # We remove docker-engine as this is old package to install. The new package is
 # docker-ce
-- name: debian | uninstalling old docker package (if exists)
+- name: debian | uninstalling old docker packages (if exists)
   apt:
-    name: ["docker-engine", "lxc-docker"]
+    name:
+      - containerd
+      - docker
+      - docker-engine
+      - docker.io
+      - lxc-docker
+      - runc
     state: absent
-    purge: yes
+    purge: true
   become: true
   register: result
   until: result is successful
@@ -81,7 +91,9 @@
 
 - name: debian | installing docker
   apt:
-    name: "docker-ce={{ docker_version_debian }}"
+    name:
+      - containerd.io
+      - "docker-ce={{ docker_version_debian }}"
     state: present
   become: true
   register: result
