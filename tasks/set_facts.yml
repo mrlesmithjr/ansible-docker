@@ -106,6 +106,17 @@
     - ansible_distribution_version is version('7', '>=')
     - ansible_distribution_version is version('8', '<')
 
+- name: set_facts | Setting Docker Version To Install (RedHat)
+  set_fact:
+    docker_version_redhat: "{{ docker_version }}.ce-3.el7"
+  when:
+    - ansible_os_family == "RedHat"
+    - ansible_distribution != "Fedora"
+    - docker_version is version('18.03', '>=')
+    - docker_version is version('18.09', '<')
+    - ansible_distribution_version is version('7', '>=')
+    - ansible_distribution_version is version('8', '<')
+
 - name: Installing Docker Version On Debian
   debug:
     msg: "Installing Docker Version {{ docker_version_debian }}"
