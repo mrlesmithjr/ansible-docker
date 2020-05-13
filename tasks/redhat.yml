@@ -50,3 +50,14 @@
   become: true
   register: result
   until: result is successful
+
+- name: redhat | Installing bridge-utils
+  package:
+    name: bridge-utils
+    state: present
+  become: true
+  register: result
+  until: result is successful
+  when:
+    - docker_install_bridge_utils is defined
+    - docker_install_bridge_utils
