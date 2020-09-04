@@ -84,7 +84,22 @@
   become: true
   register: result
   until: result is successful
-  when: has_docker is failed
+  when:
+    - docker_version|lower != "latest"
+    - has_docker is failed
+
+- name: debian | installing docker
+  apt:
+    name:
+      - containerd.io
+      - docker-ce
+    state: present
+  become: true
+  register: result
+  until: result is successful
+  when:
+    - docker_version|lower == "latest"
+    - has_docker is failed
 
 - name: debian | Checking For /etc/default/grub
   stat:

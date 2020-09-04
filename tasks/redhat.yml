@@ -55,9 +55,25 @@
   register: result
   until: result is successful
   when: >
-    ansible_distribution != "Fedora" or
+    docker_version|lower != "latest" and
+    (ansible_distribution != "Fedora" or
     (ansible_distribution == "Fedora" and
-    ansible_distribution_version is version('31', '<'))
+    ansible_distribution_version is version('31', '<')))
+
+- name: redhat | installing Docker
+  package:
+    name:
+      - docker-ce
+      - containerd.io
+    state: present
+  become: true
+  register: result
+  until: result is successful
+  when: >
+    docker_version|lower == "latest" and
+    (ansible_distribution != "Fedora" or
+    (ansible_distribution == "Fedora" and
+    ansible_distribution_version is version('31', '<')))
 
 - name: redhat | Installing bridge-utils
   package:
