@@ -103,6 +103,7 @@
     - ansible_os_family == "RedHat"
     - ansible_distribution != "Fedora"
     - docker_version is version('17.03', '>=')
+    - docker_version is version('18.06', '<')
     - ansible_distribution_version is version('7', '>=')
     - ansible_distribution_version is version('8', '<')
 
@@ -112,7 +113,7 @@
   when:
     - ansible_os_family == "RedHat"
     - ansible_distribution != "Fedora"
-    - docker_version is version('18.03', '>=')
+    - docker_version is version('18.06', '>=')
     - docker_version is version('18.09', '<')
     - ansible_distribution_version is version('7', '>=')
     - ansible_distribution_version is version('8', '<')
