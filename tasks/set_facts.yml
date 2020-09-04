@@ -1,4 +1,22 @@
 ---
+- name: set_facts | Assert Debian Version
+  assert:
+    that:
+      - docker_version is version('18.06', '>=')
+    fail_msg: "'docker_version' MUST be 18.06 or lower for Debian 8"
+  when:
+    - ansible_distribution == "Debian"
+    - ansible_distribution_major_version is version('8', '==')
+
+- name: set_facts | Assert Ubuntu Version
+  assert:
+    that:
+      - docker_version is version('19.03', '>=')
+    fail_msg: "'docker_version' MUST be 19.03 or higher for Ubuntu 20.04 and higher"
+  when:
+    - ansible_distribution == "Ubuntu"
+    - ansible_distribution_version is version('20.04', '>=')
+
 - name: set_facts | Setting Docker Version To Install (Debian)
   set_fact:
     docker_version_debian: "{{ docker_version }}-0~{{ ansible_distribution_release|lower }}"
@@ -28,30 +46,6 @@
   when:
     - ansible_os_family == "Debian"
     - docker_version is version('17.06', '>=')
-    - docker_version is version('17.09', '<')
-
-- name: set_facts | Setting Docker Version To Install (Debian)
-  set_fact:
-    docker_version_debian: "{{ docker_version }}~ce-0~{{ ansible_distribution|lower }}"
-  when:
-    - ansible_os_family == "Debian"
-    - docker_version is version('17.09', '>=')
-
-- name: set_facts | Setting Docker Version To Install (Debian)
-  set_fact:
-    docker_version_debian: "{{ docker_version }}~ce-0~{{ ansible_distribution|lower }}"
-  when:
-    - ansible_distribution == "Debian"
-    - docker_version is version('18.03', '>=')
-    - docker_version is version('18.09', '<')
-
-- name: set_facts | Setting Docker Version To Install (Debian)
-  set_fact:
-    docker_version_debian: "{{ docker_version }}~ce-0~{{ ansible_distribution|lower }}"
-  when:
-    - ansible_distribution == "Ubuntu"
-    - ansible_distribution_version is version('16.04', '<=')
-    - docker_version is version('18.03', '>=')
     - docker_version is version('18.09', '<')
 
 - name: set_facts | Setting Docker Version To Install (Debian)
