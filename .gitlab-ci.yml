@@ -24,15 +24,15 @@ centos7:
   script:
     - molecule test --scenario-name centos7
 
-centos8:
-  stage: molecule-test
-  script:
-    - molecule test --scenario-name centos8
+# centos8:
+#   stage: molecule-test
+#   script:
+#     - molecule test --scenario-name centos8
 
-debian8:
-  stage: molecule-test
-  script:
-    - molecule test --scenario-name debian8
+# debian8:
+#   stage: molecule-test
+#   script:
+#     - molecule test --scenario-name debian8
 
 debian9:
   stage: molecule-test

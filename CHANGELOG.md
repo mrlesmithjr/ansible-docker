@@ -1,3 +1,17 @@
+commit 9fcefacaed2d33f755698788eeccab0aa3ef2459
+Author: Larry Smith Jr <mrlesmithjr@gmail.com>
+Date:   Fri Sep 4 00:15:04 2020 -0400
+
+    Added ability to specify latest for docker_version
+    
+    This should've been there before...
+    
+    This is now the default
+    
+    Further testing will need to be done as newer versions are released
+    
+    Testing will ensure that newer versions can be specified
+
 commit eeb69b1c0940e1110ee74b6327d91aca7051e879
 Author: Larry Smith Jr <mrlesmithjr@gmail.com>
 Date:   Thu Sep 3 23:58:00 2020 -0400
