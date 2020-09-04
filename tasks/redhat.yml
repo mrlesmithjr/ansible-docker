@@ -40,6 +40,10 @@
     src: etc/yum.repos.d/docker.repo.j2
     dest: /etc/yum.repos.d/docker.repo
   become: true
+  when: >
+    ansible_distribution != "Fedora" or
+    (ansible_distribution == "Fedora" and
+    ansible_distribution_version is version('31', '<'))
 
 - name: redhat | installing Docker
   package:
@@ -50,6 +54,10 @@
   become: true
   register: result
   until: result is successful
+  when: >
+    ansible_distribution != "Fedora" or
+    (ansible_distribution == "Fedora" and
+    ansible_distribution_version is version('31', '<'))
 
 - name: redhat | Installing bridge-utils
   package:
@@ -61,3 +69,41 @@
   when:
     - docker_install_bridge_utils is defined
     - docker_install_bridge_utils
+
+# https://fedoramagazine.org/docker-and-fedora-32/
+- name: redhat | installing Docker
+  package:
+    name:
+      - docker-compose
+      - moby-engine
+    state: present
+  become: true
+  register: result
+  until: result is successful
+  when:
+    - ansible_distribution == "Fedora"
+    - ansible_distribution_version is version('31', '>=')
+
+# https://fedoramagazine.org/docker-and-fedora-32/
+- name: redhat | Configuring FirewallD
+  firewalld:
+    interface: docker0
+    permanent: true
+    state: enabled
+    zone: trusted
+  become: true
+  when:
+    - ansible_distribution == "Fedora"
+    - ansible_distribution_version is version('32', '>=')
+
+# https://fedoramagazine.org/docker-and-fedora-32/
+- name: redhat | Configuring FirewallD
+  firewalld:
+    masquerade: "true"
+    permanent: true
+    state: enabled
+    zone: FedoraWorkstation
+  become: true
+  when:
+    - ansible_distribution == "Fedora"
+    - ansible_distribution_version is version('32', '>=')
