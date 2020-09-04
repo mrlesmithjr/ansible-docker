@@ -2,9 +2,6 @@
 - name: Converge
   hosts: all
   tasks:
-    - name: Include ansible-bootstrap-python
-      include_role:
-        name: ansible-bootstrap-python
     - name: Include ansible-docker
       include_role:
         name: ansible-docker
