@@ -1,3 +1,93 @@
+commit 4f713039d295bbba8c67d045f44dd4769b7298bb
+Author: Larry Smith Jr <mrlesmithjr@gmail.com>
+Date:   Fri Sep 4 00:24:49 2020 -0400
+
+    Disabled Debian8 and CentOS 8 testing
+    
+    Too many issues right now and will circle back
+
+commit 9fcefacaed2d33f755698788eeccab0aa3ef2459
+Author: Larry Smith Jr <mrlesmithjr@gmail.com>
+Date:   Fri Sep 4 00:15:04 2020 -0400
+
+    Added ability to specify latest for docker_version
+    
+    This should've been there before...
+    
+    This is now the default
+    
+    Further testing will need to be done as newer versions are released
+    
+    Testing will ensure that newer versions can be specified
+
+commit eeb69b1c0940e1110ee74b6327d91aca7051e879
+Author: Larry Smith Jr <mrlesmithjr@gmail.com>
+Date:   Thu Sep 3 23:58:00 2020 -0400
+
+    Fixing version specifics
+    
+    Too many facts to weed through
+
+commit f13db10d7c4203b8a8017b7193e6d7d2f213fb06
+Author: Larry Smith Jr <mrlesmithjr@gmail.com>
+Date:   Thu Sep 3 23:20:49 2020 -0400
+
+    Fixed CentOS fact for package to install
+    
+    Previously the conditional was not correct and selected two versions
+
+commit 0a6d18dab599602a6c9d4cc982cb8c74d140240b
+Author: Larry Smith Jr <mrlesmithjr@gmail.com>
+Date:   Thu Sep 3 23:01:31 2020 -0400
+
+    Updated Molecule tests
+    
+    To properly test Fedora we needed to update to latest Cookiecutter template
+
+commit 30ac011f7e22542f12b364732956104558665dc9
+Author: Larry Smith Jr <mrlesmithjr@gmail.com>
+Date:   Thu Sep 3 23:00:29 2020 -0400
+
+    Updated CI tests
+    
+    To properly test Fedora we needed to update to latest Cookiecutter template
+
+commit 0d075d98c67746ce157a9241c320e8052ac1684a
+Author: Larry Smith Jr <mrlesmithjr@gmail.com>
+Date:   Thu Sep 3 22:59:13 2020 -0400
+
+    Updated Python requirements
+    
+    To properly test Fedora we needed to update to latest Cookiecutter template
+
+commit 8e2ad769cd32e72fe5983e3927b38a934a67c15a
+Author: Larry Smith Jr <mrlesmithjr@gmail.com>
+Date:   Thu Sep 3 22:51:21 2020 -0400
+
+    Fixes Fedora 31/32 install
+    
+    Fixes #24
+
+commit db83c9479027f990ddb5b1b3a92377b8833fd287
+Author: Larry Smith Jr <mrlesmithjr@gmail.com>
+Date:   Wed May 13 13:49:19 2020 -0400
+
+    Added Docker version fact for RedHat when Docker is 18.x
+
+commit e43284d006f7b8fa2a8c6618862624423ae65830
+Author: Larry Smith Jr <mrlesmithjr@gmail.com>
+Date:   Wed May 13 13:48:58 2020 -0400
+
+    Added bridge-utils for RedHat
+
+commit 11099262c2ff88a17c1bda5a494350a4e49b6720
+Author: Larry Smith Jr <mrlesmithjr@gmail.com>
+Date:   Sun Apr 26 18:35:01 2020 -0400
+
+    Removed linux image extra package for Ubuntu
+    
+    This is failing and seems like it is no longer required for Ubuntu 16.04
+
 commit 05460a2d3a969aeb0fd4f499e194c0877f76fde3
 Author: Larry Smith Jr <mrlesmithjr@gmail.com>
 Date:   Sun Apr 26 17:43:43 2020 -0400
