@@ -1,3 +1,11 @@
+commit 4f713039d295bbba8c67d045f44dd4769b7298bb
+Author: Larry Smith Jr <mrlesmithjr@gmail.com>
+Date:   Fri Sep 4 00:24:49 2020 -0400
+
+    Disabled Debian8 and CentOS 8 testing
+    
+    Too many issues right now and will circle back
+
 commit 9fcefacaed2d33f755698788eeccab0aa3ef2459
 Author: Larry Smith Jr <mrlesmithjr@gmail.com>
 Date:   Fri Sep 4 00:15:04 2020 -0400
