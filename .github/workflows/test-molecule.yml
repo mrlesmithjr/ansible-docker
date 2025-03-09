@@ -49,3 +49,7 @@ jobs:
       - name: Test with molecule
         run: |
           molecule test --scenario-name ${{ matrix.molecule_distro }}
+        env:
+          # Fix `ERROR! Unexpected Exception, this is probably a bug: '/api/v3/plugin/ansible/content/published/collections/index/community/docker/versions/'`
+          # see https://github.com/ansible/awx/issues/14495#issuecomment-1752708302
+          ANSIBLE_CONFIG: ./molecule/ansible.old-galaxy.cfg
