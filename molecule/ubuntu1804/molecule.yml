@@ -1,4 +1,7 @@
 ---
+# skip role name check
+# see https://github.com/ansible/ansible-compat/issues/78
+role_name_check: 1
 dependency:
   name: galaxy
   enabled: false
