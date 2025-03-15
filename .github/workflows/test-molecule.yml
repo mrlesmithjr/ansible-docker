@@ -18,6 +18,7 @@ jobs:
         molecule_distro:
           - centos7
           # - centos8
+          - centos8
           # - debian8
           - debian9
           - debian10

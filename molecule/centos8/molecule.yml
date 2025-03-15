@@ -13,6 +13,7 @@ lint: |
 platforms:
   - name: centos8
     image: jrei/systemd-centos:8
+    pre_build_image: false
     privileged: true
     command: /usr/sbin/init
     # tmpfs:

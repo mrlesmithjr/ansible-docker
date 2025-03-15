@@ -1,0 +1,10 @@
+FROM jrei/systemd-centos:8
+
+# skip `Build an Ansible compatible image (new)` so we need install missing packages
+# see https://github.com/ansible-community/molecule-docker/blob/acb7d4ef0ea83d822f01adf26af543fa0817d5bd/src/molecule_docker/playbooks/create.yml#L65
+# see https://github.com/ansible-community/molecule-docker/blob/acb7d4ef0ea83d822f01adf26af543fa0817d5bd/src/molecule_docker/playbooks/Dockerfile.j2#L17
+RUN sed -i 's/mirror.centos.org/vault.centos.org/g' /etc/yum.repos.d/*.repo && \
+    sed -i 's/^#.*baseurl=http/baseurl=http/g' /etc/yum.repos.d/*.repo && \
+    sed -i 's/^mirrorlist=http/#mirrorlist=http/g' /etc/yum.repos.d/*.repo && \
+    yum makecache && \
+    yum install -y sudo epel-release
