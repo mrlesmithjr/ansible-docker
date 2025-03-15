@@ -5,6 +5,9 @@ on:
     branches:
     - '*'
   workflow_dispatch:
+defaults:
+  run:
+    working-directory: 'ansible-role-docker'
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -27,7 +30,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
         with:
-          submodules: recursive
+          path: 'ansible-role-docker'
       - name: Set up Python ${{ matrix.python-version }}
         uses: actions/setup-python@v2
         with:
