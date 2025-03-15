@@ -22,6 +22,7 @@ jobs:
           # - debian8
           - debian9
           - debian10
+          # `jrei/systemd-fedora:latest` rolling release image too new for this
           # - fedora
           - ubuntu1604
           - ubuntu1804
