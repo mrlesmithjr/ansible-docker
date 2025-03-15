@@ -8,10 +8,6 @@ Ansible role to install/configure Docker
 
 ![Molecule Test](https://github.com/mrlesmithjr/ansible-docker/workflows/Molecule%20Test/badge.svg)
 
-### Travis CI
-
-[![Build Status](https://travis-ci.org/mrlesmithjr/ansible-docker.svg?branch=master)](https://travis-ci.org/mrlesmithjr/ansible-docker)
-
 ## Requirements
 
 For any required Ansible roles, review:
