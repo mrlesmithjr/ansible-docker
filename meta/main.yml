@@ -9,18 +9,22 @@ galaxy_info:
   platforms:
     - name: EL
       versions:
-        - 7
+        - "7"
+        - "8"
     - name: Ubuntu
       versions:
-        - bionic
-        - precise
-        - trusty
+        # 16.04
         - xenial
-        - zesty
+        # 18.04
+        - bionic
+        # 20.04
+        - focal
     - name: Debian
       versions:
-        - jessie
+        # 9
         - stretch
+        # 10
+        - buster
 
   galaxy_tags:
     - cloud
