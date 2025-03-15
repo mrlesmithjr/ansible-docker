@@ -5,7 +5,9 @@ description = "Ansible role to install/configure Docker"
 authors = ["Larry Smith Jr. <mrlesmithjr@gmail.com>", "xiaoyao9184"]
 
 [tool.poetry.dependencies]
-python = "^3.7"
+# poetry use virtualenv and drop python < 3.7 support
+# see https://virtualenv.pypa.io/en/latest/changelog.html#v20-27-0-2024-10-17
+python = "^3.8"
 ansible = "^4.6.0"
 
 [tool.poetry.group.dev.dependencies]
