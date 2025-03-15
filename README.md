@@ -6,7 +6,7 @@ Ansible role to install/configure Docker
 
 ### GitHub Actions
 
-![Molecule Test](https://github.com/mrlesmithjr/ansible-docker/workflows/Molecule%20Test/badge.svg)
+[![Molecule Test](../../actions/workflows/test-molecule.yml/badge.svg)](../../actions/workflows/test-molecule.yml)
 
 ## Requirements
 
