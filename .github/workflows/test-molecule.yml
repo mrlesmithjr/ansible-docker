@@ -10,7 +10,6 @@ defaults:
     working-directory: 'ansible-role-docker'
 jobs:
   build:
-    runs-on: ubuntu-20.04
     strategy:
       fail-fast: false
       max-parallel: 4
@@ -28,6 +27,20 @@ jobs:
           - ubuntu1804
           - ubuntu2004
         python-version: [3.8]
+        runs-on:
+          - ubuntu-20.04
+          - ubuntu-24.04
+        exclude:
+          - molecule_distro: ubuntu1604
+            python-version: 3.8
+            runs-on: ubuntu-24.04
+        include:
+          - runs-on: ubuntu-20.04
+            cgroup: '@cgroupv1'
+          - runs-on: ubuntu-24.04
+            cgroup: '@cgroupv2'
+
+    runs-on: ${{ matrix.runs-on }}
 
     steps:
       - uses: actions/checkout@v2
@@ -53,7 +66,7 @@ jobs:
           SKIP=no-commit-to-branch pre-commit run --all-files
       - name: Test with molecule
         run: |
-          molecule test --scenario-name ${{ matrix.molecule_distro }}
+          molecule test --scenario-name ${{ matrix.molecule_distro }}${{ matrix.cgroup }}
         env:
           # Fix `ERROR! Unexpected Exception, this is probably a bug: '/api/v3/plugin/ansible/content/published/collections/index/community/docker/versions/'`
           # see https://github.com/ansible/awx/issues/14495#issuecomment-1752708302
