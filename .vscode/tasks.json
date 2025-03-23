@@ -10,7 +10,7 @@
             "command": "molecule list"
         },
         {
-            "label": "molecule: test all",
+            "label": "molecule: test all@cgroupv1",
             "type": "shell",
             "options": {
                 "cwd": "${workspaceFolder}",
@@ -19,13 +19,14 @@
                 }
             },
             "command": [
-                "molecule test --scenario-name ubuntu2004",
-                "&& molecule test --scenario-name ubuntu1804",
-                "&& molecule test --scenario-name ubuntu1604",
-                "&& molecule test --scenario-name debian10",
-                "&& molecule test --scenario-name debian9",
-                "&& molecule test --scenario-name centos8",
-                "&& molecule test --scenario-name centos7"
+                "[ -d /sys/fs/cgroup/memory ] || { echo 'not cgroupv1 host'; exit 1; }",
+                "&& molecule test --scenario-name ubuntu2004@cgroupv1",
+                "&& molecule test --scenario-name ubuntu1804@cgroupv1",
+                "&& molecule test --scenario-name ubuntu1604@cgroupv1",
+                "&& molecule test --scenario-name debian10@cgroupv1",
+                "&& molecule test --scenario-name debian9@cgroupv1",
+                "&& molecule test --scenario-name centos8@cgroupv1",
+                "&& molecule test --scenario-name centos7@cgroupv1"
             ]
         }
     ]
