@@ -71,7 +71,7 @@ poetry run pip install -r requirements.txt -r requirements-dev.txt
 
 after add some new dependencies
 
-```
+```bash
 poetry update molecule
 ```
 
@@ -94,11 +94,20 @@ poetry run ansible-lint .
 
 ```bash
 export ANSIBLE_CONFIG=$(pwd)/molecule/ansible.old-galaxy.cfg
-poetry run molecule --debug -vvv test --scenario-name centos7
-poetry run molecule --debug -vvv test --scenario-name centos8
-poetry run molecule --debug -vvv test --scenario-name debian9
-poetry run molecule --debug -vvv test --scenario-name debian10
-poetry run molecule --debug -vvv test --scenario-name ubuntu1604
-poetry run molecule --debug -vvv test --scenario-name ubuntu1804
-poetry run molecule --debug -vvv test --scenario-name ubuntu2004
+# if on cgroupv1 host
+poetry run molecule --debug -vvv test --scenario-name centos7@cgroupv1
+poetry run molecule --debug -vvv test --scenario-name centos8@cgroupv1
+poetry run molecule --debug -vvv test --scenario-name debian9@cgroupv1
+poetry run molecule --debug -vvv test --scenario-name debian10@cgroupv1
+poetry run molecule --debug -vvv test --scenario-name ubuntu1604@cgroupv1
+poetry run molecule --debug -vvv test --scenario-name ubuntu1804@cgroupv1
+poetry run molecule --debug -vvv test --scenario-name ubuntu2004@cgroupv1
+# if on cgroupv2 host
+poetry run molecule --debug -vvv test --scenario-name centos7@cgroupv2
+poetry run molecule --debug -vvv test --scenario-name centos8@cgroupv2
+poetry run molecule --debug -vvv test --scenario-name debian9@cgroupv2
+poetry run molecule --debug -vvv test --scenario-name debian10@cgroupv2
+# poetry run molecule --debug -vvv test --scenario-name ubuntu1604@cgroupv2
+poetry run molecule --debug -vvv test --scenario-name ubuntu1804@cgroupv2
+poetry run molecule --debug -vvv test --scenario-name ubuntu2004@cgroupv2
 ```
