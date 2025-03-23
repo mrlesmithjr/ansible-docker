@@ -4,7 +4,8 @@
 role_name_check: 1
 dependency:
   name: galaxy
-  enabled: false
+  # need update `community.docker` support `cgroupns_mode` by molecule-plugins[docker]
+  enabled: true
   options:
     role-file: requirements.yml
 driver:
