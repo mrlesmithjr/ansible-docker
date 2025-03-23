@@ -1,6 +1,7 @@
 # Environments
 .env
 .venv
+.tox
 env/
 venv/
 ENV/
