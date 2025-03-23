@@ -8,6 +8,8 @@ Ansible role to install/configure Docker
 
 [![Molecule Test](../../actions/workflows/test-molecule.yml/badge.svg)](../../actions/workflows/test-molecule.yml)
 
+[![Tox Test](../../actions/workflows/test-tox.yml/badge.svg)](../../actions/workflows/test-tox.yml)
+
 ## Requirements
 
 For any required Ansible roles, review:
