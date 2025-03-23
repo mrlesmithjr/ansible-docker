@@ -44,6 +44,52 @@
                 "ANSIBLE_CONFIG": "${workspaceFolder}/molecule/ansible.old-galaxy.cfg"
             },
             "justMyCode": false
+        },
+        {
+            "name": "tox-ansible1: list tox.ini",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "tox",
+            "args": [
+                // "-c", "tox.ini",
+                "-a",
+                "-v"
+            ],
+            "env": {
+                // not support match with *
+                // "TOX_ANSIBLE_SCENARIO": "ansible5-centos7@cgroupv1"
+            },
+            "justMyCode": false
+        },
+        {
+            "name": "tox-ansible1: test tox.ini/ansible5-centos7@cgroupv1",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "tox",
+            "args": [
+                // "-c", "tox.ini",
+                "-e", "ansible5-centos7@cgroupv1",
+                "-v"
+            ],
+            "env": {
+                "ANSIBLE_CONFIG": "${workspaceFolder}/molecule/ansible.old-galaxy.cfg"
+            },
+            "justMyCode": false
+        },
+        {
+            "name": "tox-ansible1: test tox.ini/ansible5-ubuntu2004@cgroupv2",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "tox",
+            "args": [
+                // "-c", "tox.ini",
+                "-e", "ansible5-ubuntu2004@cgroupv2",
+                "-v"
+            ],
+            "env": {
+                "ANSIBLE_CONFIG": "${workspaceFolder}/molecule/ansible.old-galaxy.cfg"
+            },
+            "justMyCode": false
         }
     ]
 }
