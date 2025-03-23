@@ -9,21 +9,39 @@ defaults:
   run:
     working-directory: 'docker'
 jobs:
-  build:
+  matrix:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          path: 'docker'
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install tox-ansible, includes tox
+        run: python3 -m pip install 'tox-ansible<2.0.0'
+
+      - name: Generate matrix
+        id: generate-matrix
+        run: |
+          echo "envlist=$(bash tox-ansible.sh --stdout | jq -c)" >> "$GITHUB_OUTPUT"
+
+    outputs:
+      envlist: ${{ steps.generate-matrix.outputs.envlist }}
+
+  test:
+    needs: matrix
     strategy:
       fail-fast: false
-      max-parallel: 4
       matrix:
-        runs-on:
-          - ubuntu-20.04
-          - ubuntu-24.04
-        include:
-          - runs-on: ubuntu-20.04
-            cgroup: '@cgroupv1'
-          - runs-on: ubuntu-24.04
-            cgroup: '@cgroupv2'
+        entry: ${{ fromJson(needs.matrix.outputs.envlist) }}
 
-    runs-on: ${{ matrix.runs-on }}
+    name: ${{ matrix.entry.name }}
+    runs-on: ${{ matrix.entry.run_on }}
 
     steps:
       - name: Checkout
@@ -31,27 +49,15 @@ jobs:
         with:
           path: 'docker'
 
-      - name: Install python version
-        uses: gabrielfalcao/pyenv-action@main
+      - name: Set up Python
+        uses: actions/setup-python@v2
         with:
-          default: 3.8
-          versions: 3.5.10, 3.6.15, 3.7.17, 3.8.20, 3.9.21, 3.10.16, 3.11.11
+          python-version: ${{ matrix.entry.python_version }}
 
-      - name: Global python version
+      - name: Install dependencies
         run: |
-          pyenv global 3.5 3.6 3.7 3.8 3.9 3.10 3.11
+          python3 -m pip install 'tox-ansible<2.0.0'
 
-      - name: Install tox
+      - name: Test tox
         run: |
-          pip install 'tox>3.0.0,<4.0.0'
-          pip install 'tox-ansible>1.0.0,<2.0.0'
-
-      - name: Test with tox
-        run: |
-          tox -c tox.ini -l | grep ${{ matrix.cgroup }} | awk '{print "tox -c tox.ini -e "$1}' > tox-ansible1-${{ matrix.cgroup }}.sh
-          cat tox-ansible1-${{ matrix.cgroup }}.sh
-          bash tox-ansible1-${{ matrix.cgroup }}.sh
-        env:
-          # Fix `ERROR! Unexpected Exception, this is probably a bug: '/api/v3/plugin/ansible/content/published/collections/index/community/docker/versions/'`
-          # see https://github.com/ansible/awx/issues/14495#issuecomment-1752708302
-          ANSIBLE_CONFIG: ./molecule/ansible.old-galaxy.cfg
+          tox -c ${{ matrix.entry.conf }} -e ${{ matrix.entry.environment }} -v
