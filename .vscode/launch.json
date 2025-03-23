@@ -14,7 +14,7 @@
             "justMyCode": false
         },
         {
-            "name": "molecule: test ubuntu2004",
+            "name": "molecule: test ubuntu2004@cgroupv1",
             "type": "debugpy",
             "request": "launch",
             "module": "molecule",
@@ -22,7 +22,7 @@
                 // molecule --debug -vvv test --scenario-name ubuntu2004
                 "--debug", "-vvv",
                 "test",
-                "--scenario-name", "ubuntu2004"
+                "--scenario-name", "ubuntu2004@cgroupv1"
             ],
             "env": {
                 "ANSIBLE_CONFIG": "${workspaceFolder}/molecule/ansible.old-galaxy.cfg"
