@@ -1,0 +1,11 @@
+FROM jrei/systemd-debian:9
+
+# skip `Build an Ansible compatible image (new)` so we need install missing packages
+# see https://github.com/ansible-community/molecule-docker/blob/acb7d4ef0ea83d822f01adf26af543fa0817d5bd/src/molecule_docker/playbooks/create.yml#L65
+# see https://github.com/ansible-community/molecule-docker/blob/acb7d4ef0ea83d822f01adf26af543fa0817d5bd/src/molecule_docker/playbooks/Dockerfile.j2#L17
+RUN sed -i 's|http://deb.debian.org|http://archive.debian.org|g' /etc/apt/sources.list && \
+    sed -i 's|http://security.debian.org|http://archive.debian.org|g' /etc/apt/sources.list && \
+    sed -i '/stretch-updates/d' /etc/apt/sources.list && \
+    apt-get update && \
+    apt-get install -y python3 sudo bash ca-certificates iproute2 python3-apt aptitude && \
+    apt-get clean && rm -rf /var/lib/apt/lists/*
