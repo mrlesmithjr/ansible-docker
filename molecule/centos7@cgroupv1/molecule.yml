@@ -4,7 +4,8 @@
 role_name_check: 1
 dependency:
   name: galaxy
-  enabled: false
+  # need update `community.docker` support `command_handling`
+  enabled: true
   options:
     role-file: requirements.yml
 driver:
