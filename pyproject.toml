@@ -27,6 +27,7 @@ mkdocs-material = "^7.3.0"
 # lock version
 # see https://github.com/docker/docker-py/issues/3256
 requests = "<=2.32.0"
+pre-commit = "<=3.5.0"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
