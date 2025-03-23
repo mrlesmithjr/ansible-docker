@@ -111,3 +111,16 @@ poetry run molecule --debug -vvv test --scenario-name debian10@cgroupv2
 poetry run molecule --debug -vvv test --scenario-name ubuntu1804@cgroupv2
 poetry run molecule --debug -vvv test --scenario-name ubuntu2004@cgroupv2
 ```
+
+### Test tox environment
+
+```bash
+export ANSIBLE_CONFIG=$(pwd)/molecule/ansible.old-galaxy.cfg
+# if on cgroupv1 host
+# output first then run tox test
+bash tox-ansible.sh --cgroup=v1 --stdout
+bash tox-ansible.sh --cgroup=v1
+# if on cgroupv2 host
+bash tox-ansible.sh --cgroup=v2 --stdout
+bash tox-ansible.sh --cgroup=v2
+```
