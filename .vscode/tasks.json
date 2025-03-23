@@ -28,6 +28,25 @@
                 "&& molecule test --scenario-name centos8@cgroupv1",
                 "&& molecule test --scenario-name centos7@cgroupv1"
             ]
+        },
+        {
+            "label": "molecule: test all@cgroupv2",
+            "type": "shell",
+            "options": {
+                "cwd": "${workspaceFolder}",
+                "env": {
+                    "ANSIBLE_CONFIG": "${workspaceFolder}/molecule/ansible.old-galaxy.cfg"
+                }
+            },
+            "command": [
+                "[ -f /sys/fs/cgroup/cgroup.controllers ] || { echo 'not cgroupv2 host'; exit 1; }",
+                "&& molecule test --scenario-name ubuntu2004@cgroupv2",
+                "&& molecule test --scenario-name ubuntu1804@cgroupv2",
+                "&& molecule test --scenario-name debian10@cgroupv2",
+                "&& molecule test --scenario-name debian9@cgroupv2",
+                "&& molecule test --scenario-name centos8@cgroupv2",
+                "&& molecule test --scenario-name centos7@cgroupv2"
+            ]
         }
     ]
 }
