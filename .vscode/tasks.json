@@ -69,9 +69,7 @@
                 "[ -d /sys/fs/cgroup/memory ] || { echo 'not cgroupv1 host'; exit 1; }",
                 // CANT filter by tox
                 // "&& tox -c tox.ini",
-                "&& tox -c tox.ini -l | grep cgroupv1 | awk '{print \"tox -c tox.ini -e \"$1}' > tox-ansible1-cgroupv1.sh",
-                "&& bash tox-ansible1-cgroupv1.sh",
-                "&& rm -f tox-ansible1-cgroupv2.sh"
+                "&& bash tox-ansible.sh --cgroup=v1"
             ]
         },
         {
@@ -87,9 +85,7 @@
                 "[ -f /sys/fs/cgroup/cgroup.controllers ] || { echo 'not cgroupv2 host'; exit 1; }",
                 // CANT filter by tox
                 // "&& tox -c tox.ini",
-                "&& tox -c tox.ini -l | grep cgroupv2 | awk '{print \"tox -c tox.ini -e \"$1}' > tox-ansible1-cgroupv2.sh",
-                "&& bash tox-ansible1-cgroupv2.sh",
-                "&& rm -f tox-ansible1-cgroupv2.sh"
+                "&& bash tox-ansible.sh --cgroup=v2"
             ]
         }
     ]
