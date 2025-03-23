@@ -7,7 +7,7 @@ on:
   workflow_dispatch:
 defaults:
   run:
-    working-directory: 'ansible-role-docker'
+    working-directory: 'docker'
 jobs:
   build:
     strategy:
@@ -45,7 +45,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
         with:
-          path: 'ansible-role-docker'
+          path: 'docker'
       - name: Set up Python ${{ matrix.python-version }}
         uses: actions/setup-python@v2
         with:

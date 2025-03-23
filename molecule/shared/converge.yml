@@ -5,6 +5,6 @@
     docker_set_grub_memory_limit: false
     docker_version: latest
   tasks:
-    - name: Include ansible-role-docker
+    - name: Include docker
       include_role:
-        name: ansible-role-docker
+        name: docker
