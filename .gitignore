@@ -9,3 +9,5 @@ env.bak/
 venv.bak/
 
 poetry.lock
+
+/**/__pycache__
