@@ -41,6 +41,11 @@ for environment__config in "${environment__configs[@]}"; do
     IFS='-' read -r factor py ansible <<< "$environment"
     python_version=$(echo "$py" | awk -F 'py' '{print $2}')
 
+    skip=$(grep "skip.py.$python_version.ansible.${ansible}" "$conf")
+    if [[ -n "$skip" ]]; then
+        continue
+    fi
+
     cgroups=()
     if [[ ("$INCLUDE_CGROUP" == "auto" || "$INCLUDE_CGROUP" == "v1") && -z $(grep "skip.ansible.${ansible}.cgroupv1" "$conf") ]]; then
         cgroups+=("cgroupv1")
