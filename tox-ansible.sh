@@ -36,13 +36,11 @@ json_array=()
 for environment in "${enable_environments[@]}"; do
     IFS='-' read -r factor py ansible <<< "$environment"
     python_version=$(echo "$py" | awk -F 'py' '{print $2}')
+
     cgroups=()
-    if [[ "$INCLUDE_CGROUP" == "auto" ]]; then
+    if [[ ("$INCLUDE_CGROUP" == "auto" || "$INCLUDE_CGROUP" == "v1") && -z $(grep "skip.ansible.${ansible}.cgroupv1" tox-ansible.ini) ]]; then
         cgroups+=("cgroupv1")
-        cgroups+=("cgroupv2")
-    elif [[ "$INCLUDE_CGROUP" == "v1" ]]; then
-        cgroups+=("cgroupv1")
-    elif [[ "$INCLUDE_CGROUP" == "v2" ]]; then
+    elif [[ ("$INCLUDE_CGROUP" == "auto" || "$INCLUDE_CGROUP" == "v2") && -z $(grep "skip.ansible.${ansible}.cgroupv2" tox-ansible.ini) ]]; then
         cgroups+=("cgroupv2")
     fi
 
