@@ -63,4 +63,8 @@ jobs:
 
       - name: Test tox
         run: |
-          tox --ansible -c ${{ matrix.entry.conf }} -e ${{ matrix.entry.environment }} -v
+          if [[ "${{ matrix.entry.conf }}" == "tox-ansible.ini" ]]; then
+              tox --ansible -c ${{ matrix.entry.conf }} -e ${{ matrix.entry.environment }} -v
+          else
+              tox -c ${{ matrix.entry.conf }} -e ${{ matrix.entry.environment }} -v
+          fi
