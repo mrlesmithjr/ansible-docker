@@ -3,6 +3,7 @@ name = "ansible-docker"
 version = "0.2.1"
 description = "Ansible role to install/configure Docker"
 authors = ["Larry Smith Jr. <mrlesmithjr@gmail.com>", "xiaoyao9184"]
+package-mode = false
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
