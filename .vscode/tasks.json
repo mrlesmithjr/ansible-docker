@@ -83,6 +83,36 @@
                 "[ -f /sys/fs/cgroup/cgroup.controllers ] || { echo 'not cgroupv2 host'; exit 1; }",
                 "&& tox --ansible -c tox-ansible.ini"
             ]
+        },
+        {
+            "label": "tox4: list",
+            "type": "shell",
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "command": "tox -c tox.ini -a"
+        },
+        {
+            "label": "tox4: test all@cgroupv1",
+            "type": "shell",
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "command": [
+                "[ -d /sys/fs/cgroup/memory ] || { echo 'not cgroupv1 host'; exit 1; }",
+                "&& tox -c tox.ini"
+            ]
+        },
+        {
+            "label": "tox4: test all@cgroupv2",
+            "type": "shell",
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "command": [
+                "[ -f /sys/fs/cgroup/cgroup.controllers ] || { echo 'not cgroupv2 host'; exit 1; }",
+                "&& tox -c tox.ini"
+            ]
         }
     ]
 }
