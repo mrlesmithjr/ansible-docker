@@ -25,22 +25,26 @@ for arg in "$@"; do
     esac
 done
 
-enable_environments=()
+environment__configs=()
 
 while IFS= read -r line; do
-    enable_environments+=("$line")
+    environment__configs+=("$line tox-ansible.ini")
 done < <(tox --ansible -c tox-ansible.ini -l 2>/dev/null)
+while IFS= read -r line; do
+    environment__configs+=("$line tox.ini")
+done < <(tox -c tox.ini -l 2>/dev/null)
 
 json_array=()
 
-for environment in "${enable_environments[@]}"; do
+for environment__config in "${environment__configs[@]}"; do
+    IFS=' ' read -r environment conf <<< "$environment__config"
     IFS='-' read -r factor py ansible <<< "$environment"
     python_version=$(echo "$py" | awk -F 'py' '{print $2}')
 
     cgroups=()
-    if [[ ("$INCLUDE_CGROUP" == "auto" || "$INCLUDE_CGROUP" == "v1") && -z $(grep "skip.ansible.${ansible}.cgroupv1" tox-ansible.ini) ]]; then
+    if [[ ("$INCLUDE_CGROUP" == "auto" || "$INCLUDE_CGROUP" == "v1") && -z $(grep "skip.ansible.${ansible}.cgroupv1" "$conf") ]]; then
         cgroups+=("cgroupv1")
-    elif [[ ("$INCLUDE_CGROUP" == "auto" || "$INCLUDE_CGROUP" == "v2") && -z $(grep "skip.ansible.${ansible}.cgroupv2" tox-ansible.ini) ]]; then
+    elif [[ ("$INCLUDE_CGROUP" == "auto" || "$INCLUDE_CGROUP" == "v2") && -z $(grep "skip.ansible.${ansible}.cgroupv2" "$conf") ]]; then
         cgroups+=("cgroupv2")
     fi
 
@@ -50,7 +54,7 @@ for environment in "${enable_environments[@]}"; do
         else
             run_on="ubuntu-22.04"
         fi
-        json_obj="{\"name\": \"ansible$ansible(py$python_version)@$run_on\", \"cgroup\": \"$cgroup\", \"run_on\": \"$run_on\", \"python_version\": \"$python_version\", \"conf\": \"tox-ansible.ini\", \"environment\": \"$environment\", \"factors\": [\"python$python_version\", \"ansible$ansible\"]}"
+        json_obj="{\"name\": \"ansible$ansible(py$python_version)$factor@$run_on\", \"cgroup\": \"$cgroup\", \"run_on\": \"$run_on\", \"python_version\": \"$python_version\", \"conf\": \"$conf\", \"environment\": \"$environment\", \"factors\": [\"python$python_version\", \"ansible$ansible\"]}"
         json_array+=("$json_obj")
     done
 done
@@ -63,6 +67,10 @@ else
         conf=$(echo "$json_obj" | jq -r '.conf')
         env=$(echo "$json_obj" | jq -r '.environment')
         cgroup=$(echo "$json_obj" | jq -r '.cgroup')
-        MATCH_MOLECULE_CGROUP=$cgroup tox --ansible -c "$conf" -e "$env" -v
+        if [[ "$conf" == "tox-ansible.ini" ]]; then
+            MATCH_MOLECULE_CGROUP=$cgroup tox --ansible -c "$conf" -e "$env" -v
+        else
+            tox -c "$conf" -e "$env" -v
+        fi
     done
 fi
