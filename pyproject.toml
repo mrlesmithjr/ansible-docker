@@ -109,7 +109,7 @@ ansible211 = [
     "ansible-core>=2.11.0,<2.12.0"
 ]
 ansible210 = [
-    "molecule[docker]",
+    "molecule[docker]<5.0.0",
     "paramiko",
     "flake8",
     # BUG in 2.10.17
