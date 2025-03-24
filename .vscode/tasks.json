@@ -49,43 +49,39 @@
             ]
         },
         {
-            "label": "tox-ansible1: list",
+            "label": "tox-ansible2: list",
             "type": "shell",
             "options": {
                 "cwd": "${workspaceFolder}"
             },
-            "command": "tox -c tox.ini -a -v"
+            "command": "tox --ansible -c tox-ansible.ini -a"
         },
         {
-            "label": "tox-ansible1: test all@cgroupv1",
+            "label": "tox-ansible2: test all@cgroupv1",
             "type": "shell",
             "options": {
                 "cwd": "${workspaceFolder}",
                 "env": {
-                    "ANSIBLE_CONFIG": "${workspaceFolder}/molecule/ansible.old-galaxy.cfg"
+                    "MATCH_MOLECULE_CGROUP": "cgroupv1"
                 }
             },
             "command": [
                 "[ -d /sys/fs/cgroup/memory ] || { echo 'not cgroupv1 host'; exit 1; }",
-                // CANT filter by tox
-                // "&& tox -c tox.ini",
-                "&& bash tox-ansible.sh --cgroup=v1"
+                "&& tox --ansible -c tox-ansible.ini"
             ]
         },
         {
-            "label": "tox-ansible1: test all@cgroupv2",
+            "label": "tox-ansible2: test all@cgroupv2",
             "type": "shell",
             "options": {
                 "cwd": "${workspaceFolder}",
                 "env": {
-                    "ANSIBLE_CONFIG": "${workspaceFolder}/molecule/ansible.old-galaxy.cfg"
+                    "MATCH_MOLECULE_CGROUP": "cgroupv2"
                 }
             },
             "command": [
                 "[ -f /sys/fs/cgroup/cgroup.controllers ] || { echo 'not cgroupv2 host'; exit 1; }",
-                // CANT filter by tox
-                // "&& tox -c tox.ini",
-                "&& bash tox-ansible.sh --cgroup=v2"
+                "&& tox --ansible -c tox-ansible.ini"
             ]
         }
     ]
