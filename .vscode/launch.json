@@ -89,6 +89,48 @@
                 // "MATCH_MOLECULE_CGROUP": "cgroupv2"
             },
             "justMyCode": false
+        },
+        {
+            "name": "tox4: list tox.ini",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "tox",
+            "args": [
+                "-c", "tox.ini",
+                "-a",
+                "-v"
+            ],
+            "justMyCode": false
+        },
+        {
+            "name": "tox4: test tox.ini/molecule-py3.8-2.9 cgroupv1",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "tox",
+            "args": [
+                "-c", "tox.ini",
+                "-e", "molecule-py3.8-2.9",
+                "-v"
+            ],
+            "env": {
+                // "MATCH_MOLECULE_CGROUP": "cgroupv1"
+            },
+            "justMyCode": false
+        },
+        {
+            "name": "tox4: test tox.ini/molecule-py3.13-2.18 cgroupv2",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "tox",
+            "args": [
+                "-c", "tox.ini",
+                "-e", "molecule-py3.13-2.18",
+                "-v"
+            ],
+            "env": {
+                // "MATCH_MOLECULE_CGROUP": "cgroupv2"
+            },
+            "justMyCode": false
         }
     ]
 }
