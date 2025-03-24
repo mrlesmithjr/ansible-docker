@@ -66,7 +66,7 @@ poetry env use $(pyenv which python3.8)
 # auto update dependencies
 poetry install
 # OR restore completely dependencies
-poetry run pip install -r requirements.txt -r requirements-dev.txt
+poetry run pip install -r requirements-dev.txt
 ```
 
 ### Export pyproject.toml to requirements
@@ -80,7 +80,6 @@ poetry update molecule
 
 ```bash
 poetry lock
-poetry export --without-hashes --output requirements.txt
 poetry export --without-hashes --only=dev --output requirements-dev.txt
 ```
 
