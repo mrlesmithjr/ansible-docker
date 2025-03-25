@@ -23,9 +23,19 @@ def test_integration(molecule_scenario: MoleculeScenario) -> None:
         )
         return
 
+    target, cgroup = molecule_scenario.name.split("@")
+
+    include_molecule_target_env = os.getenv("MATCH_MOLECULE_TARGETS", "")
+    include_molecule_target_list = include_molecule_target_env.split(",")
+    if include_molecule_target_env and target not in include_molecule_target_list:
+        pytest.skip(
+            "Skipping scenario target not in whitelist: {}".format(
+                molecule_scenario.name
+            )
+        )
+        return
     skip_molecule_target_env = os.environ.get("SKIP_MOLECULE_TARGET", "")
     skip_molecule_target_list = skip_molecule_target_env.split(",")
-    target, cgroup = molecule_scenario.name.split("@")
     if target in skip_molecule_target_list:
         pytest.skip(
             "Skipping scenario target not support: {}".format(molecule_scenario.name)

@@ -20,6 +20,13 @@ done < <(molecule list 2>/dev/null | awk -F '│' '{print $4}' | sed 's/^ *//;s/
 for scenario in "${scenarios[@]}"; do
     IFS='@' read -r target cgroup <<< "$scenario"
 
+    MATCH_MOLECULE_TARGETS=${MATCH_MOLECULE_TARGETS:-""}
+    IFS=',' read -r -a include_molecule_target_list <<< "$MATCH_MOLECULE_TARGETS"
+    if [[ -n "$MATCH_MOLECULE_TARGETS" && ! " ${include_molecule_target_list[@]} " =~ " $target " ]]; then
+        echo "Skipping scenario target not in whitelist: $scenario"
+        continue
+    fi
+
     SKIP_MOLECULE_TARGET=${SKIP_MOLECULE_TARGET:-""}
     IFS=',' read -r -a skip_molecule_target_list <<< "$SKIP_MOLECULE_TARGET"
     if [[ " ${skip_molecule_target_list[@]} " =~ " $target " ]]; then

@@ -19,7 +19,7 @@ for arg in "$@"; do
             INCLUDE_CGROUP=auto
             ;;
         --target=*)
-            WHITELIST_TARGETS="${arg#*=}" 
+            WHITELIST_TARGETS="${arg#*=}"
             ;;
         *)
             echo "unknow: $arg"
