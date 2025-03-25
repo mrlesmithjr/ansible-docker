@@ -75,7 +75,7 @@ else
         if [[ "$conf" == "tox-ansible.ini" ]]; then
             MATCH_MOLECULE_CGROUP=$cgroup tox --ansible -c "$conf" -e "$env" -v
         else
-            tox -c "$conf" -e "$env" -v
+            MATCH_MOLECULE_CGROUP=$cgroup tox -c "$conf" -e "$env" -v
         fi
     done
 fi
