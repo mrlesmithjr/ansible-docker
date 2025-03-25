@@ -88,6 +88,7 @@ jobs:
       - name: Test with molecule
         run: |
           pip-install-dependency-groups requests ${{ matrix.group-ansible }}
+          python tox-ansible-v2-faked-galaxy-role-installer.py
           molecule test --scenario-name ${{ matrix.molecule_distro }}${{ matrix.cgroup }}
         env:
           ANSIBLE_CONFIG: ${{ matrix.ansible-config }}
