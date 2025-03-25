@@ -230,3 +230,44 @@ $(poetry env activate)
     # run tox test
     bash tox-ansible.sh --cgroup=v2
     ```
+
+### New target test
+
+activate poetry environment before tox test
+
+```bash
+$(poetry env activate)
+```
+
+- add new molecule scenario in ./molecule path, named format like `<target>@<cgroup>`
+- test target in each tox environment
+
+ - batch test in each python and ansible version on cgroupv1 host
+
+    ```bash
+    # <target> name like `debian11` `ubuntu2204,ubuntu2404`
+    # output first then run tox test
+    bash tox-ansible.sh --target=<target> --cgroup=v1 --stdout
+    # run tox test
+    bash tox-ansible.sh --target=<target> --cgroup=v1
+    ```
+
+- batch test in each python and ansible version on cgroupv2 host
+
+    ```bash
+    # <target> name like `debian11` `ubuntu2204,ubuntu2404`
+    # output first then run tox test
+    bash tox-ansible.sh --target=<target> --cgroup=v2 --stdout
+    # run tox test
+    bash tox-ansible.sh --target=<target> --cgroup=v2
+    ```
+
+- batch test in each python and ansible version auto detect host cgroup version
+
+    ```bash
+    # <target> name like `debian11` `ubuntu2204,ubuntu2404`
+    # output first then run tox test
+    bash tox-ansible.sh --target=<target> --stdout
+    # run tox test
+    bash tox-ansible.sh --target=<target>
+    ```
