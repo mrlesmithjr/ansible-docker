@@ -113,6 +113,16 @@ poetry run molecule --debug -vvv test --scenario-name ubuntu1804@cgroupv2
 poetry run molecule --debug -vvv test --scenario-name ubuntu2004@cgroupv2
 ```
 
+```bash
+# need old ansible-galaxy
+export ANSIBLE_CONFIG=$(pwd)/molecule/ansible.old-galaxy.cfg
+# no skip any `{target}@*` scenario
+export SKIP_MOLECULE_TARGET=
+# filter only `{target}@cgroupv1` scenario
+export MATCH_MOLECULE_CGROUP=cgroupv1
+bash molecule-test-cgroup-filter.sh
+```
+
 ### Test tox environment
 
 ```bash
