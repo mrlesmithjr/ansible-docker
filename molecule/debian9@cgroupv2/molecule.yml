@@ -10,6 +10,8 @@ dependency:
     role-file: requirements.yml
 driver:
   name: docker
+# remove in molecule v5
+# see https://github.com/ansible/molecule/discussions/3914
 lint: |
   yamllint .
   ansible-lint
