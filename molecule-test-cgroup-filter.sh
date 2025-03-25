@@ -13,10 +13,11 @@ ansible=$(ansible --version | grep -oP 'ansible (\[core )?\K[0-9]+\.[0-9]+')
 
 scenarios=()
 while IFS= read -r line; do
-    if [[ -n "$line" && "$line" != *"Scenario Name"* ]]; then
-        scenarios+=("$line")
+    scenario=$(echo "$line" | awk '{print $4}' | sed 's/^ *//;s/ *$//')
+    if [[ -n "$scenario" ]]; then
+        scenarios+=("$scenario")
     fi
-done < <(molecule list 2>/dev/null | awk -F '│' '{print $4}' | sed 's/^ *//;s/ *$//' | tail -n +2)
+done < <(molecule list -f plain 2>/dev/null)
 
 output=""
 time_start=$SECONDS
