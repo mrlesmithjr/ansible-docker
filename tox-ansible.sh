@@ -79,7 +79,7 @@ else
         cgroup=$(echo "$json_obj" | jq -r '.env.MATCH_MOLECULE_CGROUP')
         targets=$(echo "$json_obj" | jq -r '.env.MATCH_MOLECULE_TARGETS')
         if [[ "$conf" == "tox-ansible.ini" ]]; then
-            MATCH_MOLECULE_CGROUP=$cgroup MATCH_MOLECULE_TARGETS=$targets tox --ansible -c "$conf" -e "$env" -v
+            MATCH_MOLECULE_CGROUP=$cgroup MATCH_MOLECULE_TARGETS=$targets tox --ansible -c "$conf" -e "$env" -v -- -r A
         else
             MATCH_MOLECULE_CGROUP=$cgroup MATCH_MOLECULE_TARGETS=$targets tox -c "$conf" -e "$env" -v
         fi
