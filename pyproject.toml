@@ -1,3 +1,8 @@
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
 [tool.poetry]
 name = "ansible-docker"
 version = "0.2.1"
@@ -5,35 +10,20 @@ description = "Ansible role to install/configure Docker"
 authors = ["Larry Smith Jr. <mrlesmithjr@gmail.com>", "xiaoyao9184"]
 package-mode = false
 
-[build-system]
-requires = ["poetry-core>=1.0.0"]
-build-backend = "poetry.core.masonry.api"
-
 [tool.poetry.dependencies]
 python = "^3.8"
 
-[tool.poetry.group.dev.dependencies]
-# poetry use virtualenv and drop python < 3.7 support
-# see https://virtualenv.pypa.io/en/latest/changelog.html#v20-27-0-2024-10-17
-ansible = "^4.6.0"
-autopep8 = "^1.5.6"
-flake8 = "^3.9.0"
-pycodestyle = "^2.7.0"
-pylint = "^2.7.3"
-tox = "^4.0.0"
-tox-ansible = "^2.0.0"
-black = "^24.8.0"
-ansible-lint = "^5.1.3"
-mkdocs = "^1.1.2"
-# molecule > 4.0.0 support skip role-name check
-# see https://github.com/ansible/ansible-compat/issues/78
-molecule = {extras = ["docker"], version = "^4.0.0"}
-yamllint = "^1.26.0"
-mkdocs-material = "^7.3.0"
-# lock version
-# see https://github.com/docker/docker-py/issues/3256
-requests = "<=2.32.0"
+[tool.poetry.group.py38.dependencies]
 pre-commit = "<=3.5.0"
+tox-ansible = "^2.0.0"
+tox = "^4.0.0"
+dependency-groups = "^1.3.0"
+
+[tool.poetry.group.py311.dependencies]
+pre-commit = "*"
+tox-ansible = "^2.0.0"
+tox = "^4.0.0"
+dependency-groups = "^1.3.0"
 
 [dependency-groups]
 # lock version
@@ -49,6 +39,7 @@ ansible218 = [
     "molecule-plugins[docker]",
     "paramiko",
     "flake8",
+    "yamllint",
     "ansible-lint",
     "ansible-core>=2.18.0,<2.19.0"
 ]
@@ -57,6 +48,7 @@ ansible217 = [
     "molecule-plugins[docker]",
     "paramiko",
     "flake8",
+    "yamllint",
     "ansible-lint",
     "ansible-core>=2.17.0,<2.18.0"
 ]
@@ -65,6 +57,7 @@ ansible216 = [
     "molecule-plugins[docker]",
     "paramiko",
     "flake8",
+    "yamllint",
     "ansible-lint",
     "ansible-core>=2.16.0,<2.17.0"
 ]
@@ -73,6 +66,7 @@ ansible215 = [
     "molecule-plugins[docker]",
     "paramiko",
     "flake8",
+    "yamllint",
     "ansible-lint",
     "ansible-core>=2.15.0,<2.16.0"
 ]
@@ -81,6 +75,7 @@ ansible214 = [
     "molecule-plugins[docker]",
     "paramiko",
     "flake8",
+    "yamllint",
     "ansible-lint",
     "ansible-core>=2.14.0,<2.15.0"
 ]
@@ -89,6 +84,7 @@ ansible213 = [
     "molecule-plugins[docker]",
     "paramiko",
     "flake8",
+    "yamllint",
     "ansible-lint",
     "ansible-core>=2.13.0,<2.14.0"
 ]
@@ -97,6 +93,7 @@ ansible212 = [
     "molecule-plugins[docker]",
     "paramiko",
     "flake8",
+    "yamllint",
     "ansible-lint",
     "ansible-core>=2.12.0,<2.13.0"
 ]
@@ -105,6 +102,7 @@ ansible211 = [
     "molecule-plugins[docker]",
     "paramiko",
     "flake8",
+    "yamllint",
     "ansible-lint",
     "ansible-core>=2.11.0,<2.12.0"
 ]
@@ -112,6 +110,7 @@ ansible210 = [
     "molecule[docker]<5.0.0",
     "paramiko",
     "flake8",
+    "yamllint",
     # BUG in 2.10.17
     # fix `ImportError: cannot import name 'should_retry_error' from 'ansible.galaxy.api'`
     "ansible-base==2.10.16",
@@ -128,6 +127,7 @@ ansible29 = [
     "molecule-docker<=1.1.0",
     "paramiko",
     "flake8",
+    "yamllint",
     "ansible>=2.9.0,<2.10.0",
     # last support ansible-base is ansible-lint <= 5.1.3
     "ansible-lint<=5.1.3",
