@@ -2,12 +2,14 @@
 
 from ansible_compat.runtime import Runtime
 from packaging.version import Version
-import ansible_compat
+import molecule
 
 
-# fix ansible-compat >= 25.0.0 cache_dir cant load collection
-# if >= 25.0.0, isolated will `project_dir/.ansible` not `~/.cache/ansible-compat/`
-isolated = Version(ansible_compat.__version__) < Version("25.0.0")
+# fix `ERROR! the role 'docker' was not found`
+# if molecule < 6.0.0, isolated `cache_dir` use `~/.cache/ansible-compat/`
+# if molecule >= 6.0.0, isolated disabled not use `~/.ansible/`
+# if ansible-compat >= 25.0.0, isolated `cache_dir` use `project_dir/.ansible` not work
+isolated = Version(molecule.__version__) < Version("6.0.0")
 runtime = Runtime(isolated=isolated)
 runtime._install_galaxy_role(project_dir=runtime.project_dir, role_name_check=2)
 
