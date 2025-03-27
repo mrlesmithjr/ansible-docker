@@ -39,6 +39,7 @@
   template:
     src: etc/yum.repos.d/docker.repo.j2
     dest: /etc/yum.repos.d/docker.repo
+    mode: 0644
   become: true
   when: >
     ansible_distribution != "Fedora" or
