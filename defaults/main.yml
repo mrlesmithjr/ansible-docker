@@ -42,6 +42,12 @@ docker_images: []
   # - fedora
   # - ubuntu
 
+# Defines default file to be configured
+docker_default_file: /etc/default/docker
+
+# Defines daemon json file to be configured
+docker_daemon_file: /etc/docker/daemon.json
+
 # Defines docker service options to be configured in /etc/docker/daemon.json
 # Configure each option the same naming/format as the variables are set as at
 # https://docs.docker.com/engine/reference/commandline/dockerd/

@@ -2,23 +2,31 @@
 - name: config_docker | Configuring Docker Service (Debian)
   template:
     src: etc/default/docker.j2
-    dest: /etc/default/docker
+    dest: "{{ docker_default_file }}"
     owner: root
     group: root
     mode: 0644
   notify: restart docker
   become: true
-  when: ansible_os_family == "Debian"
+  when:
+    - ansible_os_family == "Debian"
+    - docker_default_file is defined
 
-- name: config_docker | Ensuring /etc/docker Folder Exists
+- name: config_docker | Ensuring Daemon Folder Exists
   file:
-    path: /etc/docker
+    path: "{{ docker_daemon_file | dirname }}"
     state: directory
+    mode: 0644
   become: true
+  when:
+    - docker_daemon_file is defined
 
 - name: config_docker | Configuring Docker
   template:
     src: etc/docker/daemon.json.j2
-    dest: /etc/docker/daemon.json
+    dest: "{{ docker_daemon_file }}"
+    mode: 0644
   notify: restart docker
   become: true
+  when:
+    - docker_daemon_file is defined
