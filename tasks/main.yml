@@ -18,8 +18,8 @@
 
 - include_tasks: users.yml
   when:
-    - docker_config_users is defined
     - docker_config_users|bool
+    - docker_users is defined
 
 - include_tasks: images.yml
   when:

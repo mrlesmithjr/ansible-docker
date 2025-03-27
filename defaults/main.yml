@@ -26,6 +26,10 @@ docker_config_service: false
 # Defines if users defined in docker_users should be added to docker group
 docker_config_users: false
 
+# Defines users to be added to docker group to allow non sudo access to docker
+docker_users: []
+# - vagrant
+
 # Defines docker images to be installed
 docker_images:
   []
@@ -167,10 +171,6 @@ docker_install_bridge_utils: true
 docker_swarm_addr: "{{ hostvars[inventory_hostname]['ansible_' + docker_swarm_interface]['ipv4']['address'] }}"
 
 docker_swarm_interface: enp0s8
-
-# Defines users to be added to docker group to allow non sudo access to docker
-docker_users: []
-# - vagrant
 
 # Define Docker version to install
 #
