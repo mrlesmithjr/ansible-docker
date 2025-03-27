@@ -2,7 +2,7 @@
 - name: Converge
   hosts: all
   vars:
-    docker_set_grub_memory_limit: false
+    docker_debian_set_grub_memory_limit: false
     docker_version: latest
   tasks:
     - name: Include docker

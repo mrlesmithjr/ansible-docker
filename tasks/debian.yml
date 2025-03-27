@@ -115,8 +115,8 @@
   become: true
   when:
     - _docker_grub_check['stat']['exists']
-    - docker_set_grub_memory_limit is defined
-    - docker_set_grub_memory_limit
+    - docker_debian_set_grub_memory_limit is defined
+    - docker_debian_set_grub_memory_limit
 
 - name: debian | updating grub (if updated) # noqa 503
   command: update-grub

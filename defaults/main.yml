@@ -152,7 +152,7 @@ docker_opts:
 docker_release_channel: stable
 
 # Defines if docker memory limits should be added to grub boot loader
-docker_set_grub_memory_limit: true
+docker_debian_set_grub_memory_limit: true
 
 # Defines if Linux birdge-utils will get installed.
 docker_install_bridge_utils: true
