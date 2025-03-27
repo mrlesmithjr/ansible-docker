@@ -157,6 +157,14 @@ docker_opts:
 # define as stable or edge
 docker_release_channel: stable
 
+# Defines debian apt pre-requisites package
+docker_debian_apt_pre_reqs:
+  - apt-transport-https
+  - ca-certificates
+  - curl
+  - gnupg-agent
+  - software-properties-common
+
 # Defines debian apt repo info for installing from
 docker_debian_apt_repo_info:
   id: 0EBFCD88

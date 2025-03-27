@@ -9,16 +9,13 @@
 
 - name: debian | installing pre-reqs
   apt:
-    name:
-      - apt-transport-https
-      - ca-certificates
-      - curl
-      - gnupg-agent
-      - software-properties-common
+    name: "{{ docker_debian_apt_pre_reqs }}"
     state: present
   become: true
   register: result
   until: result is successful
+  when:
+    - docker_debian_apt_pre_reqs | default([],true) | length > 0
 
 # We are removing the old Docker info
 - name: debian | Removing Legacy Docker apt-key
