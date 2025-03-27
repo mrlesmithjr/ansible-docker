@@ -30,24 +30,17 @@ docker_config_users: false
 docker_users: []
 # - vagrant
 
+# Defines if images defined in docker_images are pulled
+docker_pull_images: false
+
 # Defines docker images to be installed
-docker_images:
-  []
+docker_images: []
   # Defines image name
   # ex. docker hub image name
-  # - name: centos
-  # Defines state of image
-  # present|absent
-  #   state: present
-  # - name: elasticsearch
-  #   state: present
-  # - name: fedora
-  #   state: present
-  # - name: ubuntu
-  #   state: present
-
-# Defines if images defined in docker_images are managed
-docker_manage_images: false
+  # - centos
+  # - elasticsearch
+  # - fedora
+  # - ubuntu
 
 # Defines docker service options to be configured in /etc/docker/daemon.json
 # Configure each option the same naming/format as the variables are set as at

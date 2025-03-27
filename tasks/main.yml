@@ -23,5 +23,5 @@
 
 - include_tasks: images.yml
   when:
-    - docker_manage_images|bool
+    - docker_pull_images|bool
     - docker_images is defined

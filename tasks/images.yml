@@ -1,7 +1,9 @@
 ---
 - name: images | ensuring docker images are present
   docker_image:
-    name: "{{ item['name'] }}"
-    state: "{{ item['state'] }}"
+    name: "{{ item }}"
+    state: present
+    # without `source` will error: 'state is present but all of the following are missing: source'
+    source: pull
   become: true
   loop: "{{ docker_images }}"
