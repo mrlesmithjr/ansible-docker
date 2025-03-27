@@ -1,28 +1,6 @@
 ---
 # defaults file for ansible-docker
 
-# Ensure this exists if setting docker to alternate data directory
-# We do not create this to ensure any add'l mounts do not overlay this path
-# Service may fail to start if not.
-docker_alt_data_dir: /mnt/docker
-
-# Defines address of cluster address
-# Not the same as Swarm Cluster address
-# Ex. Consul
-docker_cluster_addr: "{{ hostvars[inventory_hostname]['ansible_' + docker_cluster_interface]['ipv4']['address'] }}"
-
-# Defines interface to capture address from for docker_cluster_addr
-docker_cluster_interface: "{{ docker_swarm_interface }}"
-
-docker_cluster_port: 2376
-
-# Defines if docker should be configured to store data in alternate location
-# ensure to enable -g option in docker_opts if true
-docker_config_alt_data_dir: false
-
-# Defines if docker service should be configured
-docker_config_service: false
-
 # Defines docker service name
 docker_service_name: docker
 
@@ -45,11 +23,33 @@ docker_images: []
   # - fedora
   # - ubuntu
 
+# Defines if docker service should be configured
+docker_config_service: false
+
 # Defines default file to be configured
 docker_default_file: /etc/default/docker
 
 # Defines daemon json file to be configured
 docker_daemon_file: /etc/docker/daemon.json
+
+# Defines just for docker_opts
+
+# Defines swarm interface
+docker_opt_swarm_interface: enp0s8
+
+# Defines swarm address
+docker_opt_swarm_addr: "{{ hostvars[inventory_hostname]['ansible_' + docker_opt_swarm_interface]['ipv4']['address'] }}"
+
+# Defines interface to capture address from for docker_opt_cluster_addr
+docker_opt_cluster_interface: "{{ docker_opt_swarm_interface }}"
+
+# Defines address of cluster address
+# Not the same as Swarm Cluster address
+# Ex. Consul
+docker_opt_cluster_addr: "{{ hostvars[inventory_hostname]['ansible_' + docker_opt_cluster_interface]['ipv4']['address'] }}"
+
+# Defines address of cluster port
+docker_opt_cluster_port: 2376
 
 # Defines docker service options to be configured in /etc/docker/daemon.json
 # Configure each option the same naming/format as the variables are set as at
@@ -63,7 +63,7 @@ docker_opts:
   # Attach containers to a network bridge
   # bridge: docker0
   # Address or interface name to advertise
-  # cluster-advertise: "{{ docker_cluster_addr }}:{{ docker_cluster_port }}"
+  # cluster-advertise: "{{ docker_opt_cluster_addr }}:{{ docker_opt_cluster_port }}"
   # Set cluster store options
   # cluster-store: "consul://192.168.250.10:8500"
   # Enable debug mode
@@ -147,7 +147,7 @@ docker_opts:
   # aufs, devicemapper, btrfs, zfs, overlay and overlay2
   # storage-driver: aufs
   # Set default address or interface for swarm advertised address
-  swarm-default-advertise-addr: "{{ docker_swarm_addr }}"
+  swarm-default-advertise-addr: "{{ docker_opt_swarm_addr }}"
   # Use TLS; implied by –tlsverify
   # tls: false
 
@@ -169,10 +169,6 @@ docker_debian_set_grub_memory_limit: true
 
 # Defines if Linux birdge-utils will get installed.
 docker_install_bridge_utils: true
-
-docker_swarm_addr: "{{ hostvars[inventory_hostname]['ansible_' + docker_swarm_interface]['ipv4']['address'] }}"
-
-docker_swarm_interface: enp0s8
 
 # Define Docker version to install
 #
