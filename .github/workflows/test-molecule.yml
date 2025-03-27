@@ -9,10 +9,9 @@ defaults:
   run:
     working-directory: 'docker'
 jobs:
-  build:
+  test:
     strategy:
       fail-fast: false
-      max-parallel: 4
       matrix:
         molecule_distro:
           - centos7
@@ -26,34 +25,65 @@ jobs:
           - ubuntu1604
           - ubuntu1804
           - ubuntu2004
-        python-version:
-          - "3.8"
-          - "3.11"
-        runs-on:
-          - ubuntu-20.04
-          - ubuntu-24.04
-        exclude:
-          - molecule_distro: ubuntu1604
-            python-version: "3.8"
-            runs-on: ubuntu-24.04
-          - molecule_distro: ubuntu1604
-            python-version: "3.11"
-            runs-on: ubuntu-24.04
+        # Only test the oldest supported Python and Ansible versions on the oldest GitHub Action runner.
+        # For other tests, refer to the Tox tests.
         include:
-          - runs-on: ubuntu-20.04
+          - molecule_distro: centos7
+            runs-on: ubuntu-20.04
             cgroup: '@cgroupv1'
-          - runs-on: ubuntu-24.04
-            cgroup: '@cgroupv2'
-          - python-version: "3.8"
+            python-version: "3.8"
             group-python: "py38"
-            group-ansible: "ansible211"
-            # Fix `ERROR! Unexpected Exception, this is probably a bug: '/api/v3/plugin/ansible/content/published/collections/index/community/docker/versions/'`
-            # see https://github.com/ansible/awx/issues/14495#issuecomment-1752708302
+            group-ansible: "ansible29"
             ansible-config: "./molecule/ansible.old-galaxy.cfg"
-          - python-version: "3.11"
-            group-python: "py311"
-            group-ansible: "ansible216"
-            ansible-config: ""
+          - molecule_distro: centos8
+            runs-on: ubuntu-20.04
+            cgroup: '@cgroupv1'
+            python-version: "3.8"
+            group-python: "py38"
+            group-ansible: "ansible29"
+            ansible-config: "./molecule/ansible.old-galaxy.cfg"
+          - molecule_distro: debian9
+            runs-on: ubuntu-20.04
+            cgroup: '@cgroupv1'
+            python-version: "3.8"
+            group-python: "py38"
+            group-ansible: "ansible29"
+            ansible-config: "./molecule/ansible.old-galaxy.cfg"
+          - molecule_distro: debian10
+            runs-on: ubuntu-20.04
+            cgroup: '@cgroupv1'
+            python-version: "3.8"
+            group-python: "py38"
+            group-ansible: "ansible29"
+            ansible-config: "./molecule/ansible.old-galaxy.cfg"
+          - molecule_distro: ubuntu1604
+            runs-on: ubuntu-20.04
+            cgroup: '@cgroupv1'
+            python-version: "3.8"
+            group-python: "py38"
+            group-ansible: "ansible29"
+            ansible-config: "./molecule/ansible.old-galaxy.cfg"
+          - molecule_distro: ubuntu1604
+            runs-on: ubuntu-20.04
+            cgroup: '@cgroupv1'
+            python-version: "3.8"
+            group-python: "py38"
+            group-ansible: "ansible29"
+            ansible-config: "./molecule/ansible.old-galaxy.cfg"
+          - molecule_distro: ubuntu1804
+            runs-on: ubuntu-20.04
+            cgroup: '@cgroupv1'
+            python-version: "3.8"
+            group-python: "py38"
+            group-ansible: "ansible29"
+            ansible-config: "./molecule/ansible.old-galaxy.cfg"
+          - molecule_distro: ubuntu2004
+            runs-on: ubuntu-20.04
+            cgroup: '@cgroupv1'
+            python-version: "3.8"
+            group-python: "py38"
+            group-ansible: "ansible29"
+            ansible-config: "./molecule/ansible.old-galaxy.cfg"
 
     runs-on: ${{ matrix.runs-on }}
 
