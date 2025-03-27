@@ -48,13 +48,16 @@
     - docker_debian_apt_repo_info.url is defined
     - docker_debian_apt_repo_info.id is defined
 
-- name: debian | adding docker repo
+- name: debian | adding docker apt-repo
   apt_repository:
     repo: "{{ docker_debian_apt_repo_info['repo'] }}"
     state: present
   become: true
   register: result
   until: result is successful
+  when:
+    - docker_debian_apt_repo_info is defined
+    - docker_debian_apt_repo_info.repo is defined
 
 # We remove docker-engine as this is old package to install. The new package is
 # docker-ce
