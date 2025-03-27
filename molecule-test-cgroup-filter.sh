@@ -83,3 +83,7 @@ summary_length=${#summary_end}
 equal_count=$(((bar_width - summary_length - 2) / 2))
 border="$(printf '=%.0s' $(seq 1 $equal_count))"
 echo "$border $summary_end $border"
+
+if [[ $count_failed -gt 0 ]]; then
+    exit 1
+fi
