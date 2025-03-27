@@ -1,0 +1,39 @@
+---
+# We are removing the old Docker info
+- name: debian | Removing Legacy Docker apt-key
+  apt_key:
+    keyserver: hkp://p80.pool.sks-keyservers.net:80
+    id: 58118E89F3A912897C070ADBF76221572C52609D
+    state: absent
+  become: true
+
+# We are removing the old Docker info
+- name: debian | Removing Legacy Docker Repo
+  apt_repository:
+    repo: "deb https://apt.dockerproject.org/repo {{ ansible_distribution | lower }}-{{ ansible_distribution_release }} main"
+    state: absent
+  become: true
+
+- name: debian | adding docker apt-key
+  apt_key:
+    url: "{{ docker_debian_apt_repo_info['url'] }}"
+    id: "{{ docker_debian_apt_repo_info['id'] }}"
+    state: present
+  become: true
+  register: result
+  until: result is successful
+  when:
+    - docker_debian_apt_repo_info is defined
+    - docker_debian_apt_repo_info.url is defined
+    - docker_debian_apt_repo_info.id is defined
+
+- name: debian | adding docker apt-repo
+  apt_repository:
+    repo: "{{ docker_debian_apt_repo_info['repo'] }}"
+    state: present
+  become: true
+  register: result
+  until: result is successful
+  when:
+    - docker_debian_apt_repo_info is defined
+    - docker_debian_apt_repo_info.repo is defined

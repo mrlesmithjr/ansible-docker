@@ -165,12 +165,28 @@ docker_debian_apt_pre_reqs:
   - gnupg-agent
   - software-properties-common
 
+# Define use apt or deb822 add docker repository
+docker_debian_repo_type: apt
+
+# Defines mapping between ansible architecture and docker architecture
+docker_debian_architectures_mapping:
+  x86_64: amd64
+  aarch64: arm64
+
 # Defines debian apt repo info for installing from
 docker_debian_apt_repo_info:
   id: 0EBFCD88
   # keyserver: "hkp://p80.pool.sks-keyservers.net:80"
-  repo: "deb [arch=amd64] https://download.docker.com/linux/{{ ansible_distribution | lower }} {{ ansible_distribution_release }} {{ docker_release_channel }}"
+  repo: "deb [arch={{ docker_debian_architectures_mapping[ansible_architecture] }}] https://download.docker.com/linux/{{ ansible_distribution | lower }} {{ ansible_distribution_release }} {{ docker_release_channel }}"
   url: "https://download.docker.com/linux/{{ ansible_distribution | lower }}/gpg"
+
+# https://www.jeffgeerling.com/blog/2022/aptkey-deprecated-debianubuntu-how-fix-ansible
+docker_debian_deb822_repo_info:
+  uris: "https://download.docker.com/linux/{{ ansible_distribution | lower }}"
+  suites: "{{ ansible_distribution_release }}"
+  components: "{{ docker_release_channel }}"
+  architectures: "{{ docker_debian_architectures_mapping[ansible_architecture] }}"
+  signed_by: "https://download.docker.com/linux/{{ ansible_distribution | lower }}/gpg"
 
 # Defines if docker memory limits should be added to grub boot loader
 docker_debian_set_grub_memory_limit: true

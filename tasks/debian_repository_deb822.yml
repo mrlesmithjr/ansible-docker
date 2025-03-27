@@ -1,0 +1,21 @@
+---
+- name: debian | deb822 | Add Docker Repo using key from URL
+  deb822_repository:
+    name: docker
+    types: deb
+    uris: "{{ docker_debian_deb822_repo_info['uris'] }}"
+    suites: "{{ docker_debian_deb822_repo_info['suites'] | default(ansible_distribution_release) }}"
+    components: "{{ docker_debian_deb822_repo_info['components'] | default('main') }}"
+    architectures: "{{ docker_debian_deb822_repo_info['architectures'] | default('amd64') }}"
+    signed_by: "{{ docker_debian_deb822_repo_info['signed_by'] }}"
+    state: present
+    enabled: true
+  become: true
+  register: result
+  until: result is successful
+  when:
+    - docker_debian_deb822_repo_info is defined
+    - docker_debian_deb822_repo_info.uris is defined
+    - docker_debian_deb822_repo_info.signed_by is defined
+    - docker_debian_deb822_repo_info.uris
+    - docker_debian_deb822_repo_info.signed_by
