@@ -23,6 +23,9 @@ docker_config_alt_data_dir: false
 # Defines if docker service should be configured
 docker_config_service: false
 
+# Defines docker service name
+docker_service_name: docker
+
 # Defines if users defined in docker_users should be added to docker group
 docker_config_users: false
 

@@ -2,6 +2,8 @@
 # handlers file for ansible-docker
 - name: restart docker
   service:
-    name: docker
+    name: "{{ docker_service_name }}"
     state: restarted
   become: true
+  when:
+    - docker_service_name is defined

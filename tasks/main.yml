@@ -16,6 +16,9 @@
 
 - include_tasks: service.yml
 
+- name: Flush handlers
+  meta: flush_handlers
+
 - include_tasks: users.yml
   when:
     - docker_config_users|bool
