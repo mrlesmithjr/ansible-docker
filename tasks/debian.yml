@@ -43,6 +43,10 @@
   become: true
   register: result
   until: result is successful
+  when:
+    - docker_debian_apt_repo_info is defined
+    - docker_debian_apt_repo_info.url is defined
+    - docker_debian_apt_repo_info.id is defined
 
 - name: debian | adding docker repo
   apt_repository:
