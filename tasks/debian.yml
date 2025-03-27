@@ -37,8 +37,8 @@
 
 - name: debian | adding docker apt-key
   apt_key:
-    url: "{{ docker_ubuntu_repo_info['url'] }}"
-    id: "{{ docker_ubuntu_repo_info['id'] }}"
+    url: "{{ docker_debian_apt_repo_info['url'] }}"
+    id: "{{ docker_debian_apt_repo_info['id'] }}"
     state: present
   become: true
   register: result
@@ -46,7 +46,7 @@
 
 - name: debian | adding docker repo
   apt_repository:
-    repo: "{{ docker_ubuntu_repo_info['repo'] }}"
+    repo: "{{ docker_debian_apt_repo_info['repo'] }}"
     state: present
   become: true
   register: result

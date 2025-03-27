@@ -151,6 +151,13 @@ docker_opts:
 # define as stable or edge
 docker_release_channel: stable
 
+# Defines debian apt repo info for installing from
+docker_debian_apt_repo_info:
+  id: 0EBFCD88
+  # keyserver: "hkp://p80.pool.sks-keyservers.net:80"
+  repo: "deb [arch=amd64] https://download.docker.com/linux/{{ ansible_distribution | lower }} {{ ansible_distribution_release }} {{ docker_release_channel }}"
+  url: "https://download.docker.com/linux/{{ ansible_distribution | lower }}/gpg"
+
 # Defines if docker memory limits should be added to grub boot loader
 docker_debian_set_grub_memory_limit: true
 
@@ -160,13 +167,6 @@ docker_install_bridge_utils: true
 docker_swarm_addr: "{{ hostvars[inventory_hostname]['ansible_' + docker_swarm_interface]['ipv4']['address'] }}"
 
 docker_swarm_interface: enp0s8
-
-# Defines docker ubuntu repo info for installing from
-docker_ubuntu_repo_info:
-  id: 0EBFCD88
-  # keyserver: "hkp://p80.pool.sks-keyservers.net:80"
-  repo: "deb [arch=amd64] https://download.docker.com/linux/{{ ansible_distribution | lower }} {{ ansible_distribution_release }} {{ docker_release_channel }}"
-  url: "https://download.docker.com/linux/ubuntu/gpg"
 
 # Defines users to be added to docker group to allow non sudo access to docker
 docker_users: []
