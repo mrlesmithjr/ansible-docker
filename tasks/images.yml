@@ -1,5 +1,5 @@
 ---
-- name: images | ensuring docker images are present
+- name: images | Ensuring docker images are present
   docker_image:
     name: "{{ item }}"
     state: present

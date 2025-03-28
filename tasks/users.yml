@@ -1,5 +1,5 @@
 ---
-- name: users | adding docker users (for use without sudo)
+- name: users | Adding docker users (for use without sudo)
   user:
     name: "{{ item }}"
     append: yes

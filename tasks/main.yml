@@ -15,31 +15,39 @@
       paths:
         - 'vars'
 
-- include_tasks: set_facts.yml
+- name: Include set_facts
+  include_tasks: set_facts.yml
 
-- include_tasks: alpine.yml
+- name: Include alpine
+  include_tasks: alpine.yml
   when: ansible_os_family == "Alpine"
 
-- include_tasks: debian.yml
+- name: Include debian
+  include_tasks: debian.yml
   when: ansible_os_family == "Debian"
 
-- include_tasks: redhat.yml
+- name: Include redhat
+  include_tasks: redhat.yml
   when: ansible_os_family == "RedHat"
 
-- include_tasks: config_docker.yml
+- name: Include config_docker
+  include_tasks: config_docker.yml
   when: docker_config_service|bool
 
-- include_tasks: service.yml
+- name: Include service
+  include_tasks: service.yml
 
 - name: Flush handlers
   meta: flush_handlers
 
-- include_tasks: users.yml
+- name: Include users
+  include_tasks: users.yml
   when:
     - docker_config_users|bool
     - docker_users is defined
 
-- include_tasks: images.yml
+- name: Include images
+  include_tasks: images.yml
   when:
     - docker_pull_images|bool
     - docker_images is defined

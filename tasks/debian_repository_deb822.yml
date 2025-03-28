@@ -1,5 +1,5 @@
 ---
-- name: debian | deb822 | Add Docker Repo using key from URL
+- name: debian_repository_deb822 | Adding Docker Repo using key from URL
   deb822_repository:
     name: docker
     types: deb

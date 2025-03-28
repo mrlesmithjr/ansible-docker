@@ -35,7 +35,7 @@
   until: result is successful
   when: ansible_distribution == "Fedora"
 
-- name: redhat | adding Docker repo
+- name: redhat | Adding Docker repo
   template:
     src: etc/yum.repos.d/docker.repo.j2
     dest: /etc/yum.repos.d/docker.repo
@@ -46,7 +46,7 @@
     (ansible_distribution == "Fedora" and
     ansible_distribution_version is version('31', '<'))
 
-- name: redhat | installing Docker
+- name: redhat | Installing Docker
   package:
     name:
       - "docker-ce-{{ docker_version_redhat }}"
@@ -61,7 +61,7 @@
     (ansible_distribution == "Fedora" and
     ansible_distribution_version is version('31', '<')))
 
-- name: redhat | installing Docker
+- name: redhat | Installing Docker
   package:
     name:
       - docker-ce
@@ -88,7 +88,7 @@
     - docker_install_bridge_utils
 
 # https://fedoramagazine.org/docker-and-fedora-32/
-- name: redhat | installing Docker
+- name: redhat | Installing Docker
   package:
     name:
       - docker-compose

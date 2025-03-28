@@ -1,5 +1,5 @@
 ---
-- name: debian | updating apt-cache
+- name: debian | Updating apt-cache
   apt:
     update_cache: true
     cache_valid_time: 86400
@@ -7,7 +7,7 @@
   register: result
   until: result is successful
 
-- name: debian | installing pre-reqs
+- name: debian | Installing pre-reqs
   apt:
     name: "{{ docker_debian_apt_pre_reqs }}"
     state: present
@@ -17,19 +17,19 @@
   when:
     - docker_debian_apt_pre_reqs | default([],true) | length > 0
 
-- name: debian | installing repository by apt-key apt-repository
+- name: debian | Installing repository by apt-key apt-repository
   include_tasks: debian_repository_apt.yml
   when:
     - docker_debian_repo_type | default('apt') == 'apt'
 
-- name: debian | installing repository by deb822-repository
+- name: debian | Installing repository by deb822-repository
   include_tasks: debian_repository_deb822.yml
   when:
     - docker_debian_repo_type | default('apt') == 'deb822'
 
 # We remove docker-engine as this is old package to install.
 # The new package is docker-ce
-- name: debian | uninstalling old docker packages (if exists)
+- name: debian | Uninstalling old docker packages (if exists)
   apt:
     name: "{{ docker_debian_apt_absent_packages }}"
     state: absent
@@ -38,13 +38,13 @@
   register: result
   until: result is successful
 
-- name: debian | checking for existing docker # noqa 305
+- name: debian | Checking for existing docker # noqa 305
   shell: "dpkg-query -W '{{ docker_debian_apt_check_package }}'"
   ignore_errors: true
   register: has_docker
   changed_when: false
 
-- name: debian | installing docker
+- name: debian | Installing docker
   apt:
     name: "{{ docker_debian_apt_present_versioned_packages }}"
     state: present
@@ -55,7 +55,7 @@
     - docker_version|lower != "latest"
     - has_docker is failed
 
-- name: debian | installing docker
+- name: debian | Installing docker
   apt:
     name: "{{ docker_debian_apt_present_latest_packages }}"
     state: present
@@ -71,7 +71,7 @@
     path: /etc/default/grub
   register: _docker_grub_check
 
-- name: debian | setting grub memory limit (if set)
+- name: debian | Setting grub memory limit (if set)
   lineinfile:
     dest: /etc/default/grub
     regexp: "^GRUB_CMDLINE_LINUX_DEFAULT"
@@ -83,7 +83,7 @@
     - docker_debian_set_grub_memory_limit is defined
     - docker_debian_set_grub_memory_limit
 
-- name: debian | updating grub (if updated) # noqa 503
+- name: debian | Updating grub (if updated) # noqa 503
   command: update-grub
   become: true
   when: grub_updated['changed']
