@@ -1,0 +1,16 @@
+---
+- name: Converge
+  hosts: all
+  vars:
+    docker_config_service: true
+    docker_default_file: /etc/default/docker
+    docker_daemon_file: /etc/docker/daemon.json
+    docker_opts:
+      debug: false
+      insecure-registries:
+        - "gitlab.etsbv.internal:5000"
+    docker_debian_set_grub_memory_limit: false
+  tasks:
+    - name: Include docker
+      include_role:
+        name: docker

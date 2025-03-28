@@ -1,0 +1,29 @@
+---
+# This is an example playbook to execute Ansible tests.
+
+- name: Verify
+  hosts: all
+  tasks:
+
+    - name: Read daemon.json
+      ansible.builtin.slurp:
+        src: /etc/docker/daemon.json
+      register: daemon_json_content
+
+    - name: Parse JSON and check values
+      ansible.builtin.set_fact:
+        daemon_json: "{{ daemon_json_content['content'] | b64decode | from_json }}"
+
+    - name: Ensure debug is false
+      ansible.builtin.assert:
+        that:
+          - daemon_json.debug is defined
+          - daemon_json.debug == false
+        fail_msg: "'debug' must be set to false in /etc/docker/daemon.json"
+
+    - name: Ensure insecure-registries contains gitlab.etsbv.internal:5000
+      ansible.builtin.assert:
+        that:
+          - "'insecure-registries' in daemon_json"
+          - "'gitlab.etsbv.internal:5000' in daemon_json['insecure-registries']"
+        fail_msg: "'gitlab.etsbv.internal:5000' is missing from insecure-registries in /etc/docker/daemon.json"
