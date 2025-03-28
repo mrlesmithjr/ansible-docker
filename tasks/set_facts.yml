@@ -1,4 +1,12 @@
 ---
+- name: set_facts | Assert docker_opts
+  assert:
+    that:
+      - docker_opts is defined
+    fail_msg: "'docker_opts' MUST be evaluable: {{ docker_opts }}"
+  when:
+    - docker_config_service | bool
+
 - name: set_facts | Assert Debian Version
   assert:
     that:
