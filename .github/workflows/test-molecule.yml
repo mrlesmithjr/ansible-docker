@@ -21,6 +21,7 @@ jobs:
           - debian9
           - debian10
           - debian11
+          - debian12
           # `jrei/systemd-fedora:latest` rolling release image too new for this
           # - fedora
           - ubuntu1604
@@ -58,6 +59,13 @@ jobs:
             group-ansible: "ansible29"
             ansible-config: "./molecule/ansible.old-galaxy.cfg"
           - molecule_distro: debian11
+            runs-on: ubuntu-20.04
+            cgroup: '@cgroupv1'
+            python-version: "3.8"
+            group-python: "py38"
+            group-ansible: "ansible29"
+            ansible-config: "./molecule/ansible.old-galaxy.cfg"
+          - molecule_distro: debian12
             runs-on: ubuntu-20.04
             cgroup: '@cgroupv1'
             python-version: "3.8"
