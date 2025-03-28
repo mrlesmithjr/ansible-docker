@@ -39,7 +39,7 @@
   until: result is successful
 
 - name: debian | checking for existing docker # noqa 305
-  shell: dpkg-query -W 'docker-ce'
+  shell: "dpkg-query -W '{{ docker_debian_apt_check_package }}'"
   ignore_errors: true
   register: has_docker
   changed_when: false

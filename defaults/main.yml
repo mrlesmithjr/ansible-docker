@@ -197,6 +197,9 @@ docker_debian_deb822_repo_info:
   architectures: "{{ docker_debian_architectures_mapping[ansible_architecture] }}"
   signed_by: "https://download.docker.com/linux/{{ ansible_distribution | lower }}/gpg"
 
+# Defines debian apt package name for check exists
+docker_debian_apt_check_package: docker-ce
+
 # Defines if docker memory limits should be added to grub boot loader
 docker_debian_set_grub_memory_limit: true
 
