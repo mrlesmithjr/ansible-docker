@@ -103,7 +103,7 @@
 
 # https://fedoramagazine.org/docker-and-fedora-32/
 - name: redhat | Configuring FirewallD
-  firewalld:
+  ansible.posix.firewalld:
     interface: docker0
     permanent: true
     state: enabled
@@ -115,7 +115,7 @@
 
 # https://fedoramagazine.org/docker-and-fedora-32/
 - name: redhat | Configuring FirewallD
-  firewalld:
+  ansible.posix.firewalld:
     masquerade: "true"
     permanent: true
     state: enabled

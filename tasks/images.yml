@@ -1,8 +1,8 @@
 ---
 - name: images | Ensuring docker images are present
-  docker_image:
-    name: "{{ item }}"
-    state: present
+  community.docker.docker_image:
+    name: "{{ item['name'] }}"
+    state: "{{ item['state'] }}"
     # without `source` will error: 'state is present but all of the following are missing: source'
     source: pull
   become: true

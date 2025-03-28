@@ -10,7 +10,7 @@
   until: _apk_repos_updated is successful
 
 - name: alpine | Updating APK Cache # noqa 503
-  apk:
+  community.general.apk:
     update_cache: true
   become: true
   register: result
@@ -18,7 +18,7 @@
   when: _apk_repos_updated['changed']
 
 - name: alpine | Installing Docker
-  apk:
+  community.general.apk:
     name: docker
     state: present
   become: true
