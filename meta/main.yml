@@ -3,7 +3,7 @@ galaxy_info:
   author: Larry Smith Jr./xiaoyao9184
   description: Ansible role to install/configure Docker
   license: MIT
-  min_ansible_version: "2.11"
+  min_ansible_version: "2.9"
   role_name: docker
 
   platforms:
@@ -19,12 +19,22 @@ galaxy_info:
         - bionic
         # 20.04
         - focal
+        # 22.04
+        - jammy
+        # 24.04
+        - noble
     - name: Debian
       versions:
         # 9
         - stretch
         # 10
         - buster
+        # 11
+        - bullseye
+        # 12
+        - bookworm
+        # 13
+        - trixie
 
   galaxy_tags:
     - cloud
