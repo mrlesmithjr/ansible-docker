@@ -46,9 +46,7 @@
 
 - name: debian | installing docker
   apt:
-    name:
-      - containerd.io
-      - "docker-ce={{ docker_version_debian }}"
+    name: "{{ docker_debian_apt_present_versioned_packages }}"
     state: present
   become: true
   register: result
@@ -59,9 +57,7 @@
 
 - name: debian | installing docker
   apt:
-    name:
-      - containerd.io
-      - docker-ce
+    name: "{{ docker_debian_apt_present_latest_packages }}"
     state: present
   become: true
   register: result

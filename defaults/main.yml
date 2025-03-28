@@ -200,6 +200,16 @@ docker_debian_deb822_repo_info:
 # Defines debian apt package name for check exists
 docker_debian_apt_check_package: docker-ce
 
+# Defines debian apt installing version package
+docker_debian_apt_present_versioned_packages:
+  - containerd.io
+  - "docker-ce={{ docker_version_debian }}"
+
+# Defines debian apt installing latest package
+docker_debian_apt_present_latest_packages:
+  - containerd.io
+  - docker-ce
+
 # Defines if docker memory limits should be added to grub boot loader
 docker_debian_set_grub_memory_limit: true
 
