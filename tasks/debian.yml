@@ -1,6 +1,6 @@
 ---
 - name: debian | Updating apt-cache
-  apt:
+  ansible.builtin.apt:
     update_cache: true
     cache_valid_time: 86400
   become: true
@@ -8,7 +8,7 @@
   until: result is successful
 
 - name: debian | Installing pre-reqs
-  apt:
+  ansible.builtin.apt:
     name: "{{ docker_debian_apt_pre_reqs }}"
     state: present
   become: true
@@ -18,12 +18,12 @@
     - docker_debian_apt_pre_reqs | default([],true) | length > 0
 
 - name: debian | Installing repository by apt-key apt-repository
-  include_tasks: debian_repository_apt.yml
+  ansible.builtin.include_tasks: debian_repository_apt.yml
   when:
     - docker_debian_repo_type | default('apt') == 'apt'
 
 - name: debian | Installing repository by deb822-repository
-  include_tasks: debian_repository_deb822.yml
+  ansible.builtin.include_tasks: debian_repository_deb822.yml
   when:
     - docker_debian_repo_type | default('apt') == 'deb822'
 
@@ -39,13 +39,13 @@
   until: result is successful
 
 - name: debian | Checking for existing docker # noqa 305
-  shell: "dpkg-query -W '{{ docker_debian_apt_check_package }}'"
+  ansible.builtin.shell: "dpkg-query -W '{{ docker_debian_apt_check_package }}'"
   ignore_errors: true
   register: has_docker
   changed_when: false
 
 - name: debian | Installing docker
-  apt:
+  ansible.builtin.apt:
     name: "{{ docker_debian_apt_present_versioned_packages }}"
     state: present
   become: true
@@ -56,7 +56,7 @@
     - has_docker is failed
 
 - name: debian | Installing docker
-  apt:
+  ansible.builtin.apt:
     name: "{{ docker_debian_apt_present_latest_packages }}"
     state: present
   become: true
@@ -67,12 +67,12 @@
     - has_docker is failed
 
 - name: debian | Checking For /etc/default/grub
-  stat:
+  ansible.builtin.stat:
     path: /etc/default/grub
   register: _docker_grub_check
 
 - name: debian | Setting grub memory limit (if set)
-  lineinfile:
+  ansible.builtin.lineinfile:
     dest: /etc/default/grub
     regexp: "^GRUB_CMDLINE_LINUX_DEFAULT"
     line: 'GRUB_CMDLINE_LINUX_DEFAULT="cgroup_enable=memory swapaccount=1"'
@@ -84,12 +84,12 @@
     - docker_debian_set_grub_memory_limit
 
 - name: debian | Updating grub (if updated) # noqa 503
-  command: update-grub
+  ansible.builtin.command: update-grub
   become: true
   when: grub_updated['changed']
 
 - name: debian | Installing bridge-utils
-  apt:
+  ansible.builtin.apt:
     name: bridge-utils
     state: present
   become: true

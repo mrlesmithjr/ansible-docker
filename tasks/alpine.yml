@@ -1,6 +1,6 @@
 ---
 - name: alpine | Ensuring Edge Repo Is Enabled
-  lineinfile:
+  ansible.builtin.lineinfile:
     path: /etc/apk/repositories
     regexp: "^http://dl-cdn.alpinelinux.org/alpine/edge/community"
     line: http://dl-cdn.alpinelinux.org/alpine/edge/community

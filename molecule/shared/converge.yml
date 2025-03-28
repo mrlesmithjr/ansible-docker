@@ -6,5 +6,5 @@
     docker_version: latest
   tasks:
     - name: Include docker
-      include_role:
+      ansible.builtin.include_role:
         name: docker

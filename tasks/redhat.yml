@@ -1,6 +1,6 @@
 ---
 - name: redhat | Uninstalling Old Docker Package (if exists)
-  package:
+  ansible.builtin.package:
     name:
       - docker
       - docker-client
@@ -17,7 +17,7 @@
   when: ansible_distribution != "Fedora"
 
 - name: redhat | Uninstalling Old Docker Package (if exists)
-  package:
+  ansible.builtin.package:
     name:
       - docker
       - docker-client
@@ -36,7 +36,7 @@
   when: ansible_distribution == "Fedora"
 
 - name: redhat | Adding Docker repo
-  template:
+  ansible.builtin.template:
     src: etc/yum.repos.d/docker.repo.j2
     dest: /etc/yum.repos.d/docker.repo
     mode: 0644
@@ -47,7 +47,7 @@
     ansible_distribution_version is version('31', '<'))
 
 - name: redhat | Installing Docker
-  package:
+  ansible.builtin.package:
     name:
       - "docker-ce-{{ docker_version_redhat }}"
       - containerd.io
@@ -62,7 +62,7 @@
     ansible_distribution_version is version('31', '<')))
 
 - name: redhat | Installing Docker
-  package:
+  ansible.builtin.package:
     name:
       - docker-ce
       - containerd.io
@@ -77,7 +77,7 @@
     ansible_distribution_version is version('31', '<')))
 
 - name: redhat | Installing bridge-utils
-  package:
+  ansible.builtin.package:
     name: bridge-utils
     state: present
   become: true
@@ -89,7 +89,7 @@
 
 # https://fedoramagazine.org/docker-and-fedora-32/
 - name: redhat | Installing Docker
-  package:
+  ansible.builtin.package:
     name:
       - docker-compose
       - moby-engine

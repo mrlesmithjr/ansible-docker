@@ -1,6 +1,6 @@
 ---
 - name: config_docker | Configuring Docker Service (Debian)
-  template:
+  ansible.builtin.template:
     src: etc/default/docker.j2
     dest: "{{ docker_default_file }}"
     owner: root
@@ -13,7 +13,7 @@
     - docker_default_file is defined
 
 - name: config_docker | Ensuring Daemon Folder Exists
-  file:
+  ansible.builtin.file:
     path: "{{ docker_daemon_file | dirname }}"
     state: directory
     mode: 0644
@@ -22,7 +22,7 @@
     - docker_daemon_file is defined
 
 - name: config_docker | Configuring Docker
-  template:
+  ansible.builtin.template:
     src: etc/docker/daemon.json.j2
     dest: "{{ docker_daemon_file }}"
     mode: 0644

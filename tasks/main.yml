@@ -1,7 +1,7 @@
 ---
 # tasks file for ansible-docker
 - name: Load OS-specific vars
-  include_vars: "{{ lookup('first_found', params) }}"
+  ansible.builtin.include_vars: "{{ lookup('first_found', params) }}"
   vars:
     params:
       files:
@@ -16,38 +16,38 @@
         - 'vars'
 
 - name: Include set_facts
-  include_tasks: set_facts.yml
+  ansible.builtin.include_tasks: set_facts.yml
 
 - name: Include alpine
-  include_tasks: alpine.yml
+  ansible.builtin.include_tasks: alpine.yml
   when: ansible_os_family == "Alpine"
 
 - name: Include debian
-  include_tasks: debian.yml
+  ansible.builtin.include_tasks: debian.yml
   when: ansible_os_family == "Debian"
 
 - name: Include redhat
-  include_tasks: redhat.yml
+  ansible.builtin.include_tasks: redhat.yml
   when: ansible_os_family == "RedHat"
 
 - name: Include config_docker
-  include_tasks: config_docker.yml
+  ansible.builtin.include_tasks: config_docker.yml
   when: docker_config_service|bool
 
 - name: Include service
-  include_tasks: service.yml
+  ansible.builtin.include_tasks: service.yml
 
 - name: Flush handlers
-  meta: flush_handlers
+  ansible.builtin.meta: flush_handlers
 
 - name: Include users
-  include_tasks: users.yml
+  ansible.builtin.include_tasks: users.yml
   when:
     - docker_config_users|bool
     - docker_users is defined
 
 - name: Include images
-  include_tasks: images.yml
+  ansible.builtin.include_tasks: images.yml
   when:
     - docker_pull_images|bool
     - docker_images is defined

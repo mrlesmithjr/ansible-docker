@@ -1,6 +1,6 @@
 ---
 - name: service | Ensuring Docker Service Is Started And Enabled On Boot
-  service:
+  ansible.builtin.service:
     name: "{{ docker_service_name }}"
     state: started
     enabled: true

@@ -1,6 +1,6 @@
 ---
-- name: debian_repository_deb822 | Adding Docker Repo using key from URL
-  deb822_repository:
+- name: debian_repository_deb822 | Add Docker Repo using key from URL
+  ansible.builtin.deb822_repository:
     name: docker
     types: deb
     uris: "{{ docker_debian_deb822_repo_info['uris'] }}"
