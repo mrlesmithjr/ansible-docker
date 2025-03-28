@@ -43,3 +43,6 @@ if runtime.version < v210:
     runtime.install_collection(
         collection="community.docker:<3.0.0", destination=destination, force=args.force
     )
+    runtime.install_collection(
+        collection="ansible.posix:>=1.1.0", destination=destination, force=args.force
+    )
