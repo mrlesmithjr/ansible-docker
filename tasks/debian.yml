@@ -30,7 +30,7 @@
 # We remove docker-engine as this is old package to install.
 # The new package is docker-ce
 - name: debian | Uninstalling old docker packages (if exists)
-  apt:
+  ansible.builtin.apt:
     name: "{{ docker_debian_apt_absent_packages }}"
     state: absent
     purge: true
@@ -38,8 +38,8 @@
   register: result
   until: result is successful
 
-- name: debian | Checking for existing docker # noqa 305
-  ansible.builtin.shell: "dpkg-query -W '{{ docker_debian_apt_check_package }}'"
+- name: debian | Checking for existing docker # noqa: no-handler
+  ansible.builtin.command: "dpkg-query -W '{{ docker_debian_apt_check_package }}'"
   ignore_errors: true
   register: has_docker
   changed_when: false
@@ -83,7 +83,7 @@
     - docker_debian_set_grub_memory_limit is defined
     - docker_debian_set_grub_memory_limit
 
-- name: debian | Updating grub (if updated) # noqa 503
+- name: debian | Updating grub (if updated) # noqa: no-handler
   ansible.builtin.command: update-grub
   become: true
   when: grub_updated['changed']
