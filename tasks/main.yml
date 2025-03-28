@@ -5,6 +5,7 @@
   vars:
     params:
       files:
+        - "{{ docker_os_specific_vars_file | default('/always_nonexistent',true) }}"
         - "{{ ansible_distribution }}-{{ ansible_distribution_version }}.yml"
         - "{{ ansible_distribution }}-{{ ansible_distribution_release }}.yml"
         - "{{ ansible_distribution }}-{{ ansible_distribution_major_version }}.yml"

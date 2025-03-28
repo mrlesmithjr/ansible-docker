@@ -227,3 +227,6 @@ docker_install_bridge_utils: true
 #
 # docker_version: 18.03.1
 docker_version: latest
+
+# Define OS-specific vars file for override default
+docker_os_specific_vars_file: NONE
