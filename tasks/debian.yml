@@ -27,17 +27,11 @@
   when:
     - docker_debian_repo_type | default('apt') == 'deb822'
 
-# We remove docker-engine as this is old package to install. The new package is
-# docker-ce
+# We remove docker-engine as this is old package to install.
+# The new package is docker-ce
 - name: debian | uninstalling old docker packages (if exists)
   apt:
-    name:
-      - containerd
-      - docker
-      - docker-engine
-      - docker.io
-      - lxc-docker
-      - runc
+    name: "{{ docker_debian_apt_absent_packages }}"
     state: absent
     purge: true
   become: true

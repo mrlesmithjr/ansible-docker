@@ -165,6 +165,15 @@ docker_debian_apt_pre_reqs:
   - gnupg-agent
   - software-properties-common
 
+# Defines debian apt removing package
+docker_debian_apt_absent_packages:
+  - containerd
+  - docker
+  - docker-engine
+  - docker.io
+  - lxc-docker
+  - runc
+
 # Define use apt or deb822 add docker repository
 docker_debian_repo_type: apt
 
