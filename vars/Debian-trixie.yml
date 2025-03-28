@@ -1,0 +1,32 @@
+---
+# Used only for Debian 13
+
+docker_debian_apt_pre_reqs:
+  - apt-transport-https
+  - ca-certificates
+  - curl
+  - gnupg-agent
+  # for task deb822_repository
+  - python3-debian
+
+docker_debian_apt_absent_packages:
+  - docker
+  - docker-engine
+  - lxc-docker
+
+docker_debian_repo_type: deb822
+
+# docker repository not supported debian trixie for now
+docker_debian_apt_repo_info:
+docker_debian_deb822_repo_info:
+
+# make check fail always install docker package
+docker_debian_apt_check_package: none
+
+# versioned package not supported debian trixie for now
+docker_debian_apt_present_versioned_packages:
+  - docker.io
+  - docker-ce
+
+docker_debian_apt_present_latest_packages:
+  - docker.io
