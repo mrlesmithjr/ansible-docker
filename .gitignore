@@ -2,6 +2,7 @@
 .env
 .venv
 .tox
+.ansible
 env/
 venv/
 ENV/
