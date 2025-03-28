@@ -29,6 +29,7 @@ jobs:
           - ubuntu1804
           - ubuntu2004
           - ubuntu2204
+          - ubuntu2404
         # Only test the oldest supported Python and Ansible versions on the oldest GitHub Action runner.
         # For other tests, refer to the Tox tests.
         include:
@@ -115,6 +116,12 @@ jobs:
             group-python: "py38"
             group-ansible: "ansible29"
             ansible-config: "./molecule/ansible.old-galaxy.cfg"
+          - molecule_distro: ubuntu2404
+            runs-on: ubuntu-20.04
+            cgroup: '@cgroupv1'
+            python-version: "3.11"
+            group-python: "py311"
+            group-ansible: "ansible216"
 
     runs-on: ${{ matrix.runs-on }}
 
