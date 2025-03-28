@@ -7,3 +7,4 @@
   become: true
   when:
     - docker_service_name is defined
+  listen: "restart docker"
