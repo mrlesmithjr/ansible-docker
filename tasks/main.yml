@@ -28,7 +28,8 @@
 
 - name: Include redhat
   ansible.builtin.include_tasks: redhat.yml
-  when: ansible_os_family == "RedHat"
+  when:
+    - ansible_os_family == "RedHat" or ansible_os_family == "Rocky"
 
 - name: Include config_docker
   ansible.builtin.include_tasks: config_docker.yml

@@ -1,0 +1,4 @@
+---
+# Used only for Rocky linux
+
+docker_install_bridge_utils: false
