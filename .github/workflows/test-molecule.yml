@@ -18,6 +18,7 @@ jobs:
           - centos8
           - rockylinux8
           - rockylinux9
+          - almalinux8
           # debian8 only have python 3.4 version too old for ansible-core 2.11
           # - debian8
           - debian9
@@ -57,6 +58,13 @@ jobs:
             group-ansible: "ansible29"
             ansible-config: "./molecule/ansible.old-galaxy.cfg"
           - molecule_distro: rockylinux9
+            runs-on: ubuntu-20.04
+            cgroup: '@cgroupv1'
+            python-version: "3.8"
+            group-python: "py38"
+            group-ansible: "ansible210"
+            ansible-config: "./molecule/ansible.old-galaxy.cfg"
+          - molecule_distro: almalinux8
             runs-on: ubuntu-20.04
             cgroup: '@cgroupv1'
             python-version: "3.8"
