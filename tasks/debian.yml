@@ -52,7 +52,7 @@
   register: result
   until: result is successful
   when:
-    - docker_version|lower != "latest"
+    - docker_version | lower != "latest"
     - has_docker is failed
 
 - name: debian | Installing docker
@@ -63,7 +63,7 @@
   register: result
   until: result is successful
   when:
-    - docker_version|lower == "latest"
+    - docker_version | lower == "latest"
     - has_docker is failed
 
 - name: debian | Checking For /etc/default/grub

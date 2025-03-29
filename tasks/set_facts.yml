@@ -13,7 +13,7 @@
       - docker_version is version('18.06', '>=')
     fail_msg: "'docker_version' MUST be 18.06 or lower for Debian 8"
   when:
-    - docker_version|lower != "latest"
+    - docker_version | lower != "latest"
     - ansible_distribution == "Debian"
     - ansible_distribution_major_version is not match("n/a")
     - ansible_distribution_major_version is version('8', '==')
@@ -24,7 +24,7 @@
       - docker_version is version('19.03', '>=')
     fail_msg: "'docker_version' MUST be 19.03 or higher for Ubuntu 20.04 and higher"
   when:
-    - docker_version|lower != "latest"
+    - docker_version | lower != "latest"
     - ansible_distribution == "Ubuntu"
     - ansible_distribution_version is not match("n/a")
     - ansible_distribution_version is version('20.04', '>=')
@@ -33,7 +33,7 @@
   ansible.builtin.set_fact:
     docker_version_debian: "{{ docker_version }}-0~{{ ansible_distribution_release | lower }}"
   when:
-    - docker_version|lower != "latest"
+    - docker_version | lower != "latest"
     - ansible_os_family == "Debian"
     - docker_version is version('1.12.4', '<')
     - ansible_distribution_release is not match("n/a")
@@ -42,7 +42,7 @@
   ansible.builtin.set_fact:
     docker_version_debian: "{{ docker_version }}-0~{{ ansible_distribution | lower }}-{{ ansible_distribution_release | lower }}"
   when:
-    - docker_version|lower != "latest"
+    - docker_version | lower != "latest"
     - ansible_os_family == "Debian"
     - docker_version is version('1.12.4', '>=')
     - docker_version is version('1.13.1', '<=')
@@ -52,7 +52,7 @@
   ansible.builtin.set_fact:
     docker_version_debian: "{{ docker_version }}~ce-0~{{ ansible_distribution | lower }}-{{ ansible_distribution_release | lower }}"
   when:
-    - docker_version|lower != "latest"
+    - docker_version | lower != "latest"
     - ansible_os_family == "Debian"
     - docker_version is version('17.03', '>=')
     - docker_version is version('17.06', '<')
@@ -62,7 +62,7 @@
   ansible.builtin.set_fact:
     docker_version_debian: "{{ docker_version }}~ce-0~{{ ansible_distribution | lower }}"
   when:
-    - docker_version|lower != "latest"
+    - docker_version | lower != "latest"
     - ansible_os_family == "Debian"
     - docker_version is version('17.06', '>=')
     - docker_version is version('18.09', '<')
@@ -71,7 +71,7 @@
   ansible.builtin.set_fact:
     docker_version_debian: "{{ docker_version }}~ce~3-0~{{ ansible_distribution | lower }}"
   when:
-    - docker_version|lower != "latest"
+    - docker_version | lower != "latest"
     - ansible_distribution == "Ubuntu"
     - ansible_distribution_release is not match("n/a")
     - ansible_distribution_version is version('16.04', '>')
@@ -82,7 +82,7 @@
   ansible.builtin.set_fact:
     docker_version_debian: "5:{{ docker_version }}~3-0~{{ ansible_distribution | lower }}-{{ ansible_distribution_release }}"
   when:
-    - docker_version|lower != "latest"
+    - docker_version | lower != "latest"
     - ansible_os_family == "Debian"
     - docker_version is version('18.09', '>=')
     - ansible_distribution_release is not match("n/a")
@@ -91,7 +91,7 @@
   ansible.builtin.set_fact:
     docker_version_redhat: "{{ docker_version }}-1.el7.centos"
   when:
-    - docker_version|lower != "latest"
+    - docker_version | lower != "latest"
     - ansible_os_family == "RedHat"
     - ansible_distribution == "Fedora"
     - docker_version is version('17.03', '<')
@@ -100,7 +100,7 @@
   ansible.builtin.set_fact:
     docker_version_redhat: "{{ docker_version }}.ce-1.fc{{ ansible_distribution_major_version }}"
   when:
-    - docker_version|lower != "latest"
+    - docker_version | lower != "latest"
     - ansible_os_family == "RedHat"
     - ansible_distribution == "Fedora"
     - docker_version is version('17.03', '>=')
@@ -110,7 +110,7 @@
   ansible.builtin.set_fact:
     docker_version_redhat: "{{ docker_version }}-1.el7.centos"
   when:
-    - docker_version|lower != "latest"
+    - docker_version | lower != "latest"
     - ansible_os_family == "RedHat"
     - ansible_distribution != "Fedora"
     - docker_version is version('17.03', '<')
@@ -122,7 +122,7 @@
   ansible.builtin.set_fact:
     docker_version_redhat: "{{ docker_version }}.ce-1.el7.centos"
   when:
-    - docker_version|lower != "latest"
+    - docker_version | lower != "latest"
     - ansible_os_family == "RedHat"
     - ansible_distribution != "Fedora"
     - docker_version is version('17.03', '>=')
@@ -135,7 +135,7 @@
   ansible.builtin.set_fact:
     docker_version_redhat: "{{ docker_version }}.ce-3.el7"
   when:
-    - docker_version|lower != "latest"
+    - docker_version | lower != "latest"
     - ansible_os_family == "RedHat"
     - ansible_distribution != "Fedora"
     - docker_version is version('18.06', '>=')
@@ -148,7 +148,7 @@
   ansible.builtin.debug:
     msg: "Installing Docker Version {{ docker_version_debian }}"
   when:
-    - docker_version|lower != "latest"
+    - docker_version | lower != "latest"
     - ansible_os_family == "Debian"
 
 - name: Installing Docker Version On RedHat
@@ -156,4 +156,4 @@
     msg: "Installing Docker Version {{ docker_version_redhat }}"
   when:
     - ansible_os_family == "RedHat"
-    - docker_version|lower != "latest"
+    - docker_version | lower != "latest"

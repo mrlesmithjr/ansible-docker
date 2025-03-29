@@ -56,7 +56,7 @@
   register: result
   until: result is successful
   when: >
-    docker_version|lower != "latest" and
+    docker_version | lower != "latest" and
     (ansible_distribution != "Fedora" or
     (ansible_distribution == "Fedora" and
     ansible_distribution_version is version('31', '<')))
@@ -71,7 +71,7 @@
   register: result
   until: result is successful
   when: >
-    docker_version|lower == "latest" and
+    docker_version | lower == "latest" and
     (ansible_distribution != "Fedora" or
     (ansible_distribution == "Fedora" and
     ansible_distribution_version is version('31', '<')))
