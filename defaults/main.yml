@@ -213,6 +213,17 @@ docker_debian_apt_present_latest_packages:
 # Defines if docker memory limits should be added to grub boot loader
 docker_debian_set_grub_memory_limit: true
 
+# Defines suse removing package
+docker_suse_zypper_absent_packages: []
+
+# Defines suse zypper repo info for installing from
+docker_suse_zypper_repo_info: []
+  # - repo: https://download.opensuse.org/repositories/security:/SELinux/openSUSE_Factory/security:SELinux.repo
+
+# Defines suse installing latest package
+docker_suse_zypper_present_latest_packages:
+  - docker
+
 # Defines if Linux birdge-utils will get installed.
 docker_install_bridge_utils: true
 

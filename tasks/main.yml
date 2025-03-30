@@ -31,6 +31,11 @@
   when:
     - ansible_os_family == "RedHat" or ansible_os_family == "Rocky"
 
+- name: Include suse
+  ansible.builtin.include_tasks: suse.yml
+  when:
+    - ansible_os_family == "Suse"
+
 - name: Include config_docker
   ansible.builtin.include_tasks: config_docker.yml
   when: docker_config_service | bool
