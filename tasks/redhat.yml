@@ -35,9 +35,7 @@
 
 - name: redhat | Installing Docker
   ansible.builtin.package:
-    name:
-      - "docker-ce-{{ docker_version_redhat }}"
-      - containerd.io
+    name: "{{ docker_redhat_package_present_versioned_packages }}"
     state: present
   become: true
   register: result
@@ -50,9 +48,7 @@
 
 - name: redhat | Installing Docker
   ansible.builtin.package:
-    name:
-      - docker-ce
-      - containerd.io
+    name: "{{ docker_redhat_package_present_latest_packages }}"
     state: present
   become: true
   register: result

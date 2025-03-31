@@ -226,6 +226,16 @@ docker_redhat_package_absent_packages:
   - podman
   - runc
 
+# Defines redhat installing version package
+docker_redhat_package_present_versioned_packages:
+  - containerd.io
+  - "docker-ce-{{ docker_version_redhat }}"
+
+# Defines redhat installing latest package
+docker_redhat_package_present_latest_packages:
+  - containerd.io
+  - docker-ce
+
 # Defines suse removing package
 docker_suse_zypper_absent_packages: []
 
