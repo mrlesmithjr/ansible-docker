@@ -40,6 +40,7 @@ jobs:
           - alpine317
           - alpine318
           - alpine319
+          - alpine320
         # Only test the oldest supported Python and Ansible versions on the oldest GitHub Action runner.
         # For other tests, refer to the Tox tests.
         include:
@@ -199,6 +200,12 @@ jobs:
             python-version: "3.11"
             group-python: "py311"
             group-ansible: "ansible214"
+          - molecule_distro: alpine320
+            runs-on: ubuntu-20.04
+            cgroup: '@cgroupv2'
+            python-version: "3.11"
+            group-python: "py311"
+            group-ansible: "ansible216"
 
     runs-on: ${{ matrix.runs-on }}
 
