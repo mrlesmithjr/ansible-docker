@@ -35,6 +35,7 @@ jobs:
           - ubuntu2204
           - ubuntu2404
           - opensuseleap15
+          - amazonlinux2
         # Only test the oldest supported Python and Ansible versions on the oldest GitHub Action runner.
         # For other tests, refer to the Tox tests.
         include:
@@ -156,6 +157,13 @@ jobs:
             group-python: "py311"
             group-ansible: "ansible216"
           - molecule_distro: opensuseleap15
+            runs-on: ubuntu-20.04
+            cgroup: '@cgroupv1'
+            python-version: "3.8"
+            group-python: "py38"
+            group-ansible: "ansible29"
+            ansible-config: "./molecule/ansible.old-galaxy.cfg"
+          - molecule_distro: amazonlinux2
             runs-on: ubuntu-20.04
             cgroup: '@cgroupv1'
             python-version: "3.8"
