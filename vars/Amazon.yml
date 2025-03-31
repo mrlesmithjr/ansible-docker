@@ -1,0 +1,4 @@
+---
+# Used only for Amazon distribution
+
+docker_redhat_package_absent_packages: []
