@@ -1,7 +1,7 @@
 ---
 # see https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/install-docker.html
-- name: redhat_amazon_linux_extras | Install docker
+- name: redhat_repository_amazon2 | Installing Docker
   ansible.builtin.command: amazon-linux-extras install docker
   become: true
   register: result
-  changed_when: result.rc == 0
+  changed_when: result.rc == 0 and 'Nothing to do' not in result.stdout
