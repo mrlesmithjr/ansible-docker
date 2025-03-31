@@ -1,39 +1,11 @@
 ---
 - name: redhat | Uninstalling Old Docker Package (if exists)
   ansible.builtin.package:
-    name:
-      - docker
-      - docker-client
-      - docker-client-latest
-      - docker-common
-      - docker-engine
-      - docker-latest
-      - docker-latest-logrotate
-      - docker-logrotate
+    name: "{{ docker_redhat_package_absent_packages }}"
     state: absent
   become: true
   register: result
   until: result is successful
-  when: ansible_distribution != "Fedora"
-
-- name: redhat | Uninstalling Old Docker Package (if exists)
-  ansible.builtin.package:
-    name:
-      - docker
-      - docker-client
-      - docker-client-latest
-      - docker-common
-      - docker-engine
-      - docker-engine-selinux
-      - docker-latest
-      - docker-latest-logrotate
-      - docker-logrotate
-      - docker-selinux
-    state: absent
-  become: true
-  register: result
-  until: result is successful
-  when: ansible_distribution == "Fedora"
 
 - name: redhat | Adding Docker repo
   ansible.builtin.template:

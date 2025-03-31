@@ -213,6 +213,19 @@ docker_debian_apt_present_latest_packages:
 # Defines if docker memory limits should be added to grub boot loader
 docker_debian_set_grub_memory_limit: true
 
+# Defines redhat removing package
+docker_redhat_package_absent_packages:
+  - docker
+  - docker-client
+  - docker-client-latest
+  - docker-common
+  - docker-latest
+  - docker-latest-logrotate
+  - docker-logrotate
+  - docker-engine
+  - podman
+  - runc
+
 # Defines suse removing package
 docker_suse_zypper_absent_packages: []
 
