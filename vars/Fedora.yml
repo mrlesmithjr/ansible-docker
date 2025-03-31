@@ -12,3 +12,9 @@ docker_redhat_package_absent_packages:
   - docker-selinux
   - docker-engine-selinux
   - docker-engine
+
+docker_redhat_package_present_versioned_packages:
+  - "docker-ce-{{ docker_version_redhat }}"
+
+docker_redhat_package_present_latest_packages:
+  - docker-ce
