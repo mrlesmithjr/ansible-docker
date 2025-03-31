@@ -1,0 +1,52 @@
+---
+- name: redhat_repository_yum | Adding Docker repo
+  ansible.builtin.template:
+    src: etc/yum.repos.d/docker.repo.j2
+    dest: /etc/yum.repos.d/docker.repo
+    mode: 0644
+  become: true
+  when:
+    - >
+      ansible_distribution != "Rocky" and
+      ansible_distribution != "AlmaLinux"
+    - >
+      ansible_distribution != "Fedora" or
+      (ansible_distribution == "Fedora" and
+      ansible_distribution_version is version('31', '<'))
+
+- name: redhat_repository_yum | Adding Docker repo(Rocky/AlmaLinux)
+  ansible.builtin.template:
+    src: etc/yum.repos.d/centos@docker.repo.j2
+    dest: /etc/yum.repos.d/docker.repo
+    mode: 0644
+  become: true
+  when:
+    - >
+      ansible_distribution == "Rocky" or
+      ansible_distribution == "AlmaLinux"
+
+- name: redhat_repository_yum | Installing Docker
+  ansible.builtin.package:
+    name: "{{ docker_redhat_package_present_versioned_packages }}"
+    state: present
+  become: true
+  register: result
+  until: result is successful
+  when: >
+    docker_version | lower != "latest" and
+    (ansible_distribution != "Fedora" or
+    (ansible_distribution == "Fedora" and
+    ansible_distribution_version is version('31', '<')))
+
+- name: redhat_repository_yum | Installing Docker
+  ansible.builtin.package:
+    name: "{{ docker_redhat_package_present_latest_packages }}"
+    state: present
+  become: true
+  register: result
+  until: result is successful
+  when: >
+    docker_version | lower == "latest" and
+    (ansible_distribution != "Fedora" or
+    (ansible_distribution == "Fedora" and
+    ansible_distribution_version is version('31', '<')))

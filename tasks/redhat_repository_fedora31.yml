@@ -1,0 +1,38 @@
+---
+# https://fedoramagazine.org/docker-and-fedora-32/
+- name: redhat_repository_fedora31 | Installing Docker
+  ansible.builtin.package:
+    name:
+      - docker-compose
+      - moby-engine
+    state: present
+  become: true
+  register: result
+  until: result is successful
+  when:
+    - ansible_distribution == "Fedora"
+    - ansible_distribution_version is version('31', '>=')
+
+# https://fedoramagazine.org/docker-and-fedora-32/
+- name: redhat_repository_fedora31 | Configuring FirewallD
+  ansible.posix.firewalld:
+    interface: docker0
+    permanent: true
+    state: enabled
+    zone: trusted
+  become: true
+  when:
+    - ansible_distribution == "Fedora"
+    - ansible_distribution_version is version('32', '>=')
+
+# https://fedoramagazine.org/docker-and-fedora-32/
+- name: redhat_repository_fedora31 | Configuring FirewallD
+  ansible.posix.firewalld:
+    masquerade: "true"
+    permanent: true
+    state: enabled
+    zone: FedoraWorkstation
+  become: true
+  when:
+    - ansible_distribution == "Fedora"
+    - ansible_distribution_version is version('32', '>=')

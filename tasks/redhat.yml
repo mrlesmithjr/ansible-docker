@@ -7,57 +7,19 @@
   register: result
   until: result is successful
 
-- name: redhat | Adding Docker repo
-  ansible.builtin.template:
-    src: etc/yum.repos.d/docker.repo.j2
-    dest: /etc/yum.repos.d/docker.repo
-    mode: 0644
-  become: true
+- name: redhat | Installing docker by yum
+  ansible.builtin.include_tasks: redhat_repository_yum.yml
   when:
-    - >
-      ansible_distribution != "Rocky" and
-      ansible_distribution != "AlmaLinux"
     - >
       ansible_distribution != "Fedora" or
       (ansible_distribution == "Fedora" and
       ansible_distribution_version is version('31', '<'))
 
-- name: redhat | Adding Docker repo(Rocky/AlmaLinux)
-  ansible.builtin.template:
-    src: etc/yum.repos.d/centos@docker.repo.j2
-    dest: /etc/yum.repos.d/docker.repo
-    mode: 0644
-  become: true
+- name: redhat | Installing docker for fedora31
+  ansible.builtin.include_tasks: redhat_repository_fedora31.yml
   when:
-    - >
-      ansible_distribution == "Rocky" or
-      ansible_distribution == "AlmaLinux"
-
-- name: redhat | Installing Docker
-  ansible.builtin.package:
-    name: "{{ docker_redhat_package_present_versioned_packages }}"
-    state: present
-  become: true
-  register: result
-  until: result is successful
-  when: >
-    docker_version | lower != "latest" and
-    (ansible_distribution != "Fedora" or
-    (ansible_distribution == "Fedora" and
-    ansible_distribution_version is version('31', '<')))
-
-- name: redhat | Installing Docker
-  ansible.builtin.package:
-    name: "{{ docker_redhat_package_present_latest_packages }}"
-    state: present
-  become: true
-  register: result
-  until: result is successful
-  when: >
-    docker_version | lower == "latest" and
-    (ansible_distribution != "Fedora" or
-    (ansible_distribution == "Fedora" and
-    ansible_distribution_version is version('31', '<')))
+    - ansible_distribution == "Fedora"
+    - ansible_distribution_version is version('31', '>=')
 
 - name: redhat | Installing bridge-utils
   ansible.builtin.package:
@@ -69,41 +31,3 @@
   when:
     - docker_install_bridge_utils is defined
     - docker_install_bridge_utils
-
-# https://fedoramagazine.org/docker-and-fedora-32/
-- name: redhat | Installing Docker
-  ansible.builtin.package:
-    name:
-      - docker-compose
-      - moby-engine
-    state: present
-  become: true
-  register: result
-  until: result is successful
-  when:
-    - ansible_distribution == "Fedora"
-    - ansible_distribution_version is version('31', '>=')
-
-# https://fedoramagazine.org/docker-and-fedora-32/
-- name: redhat | Configuring FirewallD
-  ansible.posix.firewalld:
-    interface: docker0
-    permanent: true
-    state: enabled
-    zone: trusted
-  become: true
-  when:
-    - ansible_distribution == "Fedora"
-    - ansible_distribution_version is version('32', '>=')
-
-# https://fedoramagazine.org/docker-and-fedora-32/
-- name: redhat | Configuring FirewallD
-  ansible.posix.firewalld:
-    masquerade: "true"
-    permanent: true
-    state: enabled
-    zone: FedoraWorkstation
-  become: true
-  when:
-    - ansible_distribution == "Fedora"
-    - ansible_distribution_version is version('32', '>=')
