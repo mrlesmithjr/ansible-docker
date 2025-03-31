@@ -1,0 +1,15 @@
+---
+# Used only for CentOS distribution with 7 distribution major version
+
+docker_redhat_package_absent_packages:
+  - docker
+  - docker-client
+  - docker-client-latest
+  - docker-common
+  - docker-latest
+  - docker-latest-logrotate
+  - docker-logrotate
+  - docker-engine
+  - podman
+  # Dependent on docker-ce
+  # - runc
