@@ -2,8 +2,8 @@
 - name: alpine | Ensuring Edge Repo Is Enabled
   ansible.builtin.lineinfile:
     path: /etc/apk/repositories
-    regexp: "^http://dl-cdn.alpinelinux.org/alpine/edge/community"
-    line: http://dl-cdn.alpinelinux.org/alpine/edge/community
+    regexp: "^{{ docker_alpine_apk_repo_url }}"
+    line: "{{ docker_alpine_apk_repo_url }}"
     state: present
   become: true
   register: _apk_repos_updated
@@ -19,7 +19,7 @@
 
 - name: alpine | Installing Docker
   community.general.apk:
-    name: docker
+    name: "{{ docker_alpine_apk_present_latest_packages }}"
     state: present
   become: true
   register: result

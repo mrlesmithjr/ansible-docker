@@ -157,6 +157,13 @@ docker_opts:
 # define as stable or edge
 docker_release_channel: stable
 
+# Defines alpine apk repo url for installing from
+docker_alpine_apk_repo_url: "http://dl-cdn.alpinelinux.org/alpine/edge/community"
+
+# Defines alpine apk installing latest package
+docker_alpine_apk_present_latest_packages:
+  - docker
+
 # Defines debian apt pre-requisites package
 docker_debian_apt_pre_reqs:
   - apt-transport-https
