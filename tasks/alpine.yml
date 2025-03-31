@@ -10,7 +10,7 @@
   until: _apk_repos_updated is successful
 
 - name: alpine | Updating APK Cache # noqa: no-handler
-  community.general.apk:
+  ansible.builtin.apk:
     update_cache: true
   become: true
   register: result
@@ -18,7 +18,7 @@
   when: _apk_repos_updated['changed']
 
 - name: alpine | Installing Docker
-  community.general.apk:
+  ansible.builtin.apk:
     name: "{{ docker_alpine_apk_present_latest_packages }}"
     state: present
   become: true
