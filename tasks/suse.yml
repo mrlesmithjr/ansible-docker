@@ -1,7 +1,7 @@
 ---
 # see https://docs.docker.com/engine/install/sles/
 - name: suse | Uninstalling Old Docker Package (if exists)
-  community.general.zypper:
+  ansible.builtin.zypper:
     name: "{{ docker_suse_zypper_absent_packages }}"
     state: absent
   become: true
@@ -12,7 +12,7 @@
 
 - name: suse | Adding repository
   loop: "{{ docker_suse_zypper_repo_info | default([], true) }}"
-  community.general.zypper_repository:
+  ansible.builtin.zypper_repository:
     name: "{{ item.name | default(omit) }}"
     repo: "{{ item.repo }}"
     state: present
@@ -21,7 +21,7 @@
   until: result is successful
 
 - name: suse | Installing Docker
-  community.general.zypper:
+  ansible.builtin.zypper:
     name: "{{ docker_suse_zypper_present_latest_packages }}"
     state: present
   become: true
