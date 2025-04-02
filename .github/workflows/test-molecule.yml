@@ -53,6 +53,7 @@ jobs:
           - fedora35
           - fedora36
           - fedora37
+          - fedora38
         # Only test the oldest supported Python and Ansible versions on the oldest GitHub Action runner.
         # For other tests, refer to the Tox tests.
         include:
@@ -292,6 +293,12 @@ jobs:
             group-python: "py38"
             group-ansible: "ansible212"
           - molecule_distro: fedora37
+            runs-on: ubuntu-20.04
+            cgroup: '@cgroupv1'
+            python-version: "3.11"
+            group-python: "py311"
+            group-ansible: "ansible214"
+          - molecule_distro: fedora38
             runs-on: ubuntu-20.04
             cgroup: '@cgroupv1'
             python-version: "3.11"
