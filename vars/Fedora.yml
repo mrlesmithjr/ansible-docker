@@ -9,7 +9,8 @@ docker_redhat_package_absent_packages:
   - docker-latest
   - docker-latest-logrotate
   - docker-logrotate
-  - docker-selinux
+  # https://discussion.fedoraproject.org/t/remove-container-selinux-and-dependencies-before-install-docker/147508?replies_to_post_number=4
+  # - docker-selinux
   - docker-engine-selinux
   - docker-engine
 
