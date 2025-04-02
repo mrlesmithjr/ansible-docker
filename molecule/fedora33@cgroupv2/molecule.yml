@@ -1,0 +1,39 @@
+---
+# skip role name check
+# see https://github.com/ansible/ansible-compat/issues/78
+role_name_check: 1
+dependency:
+  name: galaxy
+  # need update `community.docker` support `cgroupns_mode` by molecule-plugins[docker]
+  enabled: true
+  options:
+    role-file: requirements.yml
+driver:
+  name: docker
+lint: |
+  yamllint .
+  ansible-lint
+  flake8
+platforms:
+  - name: fedora33
+    image: geerlingguy/docker-fedora33-ansible
+    privileged: true
+    command: /lib/systemd/systemd
+    # tmpfs:
+    #   - /run
+    #   - /tmp
+    volumes:
+      # fix `Failed to connect to bus: No such file or directory`
+      # see https://www.jeffgeerling.com/blog/2022/docker-and-systemd-getting-rid-dreaded-failed-connect-bus-error
+      - /sys/fs/cgroup:/sys/fs/cgroup:rw
+    # fix the startup issue `docker run -it -v /sys/fs/cgroup:/sys/fs/cgroup:rw jrei/systemd-centos:7 /usr/sbin/init`
+    # see https://github.com/ansible/molecule/discussions/3349
+    # must community.docker > 3.0.0 ansible > 7.0.0
+    cgroupns_mode: host
+provisioner:
+  name: ansible
+  playbooks:
+    converge: ../shared/converge.yml
+    prepare: ../shared/prepare.yml
+verifier:
+  name: ansible
