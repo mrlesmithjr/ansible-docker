@@ -39,6 +39,18 @@
     - ansible_distribution == "Amazon"
     - ansible_distribution_major_version == "2"
 
+- name: redhat | Info docker # noqa: command-instead-of-module
+  ansible.builtin.command: "yum info {{ docker_redhat_yum_check_package }}"
+  register: info_docker
+  changed_when: false
+
+# see https://github.com/geerlingguy/ansible-role-docker/issues/97
+- name: redhat | Fix docker 1809 dependency
+  ansible.builtin.include_tasks: docker-1809-shim.yml
+  when:
+    - ansible_service_mgr == 'systemd'
+    - info_docker.stdout is search("18.09.0")
+
 - name: redhat | Installing bridge-utils
   ansible.builtin.package:
     name: bridge-utils

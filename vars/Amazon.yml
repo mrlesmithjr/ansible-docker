@@ -5,6 +5,8 @@ docker_install_bridge_utils: false
 
 docker_redhat_package_absent_packages: []
 
+docker_redhat_yum_check_package: docker
+
 docker_redhat_package_present_versioned_packages:
   - docker
 

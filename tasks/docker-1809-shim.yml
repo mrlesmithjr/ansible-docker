@@ -1,0 +1,18 @@
+---
+- name: docker-1809-shim | Ensure containerd service dir exists
+  ansible.builtin.file:
+    path: /etc/systemd/system/containerd.service.d
+    state: directory
+    mode: 0755
+
+- name: docker-1809-shim | Add shim to ensure Docker can start in all environments
+  ansible.builtin.template:
+    src: etc/systemd/system/containerd.service.d/override.conf.j2
+    dest: /etc/systemd/system/containerd.service.d/override.conf
+    mode: 0644
+  register: override_template
+
+- name: docker-1809-shim | Reload systemd daemon if template is changed # noqa: no-handler
+  ansible.builtin.systemd:
+    daemon_reload: true
+  when: override_template is changed
