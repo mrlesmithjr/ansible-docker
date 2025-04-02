@@ -236,6 +236,18 @@ docker_redhat_package_absent_packages:
 # Defines redhat yum package name for check exists
 docker_redhat_yum_check_package: docker-ce
 
+# Defines redhat yum distribution
+docker_redhat_yum_distribution: "{{ ansible_distribution | lower }}"
+
+# Defines redhat yum repo uri
+docker_redhat_yum_repo_info:
+  - key: docker-ce-stable
+    name: "Docker CE Stable - $basearch"
+    baseurl: https://download.docker.com/linux/{{ docker_redhat_yum_distribution }}/$releasever/$basearch/stable
+    enabled: 1
+    gpgcheck: 1
+    gpgkey: "https://download.docker.com/linux/{{ docker_redhat_yum_distribution }}/gpg"
+
 # Defines redhat installing version package
 docker_redhat_package_present_versioned_packages:
   - containerd.io

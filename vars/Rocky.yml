@@ -1,4 +1,6 @@
 ---
-# Used only for Rocky linux
+# Used only for Rocky distribution
+
+docker_redhat_yum_distribution: centos
 
 docker_install_bridge_utils: false

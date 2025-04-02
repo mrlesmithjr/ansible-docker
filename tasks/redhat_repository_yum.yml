@@ -5,21 +5,6 @@
     dest: /etc/yum.repos.d/docker.repo
     mode: 0644
   become: true
-  when:
-    - >
-      ansible_distribution != "Rocky" and
-      ansible_distribution != "AlmaLinux"
-
-- name: redhat_repository_yum | Adding Docker repo(Rocky/AlmaLinux)
-  ansible.builtin.template:
-    src: etc/yum.repos.d/centos@docker.repo.j2
-    dest: /etc/yum.repos.d/docker.repo
-    mode: 0644
-  become: true
-  when:
-    - >
-      ansible_distribution == "Rocky" or
-      ansible_distribution == "AlmaLinux"
 
 - name: redhat_repository_yum | Installing Docker
   ansible.builtin.package:

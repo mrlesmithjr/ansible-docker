@@ -1,20 +1,18 @@
-[docker-ce-{{ docker_release_channel }}]
-name=Docker CE {{ docker_release_channel }} - $basearch
-baseurl=https://download.docker.com/linux/{{ ansible_distribution|lower }}/{{ ansible_distribution_major_version }}/$basearch/{{ docker_release_channel }}
-enabled=1
-gpgcheck=1
-gpgkey=https://download.docker.com/linux/{{ ansible_distribution|lower }}/gpg
-
-[docker-ce-{{ docker_release_channel }}-debuginfo]
-name=Docker CE {{ docker_release_channel }} - Debuginfo $basearch
-baseurl=https://download.docker.com/linux/{{ ansible_distribution|lower }}/{{ ansible_distribution_major_version }}/debug-$basearch/{{ docker_release_channel }}
-enabled=0
-gpgcheck=1
-gpgkey=https://download.docker.com/linux/{{ ansible_distribution|lower }}/gpg
-
-[docker-ce-{{ docker_release_channel }}-source]
-name=Docker CE {{ docker_release_channel }} - Sources
-baseurl=https://download.docker.com/linux/{{ ansible_distribution|lower }}/{{ ansible_distribution_major_version }}/source/{{ docker_release_channel }}
-enabled=0
-gpgcheck=1
-gpgkey=https://download.docker.com/linux/{{ ansible_distribution|lower }}/gpg
+{%- if docker_redhat_yum_repo_info is defined and docker_redhat_yum_repo_info | type_debug == 'list' -%}
+{%    for item in docker_redhat_yum_repo_info %}
+{%      if item is defined and item.key is defined and item.name is defined and item.baseurl is defined %}
+[{{ item.key }}]
+name={{ item.name }}
+baseurl={{ item.baseurl }}
+{%        if item.enabled is defined %}
+enabled={{ item.enabled | default(1) }}
+{%        endif %}
+{%        if item.gpgcheck is defined %}
+gpgcheck={{ item.gpgcheck }}
+{%        endif %}
+{%        if item.gpgkey is defined %}
+gpgkey={{ item.gpgkey }}
+{%        endif %}
+{%      endif %}
+{%    endfor %}
+{% endif %}
