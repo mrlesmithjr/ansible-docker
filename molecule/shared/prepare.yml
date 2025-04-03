@@ -9,9 +9,10 @@
     - name: Print version distribution facts
       ansible.builtin.debug:
         msg:
-          - "{{ ansible_os_family }}"
-          - "{{ ansible_pkg_mgr }}"
-          - "{{ ansible_distribution }}"
-          - "{{ ansible_distribution_major_version }}"
-          - "{{ ansible_distribution_release }}"
-          - "{{ ansible_python_version }}"
+          - "os-family={{ ansible_os_family }}"
+          - "distribution={{ ansible_distribution }}"
+          - "distribution={{ ansible_distribution }}+major={{ ansible_distribution_major_version }}"
+          - "distribution={{ ansible_distribution }}+release={{ ansible_distribution_release }}"
+          - "distribution={{ ansible_distribution }}+version={{ ansible_distribution_version }}"
+          - "python={{ ansible_python_version }}"
+          - "pkg={{ ansible_pkg_mgr }}"

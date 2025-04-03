@@ -5,11 +5,11 @@
   vars:
     params:
       files:
-        - "{{ ansible_distribution }}-{{ ansible_distribution_version }}.yml"
-        - "{{ ansible_distribution }}-{{ ansible_distribution_release }}.yml"
-        - "{{ ansible_distribution }}-{{ ansible_distribution_major_version }}.yml"
-        - "{{ ansible_distribution }}.yml"
-        - "{{ ansible_os_family }}.yml"
+        - "distribution={{ ansible_distribution }}+version={{ ansible_distribution_version }}.yml"
+        - "distribution={{ ansible_distribution }}+release={{ ansible_distribution_release }}.yml"
+        - "distribution={{ ansible_distribution }}+major={{ ansible_distribution_major_version }}.yml"
+        - "distribution={{ ansible_distribution }}.yml"
+        - "os-family={{ ansible_os_family }}.yml"
         - main.yml
       paths:
         - '{{ docker_os_specific_vars_path }}'
