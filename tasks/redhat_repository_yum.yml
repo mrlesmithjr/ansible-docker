@@ -15,17 +15,23 @@
     - item.name is defined
     - item.baseurl is defined
 
-- name: redhat_repository_yum | Installing Docker
+- name: redhat_repository_yum | Checking for existing docker # noqa: command-instead-of-module
+  ansible.builtin.command: "rpm -q '{{ docker_redhat_yum_check_package }}'"
+  ignore_errors: true
+  register: has_docker
+  changed_when: false
+
+- name: redhat_repository_yum | Installing Docker versioned
   ansible.builtin.package:
     name: "{{ docker_redhat_package_present_versioned_packages }}"
     state: present
   become: true
   register: result
   until: result is successful
-  when: >
-    docker_version | lower != "latest"
+  when:
+    - docker_version | lower != "latest" and docker_version | lower != "any"
 
-- name: redhat_repository_yum | Installing Docker
+- name: redhat_repository_yum | Installing Docker latest
   ansible.builtin.package:
     name: "{{ docker_redhat_package_present_latest_packages }}"
     state: present
@@ -34,3 +40,4 @@
   until: result is successful
   when: >
     docker_version | lower == "latest"
+    or (docker_version | lower == "any" and has_docker is failed)

@@ -1,7 +1,26 @@
 ---
+- name: redhat_repository_amazon2 | Checking for existing docker # noqa: command-instead-of-module
+  ansible.builtin.command: "rpm -q '{{ docker_redhat_yum_check_package }}'"
+  ignore_errors: true
+  register: has_docker
+  changed_when: false
+
 # see https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/install-docker.html
-- name: redhat_repository_amazon2 | Installing Docker
-  ansible.builtin.command: amazon-linux-extras install docker
+- name: redhat_repository_amazon2 | Installing Docker versioned
+  loop: "{{ docker_redhat_package_present_versioned_packages }}"
+  ansible.builtin.command: "amazon-linux-extras install {{ item }}"
   become: true
   register: result
   changed_when: result.rc == 0 and 'Nothing to do' not in result.stdout
+  when:
+    - docker_version | lower != "latest" and docker_version | lower != "any"
+
+- name: redhat_repository_amazon2 | Installing Docker latest
+  loop: "{{ docker_redhat_package_present_latest_packages }}"
+  ansible.builtin.command: "amazon-linux-extras install {{ item }}"
+  become: true
+  register: result
+  changed_when: result.rc == 0 and 'Nothing to do' not in result.stdout
+  when: >
+    docker_version | lower == "latest"
+    or (docker_version | lower == "any" and has_docker is failed)
