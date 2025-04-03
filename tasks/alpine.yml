@@ -17,6 +17,22 @@
   until: result is successful
   when: _apk_repos_updated['changed']
 
+- name: alpine | Checking for existing docker # noqa: no-handler
+  ansible.builtin.command: "apk info -e '{{ docker_alpine_apk_check_package }}'"
+  ignore_errors: true
+  register: has_docker
+  changed_when: false
+
+- name: alpine | Installing docker versioned
+  ansible.builtin.apk:
+    name: "{{ docker_alpine_apk_present_versioned_packages }}"
+    state: present
+  become: true
+  register: result
+  until: result is successful
+  when:
+    - docker_version | lower != "latest" and docker_version | lower != "any"
+
 - name: alpine | Installing Docker
   ansible.builtin.apk:
     name: "{{ docker_alpine_apk_present_latest_packages }}"
@@ -24,3 +40,6 @@
   become: true
   register: result
   until: result is successful
+  when: >
+    docker_version | lower == "latest"
+    or (docker_version | lower == "any" and has_docker is failed)

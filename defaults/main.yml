@@ -160,6 +160,13 @@ docker_release_channel: stable
 # Defines alpine apk repo url for installing from
 docker_alpine_apk_repo_url: "http://dl-cdn.alpinelinux.org/alpine/edge/community"
 
+# Defines alpine apk package name for check exists
+docker_alpine_apk_check_package: docker
+
+# Defines alpine apk installing version package
+docker_alpine_apk_present_versioned_packages:
+  - "docker-{{ docker_version_alpine }}"
+
 # Defines alpine apk installing latest package
 docker_alpine_apk_present_latest_packages:
   - docker
