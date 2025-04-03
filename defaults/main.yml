@@ -272,7 +272,15 @@ docker_suse_zypper_absent_packages: []
 docker_suse_zypper_repo_info: []
   # - repo: https://download.opensuse.org/repositories/security:/SELinux/openSUSE_Factory/security:SELinux.repo
 
-# Defines suse installing latest package
+# Defines suse zypper package name for check exists
+docker_suse_zypper_check_package: docker
+
+# Defines suse zypper installing version package
+docker_suse_zypper_present_versioned_packages:
+  - containerd.io
+  - "docker-ce-{{ docker_version_suse }}"
+
+# Defines suse zypper installing latest package
 docker_suse_zypper_present_latest_packages:
   - docker
 

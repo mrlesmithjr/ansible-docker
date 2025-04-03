@@ -20,10 +20,29 @@
   register: result
   until: result is successful
 
-- name: suse | Installing Docker
+- name: suse | Checking for existing docker # noqa: command-instead-of-module
+  ansible.builtin.command: "rpm -q '{{ docker_suse_zypper_check_package }}'"
+  ignore_errors: true
+  register: has_docker
+  changed_when: false
+
+- name: suse | Installing docker versioned
+  ansible.builtin.zypper:
+    name: "{{ docker_suse_zypper_present_versioned_packages }}"
+    state: present
+  become: true
+  register: result
+  until: result is successful
+  when:
+    - docker_version | lower != "latest" and docker_version | lower != "any"
+
+- name: suse | Installing Docker latest
   ansible.builtin.zypper:
     name: "{{ docker_suse_zypper_present_latest_packages }}"
     state: present
   become: true
   register: result
   until: result is successful
+  when: >
+    docker_version | lower == "latest"
+    or (docker_version | lower == "any" and has_docker is failed)
