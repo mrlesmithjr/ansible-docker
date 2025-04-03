@@ -285,4 +285,8 @@ docker_install_bridge_utils: true
 docker_version: latest
 
 # Define OS-specific vars file for override default
-docker_os_specific_vars_file: NONE
+# If enabled, some variables will be overridden by those in the `vars` path.
+docker_os_specific_vars_included: true
+
+# Define OS-specific vars path for override default
+docker_os_specific_vars_path: "NONE"
