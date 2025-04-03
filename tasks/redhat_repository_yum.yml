@@ -1,10 +1,19 @@
 ---
 - name: redhat_repository_yum | Adding Docker repo
-  ansible.builtin.template:
-    src: etc/yum.repos.d/docker.repo.j2
-    dest: /etc/yum.repos.d/docker.repo
-    mode: 0644
+  loop: "{{ docker_redhat_yum_repo_info | default([], true) }}"
+  ansible.builtin.yum_repository:
+    file: docker
+    name: "{{ item.key }}"
+    description: "{{ item.name }}"
+    baseurl: "{{ item.baseurl }}"
+    enabled: "{{ item.enabled | default(omit) }}"
+    gpgcheck: "{{ item.gpgcheck | default(omit) }}"
+    gpgkey: "{{ item.gpgkey | default(omit) }}"
   become: true
+  when:
+    - item.key is defined
+    - item.name is defined
+    - item.baseurl is defined
 
 - name: redhat_repository_yum | Installing Docker
   ansible.builtin.package:
