@@ -1,0 +1,12 @@
+---
+# This is an example playbook to execute Ansible tests.
+
+- name: Cleanup
+  hosts: localhost
+  connection: local
+  tasks:
+  - name: Prune docker unused data on GitHub Action
+    ansible.builtin.command:
+      cmd: docker system prune -f -a --volumes
+    when:
+      - lookup('env', 'GITHUB_ACTIONS') == 'true'

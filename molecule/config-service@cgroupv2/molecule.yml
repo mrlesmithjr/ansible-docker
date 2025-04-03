@@ -33,5 +33,6 @@ provisioner:
   playbooks:
     converge: ./converge.yml
     prepare: ../shared/prepare.yml
+    cleanup: ../shared/cleanup.yml
 verifier:
   name: ansible
