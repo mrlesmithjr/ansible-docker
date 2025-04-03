@@ -44,7 +44,7 @@
   register: has_docker
   changed_when: false
 
-- name: debian | Installing docker
+- name: debian | Installing docker versioned
   ansible.builtin.apt:
     name: "{{ docker_debian_apt_present_versioned_packages }}"
     state: present
@@ -52,19 +52,18 @@
   register: result
   until: result is successful
   when:
-    - docker_version | lower != "latest"
-    - has_docker is failed
+    - docker_version | lower != "latest" and docker_version | lower != "any"
 
-- name: debian | Installing docker
+- name: debian | Installing docker latest
   ansible.builtin.apt:
     name: "{{ docker_debian_apt_present_latest_packages }}"
     state: present
   become: true
   register: result
   until: result is successful
-  when:
-    - docker_version | lower == "latest"
-    - has_docker is failed
+  when: >
+    docker_version | lower == "latest"
+    or (docker_version | lower == "any" and has_docker is failed)
 
 - name: debian | Checking For /etc/default/grub
   ansible.builtin.stat:
