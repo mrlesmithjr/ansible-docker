@@ -5,7 +5,7 @@ build-backend = "poetry.core.masonry.api"
 
 [tool.poetry]
 name = "ansible-docker"
-version = "0.2.1"
+version = "0.3.0"
 description = "Ansible role to install/configure Docker"
 authors = ["Larry Smith Jr. <mrlesmithjr@gmail.com>", "xiaoyao9184"]
 package-mode = false

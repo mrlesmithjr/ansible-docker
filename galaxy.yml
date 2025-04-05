@@ -1,5 +1,5 @@
 namespace: none
 name: ansible-role-docker
-version: 0.2.1
+version: 0.3.0
 readme: "fake galaxy meta for tox-ansble v2 `commands_pre`"
 authors: xy
