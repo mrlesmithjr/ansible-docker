@@ -42,7 +42,8 @@ ansible218 = [
     "yamllint",
     "ansible-lint",
     "ansible-core>=2.18.0,<2.19.0",
-    "ansible>=11.0.0,<12.0.0"
+    "ansible>=11.0.0,<12.0.0",
+    "jmespath"
 ]
 ansible217 = [
     "molecule",
@@ -52,7 +53,8 @@ ansible217 = [
     "yamllint",
     "ansible-lint",
     "ansible-core>=2.17.0,<2.18.0",
-    "ansible>=10.0.0,<11.0.0"
+    "ansible>=10.0.0,<11.0.0",
+    "jmespath"
 ]
 ansible216 = [
     "molecule",
@@ -62,7 +64,8 @@ ansible216 = [
     "yamllint",
     "ansible-lint",
     "ansible-core>=2.16.0,<2.17.0",
-    "ansible>=9.0.0,<10.0.0"
+    "ansible>=9.0.0,<10.0.0",
+    "jmespath"
 ]
 ansible215 = [
     "molecule",
@@ -72,7 +75,8 @@ ansible215 = [
     "yamllint",
     "ansible-lint",
     "ansible-core>=2.15.0,<2.16.0",
-    "ansible>=8.0.0,<9.0.0"
+    "ansible>=8.0.0,<9.0.0",
+    "jmespath"
 ]
 ansible214 = [
     "molecule",
@@ -82,7 +86,8 @@ ansible214 = [
     "yamllint",
     "ansible-lint",
     "ansible-core>=2.14.0,<2.15.0",
-    "ansible>=7.0.0,<8.0.0"
+    "ansible>=7.0.0,<8.0.0",
+    "jmespath"
 ]
 ansible213 = [
     "molecule",
@@ -92,7 +97,8 @@ ansible213 = [
     "yamllint",
     "ansible-lint",
     "ansible-core>=2.13.0,<2.14.0",
-    "ansible>=6.0.0,<7.0.0"
+    "ansible>=6.0.0,<7.0.0",
+    "jmespath"
 ]
 ansible212 = [
     "molecule",
@@ -102,7 +108,8 @@ ansible212 = [
     "yamllint",
     "ansible-lint",
     "ansible-core>=2.12.0,<2.13.0",
-    "ansible>=5.0.0,<6.0.0"
+    "ansible>=5.0.0,<6.0.0",
+    "jmespath"
 ]
 ansible211 = [
     "molecule",
@@ -112,7 +119,8 @@ ansible211 = [
     "yamllint",
     "ansible-lint",
     "ansible-core>=2.11.0,<2.12.0",
-    "ansible>=4.0.0,<5.0.0"
+    "ansible>=4.0.0,<5.0.0",
+    "jmespath"
 ]
 ansible210 = [
     "molecule[docker]<5.0.0",
@@ -129,7 +137,8 @@ ansible210 = [
     "ansible-compat<=2.2.7",
     # fix dependencies `rich` break change
     #  see https://github.com/ansible/ansible-lint/issues/1795
-    "rich==10.11.0"
+    "rich==10.11.0",
+    "jmespath"
 ]
 ansible29 = [
     "molecule",
@@ -144,5 +153,6 @@ ansible29 = [
     "ansible-compat<=2.2.7",
     # fix dependencies `rich` break change
     # see https://github.com/ansible/ansible-lint/issues/1795
-    "rich==10.11.0"
+    "rich==10.11.0",
+    "jmespath"
 ]

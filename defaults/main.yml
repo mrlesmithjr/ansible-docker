@@ -167,6 +167,9 @@ docker_architecture_mapping:
 # Defines docker package architecture
 docker_architecture: "{{ docker_architecture_mapping[ansible_architecture] | default(ansible_architecture) }}"
 
+# Defines distribution
+docker_distribution: "{{ ansible_distribution | lower }}"
+
 # Defines alpine apk repo url for installing from
 docker_alpine_apk_repo_url: "http://dl-cdn.alpinelinux.org/alpine/edge/community"
 
@@ -175,7 +178,7 @@ docker_alpine_apk_check_package: docker
 
 # Defines alpine apk installing version package
 docker_alpine_apk_present_versioned_packages:
-  - "docker-{{ docker_version_alpine }}"
+  - "docker-{{ role_docker_version_pkg }}"
 
 # Defines alpine apk installing latest package
 docker_alpine_apk_present_latest_packages:
@@ -205,16 +208,16 @@ docker_debian_repo_type: apt
 docker_debian_apt_repo_info:
   id: 0EBFCD88
   # keyserver: "hkp://p80.pool.sks-keyservers.net:80"
-  repo: "deb [arch={{ docker_architecture }}] https://download.docker.com/linux/{{ ansible_distribution | lower }} {{ ansible_distribution_release }} {{ docker_release_channel }}"
-  url: "https://download.docker.com/linux/{{ ansible_distribution | lower }}/gpg"
+  repo: "deb [arch={{ docker_architecture }}] https://download.docker.com/linux/{{ docker_distribution }} {{ ansible_distribution_release }} {{ docker_release_channel }}"
+  url: "https://download.docker.com/linux/{{ docker_distribution }}/gpg"
 
 # https://www.jeffgeerling.com/blog/2022/aptkey-deprecated-debianubuntu-how-fix-ansible
 docker_debian_deb822_repo_info:
-  uris: "https://download.docker.com/linux/{{ ansible_distribution | lower }}"
+  uris: "https://download.docker.com/linux/{{ docker_distribution }}"
   suites: "{{ ansible_distribution_release }}"
   components: "{{ docker_release_channel }}"
   architectures: "{{ docker_architecture }}"
-  signed_by: "https://download.docker.com/linux/{{ ansible_distribution | lower }}/gpg"
+  signed_by: "https://download.docker.com/linux/{{ docker_distribution }}/gpg"
 
 # Defines debian apt package name for check exists
 docker_debian_apt_check_package: docker-ce
@@ -222,7 +225,7 @@ docker_debian_apt_check_package: docker-ce
 # Defines debian apt installing version package
 docker_debian_apt_present_versioned_packages:
   - containerd.io
-  - "docker-ce={{ docker_version_debian }}"
+  - "docker-ce={{ role_docker_version_pkg }}"
 
 # Defines debian apt installing latest package
 docker_debian_apt_present_latest_packages:
@@ -248,22 +251,19 @@ docker_redhat_package_absent_packages:
 # Defines redhat yum package name for check exists
 docker_redhat_yum_check_package: docker-ce
 
-# Defines redhat yum distribution
-docker_redhat_yum_distribution: "{{ ansible_distribution | lower }}"
-
 # Defines redhat yum repo uri
 docker_redhat_yum_repo_info:
   - key: docker-ce-stable
     name: "Docker CE Stable - $basearch"
-    baseurl: https://download.docker.com/linux/{{ docker_redhat_yum_distribution }}/$releasever/$basearch/stable
+    baseurl: https://download.docker.com/linux/{{ docker_distribution }}/$releasever/$basearch/stable
     enabled: 1
     gpgcheck: 1
-    gpgkey: "https://download.docker.com/linux/{{ docker_redhat_yum_distribution }}/gpg"
+    gpgkey: "https://download.docker.com/linux/{{ docker_distribution }}/gpg"
 
 # Defines redhat installing version package
 docker_redhat_package_present_versioned_packages:
   - containerd.io
-  - "docker-ce-{{ docker_version_redhat }}"
+  - "docker-ce-{{ role_docker_version_pkg }}"
 
 # Defines redhat installing latest package
 docker_redhat_package_present_latest_packages:
@@ -283,7 +283,7 @@ docker_suse_zypper_check_package: docker
 # Defines suse zypper installing version package
 docker_suse_zypper_present_versioned_packages:
   - containerd.io
-  - "docker-ce-{{ docker_version_suse }}"
+  - "docker-ce-{{ role_docker_version_pkg }}"
 
 # Defines suse zypper installing latest package
 docker_suse_zypper_present_latest_packages:
@@ -303,6 +303,9 @@ docker_install_bridge_utils: true
 #
 # docker_version: 18.03.1
 docker_version: latest
+
+# Define version mapping file for getting package version from docker version
+docker_version_file: "NONE"
 
 # Define OS-specific vars file for override default
 # If enabled, some variables will be overridden by those in the `vars` path.

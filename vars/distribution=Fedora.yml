@@ -15,7 +15,7 @@ docker_redhat_package_absent_packages:
   - docker-engine
 
 docker_redhat_package_present_versioned_packages:
-  - "docker-ce-{{ docker_version_redhat }}"
+  - "docker-ce-{{ role_docker_version_pkg }}"
 
 docker_redhat_package_present_latest_packages:
   - docker-ce
