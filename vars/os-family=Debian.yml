@@ -4,3 +4,33 @@
 docker_architecture_mapping:
   x86_64: amd64
   aarch64: arm64
+
+docker_codename_mapping:
+  # debian
+  bookworm: bookworm
+  bullseye: bullseye
+  buster: buster
+  jessie: jessie
+  stretch: stretch
+  wheezy: wheezy
+  # ubuntu
+  trusty: trusty
+  xenial: xenial
+  yakkety: yakkety
+  zesty: zesty
+  artful: artful
+  bionic: bionic
+  cosmic: cosmic
+  disco: disco
+  eoan: eoan
+  focal: focal
+  groovy: groovy
+  hirsute: hirsute
+  impish: impish
+  jammy: jammy
+  kinetic: kinetic
+  lunar: lunar
+  mantic: mantic
+  noble: noble
+  oracular: oracular
+  plucky: plucky

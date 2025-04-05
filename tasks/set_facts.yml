@@ -26,7 +26,7 @@
   ansible.builtin.set_fact:
     role_docker_version_pkg: "{{ lookup('file', role_docker_version_file) | from_json | json_query(query) }}"
   vars:
-    query: "[?docker_version=='{{ docker_version }}' && os_name=='{{ docker_distribution }}' && os_version=='{{ ansible_distribution_major_version }}' && os_arch=='{{ ansible_architecture | lower }}'].package_version | [0]"
+    query: "[?docker_version=='{{ docker_version }}' && os_name=='{{ docker_distribution }}' && os_version=='{{ docker_codename }}' && os_arch=='{{ docker_architecture }}'].package_version | [0]"
   when:
     - docker_version | lower != "latest"
 

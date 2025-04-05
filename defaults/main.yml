@@ -170,6 +170,12 @@ docker_architecture: "{{ docker_architecture_mapping[ansible_architecture] | def
 # Defines distribution
 docker_distribution: "{{ ansible_distribution | lower }}"
 
+# Defines mapping between ansible distribution release and docker codename
+docker_codename_mapping: {}
+
+# Defines codename
+docker_codename: "{{ docker_codename_mapping[ansible_distribution_release] | default(ansible_distribution_major_version) }}"
+
 # Defines alpine apk repo url for installing from
 docker_alpine_apk_repo_url: "http://dl-cdn.alpinelinux.org/alpine/edge/community"
 
