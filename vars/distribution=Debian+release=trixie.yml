@@ -1,6 +1,10 @@
 ---
 # Used only for Debian 13
 
+docker_architecture_mapping:
+  x86_64: amd64
+  aarch64: arm64
+
 docker_debian_apt_pre_reqs:
   - apt-transport-https
   - ca-certificates

@@ -157,6 +157,16 @@ docker_opts:
 # define as stable or edge
 docker_release_channel: stable
 
+# Defines mapping between ansible architecture and docker architecture
+docker_architecture_mapping:
+  x86_64: x86_64
+  aarch64: aarch64
+  ppc64le: ppc64le
+  s390x: s390x
+
+# Defines docker package architecture
+docker_architecture: "{{ docker_architecture_mapping[ansible_architecture] | default(ansible_architecture) }}"
+
 # Defines alpine apk repo url for installing from
 docker_alpine_apk_repo_url: "http://dl-cdn.alpinelinux.org/alpine/edge/community"
 
@@ -191,16 +201,11 @@ docker_debian_apt_absent_packages:
 # Define use apt or deb822 add docker repository
 docker_debian_repo_type: apt
 
-# Defines mapping between ansible architecture and docker architecture
-docker_debian_architectures_mapping:
-  x86_64: amd64
-  aarch64: arm64
-
 # Defines debian apt repo info for installing from
 docker_debian_apt_repo_info:
   id: 0EBFCD88
   # keyserver: "hkp://p80.pool.sks-keyservers.net:80"
-  repo: "deb [arch={{ docker_debian_architectures_mapping[ansible_architecture] }}] https://download.docker.com/linux/{{ ansible_distribution | lower }} {{ ansible_distribution_release }} {{ docker_release_channel }}"
+  repo: "deb [arch={{ docker_architecture }}] https://download.docker.com/linux/{{ ansible_distribution | lower }} {{ ansible_distribution_release }} {{ docker_release_channel }}"
   url: "https://download.docker.com/linux/{{ ansible_distribution | lower }}/gpg"
 
 # https://www.jeffgeerling.com/blog/2022/aptkey-deprecated-debianubuntu-how-fix-ansible
@@ -208,7 +213,7 @@ docker_debian_deb822_repo_info:
   uris: "https://download.docker.com/linux/{{ ansible_distribution | lower }}"
   suites: "{{ ansible_distribution_release }}"
   components: "{{ docker_release_channel }}"
-  architectures: "{{ docker_debian_architectures_mapping[ansible_architecture] }}"
+  architectures: "{{ docker_architecture }}"
   signed_by: "https://download.docker.com/linux/{{ ansible_distribution | lower }}/gpg"
 
 # Defines debian apt package name for check exists

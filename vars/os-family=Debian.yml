@@ -1,0 +1,6 @@
+---
+# Used only for Debian os family
+
+docker_architecture_mapping:
+  x86_64: amd64
+  aarch64: arm64
