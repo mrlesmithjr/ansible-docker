@@ -7,22 +7,19 @@ galaxy_info:
   role_name: docker
 
   platforms:
+    - name: Alpine
+      versions:
+        - "all"
+    - name: Amazon Linux
+      versions:
+        - "2"
+        - "2023"
     - name: EL
       versions:
         - "7"
         - "8"
-    - name: Ubuntu
-      versions:
-        # 16.04
-        - xenial
-        # 18.04
-        - bionic
-        # 20.04
-        - focal
-        # 22.04
-        - jammy
-        # 24.04
-        - noble
+        - "9"
+        - "10"
     - name: Debian
       versions:
         # 9
@@ -35,6 +32,38 @@ galaxy_info:
         - bookworm
         # 13
         - trixie
+    - name: Fedora
+      versions:
+        - "24"
+        - "27"
+        - "29"
+        - "30"
+        - "31"
+        - "32"
+        - "33"
+        - "34"
+        - "35"
+        - "36"
+        - "37"
+        - "38"
+        - "39"
+        - "40"
+        - "41"
+    - name: SLES
+      versions:
+        - "15"
+    - name: Ubuntu
+      versions:
+        # 16.04
+        - xenial
+        # 18.04
+        - bionic
+        # 20.04
+        - focal
+        # 22.04
+        - jammy
+        # 24.04
+        - noble
 
   galaxy_tags:
     - cloud
