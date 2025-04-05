@@ -1,0 +1,17 @@
+---
+# This is an example playbook to execute Ansible tests.
+
+- name: Verify
+  hosts: all
+  tasks:
+  - name: Info docker # noqa: command-instead-of-module
+    ansible.builtin.command: "rpm -q 'docker-ce'"
+    ignore_errors: true
+    register: info_docker
+    changed_when: false
+
+  - name: Ensure version is 19.03.9
+    ansible.builtin.assert:
+      that:
+        - info_docker.stdout is search("19.03.9")
+      fail_msg: "version must be to 19.03.9"
