@@ -30,7 +30,8 @@
     - ansible_distribution_major_version == "2"
 
 - name: redhat | Info docker # noqa: command-instead-of-module
-  ansible.builtin.command: "yum info {{ docker_redhat_yum_check_package }}"
+  ansible.builtin.command: "rpm -q '{{ docker_redhat_yum_check_package }}'"
+  ignore_errors: true
   register: info_docker
   changed_when: false
 
