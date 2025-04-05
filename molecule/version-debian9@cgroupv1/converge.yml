@@ -1,0 +1,9 @@
+---
+- name: Converge
+  hosts: all
+  vars:
+    docker_version: "17.03.0"
+  tasks:
+    - name: Include docker
+      ansible.builtin.include_role:
+        name: docker
