@@ -30,6 +30,12 @@ paths+=("7/x86_64")
 paths+=("8/aarch64")
 paths+=("8/ppc64le")
 paths+=("8/x86_64")
+paths+=("9/aarch64")
+paths+=("9/ppc64le")
+paths+=("9/x86_64")
+paths+=("10/aarch64")
+paths+=("10/ppc64le")
+paths+=("10/x86_64")
 
 for path in "${paths[@]}"; do
     IFS='/' read -r os_version os_arch <<< "$path"
