@@ -1,0 +1,4 @@
+---
+# Used only for CentOS distribution with 10 distribution major version
+
+docker_install_bridge_utils: false

@@ -1,0 +1,36 @@
+---
+# skip role name check
+# see https://github.com/ansible/ansible-compat/issues/78
+role_name_check: 1
+dependency:
+  name: galaxy
+  # need update `community.docker` support `command_handling`
+  enabled: true
+  options:
+    role-file: requirements.yml
+driver:
+  name: docker
+# remove in molecule v5
+# see https://github.com/ansible/molecule/discussions/3914
+lint: |
+  yamllint .
+  ansible-lint
+  flake8
+platforms:
+  - name: centos-stream9
+    image: quay.io/centos/centos:stream9
+    pre_build_image: false
+    privileged: true
+    command: /sbin/init
+    tmpfs:
+      - /run
+      - /run/lock
+      - /sys/fs/cgroup
+provisioner:
+  name: ansible
+  playbooks:
+    converge: ../shared/converge.yml
+    prepare: ../shared/prepare.yml
+    cleanup: ../shared/cleanup.yml
+verifier:
+  name: ansible
