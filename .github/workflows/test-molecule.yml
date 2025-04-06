@@ -18,6 +18,7 @@ jobs:
           - centos8
           - centos-stream8
           - centos-stream9
+          - centos-stream10
           - rockylinux8
           - rockylinux9
           - almalinux8
@@ -90,6 +91,12 @@ jobs:
             group-python: "py38"
             group-ansible: "ansible29"
             ansible-config: "./molecule/ansible.old-galaxy.cfg"
+          - molecule_distro: centos-stream10
+            runs-on: ubuntu-22.04
+            cgroup: '@cgroupv2'
+            python-version: "3.11"
+            group-python: "py311"
+            group-ansible: "ansible216"
           - molecule_distro: rockylinux8
             runs-on: ubuntu-20.04
             cgroup: '@cgroupv1'
