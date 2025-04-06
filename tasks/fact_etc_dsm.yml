@@ -1,0 +1,39 @@
+---
+- name: fact_etc_dsm | Checking for uname machine # noqa: no-handler
+  ansible.builtin.command: "uname -m"
+  register: machine_uname
+  changed_when: false
+
+- name: fact_etc_dsm | ReFact ansible_distribution ansible_architecture
+  ansible.builtin.set_fact:
+    ansible_distribution: "DSM"
+    ansible_architecture: "{{ machine_uname.stdout }}"
+
+- name: fact_etc_dsm | Check /etc/VERSION exists
+  ansible.builtin.stat:
+    path: /etc/VERSION
+  register: etc_version_file
+
+- name: fact_etc_dsm | Read /etc/VERSION content
+  ansible.builtin.slurp:
+    path: /etc/VERSION
+  register: etc_version_slurp
+  when: etc_version_file.stat.exists
+
+- name: fact_etc_dsm | Fact /etc/VERSION variables
+  vars:
+    lines: "{{ etc_version_slurp.content | b64decode | split('\n') | reject('match', '^\\s*$') }}"
+    kv: "{{ lines | map('regex_replace', '^\\s*(.*?)\\s*=\\s*\"?(.*?)\"?\\s*$', '\\1|\\2') }}"
+    dict: "{{ kv | map('split', '|', 1) | community.general.dict }}"
+  ansible.builtin.set_fact:
+    role_docker_version_etc: "{{ dict }}"
+  when: etc_version_file.stat.exists
+
+- name: fact_etc_dsm | ReFact ansible_distribution_major_version
+  ansible.builtin.set_fact:
+    # Using only the major version is not sufficient, so the minor version is now included as well.
+    # major version will be like `72`
+    ansible_distribution_major_version: "{{ role_docker_version_etc['majorversion'] }}{{ role_docker_version_etc['minorversion'] }}"
+  when:
+    - role_docker_version_etc.majorversion is defined
+    - role_docker_version_etc.minorversion is defined

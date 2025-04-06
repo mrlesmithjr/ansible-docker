@@ -1,5 +1,8 @@
 ---
 # tasks file for ansible-docker
+- name: Include fact_etc
+  ansible.builtin.include_tasks: fact_etc.yml
+
 - name: Include OS-specific vars
   ansible.builtin.include_vars: "{{ lookup('first_found', params) }}"
   vars:
@@ -32,6 +35,14 @@
   ansible.builtin.include_tasks: redhat.yml
   when:
     - ansible_os_family == "RedHat" or ansible_os_family == "Rocky"
+
+- name: Include dsm
+  ansible.builtin.include_tasks: dsm.yml
+  when:
+    - >
+      ansible_facts.cmdline.syno_hw_version is defined
+      or docker_service_name == "pkg-Docker-dockerd.service"
+      or docker_service_name == "pkg-ContainerManager-dockerd.service"
 
 - name: Include suse
   ansible.builtin.include_tasks: suse.yml

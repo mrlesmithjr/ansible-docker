@@ -1,0 +1,6 @@
+---
+- name: fact_etc | Include DSM
+  when:
+    - >
+      ansible_facts.cmdline.syno_hw_version is defined
+  ansible.builtin.include_tasks: fact_etc_dsm.yml

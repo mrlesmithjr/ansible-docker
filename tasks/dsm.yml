@@ -1,0 +1,50 @@
+---
+- name: dsm | Checking for existing docker # noqa: no-handler
+  ansible.builtin.command: "synopkg version {{ docker_dsm_synopkg_check_package }}"
+  ignore_errors: true
+  register: version_docker
+  changed_when: false
+  environment:
+    PATH: "{{ ansible_env.PATH }}:/usr/syno/bin"
+
+- name: dsm | Download docker spk file
+  ansible.builtin.get_url:
+    url: "{{ docker_dsm_synopkg_repo_url }}/{{ docker_dsm_synopkg_present_versioned_package }}.spk"
+    dest: "/tmp/{{ docker_dsm_synopkg_present_versioned_package }}.spk"
+  when:
+    - docker_version | lower != "latest" and docker_version | lower != "any"
+    - version_docker is failed or docker_version not in version_docker.stdout
+
+- name: dsm | Installing Docker versioned # noqa: no-handler
+  # fix error `failed to run preinst script`
+  # ansible.builtin.shell: |
+  #     source /root/.profile
+  #     /usr/syno/bin/synopkg install /tmp/{{ docker_dsm_synopkg_present_versioned_package }}.spk
+  ansible.builtin.raw: "sudo su - -c 'synopkg install /tmp/{{ docker_dsm_synopkg_present_versioned_package }}.spk'"
+  become: true
+  # become_method: su
+  # become_user: root
+  register: result
+  until: result is successful
+  when:
+    - docker_version | lower != "latest" and docker_version | lower != "any"
+    - version_docker is failed or docker_version not in version_docker.stdout
+  environment:
+    PATH: "{{ ansible_env.PATH }}:/usr/syno/bin"
+
+- name: dsm | Starting docker package # noqa: no-handler
+  # ansible.builtin.command: "/usr/syno/bin/synosystemctl reload {{ docker_service_name }}"
+  ansible.builtin.shell: |
+    if ! /var/packages/{{ docker_dsm_synopkg_check_package }}/scripts/start-stop-status status; then
+      echo "Package not running, starting it..."
+      /var/packages/{{ docker_dsm_synopkg_check_package }}/scripts/start-stop-status start
+      synopkg start {{ docker_dsm_synopkg_check_package }}
+    else
+      echo "Package is already running."
+    fi
+  become: true
+  ignore_errors: true
+  register: start_docker
+  changed_when: false
+  environment:
+    PATH: "{{ ansible_env.PATH }}:/usr/syno/bin"

@@ -1,0 +1,15 @@
+---
+# Used only for DSM distribution with 7.2 distribution major version
+
+docker_install_bridge_utils: false
+
+docker_service_name: pkg-ContainerManager-dockerd.service
+
+docker_architecture_mapping:
+  x86_64: x86_64
+  aarch64: armv8
+
+docker_codename_mapping:
+  NA: "NA"
+
+docker_dsm_synopkg_check_package: ContainerManager

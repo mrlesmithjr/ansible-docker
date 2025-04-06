@@ -295,6 +295,15 @@ docker_suse_zypper_present_versioned_packages:
 docker_suse_zypper_present_latest_packages:
   - docker
 
+# Defines dsm synopkg package name for check exists
+docker_dsm_synopkg_check_package: Docker
+
+# Defines dsm synopkg repo uri
+docker_dsm_synopkg_repo_url: "https://global.synologydownload.com/download/Package/spk/{{ docker_dsm_synopkg_check_package }}/{{ docker_version }}"
+
+# Defines dsm installing version package
+docker_dsm_synopkg_present_versioned_package: "{{ role_docker_version_pkg }}"
+
 # Defines if Linux birdge-utils will get installed.
 docker_install_bridge_utils: true
 
