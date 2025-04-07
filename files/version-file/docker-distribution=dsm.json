@@ -1,0 +1,436 @@
+[
+  {
+    "docker_version": "20.10.23-1405",
+    "package_version": "ContainerManager-armv8-20.10.23-1405",
+    "os_name": "dsm",
+    "os_version": "NA",
+    "os_arch": "armv8"
+  },
+  {
+    "docker_version": "20.10.23-1405",
+    "package_version": "ContainerManager-x86_64-20.10.23-1405",
+    "os_name": "dsm",
+    "os_version": "NA",
+    "os_arch": "x86_64"
+  },
+  {
+    "docker_version": "20.10.23-1407",
+    "package_version": "ContainerManager-armv8-20.10.23-1407",
+    "os_name": "dsm",
+    "os_version": "NA",
+    "os_arch": "armv8"
+  },
+  {
+    "docker_version": "20.10.23-1407",
+    "package_version": "ContainerManager-x86_64-20.10.23-1407",
+    "os_name": "dsm",
+    "os_version": "NA",
+    "os_arch": "x86_64"
+  },
+  {
+    "docker_version": "20.10.23-1408",
+    "package_version": "ContainerManager-armv8-20.10.23-1408",
+    "os_name": "dsm",
+    "os_version": "NA",
+    "os_arch": "armv8"
+  },
+  {
+    "docker_version": "20.10.23-1408",
+    "package_version": "ContainerManager-x86_64-20.10.23-1408",
+    "os_name": "dsm",
+    "os_version": "NA",
+    "os_arch": "x86_64"
+  },
+  {
+    "docker_version": "20.10.23-1413",
+    "package_version": "ContainerManager-armv8-20.10.23-1413",
+    "os_name": "dsm",
+    "os_version": "NA",
+    "os_arch": "armv8"
+  },
+  {
+    "docker_version": "20.10.23-1413",
+    "package_version": "ContainerManager-x86_64-20.10.23-1413",
+    "os_name": "dsm",
+    "os_version": "NA",
+    "os_arch": "x86_64"
+  },
+  {
+    "docker_version": "20.10.23-1437",
+    "package_version": "ContainerManager-armv8-20.10.23-1437",
+    "os_name": "dsm",
+    "os_version": "NA",
+    "os_arch": "armv8"
+  },
+  {
+    "docker_version": "20.10.23-1437",
+    "package_version": "ContainerManager-x86_64-20.10.23-1437",
+    "os_name": "dsm",
+    "os_version": "NA",
+    "os_arch": "x86_64"
+  },
+  {
+    "docker_version": "24.0.2-1535",
+    "package_version": "ContainerManager-armv8-24.0.2-1535",
+    "os_name": "dsm",
+    "os_version": "NA",
+    "os_arch": "armv8"
+  },
+  {
+    "docker_version": "24.0.2-1535",
+    "package_version": "ContainerManager-x86_64-24.0.2-1535",
+    "os_name": "dsm",
+    "os_version": "NA",
+    "os_arch": "x86_64"
+  },
+  {
+    "docker_version": "1.11.1-0264",
+    "package_version": "Docker-x64-1.11.1-0264",
+    "os_name": "dsm",
+    "os_version": "NA",
+    "os_arch": "x64"
+  },
+  {
+    "docker_version": "1.11.1-0265",
+    "package_version": "Docker-x64-1.11.1-0265",
+    "os_name": "dsm",
+    "os_version": "NA",
+    "os_arch": "x64"
+  },
+  {
+    "docker_version": "1.11.2-0268",
+    "package_version": "Docker-x64-1.11.2-0268",
+    "os_name": "dsm",
+    "os_version": "NA",
+    "os_arch": "x64"
+  },
+  {
+    "docker_version": "1.11.2-0270",
+    "package_version": "Docker-x64-1.11.2-0270",
+    "os_name": "dsm",
+    "os_version": "NA",
+    "os_arch": "x64"
+  },
+  {
+    "docker_version": "1.11.2-0308",
+    "package_version": "Docker-x64-1.11.2-0308",
+    "os_name": "dsm",
+    "os_version": "NA",
+    "os_arch": "x64"
+  },
+  {
+    "docker_version": "1.11.2-0313",
+    "package_version": "Docker-x64-1.11.2-0313",
+    "os_name": "dsm",
+    "os_version": "NA",
+    "os_arch": "x64"
+  },
+  {
+    "docker_version": "1.11.2-0316",
+    "package_version": "Docker-x64-1.11.2-0316",
+    "os_name": "dsm",
+    "os_version": "NA",
+    "os_arch": "x64"
+  },
+  {
+    "docker_version": "1.11.2-0325",
+    "package_version": "Docker-x64-1.11.2-0325",
+    "os_name": "dsm",
+    "os_version": "NA",
+    "os_arch": "x64"
+  },
+  {
+    "docker_version": "1.11.2-0329",
+    "package_version": "Docker-x64-1.11.2-0329",
+    "os_name": "dsm",
+    "os_version": "NA",
+    "os_arch": "x64"
+  },
+  {
+    "docker_version": "1.5.0-0027",
+    "package_version": "Docker-avoton-1.5.0-0027",
+    "os_name": "dsm",
+    "os_version": "NA",
+    "os_arch": "avoton"
+  },
+  {
+    "docker_version": "1.5.0-0027",
+    "package_version": "Docker-bromolow-1.5.0-0027",
+    "os_name": "dsm",
+    "os_version": "NA",
+    "os_arch": "bromolow"
+  },
+  {
+    "docker_version": "1.5.0-0027",
+    "package_version": "Docker-cedarview-1.5.0-0027",
+    "os_name": "dsm",
+    "os_version": "NA",
+    "os_arch": "cedarview"
+  },
+  {
+    "docker_version": "1.5.0-0027",
+    "package_version": "Docker-x86-1.5.0-0027",
+    "os_name": "dsm",
+    "os_version": "NA",
+    "os_arch": "x86"
+  },
+  {
+    "docker_version": "1.6.2-0031",
+    "package_version": "Docker-avoton-1.6.2-0031",
+    "os_name": "dsm",
+    "os_version": "NA",
+    "os_arch": "avoton"
+  },
+  {
+    "docker_version": "1.6.2-0031",
+    "package_version": "Docker-bromolow-1.6.2-0031",
+    "os_name": "dsm",
+    "os_version": "NA",
+    "os_arch": "bromolow"
+  },
+  {
+    "docker_version": "1.6.2-0031",
+    "package_version": "Docker-cedarview-1.6.2-0031",
+    "os_name": "dsm",
+    "os_version": "NA",
+    "os_arch": "cedarview"
+  },
+  {
+    "docker_version": "1.6.2-0031",
+    "package_version": "Docker-x86-1.6.2-0031",
+    "os_name": "dsm",
+    "os_version": "NA",
+    "os_arch": "x86"
+  },
+  {
+    "docker_version": "1.6.2-0033",
+    "package_version": "Docker-avoton-1.6.2-0033",
+    "os_name": "dsm",
+    "os_version": "NA",
+    "os_arch": "avoton"
+  },
+  {
+    "docker_version": "1.6.2-0033",
+    "package_version": "Docker-bromolow-1.6.2-0033",
+    "os_name": "dsm",
+    "os_version": "NA",
+    "os_arch": "bromolow"
+  },
+  {
+    "docker_version": "1.6.2-0033",
+    "package_version": "Docker-cedarview-1.6.2-0033",
+    "os_name": "dsm",
+    "os_version": "NA",
+    "os_arch": "cedarview"
+  },
+  {
+    "docker_version": "1.6.2-0033",
+    "package_version": "Docker-x86-1.6.2-0033",
+    "os_name": "dsm",
+    "os_version": "NA",
+    "os_arch": "x86"
+  },
+  {
+    "docker_version": "1.6.2-0035",
+    "package_version": "Docker-avoton-1.6.2-0035",
+    "os_name": "dsm",
+    "os_version": "NA",
+    "os_arch": "avoton"
+  },
+  {
+    "docker_version": "1.6.2-0035",
+    "package_version": "Docker-bromolow-1.6.2-0035",
+    "os_name": "dsm",
+    "os_version": "NA",
+    "os_arch": "bromolow"
+  },
+  {
+    "docker_version": "1.6.2-0035",
+    "package_version": "Docker-cedarview-1.6.2-0035",
+    "os_name": "dsm",
+    "os_version": "NA",
+    "os_arch": "cedarview"
+  },
+  {
+    "docker_version": "1.6.2-0035",
+    "package_version": "Docker-x86-1.6.2-0035",
+    "os_name": "dsm",
+    "os_version": "NA",
+    "os_arch": "x86"
+  },
+  {
+    "docker_version": "1.6.2-0036",
+    "package_version": "Docker-avoton-1.6.2-0036",
+    "os_name": "dsm",
+    "os_version": "NA",
+    "os_arch": "avoton"
+  },
+  {
+    "docker_version": "1.6.2-0036",
+    "package_version": "Docker-braswell-1.6.2-0036",
+    "os_name": "dsm",
+    "os_version": "NA",
+    "os_arch": "braswell"
+  },
+  {
+    "docker_version": "1.6.2-0036",
+    "package_version": "Docker-bromolow-1.6.2-0036",
+    "os_name": "dsm",
+    "os_version": "NA",
+    "os_arch": "bromolow"
+  },
+  {
+    "docker_version": "1.6.2-0036",
+    "package_version": "Docker-cedarview-1.6.2-0036",
+    "os_name": "dsm",
+    "os_version": "NA",
+    "os_arch": "cedarview"
+  },
+  {
+    "docker_version": "1.6.2-0036",
+    "package_version": "Docker-x86-1.6.2-0036",
+    "os_name": "dsm",
+    "os_version": "NA",
+    "os_arch": "x86"
+  },
+  {
+    "docker_version": "17.05.0-0349",
+    "package_version": "Docker-x64-17.05.0-0349",
+    "os_name": "dsm",
+    "os_version": "NA",
+    "os_arch": "x64"
+  },
+  {
+    "docker_version": "17.05.0-0367",
+    "package_version": "Docker-x64-17.05.0-0367",
+    "os_name": "dsm",
+    "os_version": "NA",
+    "os_arch": "x64"
+  },
+  {
+    "docker_version": "17.05.0-0370",
+    "package_version": "Docker-x64-17.05.0-0370",
+    "os_name": "dsm",
+    "os_version": "NA",
+    "os_arch": "x64"
+  },
+  {
+    "docker_version": "17.05.0-0379",
+    "package_version": "Docker-x64-17.05.0-0379",
+    "os_name": "dsm",
+    "os_version": "NA",
+    "os_arch": "x64"
+  },
+  {
+    "docker_version": "17.05.0-0394",
+    "package_version": "Docker-x64-17.05.0-0394",
+    "os_name": "dsm",
+    "os_version": "NA",
+    "os_arch": "x64"
+  },
+  {
+    "docker_version": "17.05.0-0395",
+    "package_version": "Docker-x64-17.05.0-0395",
+    "os_name": "dsm",
+    "os_version": "NA",
+    "os_arch": "x64"
+  },
+  {
+    "docker_version": "17.05.0-0400",
+    "package_version": "Docker-x64-17.05.0-0400",
+    "os_name": "dsm",
+    "os_version": "NA",
+    "os_arch": "x64"
+  },
+  {
+    "docker_version": "17.05.0-0401",
+    "package_version": "Docker-x64-17.05.0-0401",
+    "os_name": "dsm",
+    "os_version": "NA",
+    "os_arch": "x64"
+  },
+  {
+    "docker_version": "18.09.0-0506",
+    "package_version": "Docker-x64-18.09.0-0506",
+    "os_name": "dsm",
+    "os_version": "NA",
+    "os_arch": "x64"
+  },
+  {
+    "docker_version": "18.09.0-0513",
+    "package_version": "Docker-x64-18.09.0-0513",
+    "os_name": "dsm",
+    "os_version": "NA",
+    "os_arch": "x64"
+  },
+  {
+    "docker_version": "18.09.0-0519",
+    "package_version": "Docker-x64-18.09.0-0519",
+    "os_name": "dsm",
+    "os_version": "NA",
+    "os_arch": "x64"
+  },
+  {
+    "docker_version": "1.9.1-0185",
+    "package_version": "Docker-x64-1.9.1-0185",
+    "os_name": "dsm",
+    "os_version": "NA",
+    "os_arch": "x64"
+  },
+  {
+    "docker_version": "20.10.3-0552",
+    "package_version": "Docker-x64-20.10.3-0552",
+    "os_name": "dsm",
+    "os_version": "NA",
+    "os_arch": "x64"
+  },
+  {
+    "docker_version": "20.10.3-0554",
+    "package_version": "Docker-x64-20.10.3-0554",
+    "os_name": "dsm",
+    "os_version": "NA",
+    "os_arch": "x64"
+  },
+  {
+    "docker_version": "20.10.3-1231",
+    "package_version": "Docker-x64-20.10.3-1231",
+    "os_name": "dsm",
+    "os_version": "NA",
+    "os_arch": "x64"
+  },
+  {
+    "docker_version": "20.10.3-1233",
+    "package_version": "Docker-x64-20.10.3-1233",
+    "os_name": "dsm",
+    "os_version": "NA",
+    "os_arch": "x64"
+  },
+  {
+    "docker_version": "20.10.3-1239",
+    "package_version": "Docker-x64-20.10.3-1239",
+    "os_name": "dsm",
+    "os_version": "NA",
+    "os_arch": "x64"
+  },
+  {
+    "docker_version": "20.10.3-1305",
+    "package_version": "Docker-x64-20.10.3-1305",
+    "os_name": "dsm",
+    "os_version": "NA",
+    "os_arch": "x64"
+  },
+  {
+    "docker_version": "20.10.3-1306",
+    "package_version": "Docker-x64-20.10.3-1306",
+    "os_name": "dsm",
+    "os_version": "NA",
+    "os_arch": "x64"
+  },
+  {
+    "docker_version": "20.10.3-1308",
+    "package_version": "Docker-x64-20.10.3-1308",
+    "os_name": "dsm",
+    "os_version": "NA",
+    "os_arch": "x64"
+  }
+]
