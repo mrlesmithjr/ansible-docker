@@ -1,0 +1,14 @@
+---
+- name: Prepare
+  hosts: localhost
+  connection: local
+  tasks:
+    - name: install sshpass
+      ansible.builtin.package:
+        name: sshpass
+        state: present
+      become: true
+      ignore_errors: true
+
+- name: Include shared prepare
+  ansible.builtin.import_playbook: ../shared/prepare.yml

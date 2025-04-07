@@ -1,0 +1,17 @@
+---
+- name: Converge
+  hosts: all
+  vars:
+    docker_config_service: true
+    docker_daemon_file: /var/packages/ContainerManager/etc/dockerd.json
+    docker_opts:
+      data-root: /var/packages/ContainerManager/var/docker
+      log-driver: db
+      storage-driver: btrfs
+      insecure-registries:
+        - http://nexus.lan:8082
+    docker_version: 24.0.2-1535
+  tasks:
+    - name: Include docker
+      include_role:
+        name: docker
