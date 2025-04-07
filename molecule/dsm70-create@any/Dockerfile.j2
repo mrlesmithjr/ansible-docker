@@ -1,0 +1,1 @@
+FROM vdsm/virtual-dsm
