@@ -1,0 +1,47 @@
+---
+# skip role name check
+# see https://github.com/ansible/ansible-compat/issues/78
+role_name_check: 1
+dependency:
+  name: galaxy
+  # need update `community.docker` support `cgroupns_mode` by molecule-plugins[docker]
+  enabled: true
+  options:
+    role-file: requirements.yml
+driver:
+  name: docker
+platforms:
+  - name: dsm62-create
+    image: vdsm/virtual-dsm
+    privileged: true
+    override_command: false
+    env:
+      URL: "https://global.synologydownload.com/download/DSM/release/6.2.4/25556/DSM_VirtualDSM_25556.pat"
+      DISK_SIZE: "8G"
+      DEBUG: "true"
+    devices:
+      - /dev/kvm
+      - /dev/net/tun
+    capabilities:
+      - NET_ADMIN
+    # exposed_ports:
+    #   - 22
+    published_ports:
+      - "16222:22"
+      - "16200:5000"
+    # tmpfs:
+    #   - /run
+    #   - /tmp
+    # volumes:
+    #   # fix https://github.com/ansible/molecule/issues/3094
+    #   - /sys/fs/cgroup:/sys/fs/cgroup:rw
+    cgroupns_mode: host
+provisioner:
+  name: ansible
+  playbooks:
+    # converge: ./converge.yml
+    # no need OS run in qemu container
+    # prepare: ../shared/prepare.yml
+    cleanup: ../shared/cleanup.yml
+verifier:
+  name: ansible

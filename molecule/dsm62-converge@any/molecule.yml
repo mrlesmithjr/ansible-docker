@@ -1,0 +1,32 @@
+---
+# skip role name check
+# see https://github.com/ansible/ansible-compat/issues/78
+role_name_check: 1
+dependency:
+  name: galaxy
+  # need update `community.docker` support `cgroupns_mode` by molecule-plugins[docker]
+  enabled: true
+  options:
+    role-file: requirements.yml
+driver:
+  name: default
+  options:
+    managed: False
+    ansible_connection_options:
+      ansible_host: localhost
+      ansible_port: "16222"
+      ansible_user: docker
+      ansible_password: 4Test@ansible
+      ansible_become_password: 4Test@ansible
+      ansible_remote_tmp: /tmp
+      # OpenSSH 9 deprecated SCP
+      ansible_scp_extra_args: "-O"
+platforms:
+  - name: dsm62-test
+provisioner:
+  name: ansible
+  playbooks:
+    prepare: ./prepare.yml
+    converge: ./converge.yml
+verifier:
+  name: ansible

@@ -1,0 +1,10 @@
+---
+# This is an example playbook to execute Ansible tests.
+
+- name: Converge
+  hosts: localhost
+  connection: local
+  tasks:
+  - name: Converge assert
+    ansible.builtin.assert:
+      that: true
