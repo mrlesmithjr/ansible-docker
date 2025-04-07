@@ -20,8 +20,8 @@
   when:
     - docker_os_specific_vars_included | default(true)
 
-- name: Include set_facts
-  ansible.builtin.include_tasks: set_facts.yml
+- name: Include fact_pkg
+  ansible.builtin.include_tasks: fact_pkg.yml
 
 - name: Include alpine
   ansible.builtin.include_tasks: alpine.yml
