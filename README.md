@@ -271,3 +271,26 @@ $(poetry env activate)
     # run tox test
     bash tox-ansible.sh --target=<target>
     ```
+
+## Test non-automated (manual)
+
+The current Synology DSM system can run inside Docker,
+supported by the [virtual-dsm](https://github.com/vdsm/virtual-dsm) project.
+Since virtual-dsm uses QEMU virtualization, DSM actually runs within the QEMU virtual machine.
+Ansible Molecule, when using the [docker-connection](https://docs.ansible.com/ansible/latest/collections/community/docker/docker_connection.html),
+can only access the base container running QEMU and cannot connect deeper into the DSM system.
+Therefore, fully unattended automated testing is currently not feasible.
+
+If you would like to perform testing, you need to follow the steps in the table below and manually handle some tasks between the two scenarios.
+
+- First, use *-container@any to create the container
+- Then access the DSM web interface to create a user and enable SSH
+- Next, use *-test@any to run the test
+- Finally use *-container@any to remove the container
+
+| target | *-container@any | *-test@any |
+|-----|-----|-----|
+| DSM 6.2 | [dsm62-container@any](molecule/dsm62-container@any/README.md) | [dsm62-test@any](molecule/dsm62-test@any/README.md) |
+| DSM 7.0 | [dsm70-container@any](molecule/dsm70-container@any/README.md) | [dsm70-test@any](molecule/dsm70-test@any/README.md) |
+| DSM 7.1 | [dsm71-container@any](molecule/dsm71-container@any/README.md) | [dsm71-test@any](molecule/dsm71-test@any/README.md) |
+| DSM 7.2 | [dsm72-container@any](molecule/dsm72-container@any/) | [dsm72-test@any](molecule/dsm72-test@any/) |
