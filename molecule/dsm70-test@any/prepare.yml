@@ -8,7 +8,7 @@
         name: sshpass
         state: present
       become: true
-      ignore_errors: true
+      failed_when: false
 
 - name: Include shared prepare
   ansible.builtin.import_playbook: ../shared/prepare.yml

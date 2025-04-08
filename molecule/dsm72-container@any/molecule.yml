@@ -11,12 +11,12 @@ dependency:
 driver:
   name: docker
 platforms:
-  - name: dsm70-create
+  - name: dsm72-container
     image: vdsm/virtual-dsm
     privileged: true
     override_command: false
     env:
-      URL: "https://global.synologydownload.com/download/DSM/release/7.0.1/42218/DSM_VirtualDSM_42218.pat"
+      URL: "https://global.synologydownload.com/download/DSM/release/7.2.2/72806/DSM_VirtualDSM_72806.pat"
       DISK_SIZE: "8G"
       DEBUG: "true"
     devices:
@@ -27,8 +27,8 @@ platforms:
     # exposed_ports:
     #   - 22
     published_ports:
-      - "17022:22"
-      - "17000:5000"
+      - "17222:22"
+      - "17200:5000"
     # tmpfs:
     #   - /run
     #   - /tmp

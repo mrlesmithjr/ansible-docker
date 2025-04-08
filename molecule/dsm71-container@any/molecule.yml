@@ -11,7 +11,7 @@ dependency:
 driver:
   name: docker
 platforms:
-  - name: dsm71-create
+  - name: dsm71-container
     image: vdsm/virtual-dsm
     privileged: true
     override_command: false
