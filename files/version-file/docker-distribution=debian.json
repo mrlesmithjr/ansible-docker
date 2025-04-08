@@ -1,3199 +1,3206 @@
 [
   {
     "docker_version": "23.0.0",
-    "package_version": "23.0.0-1~debian.12~bookworm",
+    "package_version": "5:23.0.0-1~debian.12~bookworm",
     "os_name": "debian",
     "os_version": "bookworm",
     "os_arch": "amd64"
   },
   {
     "docker_version": "23.0.1",
-    "package_version": "23.0.1-1~debian.12~bookworm",
+    "package_version": "5:23.0.1-1~debian.12~bookworm",
     "os_name": "debian",
     "os_version": "bookworm",
     "os_arch": "amd64"
   },
   {
     "docker_version": "23.0.2",
-    "package_version": "23.0.2-1~debian.12~bookworm",
+    "package_version": "5:23.0.2-1~debian.12~bookworm",
     "os_name": "debian",
     "os_version": "bookworm",
     "os_arch": "amd64"
   },
   {
     "docker_version": "23.0.3",
-    "package_version": "23.0.3-1~debian.12~bookworm",
+    "package_version": "5:23.0.3-1~debian.12~bookworm",
     "os_name": "debian",
     "os_version": "bookworm",
     "os_arch": "amd64"
   },
   {
     "docker_version": "23.0.4",
-    "package_version": "23.0.4-1~debian.12~bookworm",
+    "package_version": "5:23.0.4-1~debian.12~bookworm",
     "os_name": "debian",
     "os_version": "bookworm",
     "os_arch": "amd64"
   },
   {
     "docker_version": "23.0.5",
-    "package_version": "23.0.5-1~debian.12~bookworm",
+    "package_version": "5:23.0.5-1~debian.12~bookworm",
     "os_name": "debian",
     "os_version": "bookworm",
     "os_arch": "amd64"
   },
   {
     "docker_version": "23.0.6",
-    "package_version": "23.0.6-1~debian.12~bookworm",
+    "package_version": "5:23.0.6-1~debian.12~bookworm",
     "os_name": "debian",
     "os_version": "bookworm",
     "os_arch": "amd64"
   },
   {
     "docker_version": "24.0.0",
-    "package_version": "24.0.0-1~debian.12~bookworm",
+    "package_version": "5:24.0.0-1~debian.12~bookworm",
     "os_name": "debian",
     "os_version": "bookworm",
     "os_arch": "amd64"
   },
   {
     "docker_version": "24.0.1",
-    "package_version": "24.0.1-1~debian.12~bookworm",
+    "package_version": "5:24.0.1-1~debian.12~bookworm",
     "os_name": "debian",
     "os_version": "bookworm",
     "os_arch": "amd64"
   },
   {
     "docker_version": "24.0.2",
-    "package_version": "24.0.2-1~debian.12~bookworm",
+    "package_version": "5:24.0.2-1~debian.12~bookworm",
     "os_name": "debian",
     "os_version": "bookworm",
     "os_arch": "amd64"
   },
   {
     "docker_version": "24.0.3",
-    "package_version": "24.0.3-1~debian.12~bookworm",
+    "package_version": "5:24.0.3-1~debian.12~bookworm",
     "os_name": "debian",
     "os_version": "bookworm",
     "os_arch": "amd64"
   },
   {
     "docker_version": "24.0.4",
-    "package_version": "24.0.4-1~debian.12~bookworm",
+    "package_version": "5:24.0.4-1~debian.12~bookworm",
     "os_name": "debian",
     "os_version": "bookworm",
     "os_arch": "amd64"
   },
   {
     "docker_version": "24.0.5",
-    "package_version": "24.0.5-1~debian.12~bookworm",
+    "package_version": "5:24.0.5-1~debian.12~bookworm",
     "os_name": "debian",
     "os_version": "bookworm",
     "os_arch": "amd64"
   },
   {
     "docker_version": "24.0.6",
-    "package_version": "24.0.6-1~debian.12~bookworm",
+    "package_version": "5:24.0.6-1~debian.12~bookworm",
     "os_name": "debian",
     "os_version": "bookworm",
     "os_arch": "amd64"
   },
   {
     "docker_version": "24.0.7",
-    "package_version": "24.0.7-1~debian.12~bookworm",
+    "package_version": "5:24.0.7-1~debian.12~bookworm",
     "os_name": "debian",
     "os_version": "bookworm",
     "os_arch": "amd64"
   },
   {
     "docker_version": "24.0.8",
-    "package_version": "24.0.8-1~debian.12~bookworm",
+    "package_version": "5:24.0.8-1~debian.12~bookworm",
     "os_name": "debian",
     "os_version": "bookworm",
     "os_arch": "amd64"
   },
   {
     "docker_version": "24.0.9",
-    "package_version": "24.0.9-1~debian.12~bookworm",
+    "package_version": "5:24.0.9-1~debian.12~bookworm",
     "os_name": "debian",
     "os_version": "bookworm",
     "os_arch": "amd64"
   },
   {
     "docker_version": "25.0.0",
-    "package_version": "25.0.0-1~debian.12~bookworm",
+    "package_version": "5:25.0.0-1~debian.12~bookworm",
     "os_name": "debian",
     "os_version": "bookworm",
     "os_arch": "amd64"
   },
   {
     "docker_version": "25.0.1",
-    "package_version": "25.0.1-1~debian.12~bookworm",
+    "package_version": "5:25.0.1-1~debian.12~bookworm",
     "os_name": "debian",
     "os_version": "bookworm",
     "os_arch": "amd64"
   },
   {
     "docker_version": "25.0.2",
-    "package_version": "25.0.2-1~debian.12~bookworm",
+    "package_version": "5:25.0.2-1~debian.12~bookworm",
     "os_name": "debian",
     "os_version": "bookworm",
     "os_arch": "amd64"
   },
   {
     "docker_version": "25.0.3",
-    "package_version": "25.0.3-1~debian.12~bookworm",
+    "package_version": "5:25.0.3-1~debian.12~bookworm",
     "os_name": "debian",
     "os_version": "bookworm",
     "os_arch": "amd64"
   },
   {
     "docker_version": "25.0.4",
-    "package_version": "25.0.4-1~debian.12~bookworm",
+    "package_version": "5:25.0.4-1~debian.12~bookworm",
     "os_name": "debian",
     "os_version": "bookworm",
     "os_arch": "amd64"
   },
   {
     "docker_version": "25.0.5",
-    "package_version": "25.0.5-1~debian.12~bookworm",
+    "package_version": "5:25.0.5-1~debian.12~bookworm",
     "os_name": "debian",
     "os_version": "bookworm",
     "os_arch": "amd64"
   },
   {
     "docker_version": "26.0.0",
-    "package_version": "26.0.0-1~debian.12~bookworm",
+    "package_version": "5:26.0.0-1~debian.12~bookworm",
     "os_name": "debian",
     "os_version": "bookworm",
     "os_arch": "amd64"
   },
   {
     "docker_version": "26.0.1",
-    "package_version": "26.0.1-1~debian.12~bookworm",
+    "package_version": "5:26.0.1-1~debian.12~bookworm",
     "os_name": "debian",
     "os_version": "bookworm",
     "os_arch": "amd64"
   },
   {
     "docker_version": "26.0.2",
-    "package_version": "26.0.2-1~debian.12~bookworm",
+    "package_version": "5:26.0.2-1~debian.12~bookworm",
     "os_name": "debian",
     "os_version": "bookworm",
     "os_arch": "amd64"
   },
   {
     "docker_version": "26.1.0",
-    "package_version": "26.1.0-1~debian.12~bookworm",
+    "package_version": "5:26.1.0-1~debian.12~bookworm",
     "os_name": "debian",
     "os_version": "bookworm",
     "os_arch": "amd64"
   },
   {
     "docker_version": "26.1.1",
-    "package_version": "26.1.1-1~debian.12~bookworm",
+    "package_version": "5:26.1.1-1~debian.12~bookworm",
     "os_name": "debian",
     "os_version": "bookworm",
     "os_arch": "amd64"
   },
   {
     "docker_version": "26.1.2",
-    "package_version": "26.1.2-1~debian.12~bookworm",
+    "package_version": "5:26.1.2-1~debian.12~bookworm",
     "os_name": "debian",
     "os_version": "bookworm",
     "os_arch": "amd64"
   },
   {
     "docker_version": "26.1.3",
-    "package_version": "26.1.3-1~debian.12~bookworm",
+    "package_version": "5:26.1.3-1~debian.12~bookworm",
     "os_name": "debian",
     "os_version": "bookworm",
     "os_arch": "amd64"
   },
   {
     "docker_version": "26.1.4",
-    "package_version": "26.1.4-1~debian.12~bookworm",
+    "package_version": "5:26.1.4-1~debian.12~bookworm",
     "os_name": "debian",
     "os_version": "bookworm",
     "os_arch": "amd64"
   },
   {
     "docker_version": "27.0.1",
-    "package_version": "27.0.1-1~debian.12~bookworm",
+    "package_version": "5:27.0.1-1~debian.12~bookworm",
     "os_name": "debian",
     "os_version": "bookworm",
     "os_arch": "amd64"
   },
   {
     "docker_version": "27.0.2",
-    "package_version": "27.0.2-1~debian.12~bookworm",
+    "package_version": "5:27.0.2-1~debian.12~bookworm",
     "os_name": "debian",
     "os_version": "bookworm",
     "os_arch": "amd64"
   },
   {
     "docker_version": "27.0.3",
-    "package_version": "27.0.3-1~debian.12~bookworm",
+    "package_version": "5:27.0.3-1~debian.12~bookworm",
     "os_name": "debian",
     "os_version": "bookworm",
     "os_arch": "amd64"
   },
   {
     "docker_version": "27.1.0",
-    "package_version": "27.1.0-1~debian.12~bookworm",
+    "package_version": "5:27.1.0-1~debian.12~bookworm",
     "os_name": "debian",
     "os_version": "bookworm",
     "os_arch": "amd64"
   },
   {
     "docker_version": "27.1.1",
-    "package_version": "27.1.1-1~debian.12~bookworm",
+    "package_version": "5:27.1.1-1~debian.12~bookworm",
     "os_name": "debian",
     "os_version": "bookworm",
     "os_arch": "amd64"
   },
   {
     "docker_version": "27.1.2",
-    "package_version": "27.1.2-1~debian.12~bookworm",
+    "package_version": "5:27.1.2-1~debian.12~bookworm",
     "os_name": "debian",
     "os_version": "bookworm",
     "os_arch": "amd64"
   },
   {
     "docker_version": "27.2.0",
-    "package_version": "27.2.0-1~debian.12~bookworm",
+    "package_version": "5:27.2.0-1~debian.12~bookworm",
     "os_name": "debian",
     "os_version": "bookworm",
     "os_arch": "amd64"
   },
   {
     "docker_version": "27.2.1",
-    "package_version": "27.2.1-1~debian.12~bookworm",
+    "package_version": "5:27.2.1-1~debian.12~bookworm",
     "os_name": "debian",
     "os_version": "bookworm",
     "os_arch": "amd64"
   },
   {
     "docker_version": "27.3.0",
-    "package_version": "27.3.0-1~debian.12~bookworm",
+    "package_version": "5:27.3.0-1~debian.12~bookworm",
     "os_name": "debian",
     "os_version": "bookworm",
     "os_arch": "amd64"
   },
   {
     "docker_version": "27.3.1",
-    "package_version": "27.3.1-1~debian.12~bookworm",
+    "package_version": "5:27.3.1-1~debian.12~bookworm",
     "os_name": "debian",
     "os_version": "bookworm",
     "os_arch": "amd64"
   },
   {
     "docker_version": "27.4.0",
-    "package_version": "27.4.0-1~debian.12~bookworm",
+    "package_version": "5:27.4.0-1~debian.12~bookworm",
     "os_name": "debian",
     "os_version": "bookworm",
     "os_arch": "amd64"
   },
   {
     "docker_version": "27.4.1",
-    "package_version": "27.4.1-1~debian.12~bookworm",
+    "package_version": "5:27.4.1-1~debian.12~bookworm",
     "os_name": "debian",
     "os_version": "bookworm",
     "os_arch": "amd64"
   },
   {
     "docker_version": "27.5.0",
-    "package_version": "27.5.0-1~debian.12~bookworm",
+    "package_version": "5:27.5.0-1~debian.12~bookworm",
     "os_name": "debian",
     "os_version": "bookworm",
     "os_arch": "amd64"
   },
   {
     "docker_version": "27.5.1",
-    "package_version": "27.5.1-1~debian.12~bookworm",
+    "package_version": "5:27.5.1-1~debian.12~bookworm",
     "os_name": "debian",
     "os_version": "bookworm",
     "os_arch": "amd64"
   },
   {
     "docker_version": "28.0.0",
-    "package_version": "28.0.0-1~debian.12~bookworm",
+    "package_version": "5:28.0.0-1~debian.12~bookworm",
     "os_name": "debian",
     "os_version": "bookworm",
     "os_arch": "amd64"
   },
   {
     "docker_version": "28.0.1",
-    "package_version": "28.0.1-1~debian.12~bookworm",
+    "package_version": "5:28.0.1-1~debian.12~bookworm",
     "os_name": "debian",
     "os_version": "bookworm",
     "os_arch": "amd64"
   },
   {
     "docker_version": "28.0.2",
-    "package_version": "28.0.2-1~debian.12~bookworm",
+    "package_version": "5:28.0.2-1~debian.12~bookworm",
     "os_name": "debian",
     "os_version": "bookworm",
     "os_arch": "amd64"
   },
   {
     "docker_version": "28.0.3",
-    "package_version": "28.0.3-1~debian.12~bookworm",
+    "package_version": "5:28.0.3-1~debian.12~bookworm",
     "os_name": "debian",
     "os_version": "bookworm",
     "os_arch": "amd64"
   },
   {
     "docker_version": "28.0.4",
-    "package_version": "28.0.4-1~debian.12~bookworm",
+    "package_version": "5:28.0.4-1~debian.12~bookworm",
     "os_name": "debian",
     "os_version": "bookworm",
     "os_arch": "amd64"
   },
   {
     "docker_version": "23.0.0",
-    "package_version": "23.0.0-1~debian.12~bookworm",
+    "package_version": "5:23.0.0-1~debian.12~bookworm",
     "os_name": "debian",
     "os_version": "bookworm",
     "os_arch": "arm64"
   },
   {
     "docker_version": "23.0.1",
-    "package_version": "23.0.1-1~debian.12~bookworm",
+    "package_version": "5:23.0.1-1~debian.12~bookworm",
     "os_name": "debian",
     "os_version": "bookworm",
     "os_arch": "arm64"
   },
   {
     "docker_version": "23.0.2",
-    "package_version": "23.0.2-1~debian.12~bookworm",
+    "package_version": "5:23.0.2-1~debian.12~bookworm",
     "os_name": "debian",
     "os_version": "bookworm",
     "os_arch": "arm64"
   },
   {
     "docker_version": "23.0.3",
-    "package_version": "23.0.3-1~debian.12~bookworm",
+    "package_version": "5:23.0.3-1~debian.12~bookworm",
     "os_name": "debian",
     "os_version": "bookworm",
     "os_arch": "arm64"
   },
   {
     "docker_version": "23.0.4",
-    "package_version": "23.0.4-1~debian.12~bookworm",
+    "package_version": "5:23.0.4-1~debian.12~bookworm",
     "os_name": "debian",
     "os_version": "bookworm",
     "os_arch": "arm64"
   },
   {
     "docker_version": "23.0.5",
-    "package_version": "23.0.5-1~debian.12~bookworm",
+    "package_version": "5:23.0.5-1~debian.12~bookworm",
     "os_name": "debian",
     "os_version": "bookworm",
     "os_arch": "arm64"
   },
   {
     "docker_version": "23.0.6",
-    "package_version": "23.0.6-1~debian.12~bookworm",
+    "package_version": "5:23.0.6-1~debian.12~bookworm",
     "os_name": "debian",
     "os_version": "bookworm",
     "os_arch": "arm64"
   },
   {
     "docker_version": "24.0.0",
-    "package_version": "24.0.0-1~debian.12~bookworm",
+    "package_version": "5:24.0.0-1~debian.12~bookworm",
     "os_name": "debian",
     "os_version": "bookworm",
     "os_arch": "arm64"
   },
   {
     "docker_version": "24.0.1",
-    "package_version": "24.0.1-1~debian.12~bookworm",
+    "package_version": "5:24.0.1-1~debian.12~bookworm",
     "os_name": "debian",
     "os_version": "bookworm",
     "os_arch": "arm64"
   },
   {
     "docker_version": "24.0.2",
-    "package_version": "24.0.2-1~debian.12~bookworm",
+    "package_version": "5:24.0.2-1~debian.12~bookworm",
     "os_name": "debian",
     "os_version": "bookworm",
     "os_arch": "arm64"
   },
   {
     "docker_version": "24.0.3",
-    "package_version": "24.0.3-1~debian.12~bookworm",
+    "package_version": "5:24.0.3-1~debian.12~bookworm",
     "os_name": "debian",
     "os_version": "bookworm",
     "os_arch": "arm64"
   },
   {
     "docker_version": "24.0.4",
-    "package_version": "24.0.4-1~debian.12~bookworm",
+    "package_version": "5:24.0.4-1~debian.12~bookworm",
     "os_name": "debian",
     "os_version": "bookworm",
     "os_arch": "arm64"
   },
   {
     "docker_version": "24.0.5",
-    "package_version": "24.0.5-1~debian.12~bookworm",
+    "package_version": "5:24.0.5-1~debian.12~bookworm",
     "os_name": "debian",
     "os_version": "bookworm",
     "os_arch": "arm64"
   },
   {
     "docker_version": "24.0.6",
-    "package_version": "24.0.6-1~debian.12~bookworm",
+    "package_version": "5:24.0.6-1~debian.12~bookworm",
     "os_name": "debian",
     "os_version": "bookworm",
     "os_arch": "arm64"
   },
   {
     "docker_version": "24.0.7",
-    "package_version": "24.0.7-1~debian.12~bookworm",
+    "package_version": "5:24.0.7-1~debian.12~bookworm",
     "os_name": "debian",
     "os_version": "bookworm",
     "os_arch": "arm64"
   },
   {
     "docker_version": "24.0.8",
-    "package_version": "24.0.8-1~debian.12~bookworm",
+    "package_version": "5:24.0.8-1~debian.12~bookworm",
     "os_name": "debian",
     "os_version": "bookworm",
     "os_arch": "arm64"
   },
   {
     "docker_version": "24.0.9",
-    "package_version": "24.0.9-1~debian.12~bookworm",
+    "package_version": "5:24.0.9-1~debian.12~bookworm",
     "os_name": "debian",
     "os_version": "bookworm",
     "os_arch": "arm64"
   },
   {
     "docker_version": "25.0.0",
-    "package_version": "25.0.0-1~debian.12~bookworm",
+    "package_version": "5:25.0.0-1~debian.12~bookworm",
     "os_name": "debian",
     "os_version": "bookworm",
     "os_arch": "arm64"
   },
   {
     "docker_version": "25.0.1",
-    "package_version": "25.0.1-1~debian.12~bookworm",
+    "package_version": "5:25.0.1-1~debian.12~bookworm",
     "os_name": "debian",
     "os_version": "bookworm",
     "os_arch": "arm64"
   },
   {
     "docker_version": "25.0.2",
-    "package_version": "25.0.2-1~debian.12~bookworm",
+    "package_version": "5:25.0.2-1~debian.12~bookworm",
     "os_name": "debian",
     "os_version": "bookworm",
     "os_arch": "arm64"
   },
   {
     "docker_version": "25.0.3",
-    "package_version": "25.0.3-1~debian.12~bookworm",
+    "package_version": "5:25.0.3-1~debian.12~bookworm",
     "os_name": "debian",
     "os_version": "bookworm",
     "os_arch": "arm64"
   },
   {
     "docker_version": "25.0.4",
-    "package_version": "25.0.4-1~debian.12~bookworm",
+    "package_version": "5:25.0.4-1~debian.12~bookworm",
     "os_name": "debian",
     "os_version": "bookworm",
     "os_arch": "arm64"
   },
   {
     "docker_version": "25.0.5",
-    "package_version": "25.0.5-1~debian.12~bookworm",
+    "package_version": "5:25.0.5-1~debian.12~bookworm",
     "os_name": "debian",
     "os_version": "bookworm",
     "os_arch": "arm64"
   },
   {
     "docker_version": "26.0.0",
-    "package_version": "26.0.0-1~debian.12~bookworm",
+    "package_version": "5:26.0.0-1~debian.12~bookworm",
     "os_name": "debian",
     "os_version": "bookworm",
     "os_arch": "arm64"
   },
   {
     "docker_version": "26.0.1",
-    "package_version": "26.0.1-1~debian.12~bookworm",
+    "package_version": "5:26.0.1-1~debian.12~bookworm",
     "os_name": "debian",
     "os_version": "bookworm",
     "os_arch": "arm64"
   },
   {
     "docker_version": "26.0.2",
-    "package_version": "26.0.2-1~debian.12~bookworm",
+    "package_version": "5:26.0.2-1~debian.12~bookworm",
     "os_name": "debian",
     "os_version": "bookworm",
     "os_arch": "arm64"
   },
   {
     "docker_version": "26.1.0",
-    "package_version": "26.1.0-1~debian.12~bookworm",
+    "package_version": "5:26.1.0-1~debian.12~bookworm",
     "os_name": "debian",
     "os_version": "bookworm",
     "os_arch": "arm64"
   },
   {
     "docker_version": "26.1.1",
-    "package_version": "26.1.1-1~debian.12~bookworm",
+    "package_version": "5:26.1.1-1~debian.12~bookworm",
     "os_name": "debian",
     "os_version": "bookworm",
     "os_arch": "arm64"
   },
   {
     "docker_version": "26.1.2",
-    "package_version": "26.1.2-1~debian.12~bookworm",
+    "package_version": "5:26.1.2-1~debian.12~bookworm",
     "os_name": "debian",
     "os_version": "bookworm",
     "os_arch": "arm64"
   },
   {
     "docker_version": "26.1.3",
-    "package_version": "26.1.3-1~debian.12~bookworm",
+    "package_version": "5:26.1.3-1~debian.12~bookworm",
     "os_name": "debian",
     "os_version": "bookworm",
     "os_arch": "arm64"
   },
   {
     "docker_version": "26.1.4",
-    "package_version": "26.1.4-1~debian.12~bookworm",
+    "package_version": "5:26.1.4-1~debian.12~bookworm",
     "os_name": "debian",
     "os_version": "bookworm",
     "os_arch": "arm64"
   },
   {
     "docker_version": "27.0.1",
-    "package_version": "27.0.1-1~debian.12~bookworm",
+    "package_version": "5:27.0.1-1~debian.12~bookworm",
     "os_name": "debian",
     "os_version": "bookworm",
     "os_arch": "arm64"
   },
   {
     "docker_version": "27.0.2",
-    "package_version": "27.0.2-1~debian.12~bookworm",
+    "package_version": "5:27.0.2-1~debian.12~bookworm",
     "os_name": "debian",
     "os_version": "bookworm",
     "os_arch": "arm64"
   },
   {
     "docker_version": "27.0.3",
-    "package_version": "27.0.3-1~debian.12~bookworm",
+    "package_version": "5:27.0.3-1~debian.12~bookworm",
     "os_name": "debian",
     "os_version": "bookworm",
     "os_arch": "arm64"
   },
   {
     "docker_version": "27.1.0",
-    "package_version": "27.1.0-1~debian.12~bookworm",
+    "package_version": "5:27.1.0-1~debian.12~bookworm",
     "os_name": "debian",
     "os_version": "bookworm",
     "os_arch": "arm64"
   },
   {
     "docker_version": "27.1.1",
-    "package_version": "27.1.1-1~debian.12~bookworm",
+    "package_version": "5:27.1.1-1~debian.12~bookworm",
     "os_name": "debian",
     "os_version": "bookworm",
     "os_arch": "arm64"
   },
   {
     "docker_version": "27.1.2",
-    "package_version": "27.1.2-1~debian.12~bookworm",
+    "package_version": "5:27.1.2-1~debian.12~bookworm",
     "os_name": "debian",
     "os_version": "bookworm",
     "os_arch": "arm64"
   },
   {
     "docker_version": "27.2.0",
-    "package_version": "27.2.0-1~debian.12~bookworm",
+    "package_version": "5:27.2.0-1~debian.12~bookworm",
     "os_name": "debian",
     "os_version": "bookworm",
     "os_arch": "arm64"
   },
   {
     "docker_version": "27.2.1",
-    "package_version": "27.2.1-1~debian.12~bookworm",
+    "package_version": "5:27.2.1-1~debian.12~bookworm",
     "os_name": "debian",
     "os_version": "bookworm",
     "os_arch": "arm64"
   },
   {
     "docker_version": "27.3.0",
-    "package_version": "27.3.0-1~debian.12~bookworm",
+    "package_version": "5:27.3.0-1~debian.12~bookworm",
     "os_name": "debian",
     "os_version": "bookworm",
     "os_arch": "arm64"
   },
   {
     "docker_version": "27.3.1",
-    "package_version": "27.3.1-1~debian.12~bookworm",
+    "package_version": "5:27.3.1-1~debian.12~bookworm",
     "os_name": "debian",
     "os_version": "bookworm",
     "os_arch": "arm64"
   },
   {
     "docker_version": "27.4.0",
-    "package_version": "27.4.0-1~debian.12~bookworm",
+    "package_version": "5:27.4.0-1~debian.12~bookworm",
     "os_name": "debian",
     "os_version": "bookworm",
     "os_arch": "arm64"
   },
   {
     "docker_version": "27.4.1",
-    "package_version": "27.4.1-1~debian.12~bookworm",
+    "package_version": "5:27.4.1-1~debian.12~bookworm",
     "os_name": "debian",
     "os_version": "bookworm",
     "os_arch": "arm64"
   },
   {
     "docker_version": "27.5.0",
-    "package_version": "27.5.0-1~debian.12~bookworm",
+    "package_version": "5:27.5.0-1~debian.12~bookworm",
     "os_name": "debian",
     "os_version": "bookworm",
     "os_arch": "arm64"
   },
   {
     "docker_version": "27.5.1",
-    "package_version": "27.5.1-1~debian.12~bookworm",
+    "package_version": "5:27.5.1-1~debian.12~bookworm",
     "os_name": "debian",
     "os_version": "bookworm",
     "os_arch": "arm64"
   },
   {
     "docker_version": "28.0.0",
-    "package_version": "28.0.0-1~debian.12~bookworm",
+    "package_version": "5:28.0.0-1~debian.12~bookworm",
     "os_name": "debian",
     "os_version": "bookworm",
     "os_arch": "arm64"
   },
   {
     "docker_version": "28.0.1",
-    "package_version": "28.0.1-1~debian.12~bookworm",
+    "package_version": "5:28.0.1-1~debian.12~bookworm",
     "os_name": "debian",
     "os_version": "bookworm",
     "os_arch": "arm64"
   },
   {
     "docker_version": "28.0.2",
-    "package_version": "28.0.2-1~debian.12~bookworm",
+    "package_version": "5:28.0.2-1~debian.12~bookworm",
     "os_name": "debian",
     "os_version": "bookworm",
     "os_arch": "arm64"
   },
   {
     "docker_version": "28.0.3",
-    "package_version": "28.0.3-1~debian.12~bookworm",
+    "package_version": "5:28.0.3-1~debian.12~bookworm",
     "os_name": "debian",
     "os_version": "bookworm",
     "os_arch": "arm64"
   },
   {
     "docker_version": "28.0.4",
-    "package_version": "28.0.4-1~debian.12~bookworm",
+    "package_version": "5:28.0.4-1~debian.12~bookworm",
     "os_name": "debian",
     "os_version": "bookworm",
     "os_arch": "arm64"
   },
   {
     "docker_version": "23.0.0",
-    "package_version": "23.0.0-1~debian.12~bookworm",
+    "package_version": "5:23.0.0-1~debian.12~bookworm",
     "os_name": "debian",
     "os_version": "bookworm",
     "os_arch": "armhf"
   },
   {
     "docker_version": "23.0.1",
-    "package_version": "23.0.1-1~debian.12~bookworm",
+    "package_version": "5:23.0.1-1~debian.12~bookworm",
     "os_name": "debian",
     "os_version": "bookworm",
     "os_arch": "armhf"
   },
   {
     "docker_version": "23.0.2",
-    "package_version": "23.0.2-1~debian.12~bookworm",
+    "package_version": "5:23.0.2-1~debian.12~bookworm",
     "os_name": "debian",
     "os_version": "bookworm",
     "os_arch": "armhf"
   },
   {
     "docker_version": "23.0.3",
-    "package_version": "23.0.3-1~debian.12~bookworm",
+    "package_version": "5:23.0.3-1~debian.12~bookworm",
     "os_name": "debian",
     "os_version": "bookworm",
     "os_arch": "armhf"
   },
   {
     "docker_version": "23.0.4",
-    "package_version": "23.0.4-1~debian.12~bookworm",
+    "package_version": "5:23.0.4-1~debian.12~bookworm",
     "os_name": "debian",
     "os_version": "bookworm",
     "os_arch": "armhf"
   },
   {
     "docker_version": "23.0.5",
-    "package_version": "23.0.5-1~debian.12~bookworm",
+    "package_version": "5:23.0.5-1~debian.12~bookworm",
     "os_name": "debian",
     "os_version": "bookworm",
     "os_arch": "armhf"
   },
   {
     "docker_version": "23.0.6",
-    "package_version": "23.0.6-1~debian.12~bookworm",
+    "package_version": "5:23.0.6-1~debian.12~bookworm",
     "os_name": "debian",
     "os_version": "bookworm",
     "os_arch": "armhf"
   },
   {
     "docker_version": "24.0.0",
-    "package_version": "24.0.0-1~debian.12~bookworm",
+    "package_version": "5:24.0.0-1~debian.12~bookworm",
     "os_name": "debian",
     "os_version": "bookworm",
     "os_arch": "armhf"
   },
   {
     "docker_version": "24.0.1",
-    "package_version": "24.0.1-1~debian.12~bookworm",
+    "package_version": "5:24.0.1-1~debian.12~bookworm",
     "os_name": "debian",
     "os_version": "bookworm",
     "os_arch": "armhf"
   },
   {
     "docker_version": "24.0.2",
-    "package_version": "24.0.2-1~debian.12~bookworm",
+    "package_version": "5:24.0.2-1~debian.12~bookworm",
     "os_name": "debian",
     "os_version": "bookworm",
     "os_arch": "armhf"
   },
   {
     "docker_version": "24.0.3",
-    "package_version": "24.0.3-1~debian.12~bookworm",
+    "package_version": "5:24.0.3-1~debian.12~bookworm",
     "os_name": "debian",
     "os_version": "bookworm",
     "os_arch": "armhf"
   },
   {
     "docker_version": "24.0.4",
-    "package_version": "24.0.4-1~debian.12~bookworm",
+    "package_version": "5:24.0.4-1~debian.12~bookworm",
     "os_name": "debian",
     "os_version": "bookworm",
     "os_arch": "armhf"
   },
   {
     "docker_version": "24.0.5",
-    "package_version": "24.0.5-1~debian.12~bookworm",
+    "package_version": "5:24.0.5-1~debian.12~bookworm",
     "os_name": "debian",
     "os_version": "bookworm",
     "os_arch": "armhf"
   },
   {
     "docker_version": "24.0.6",
-    "package_version": "24.0.6-1~debian.12~bookworm",
+    "package_version": "5:24.0.6-1~debian.12~bookworm",
     "os_name": "debian",
     "os_version": "bookworm",
     "os_arch": "armhf"
   },
   {
     "docker_version": "24.0.7",
-    "package_version": "24.0.7-1~debian.12~bookworm",
+    "package_version": "5:24.0.7-1~debian.12~bookworm",
     "os_name": "debian",
     "os_version": "bookworm",
     "os_arch": "armhf"
   },
   {
     "docker_version": "24.0.8",
-    "package_version": "24.0.8-1~debian.12~bookworm",
+    "package_version": "5:24.0.8-1~debian.12~bookworm",
     "os_name": "debian",
     "os_version": "bookworm",
     "os_arch": "armhf"
   },
   {
     "docker_version": "24.0.9",
-    "package_version": "24.0.9-1~debian.12~bookworm",
+    "package_version": "5:24.0.9-1~debian.12~bookworm",
     "os_name": "debian",
     "os_version": "bookworm",
     "os_arch": "armhf"
   },
   {
     "docker_version": "25.0.0",
-    "package_version": "25.0.0-1~debian.12~bookworm",
+    "package_version": "5:25.0.0-1~debian.12~bookworm",
     "os_name": "debian",
     "os_version": "bookworm",
     "os_arch": "armhf"
   },
   {
     "docker_version": "25.0.1",
-    "package_version": "25.0.1-1~debian.12~bookworm",
+    "package_version": "5:25.0.1-1~debian.12~bookworm",
     "os_name": "debian",
     "os_version": "bookworm",
     "os_arch": "armhf"
   },
   {
     "docker_version": "25.0.2",
-    "package_version": "25.0.2-1~debian.12~bookworm",
+    "package_version": "5:25.0.2-1~debian.12~bookworm",
     "os_name": "debian",
     "os_version": "bookworm",
     "os_arch": "armhf"
   },
   {
     "docker_version": "25.0.3",
-    "package_version": "25.0.3-1~debian.12~bookworm",
+    "package_version": "5:25.0.3-1~debian.12~bookworm",
     "os_name": "debian",
     "os_version": "bookworm",
     "os_arch": "armhf"
   },
   {
     "docker_version": "25.0.4",
-    "package_version": "25.0.4-1~debian.12~bookworm",
+    "package_version": "5:25.0.4-1~debian.12~bookworm",
     "os_name": "debian",
     "os_version": "bookworm",
     "os_arch": "armhf"
   },
   {
     "docker_version": "25.0.5",
-    "package_version": "25.0.5-1~debian.12~bookworm",
+    "package_version": "5:25.0.5-1~debian.12~bookworm",
     "os_name": "debian",
     "os_version": "bookworm",
     "os_arch": "armhf"
   },
   {
     "docker_version": "26.0.0",
-    "package_version": "26.0.0-1~debian.12~bookworm",
+    "package_version": "5:26.0.0-1~debian.12~bookworm",
     "os_name": "debian",
     "os_version": "bookworm",
     "os_arch": "armhf"
   },
   {
     "docker_version": "26.0.1",
-    "package_version": "26.0.1-1~debian.12~bookworm",
+    "package_version": "5:26.0.1-1~debian.12~bookworm",
     "os_name": "debian",
     "os_version": "bookworm",
     "os_arch": "armhf"
   },
   {
     "docker_version": "26.0.2",
-    "package_version": "26.0.2-1~debian.12~bookworm",
+    "package_version": "5:26.0.2-1~debian.12~bookworm",
     "os_name": "debian",
     "os_version": "bookworm",
     "os_arch": "armhf"
   },
   {
     "docker_version": "26.1.0",
-    "package_version": "26.1.0-1~debian.12~bookworm",
+    "package_version": "5:26.1.0-1~debian.12~bookworm",
     "os_name": "debian",
     "os_version": "bookworm",
     "os_arch": "armhf"
   },
   {
     "docker_version": "26.1.1",
-    "package_version": "26.1.1-1~debian.12~bookworm",
+    "package_version": "5:26.1.1-1~debian.12~bookworm",
     "os_name": "debian",
     "os_version": "bookworm",
     "os_arch": "armhf"
   },
   {
     "docker_version": "26.1.2",
-    "package_version": "26.1.2-1~debian.12~bookworm",
+    "package_version": "5:26.1.2-1~debian.12~bookworm",
     "os_name": "debian",
     "os_version": "bookworm",
     "os_arch": "armhf"
   },
   {
     "docker_version": "26.1.3",
-    "package_version": "26.1.3-1~debian.12~bookworm",
+    "package_version": "5:26.1.3-1~debian.12~bookworm",
     "os_name": "debian",
     "os_version": "bookworm",
     "os_arch": "armhf"
   },
   {
     "docker_version": "26.1.4",
-    "package_version": "26.1.4-1~debian.12~bookworm",
+    "package_version": "5:26.1.4-1~debian.12~bookworm",
     "os_name": "debian",
     "os_version": "bookworm",
     "os_arch": "armhf"
   },
   {
     "docker_version": "27.0.1",
-    "package_version": "27.0.1-1~debian.12~bookworm",
+    "package_version": "5:27.0.1-1~debian.12~bookworm",
     "os_name": "debian",
     "os_version": "bookworm",
     "os_arch": "armhf"
   },
   {
     "docker_version": "27.0.2",
-    "package_version": "27.0.2-1~debian.12~bookworm",
+    "package_version": "5:27.0.2-1~debian.12~bookworm",
     "os_name": "debian",
     "os_version": "bookworm",
     "os_arch": "armhf"
   },
   {
     "docker_version": "27.0.3",
-    "package_version": "27.0.3-1~debian.12~bookworm",
+    "package_version": "5:27.0.3-1~debian.12~bookworm",
     "os_name": "debian",
     "os_version": "bookworm",
     "os_arch": "armhf"
   },
   {
     "docker_version": "27.1.0",
-    "package_version": "27.1.0-1~debian.12~bookworm",
+    "package_version": "5:27.1.0-1~debian.12~bookworm",
     "os_name": "debian",
     "os_version": "bookworm",
     "os_arch": "armhf"
   },
   {
     "docker_version": "27.1.1",
-    "package_version": "27.1.1-1~debian.12~bookworm",
+    "package_version": "5:27.1.1-1~debian.12~bookworm",
     "os_name": "debian",
     "os_version": "bookworm",
     "os_arch": "armhf"
   },
   {
     "docker_version": "27.1.2",
-    "package_version": "27.1.2-1~debian.12~bookworm",
+    "package_version": "5:27.1.2-1~debian.12~bookworm",
     "os_name": "debian",
     "os_version": "bookworm",
     "os_arch": "armhf"
   },
   {
     "docker_version": "27.2.0",
-    "package_version": "27.2.0-1~debian.12~bookworm",
+    "package_version": "5:27.2.0-1~debian.12~bookworm",
     "os_name": "debian",
     "os_version": "bookworm",
     "os_arch": "armhf"
   },
   {
     "docker_version": "27.2.1",
-    "package_version": "27.2.1-1~debian.12~bookworm",
+    "package_version": "5:27.2.1-1~debian.12~bookworm",
     "os_name": "debian",
     "os_version": "bookworm",
     "os_arch": "armhf"
   },
   {
     "docker_version": "27.3.0",
-    "package_version": "27.3.0-1~debian.12~bookworm",
+    "package_version": "5:27.3.0-1~debian.12~bookworm",
     "os_name": "debian",
     "os_version": "bookworm",
     "os_arch": "armhf"
   },
   {
     "docker_version": "27.3.1",
-    "package_version": "27.3.1-1~debian.12~bookworm",
+    "package_version": "5:27.3.1-1~debian.12~bookworm",
     "os_name": "debian",
     "os_version": "bookworm",
     "os_arch": "armhf"
   },
   {
     "docker_version": "27.4.0",
-    "package_version": "27.4.0-1~debian.12~bookworm",
+    "package_version": "5:27.4.0-1~debian.12~bookworm",
     "os_name": "debian",
     "os_version": "bookworm",
     "os_arch": "armhf"
   },
   {
     "docker_version": "27.4.1",
-    "package_version": "27.4.1-1~debian.12~bookworm",
+    "package_version": "5:27.4.1-1~debian.12~bookworm",
     "os_name": "debian",
     "os_version": "bookworm",
     "os_arch": "armhf"
   },
   {
     "docker_version": "27.5.0",
-    "package_version": "27.5.0-1~debian.12~bookworm",
+    "package_version": "5:27.5.0-1~debian.12~bookworm",
     "os_name": "debian",
     "os_version": "bookworm",
     "os_arch": "armhf"
   },
   {
     "docker_version": "27.5.1",
-    "package_version": "27.5.1-1~debian.12~bookworm",
+    "package_version": "5:27.5.1-1~debian.12~bookworm",
     "os_name": "debian",
     "os_version": "bookworm",
     "os_arch": "armhf"
   },
   {
     "docker_version": "28.0.0",
-    "package_version": "28.0.0-1~debian.12~bookworm",
+    "package_version": "5:28.0.0-1~debian.12~bookworm",
     "os_name": "debian",
     "os_version": "bookworm",
     "os_arch": "armhf"
   },
   {
     "docker_version": "28.0.1",
-    "package_version": "28.0.1-1~debian.12~bookworm",
+    "package_version": "5:28.0.1-1~debian.12~bookworm",
     "os_name": "debian",
     "os_version": "bookworm",
     "os_arch": "armhf"
   },
   {
     "docker_version": "28.0.2",
-    "package_version": "28.0.2-1~debian.12~bookworm",
+    "package_version": "5:28.0.2-1~debian.12~bookworm",
     "os_name": "debian",
     "os_version": "bookworm",
     "os_arch": "armhf"
   },
   {
     "docker_version": "28.0.3",
-    "package_version": "28.0.3-1~debian.12~bookworm",
+    "package_version": "5:28.0.3-1~debian.12~bookworm",
     "os_name": "debian",
     "os_version": "bookworm",
     "os_arch": "armhf"
   },
   {
     "docker_version": "28.0.4",
-    "package_version": "28.0.4-1~debian.12~bookworm",
+    "package_version": "5:28.0.4-1~debian.12~bookworm",
     "os_name": "debian",
     "os_version": "bookworm",
     "os_arch": "armhf"
   },
   {
     "docker_version": "23.0.0",
-    "package_version": "23.0.0-1~debian.12~bookworm",
+    "package_version": "5:23.0.0-1~debian.12~bookworm",
     "os_name": "debian",
     "os_version": "bookworm",
     "os_arch": "ppc64el"
   },
   {
     "docker_version": "23.0.1",
-    "package_version": "23.0.1-1~debian.12~bookworm",
+    "package_version": "5:23.0.1-1~debian.12~bookworm",
     "os_name": "debian",
     "os_version": "bookworm",
     "os_arch": "ppc64el"
   },
   {
     "docker_version": "23.0.2",
-    "package_version": "23.0.2-1~debian.12~bookworm",
+    "package_version": "5:23.0.2-1~debian.12~bookworm",
     "os_name": "debian",
     "os_version": "bookworm",
     "os_arch": "ppc64el"
   },
   {
     "docker_version": "23.0.3",
-    "package_version": "23.0.3-1~debian.12~bookworm",
+    "package_version": "5:23.0.3-1~debian.12~bookworm",
     "os_name": "debian",
     "os_version": "bookworm",
     "os_arch": "ppc64el"
   },
   {
     "docker_version": "23.0.4",
-    "package_version": "23.0.4-1~debian.12~bookworm",
+    "package_version": "5:23.0.4-1~debian.12~bookworm",
     "os_name": "debian",
     "os_version": "bookworm",
     "os_arch": "ppc64el"
   },
   {
     "docker_version": "23.0.5",
-    "package_version": "23.0.5-1~debian.12~bookworm",
+    "package_version": "5:23.0.5-1~debian.12~bookworm",
     "os_name": "debian",
     "os_version": "bookworm",
     "os_arch": "ppc64el"
   },
   {
     "docker_version": "23.0.6",
-    "package_version": "23.0.6-1~debian.12~bookworm",
+    "package_version": "5:23.0.6-1~debian.12~bookworm",
     "os_name": "debian",
     "os_version": "bookworm",
     "os_arch": "ppc64el"
   },
   {
     "docker_version": "24.0.0",
-    "package_version": "24.0.0-1~debian.12~bookworm",
+    "package_version": "5:24.0.0-1~debian.12~bookworm",
     "os_name": "debian",
     "os_version": "bookworm",
     "os_arch": "ppc64el"
   },
   {
     "docker_version": "24.0.1",
-    "package_version": "24.0.1-1~debian.12~bookworm",
+    "package_version": "5:24.0.1-1~debian.12~bookworm",
     "os_name": "debian",
     "os_version": "bookworm",
     "os_arch": "ppc64el"
   },
   {
     "docker_version": "24.0.2",
-    "package_version": "24.0.2-1~debian.12~bookworm",
+    "package_version": "5:24.0.2-1~debian.12~bookworm",
     "os_name": "debian",
     "os_version": "bookworm",
     "os_arch": "ppc64el"
   },
   {
     "docker_version": "24.0.3",
-    "package_version": "24.0.3-1~debian.12~bookworm",
+    "package_version": "5:24.0.3-1~debian.12~bookworm",
     "os_name": "debian",
     "os_version": "bookworm",
     "os_arch": "ppc64el"
   },
   {
     "docker_version": "24.0.4",
-    "package_version": "24.0.4-1~debian.12~bookworm",
+    "package_version": "5:24.0.4-1~debian.12~bookworm",
     "os_name": "debian",
     "os_version": "bookworm",
     "os_arch": "ppc64el"
   },
   {
     "docker_version": "24.0.5",
-    "package_version": "24.0.5-1~debian.12~bookworm",
+    "package_version": "5:24.0.5-1~debian.12~bookworm",
     "os_name": "debian",
     "os_version": "bookworm",
     "os_arch": "ppc64el"
   },
   {
     "docker_version": "24.0.6",
-    "package_version": "24.0.6-1~debian.12~bookworm",
+    "package_version": "5:24.0.6-1~debian.12~bookworm",
     "os_name": "debian",
     "os_version": "bookworm",
     "os_arch": "ppc64el"
   },
   {
     "docker_version": "24.0.7",
-    "package_version": "24.0.7-1~debian.12~bookworm",
+    "package_version": "5:24.0.7-1~debian.12~bookworm",
     "os_name": "debian",
     "os_version": "bookworm",
     "os_arch": "ppc64el"
   },
   {
     "docker_version": "24.0.8",
-    "package_version": "24.0.8-1~debian.12~bookworm",
+    "package_version": "5:24.0.8-1~debian.12~bookworm",
     "os_name": "debian",
     "os_version": "bookworm",
     "os_arch": "ppc64el"
   },
   {
     "docker_version": "24.0.9",
-    "package_version": "24.0.9-1~debian.12~bookworm",
+    "package_version": "5:24.0.9-1~debian.12~bookworm",
     "os_name": "debian",
     "os_version": "bookworm",
     "os_arch": "ppc64el"
   },
   {
     "docker_version": "25.0.2",
-    "package_version": "25.0.2-1~debian.12~bookworm",
+    "package_version": "5:25.0.2-1~debian.12~bookworm",
     "os_name": "debian",
     "os_version": "bookworm",
     "os_arch": "ppc64el"
   },
   {
     "docker_version": "25.0.3",
-    "package_version": "25.0.3-1~debian.12~bookworm",
+    "package_version": "5:25.0.3-1~debian.12~bookworm",
     "os_name": "debian",
     "os_version": "bookworm",
     "os_arch": "ppc64el"
   },
   {
     "docker_version": "25.0.4",
-    "package_version": "25.0.4-1~debian.12~bookworm",
+    "package_version": "5:25.0.4-1~debian.12~bookworm",
     "os_name": "debian",
     "os_version": "bookworm",
     "os_arch": "ppc64el"
   },
   {
     "docker_version": "25.0.5",
-    "package_version": "25.0.5-1~debian.12~bookworm",
+    "package_version": "5:25.0.5-1~debian.12~bookworm",
     "os_name": "debian",
     "os_version": "bookworm",
     "os_arch": "ppc64el"
   },
   {
     "docker_version": "26.0.0",
-    "package_version": "26.0.0-1~debian.12~bookworm",
+    "package_version": "5:26.0.0-1~debian.12~bookworm",
     "os_name": "debian",
     "os_version": "bookworm",
     "os_arch": "ppc64el"
   },
   {
     "docker_version": "26.0.1",
-    "package_version": "26.0.1-1~debian.12~bookworm",
+    "package_version": "5:26.0.1-1~debian.12~bookworm",
     "os_name": "debian",
     "os_version": "bookworm",
     "os_arch": "ppc64el"
   },
   {
     "docker_version": "26.0.2",
-    "package_version": "26.0.2-1~debian.12~bookworm",
+    "package_version": "5:26.0.2-1~debian.12~bookworm",
     "os_name": "debian",
     "os_version": "bookworm",
     "os_arch": "ppc64el"
   },
   {
     "docker_version": "26.1.0",
-    "package_version": "26.1.0-1~debian.12~bookworm",
+    "package_version": "5:26.1.0-1~debian.12~bookworm",
     "os_name": "debian",
     "os_version": "bookworm",
     "os_arch": "ppc64el"
   },
   {
     "docker_version": "26.1.1",
-    "package_version": "26.1.1-1~debian.12~bookworm",
+    "package_version": "5:26.1.1-1~debian.12~bookworm",
     "os_name": "debian",
     "os_version": "bookworm",
     "os_arch": "ppc64el"
   },
   {
     "docker_version": "26.1.2",
-    "package_version": "26.1.2-1~debian.12~bookworm",
+    "package_version": "5:26.1.2-1~debian.12~bookworm",
     "os_name": "debian",
     "os_version": "bookworm",
     "os_arch": "ppc64el"
   },
   {
     "docker_version": "26.1.3",
-    "package_version": "26.1.3-1~debian.12~bookworm",
+    "package_version": "5:26.1.3-1~debian.12~bookworm",
     "os_name": "debian",
     "os_version": "bookworm",
     "os_arch": "ppc64el"
   },
   {
     "docker_version": "26.1.4",
-    "package_version": "26.1.4-1~debian.12~bookworm",
+    "package_version": "5:26.1.4-1~debian.12~bookworm",
     "os_name": "debian",
     "os_version": "bookworm",
     "os_arch": "ppc64el"
   },
   {
     "docker_version": "27.0.1",
-    "package_version": "27.0.1-1~debian.12~bookworm",
+    "package_version": "5:27.0.1-1~debian.12~bookworm",
     "os_name": "debian",
     "os_version": "bookworm",
     "os_arch": "ppc64el"
   },
   {
     "docker_version": "27.0.2",
-    "package_version": "27.0.2-1~debian.12~bookworm",
+    "package_version": "5:27.0.2-1~debian.12~bookworm",
     "os_name": "debian",
     "os_version": "bookworm",
     "os_arch": "ppc64el"
   },
   {
     "docker_version": "27.0.3",
-    "package_version": "27.0.3-1~debian.12~bookworm",
+    "package_version": "5:27.0.3-1~debian.12~bookworm",
     "os_name": "debian",
     "os_version": "bookworm",
     "os_arch": "ppc64el"
   },
   {
     "docker_version": "27.1.0",
-    "package_version": "27.1.0-1~debian.12~bookworm",
+    "package_version": "5:27.1.0-1~debian.12~bookworm",
     "os_name": "debian",
     "os_version": "bookworm",
     "os_arch": "ppc64el"
   },
   {
     "docker_version": "27.1.1",
-    "package_version": "27.1.1-1~debian.12~bookworm",
+    "package_version": "5:27.1.1-1~debian.12~bookworm",
     "os_name": "debian",
     "os_version": "bookworm",
     "os_arch": "ppc64el"
   },
   {
     "docker_version": "27.1.2",
-    "package_version": "27.1.2-1~debian.12~bookworm",
+    "package_version": "5:27.1.2-1~debian.12~bookworm",
     "os_name": "debian",
     "os_version": "bookworm",
     "os_arch": "ppc64el"
   },
   {
     "docker_version": "27.2.0",
-    "package_version": "27.2.0-1~debian.12~bookworm",
+    "package_version": "5:27.2.0-1~debian.12~bookworm",
     "os_name": "debian",
     "os_version": "bookworm",
     "os_arch": "ppc64el"
   },
   {
     "docker_version": "27.3.0",
-    "package_version": "27.3.0-1~debian.12~bookworm",
+    "package_version": "5:27.3.0-1~debian.12~bookworm",
     "os_name": "debian",
     "os_version": "bookworm",
     "os_arch": "ppc64el"
   },
   {
     "docker_version": "27.3.1",
-    "package_version": "27.3.1-1~debian.12~bookworm",
+    "package_version": "5:27.3.1-1~debian.12~bookworm",
     "os_name": "debian",
     "os_version": "bookworm",
     "os_arch": "ppc64el"
   },
   {
     "docker_version": "27.4.0",
-    "package_version": "27.4.0-1~debian.12~bookworm",
+    "package_version": "5:27.4.0-1~debian.12~bookworm",
     "os_name": "debian",
     "os_version": "bookworm",
     "os_arch": "ppc64el"
   },
   {
     "docker_version": "27.4.1",
-    "package_version": "27.4.1-1~debian.12~bookworm",
+    "package_version": "5:27.4.1-1~debian.12~bookworm",
     "os_name": "debian",
     "os_version": "bookworm",
     "os_arch": "ppc64el"
   },
   {
     "docker_version": "27.5.0",
-    "package_version": "27.5.0-1~debian.12~bookworm",
+    "package_version": "5:27.5.0-1~debian.12~bookworm",
     "os_name": "debian",
     "os_version": "bookworm",
     "os_arch": "ppc64el"
   },
   {
     "docker_version": "27.5.1",
-    "package_version": "27.5.1-1~debian.12~bookworm",
+    "package_version": "5:27.5.1-1~debian.12~bookworm",
     "os_name": "debian",
     "os_version": "bookworm",
     "os_arch": "ppc64el"
   },
   {
     "docker_version": "28.0.0",
-    "package_version": "28.0.0-1~debian.12~bookworm",
+    "package_version": "5:28.0.0-1~debian.12~bookworm",
     "os_name": "debian",
     "os_version": "bookworm",
     "os_arch": "ppc64el"
   },
   {
     "docker_version": "28.0.1",
-    "package_version": "28.0.1-1~debian.12~bookworm",
+    "package_version": "5:28.0.1-1~debian.12~bookworm",
     "os_name": "debian",
     "os_version": "bookworm",
     "os_arch": "ppc64el"
   },
   {
     "docker_version": "28.0.2",
-    "package_version": "28.0.2-1~debian.12~bookworm",
+    "package_version": "5:28.0.2-1~debian.12~bookworm",
     "os_name": "debian",
     "os_version": "bookworm",
     "os_arch": "ppc64el"
   },
   {
     "docker_version": "28.0.4",
-    "package_version": "28.0.4-1~debian.12~bookworm",
+    "package_version": "5:28.0.4-1~debian.12~bookworm",
     "os_name": "debian",
     "os_version": "bookworm",
     "os_arch": "ppc64el"
   },
   {
     "docker_version": "28.0.2",
-    "package_version": "28.0.2-1~debian.12~bookworm",
+    "package_version": "5:28.0.2-1~debian.12~bookworm",
+    "os_name": "debian",
+    "os_version": "bookworm",
+    "os_arch": "s390x"
+  },
+  {
+    "docker_version": "28.0.4",
+    "package_version": "5:28.0.4-1~debian.12~bookworm",
     "os_name": "debian",
     "os_version": "bookworm",
     "os_arch": "s390x"
   },
   {
     "docker_version": "20.10.10",
-    "package_version": "20.10.10~3-0~debian-bullseye",
+    "package_version": "5:20.10.10~3-0~debian-bullseye",
     "os_name": "debian",
     "os_version": "bullseye",
     "os_arch": "amd64"
   },
   {
     "docker_version": "20.10.11",
-    "package_version": "20.10.11~3-0~debian-bullseye",
+    "package_version": "5:20.10.11~3-0~debian-bullseye",
     "os_name": "debian",
     "os_version": "bullseye",
     "os_arch": "amd64"
   },
   {
     "docker_version": "20.10.12",
-    "package_version": "20.10.12~3-0~debian-bullseye",
+    "package_version": "5:20.10.12~3-0~debian-bullseye",
     "os_name": "debian",
     "os_version": "bullseye",
     "os_arch": "amd64"
   },
   {
     "docker_version": "20.10.13",
-    "package_version": "20.10.13~3-0~debian-bullseye",
+    "package_version": "5:20.10.13~3-0~debian-bullseye",
     "os_name": "debian",
     "os_version": "bullseye",
     "os_arch": "amd64"
   },
   {
     "docker_version": "20.10.14",
-    "package_version": "20.10.14~3-0~debian-bullseye",
+    "package_version": "5:20.10.14~3-0~debian-bullseye",
     "os_name": "debian",
     "os_version": "bullseye",
     "os_arch": "amd64"
   },
   {
     "docker_version": "20.10.15",
-    "package_version": "20.10.15~3-0~debian-bullseye",
+    "package_version": "5:20.10.15~3-0~debian-bullseye",
     "os_name": "debian",
     "os_version": "bullseye",
     "os_arch": "amd64"
   },
   {
     "docker_version": "20.10.16",
-    "package_version": "20.10.16~3-0~debian-bullseye",
+    "package_version": "5:20.10.16~3-0~debian-bullseye",
     "os_name": "debian",
     "os_version": "bullseye",
     "os_arch": "amd64"
   },
   {
     "docker_version": "20.10.17",
-    "package_version": "20.10.17~3-0~debian-bullseye",
+    "package_version": "5:20.10.17~3-0~debian-bullseye",
     "os_name": "debian",
     "os_version": "bullseye",
     "os_arch": "amd64"
   },
   {
     "docker_version": "20.10.18",
-    "package_version": "20.10.18~3-0~debian-bullseye",
+    "package_version": "5:20.10.18~3-0~debian-bullseye",
     "os_name": "debian",
     "os_version": "bullseye",
     "os_arch": "amd64"
   },
   {
     "docker_version": "20.10.19",
-    "package_version": "20.10.19~3-0~debian-bullseye",
+    "package_version": "5:20.10.19~3-0~debian-bullseye",
     "os_name": "debian",
     "os_version": "bullseye",
     "os_arch": "amd64"
   },
   {
     "docker_version": "20.10.20",
-    "package_version": "20.10.20~3-0~debian-bullseye",
+    "package_version": "5:20.10.20~3-0~debian-bullseye",
     "os_name": "debian",
     "os_version": "bullseye",
     "os_arch": "amd64"
   },
   {
     "docker_version": "20.10.21",
-    "package_version": "20.10.21~3-0~debian-bullseye",
+    "package_version": "5:20.10.21~3-0~debian-bullseye",
     "os_name": "debian",
     "os_version": "bullseye",
     "os_arch": "amd64"
   },
   {
     "docker_version": "20.10.22",
-    "package_version": "20.10.22~3-0~debian-bullseye",
+    "package_version": "5:20.10.22~3-0~debian-bullseye",
     "os_name": "debian",
     "os_version": "bullseye",
     "os_arch": "amd64"
   },
   {
     "docker_version": "20.10.23",
-    "package_version": "20.10.23~3-0~debian-bullseye",
+    "package_version": "5:20.10.23~3-0~debian-bullseye",
     "os_name": "debian",
     "os_version": "bullseye",
     "os_arch": "amd64"
   },
   {
     "docker_version": "20.10.24",
-    "package_version": "20.10.24~3-0~debian-bullseye",
+    "package_version": "5:20.10.24~3-0~debian-bullseye",
     "os_name": "debian",
     "os_version": "bullseye",
     "os_arch": "amd64"
   },
   {
     "docker_version": "20.10.6",
-    "package_version": "20.10.6~3-0~debian-bullseye",
+    "package_version": "5:20.10.6~3-0~debian-bullseye",
     "os_name": "debian",
     "os_version": "bullseye",
     "os_arch": "amd64"
   },
   {
     "docker_version": "20.10.7",
-    "package_version": "20.10.7~3-0~debian-bullseye",
+    "package_version": "5:20.10.7~3-0~debian-bullseye",
     "os_name": "debian",
     "os_version": "bullseye",
     "os_arch": "amd64"
   },
   {
     "docker_version": "20.10.8",
-    "package_version": "20.10.8~3-0~debian-bullseye",
+    "package_version": "5:20.10.8~3-0~debian-bullseye",
     "os_name": "debian",
     "os_version": "bullseye",
     "os_arch": "amd64"
   },
   {
     "docker_version": "20.10.9",
-    "package_version": "20.10.9~3-0~debian-bullseye",
+    "package_version": "5:20.10.9~3-0~debian-bullseye",
     "os_name": "debian",
     "os_version": "bullseye",
     "os_arch": "amd64"
   },
   {
     "docker_version": "23.0.0",
-    "package_version": "23.0.0-1~debian.11~bullseye",
+    "package_version": "5:23.0.0-1~debian.11~bullseye",
     "os_name": "debian",
     "os_version": "bullseye",
     "os_arch": "amd64"
   },
   {
     "docker_version": "23.0.1",
-    "package_version": "23.0.1-1~debian.11~bullseye",
+    "package_version": "5:23.0.1-1~debian.11~bullseye",
     "os_name": "debian",
     "os_version": "bullseye",
     "os_arch": "amd64"
   },
   {
     "docker_version": "23.0.2",
-    "package_version": "23.0.2-1~debian.11~bullseye",
+    "package_version": "5:23.0.2-1~debian.11~bullseye",
     "os_name": "debian",
     "os_version": "bullseye",
     "os_arch": "amd64"
   },
   {
     "docker_version": "23.0.3",
-    "package_version": "23.0.3-1~debian.11~bullseye",
+    "package_version": "5:23.0.3-1~debian.11~bullseye",
     "os_name": "debian",
     "os_version": "bullseye",
     "os_arch": "amd64"
   },
   {
     "docker_version": "23.0.4",
-    "package_version": "23.0.4-1~debian.11~bullseye",
+    "package_version": "5:23.0.4-1~debian.11~bullseye",
     "os_name": "debian",
     "os_version": "bullseye",
     "os_arch": "amd64"
   },
   {
     "docker_version": "23.0.5",
-    "package_version": "23.0.5-1~debian.11~bullseye",
+    "package_version": "5:23.0.5-1~debian.11~bullseye",
     "os_name": "debian",
     "os_version": "bullseye",
     "os_arch": "amd64"
   },
   {
     "docker_version": "23.0.6",
-    "package_version": "23.0.6-1~debian.11~bullseye",
+    "package_version": "5:23.0.6-1~debian.11~bullseye",
     "os_name": "debian",
     "os_version": "bullseye",
     "os_arch": "amd64"
   },
   {
     "docker_version": "24.0.0",
-    "package_version": "24.0.0-1~debian.11~bullseye",
+    "package_version": "5:24.0.0-1~debian.11~bullseye",
     "os_name": "debian",
     "os_version": "bullseye",
     "os_arch": "amd64"
   },
   {
     "docker_version": "24.0.1",
-    "package_version": "24.0.1-1~debian.11~bullseye",
+    "package_version": "5:24.0.1-1~debian.11~bullseye",
     "os_name": "debian",
     "os_version": "bullseye",
     "os_arch": "amd64"
   },
   {
     "docker_version": "24.0.2",
-    "package_version": "24.0.2-1~debian.11~bullseye",
+    "package_version": "5:24.0.2-1~debian.11~bullseye",
     "os_name": "debian",
     "os_version": "bullseye",
     "os_arch": "amd64"
   },
   {
     "docker_version": "24.0.3",
-    "package_version": "24.0.3-1~debian.11~bullseye",
+    "package_version": "5:24.0.3-1~debian.11~bullseye",
     "os_name": "debian",
     "os_version": "bullseye",
     "os_arch": "amd64"
   },
   {
     "docker_version": "24.0.4",
-    "package_version": "24.0.4-1~debian.11~bullseye",
+    "package_version": "5:24.0.4-1~debian.11~bullseye",
     "os_name": "debian",
     "os_version": "bullseye",
     "os_arch": "amd64"
   },
   {
     "docker_version": "24.0.5",
-    "package_version": "24.0.5-1~debian.11~bullseye",
+    "package_version": "5:24.0.5-1~debian.11~bullseye",
     "os_name": "debian",
     "os_version": "bullseye",
     "os_arch": "amd64"
   },
   {
     "docker_version": "24.0.6",
-    "package_version": "24.0.6-1~debian.11~bullseye",
+    "package_version": "5:24.0.6-1~debian.11~bullseye",
     "os_name": "debian",
     "os_version": "bullseye",
     "os_arch": "amd64"
   },
   {
     "docker_version": "24.0.7",
-    "package_version": "24.0.7-1~debian.11~bullseye",
+    "package_version": "5:24.0.7-1~debian.11~bullseye",
     "os_name": "debian",
     "os_version": "bullseye",
     "os_arch": "amd64"
   },
   {
     "docker_version": "24.0.8",
-    "package_version": "24.0.8-1~debian.11~bullseye",
+    "package_version": "5:24.0.8-1~debian.11~bullseye",
     "os_name": "debian",
     "os_version": "bullseye",
     "os_arch": "amd64"
   },
   {
     "docker_version": "24.0.9",
-    "package_version": "24.0.9-1~debian.11~bullseye",
+    "package_version": "5:24.0.9-1~debian.11~bullseye",
     "os_name": "debian",
     "os_version": "bullseye",
     "os_arch": "amd64"
   },
   {
     "docker_version": "25.0.0",
-    "package_version": "25.0.0-1~debian.11~bullseye",
+    "package_version": "5:25.0.0-1~debian.11~bullseye",
     "os_name": "debian",
     "os_version": "bullseye",
     "os_arch": "amd64"
   },
   {
     "docker_version": "25.0.1",
-    "package_version": "25.0.1-1~debian.11~bullseye",
+    "package_version": "5:25.0.1-1~debian.11~bullseye",
     "os_name": "debian",
     "os_version": "bullseye",
     "os_arch": "amd64"
   },
   {
     "docker_version": "25.0.2",
-    "package_version": "25.0.2-1~debian.11~bullseye",
+    "package_version": "5:25.0.2-1~debian.11~bullseye",
     "os_name": "debian",
     "os_version": "bullseye",
     "os_arch": "amd64"
   },
   {
     "docker_version": "25.0.3",
-    "package_version": "25.0.3-1~debian.11~bullseye",
+    "package_version": "5:25.0.3-1~debian.11~bullseye",
     "os_name": "debian",
     "os_version": "bullseye",
     "os_arch": "amd64"
   },
   {
     "docker_version": "25.0.4",
-    "package_version": "25.0.4-1~debian.11~bullseye",
+    "package_version": "5:25.0.4-1~debian.11~bullseye",
     "os_name": "debian",
     "os_version": "bullseye",
     "os_arch": "amd64"
   },
   {
     "docker_version": "25.0.5",
-    "package_version": "25.0.5-1~debian.11~bullseye",
+    "package_version": "5:25.0.5-1~debian.11~bullseye",
     "os_name": "debian",
     "os_version": "bullseye",
     "os_arch": "amd64"
   },
   {
     "docker_version": "26.0.0",
-    "package_version": "26.0.0-1~debian.11~bullseye",
+    "package_version": "5:26.0.0-1~debian.11~bullseye",
     "os_name": "debian",
     "os_version": "bullseye",
     "os_arch": "amd64"
   },
   {
     "docker_version": "26.0.1",
-    "package_version": "26.0.1-1~debian.11~bullseye",
+    "package_version": "5:26.0.1-1~debian.11~bullseye",
     "os_name": "debian",
     "os_version": "bullseye",
     "os_arch": "amd64"
   },
   {
     "docker_version": "26.0.2",
-    "package_version": "26.0.2-1~debian.11~bullseye",
+    "package_version": "5:26.0.2-1~debian.11~bullseye",
     "os_name": "debian",
     "os_version": "bullseye",
     "os_arch": "amd64"
   },
   {
     "docker_version": "26.1.0",
-    "package_version": "26.1.0-1~debian.11~bullseye",
+    "package_version": "5:26.1.0-1~debian.11~bullseye",
     "os_name": "debian",
     "os_version": "bullseye",
     "os_arch": "amd64"
   },
   {
     "docker_version": "26.1.1",
-    "package_version": "26.1.1-1~debian.11~bullseye",
+    "package_version": "5:26.1.1-1~debian.11~bullseye",
     "os_name": "debian",
     "os_version": "bullseye",
     "os_arch": "amd64"
   },
   {
     "docker_version": "26.1.2",
-    "package_version": "26.1.2-1~debian.11~bullseye",
+    "package_version": "5:26.1.2-1~debian.11~bullseye",
     "os_name": "debian",
     "os_version": "bullseye",
     "os_arch": "amd64"
   },
   {
     "docker_version": "26.1.3",
-    "package_version": "26.1.3-1~debian.11~bullseye",
+    "package_version": "5:26.1.3-1~debian.11~bullseye",
     "os_name": "debian",
     "os_version": "bullseye",
     "os_arch": "amd64"
   },
   {
     "docker_version": "26.1.4",
-    "package_version": "26.1.4-1~debian.11~bullseye",
+    "package_version": "5:26.1.4-1~debian.11~bullseye",
     "os_name": "debian",
     "os_version": "bullseye",
     "os_arch": "amd64"
   },
   {
     "docker_version": "27.0.1",
-    "package_version": "27.0.1-1~debian.11~bullseye",
+    "package_version": "5:27.0.1-1~debian.11~bullseye",
     "os_name": "debian",
     "os_version": "bullseye",
     "os_arch": "amd64"
   },
   {
     "docker_version": "27.0.2",
-    "package_version": "27.0.2-1~debian.11~bullseye",
+    "package_version": "5:27.0.2-1~debian.11~bullseye",
     "os_name": "debian",
     "os_version": "bullseye",
     "os_arch": "amd64"
   },
   {
     "docker_version": "27.0.3",
-    "package_version": "27.0.3-1~debian.11~bullseye",
+    "package_version": "5:27.0.3-1~debian.11~bullseye",
     "os_name": "debian",
     "os_version": "bullseye",
     "os_arch": "amd64"
   },
   {
     "docker_version": "27.1.0",
-    "package_version": "27.1.0-1~debian.11~bullseye",
+    "package_version": "5:27.1.0-1~debian.11~bullseye",
     "os_name": "debian",
     "os_version": "bullseye",
     "os_arch": "amd64"
   },
   {
     "docker_version": "27.1.1",
-    "package_version": "27.1.1-1~debian.11~bullseye",
+    "package_version": "5:27.1.1-1~debian.11~bullseye",
     "os_name": "debian",
     "os_version": "bullseye",
     "os_arch": "amd64"
   },
   {
     "docker_version": "27.1.2",
-    "package_version": "27.1.2-1~debian.11~bullseye",
+    "package_version": "5:27.1.2-1~debian.11~bullseye",
     "os_name": "debian",
     "os_version": "bullseye",
     "os_arch": "amd64"
   },
   {
     "docker_version": "27.2.0",
-    "package_version": "27.2.0-1~debian.11~bullseye",
+    "package_version": "5:27.2.0-1~debian.11~bullseye",
     "os_name": "debian",
     "os_version": "bullseye",
     "os_arch": "amd64"
   },
   {
     "docker_version": "27.2.1",
-    "package_version": "27.2.1-1~debian.11~bullseye",
+    "package_version": "5:27.2.1-1~debian.11~bullseye",
     "os_name": "debian",
     "os_version": "bullseye",
     "os_arch": "amd64"
   },
   {
     "docker_version": "27.3.0",
-    "package_version": "27.3.0-1~debian.11~bullseye",
+    "package_version": "5:27.3.0-1~debian.11~bullseye",
     "os_name": "debian",
     "os_version": "bullseye",
     "os_arch": "amd64"
   },
   {
     "docker_version": "27.3.1",
-    "package_version": "27.3.1-1~debian.11~bullseye",
+    "package_version": "5:27.3.1-1~debian.11~bullseye",
     "os_name": "debian",
     "os_version": "bullseye",
     "os_arch": "amd64"
   },
   {
     "docker_version": "27.4.0",
-    "package_version": "27.4.0-1~debian.11~bullseye",
+    "package_version": "5:27.4.0-1~debian.11~bullseye",
     "os_name": "debian",
     "os_version": "bullseye",
     "os_arch": "amd64"
   },
   {
     "docker_version": "27.4.1",
-    "package_version": "27.4.1-1~debian.11~bullseye",
+    "package_version": "5:27.4.1-1~debian.11~bullseye",
     "os_name": "debian",
     "os_version": "bullseye",
     "os_arch": "amd64"
   },
   {
     "docker_version": "27.5.0",
-    "package_version": "27.5.0-1~debian.11~bullseye",
+    "package_version": "5:27.5.0-1~debian.11~bullseye",
     "os_name": "debian",
     "os_version": "bullseye",
     "os_arch": "amd64"
   },
   {
     "docker_version": "27.5.1",
-    "package_version": "27.5.1-1~debian.11~bullseye",
+    "package_version": "5:27.5.1-1~debian.11~bullseye",
     "os_name": "debian",
     "os_version": "bullseye",
     "os_arch": "amd64"
   },
   {
     "docker_version": "28.0.0",
-    "package_version": "28.0.0-1~debian.11~bullseye",
+    "package_version": "5:28.0.0-1~debian.11~bullseye",
     "os_name": "debian",
     "os_version": "bullseye",
     "os_arch": "amd64"
   },
   {
     "docker_version": "28.0.1",
-    "package_version": "28.0.1-1~debian.11~bullseye",
+    "package_version": "5:28.0.1-1~debian.11~bullseye",
     "os_name": "debian",
     "os_version": "bullseye",
     "os_arch": "amd64"
   },
   {
     "docker_version": "28.0.2",
-    "package_version": "28.0.2-1~debian.11~bullseye",
+    "package_version": "5:28.0.2-1~debian.11~bullseye",
     "os_name": "debian",
     "os_version": "bullseye",
     "os_arch": "amd64"
   },
   {
     "docker_version": "28.0.3",
-    "package_version": "28.0.3-1~debian.11~bullseye",
+    "package_version": "5:28.0.3-1~debian.11~bullseye",
     "os_name": "debian",
     "os_version": "bullseye",
     "os_arch": "amd64"
   },
   {
     "docker_version": "28.0.4",
-    "package_version": "28.0.4-1~debian.11~bullseye",
+    "package_version": "5:28.0.4-1~debian.11~bullseye",
     "os_name": "debian",
     "os_version": "bullseye",
     "os_arch": "amd64"
   },
   {
     "docker_version": "20.10.10",
-    "package_version": "20.10.10~3-0~debian-bullseye",
+    "package_version": "5:20.10.10~3-0~debian-bullseye",
     "os_name": "debian",
     "os_version": "bullseye",
     "os_arch": "arm64"
   },
   {
     "docker_version": "20.10.11",
-    "package_version": "20.10.11~3-0~debian-bullseye",
+    "package_version": "5:20.10.11~3-0~debian-bullseye",
     "os_name": "debian",
     "os_version": "bullseye",
     "os_arch": "arm64"
   },
   {
     "docker_version": "20.10.12",
-    "package_version": "20.10.12~3-0~debian-bullseye",
+    "package_version": "5:20.10.12~3-0~debian-bullseye",
     "os_name": "debian",
     "os_version": "bullseye",
     "os_arch": "arm64"
   },
   {
     "docker_version": "20.10.13",
-    "package_version": "20.10.13~3-0~debian-bullseye",
+    "package_version": "5:20.10.13~3-0~debian-bullseye",
     "os_name": "debian",
     "os_version": "bullseye",
     "os_arch": "arm64"
   },
   {
     "docker_version": "20.10.14",
-    "package_version": "20.10.14~3-0~debian-bullseye",
+    "package_version": "5:20.10.14~3-0~debian-bullseye",
     "os_name": "debian",
     "os_version": "bullseye",
     "os_arch": "arm64"
   },
   {
     "docker_version": "20.10.15",
-    "package_version": "20.10.15~3-0~debian-bullseye",
+    "package_version": "5:20.10.15~3-0~debian-bullseye",
     "os_name": "debian",
     "os_version": "bullseye",
     "os_arch": "arm64"
   },
   {
     "docker_version": "20.10.16",
-    "package_version": "20.10.16~3-0~debian-bullseye",
+    "package_version": "5:20.10.16~3-0~debian-bullseye",
     "os_name": "debian",
     "os_version": "bullseye",
     "os_arch": "arm64"
   },
   {
     "docker_version": "20.10.17",
-    "package_version": "20.10.17~3-0~debian-bullseye",
+    "package_version": "5:20.10.17~3-0~debian-bullseye",
     "os_name": "debian",
     "os_version": "bullseye",
     "os_arch": "arm64"
   },
   {
     "docker_version": "20.10.18",
-    "package_version": "20.10.18~3-0~debian-bullseye",
+    "package_version": "5:20.10.18~3-0~debian-bullseye",
     "os_name": "debian",
     "os_version": "bullseye",
     "os_arch": "arm64"
   },
   {
     "docker_version": "20.10.19",
-    "package_version": "20.10.19~3-0~debian-bullseye",
+    "package_version": "5:20.10.19~3-0~debian-bullseye",
     "os_name": "debian",
     "os_version": "bullseye",
     "os_arch": "arm64"
   },
   {
     "docker_version": "20.10.20",
-    "package_version": "20.10.20~3-0~debian-bullseye",
+    "package_version": "5:20.10.20~3-0~debian-bullseye",
     "os_name": "debian",
     "os_version": "bullseye",
     "os_arch": "arm64"
   },
   {
     "docker_version": "20.10.21",
-    "package_version": "20.10.21~3-0~debian-bullseye",
+    "package_version": "5:20.10.21~3-0~debian-bullseye",
     "os_name": "debian",
     "os_version": "bullseye",
     "os_arch": "arm64"
   },
   {
     "docker_version": "20.10.22",
-    "package_version": "20.10.22~3-0~debian-bullseye",
+    "package_version": "5:20.10.22~3-0~debian-bullseye",
     "os_name": "debian",
     "os_version": "bullseye",
     "os_arch": "arm64"
   },
   {
     "docker_version": "20.10.23",
-    "package_version": "20.10.23~3-0~debian-bullseye",
+    "package_version": "5:20.10.23~3-0~debian-bullseye",
     "os_name": "debian",
     "os_version": "bullseye",
     "os_arch": "arm64"
   },
   {
     "docker_version": "20.10.24",
-    "package_version": "20.10.24~3-0~debian-bullseye",
+    "package_version": "5:20.10.24~3-0~debian-bullseye",
     "os_name": "debian",
     "os_version": "bullseye",
     "os_arch": "arm64"
   },
   {
     "docker_version": "20.10.6",
-    "package_version": "20.10.6~3-0~debian-bullseye",
+    "package_version": "5:20.10.6~3-0~debian-bullseye",
     "os_name": "debian",
     "os_version": "bullseye",
     "os_arch": "arm64"
   },
   {
     "docker_version": "20.10.7",
-    "package_version": "20.10.7~3-0~debian-bullseye",
+    "package_version": "5:20.10.7~3-0~debian-bullseye",
     "os_name": "debian",
     "os_version": "bullseye",
     "os_arch": "arm64"
   },
   {
     "docker_version": "20.10.8",
-    "package_version": "20.10.8~3-0~debian-bullseye",
+    "package_version": "5:20.10.8~3-0~debian-bullseye",
     "os_name": "debian",
     "os_version": "bullseye",
     "os_arch": "arm64"
   },
   {
     "docker_version": "20.10.9",
-    "package_version": "20.10.9~3-0~debian-bullseye",
+    "package_version": "5:20.10.9~3-0~debian-bullseye",
     "os_name": "debian",
     "os_version": "bullseye",
     "os_arch": "arm64"
   },
   {
     "docker_version": "23.0.0",
-    "package_version": "23.0.0-1~debian.11~bullseye",
+    "package_version": "5:23.0.0-1~debian.11~bullseye",
     "os_name": "debian",
     "os_version": "bullseye",
     "os_arch": "arm64"
   },
   {
     "docker_version": "23.0.1",
-    "package_version": "23.0.1-1~debian.11~bullseye",
+    "package_version": "5:23.0.1-1~debian.11~bullseye",
     "os_name": "debian",
     "os_version": "bullseye",
     "os_arch": "arm64"
   },
   {
     "docker_version": "23.0.2",
-    "package_version": "23.0.2-1~debian.11~bullseye",
+    "package_version": "5:23.0.2-1~debian.11~bullseye",
     "os_name": "debian",
     "os_version": "bullseye",
     "os_arch": "arm64"
   },
   {
     "docker_version": "23.0.3",
-    "package_version": "23.0.3-1~debian.11~bullseye",
+    "package_version": "5:23.0.3-1~debian.11~bullseye",
     "os_name": "debian",
     "os_version": "bullseye",
     "os_arch": "arm64"
   },
   {
     "docker_version": "23.0.4",
-    "package_version": "23.0.4-1~debian.11~bullseye",
+    "package_version": "5:23.0.4-1~debian.11~bullseye",
     "os_name": "debian",
     "os_version": "bullseye",
     "os_arch": "arm64"
   },
   {
     "docker_version": "23.0.5",
-    "package_version": "23.0.5-1~debian.11~bullseye",
+    "package_version": "5:23.0.5-1~debian.11~bullseye",
     "os_name": "debian",
     "os_version": "bullseye",
     "os_arch": "arm64"
   },
   {
     "docker_version": "23.0.6",
-    "package_version": "23.0.6-1~debian.11~bullseye",
+    "package_version": "5:23.0.6-1~debian.11~bullseye",
     "os_name": "debian",
     "os_version": "bullseye",
     "os_arch": "arm64"
   },
   {
     "docker_version": "24.0.0",
-    "package_version": "24.0.0-1~debian.11~bullseye",
+    "package_version": "5:24.0.0-1~debian.11~bullseye",
     "os_name": "debian",
     "os_version": "bullseye",
     "os_arch": "arm64"
   },
   {
     "docker_version": "24.0.1",
-    "package_version": "24.0.1-1~debian.11~bullseye",
+    "package_version": "5:24.0.1-1~debian.11~bullseye",
     "os_name": "debian",
     "os_version": "bullseye",
     "os_arch": "arm64"
   },
   {
     "docker_version": "24.0.2",
-    "package_version": "24.0.2-1~debian.11~bullseye",
+    "package_version": "5:24.0.2-1~debian.11~bullseye",
     "os_name": "debian",
     "os_version": "bullseye",
     "os_arch": "arm64"
   },
   {
     "docker_version": "24.0.3",
-    "package_version": "24.0.3-1~debian.11~bullseye",
+    "package_version": "5:24.0.3-1~debian.11~bullseye",
     "os_name": "debian",
     "os_version": "bullseye",
     "os_arch": "arm64"
   },
   {
     "docker_version": "24.0.4",
-    "package_version": "24.0.4-1~debian.11~bullseye",
+    "package_version": "5:24.0.4-1~debian.11~bullseye",
     "os_name": "debian",
     "os_version": "bullseye",
     "os_arch": "arm64"
   },
   {
     "docker_version": "24.0.5",
-    "package_version": "24.0.5-1~debian.11~bullseye",
+    "package_version": "5:24.0.5-1~debian.11~bullseye",
     "os_name": "debian",
     "os_version": "bullseye",
     "os_arch": "arm64"
   },
   {
     "docker_version": "24.0.6",
-    "package_version": "24.0.6-1~debian.11~bullseye",
+    "package_version": "5:24.0.6-1~debian.11~bullseye",
     "os_name": "debian",
     "os_version": "bullseye",
     "os_arch": "arm64"
   },
   {
     "docker_version": "24.0.7",
-    "package_version": "24.0.7-1~debian.11~bullseye",
+    "package_version": "5:24.0.7-1~debian.11~bullseye",
     "os_name": "debian",
     "os_version": "bullseye",
     "os_arch": "arm64"
   },
   {
     "docker_version": "24.0.8",
-    "package_version": "24.0.8-1~debian.11~bullseye",
+    "package_version": "5:24.0.8-1~debian.11~bullseye",
     "os_name": "debian",
     "os_version": "bullseye",
     "os_arch": "arm64"
   },
   {
     "docker_version": "24.0.9",
-    "package_version": "24.0.9-1~debian.11~bullseye",
+    "package_version": "5:24.0.9-1~debian.11~bullseye",
     "os_name": "debian",
     "os_version": "bullseye",
     "os_arch": "arm64"
   },
   {
     "docker_version": "25.0.0",
-    "package_version": "25.0.0-1~debian.11~bullseye",
+    "package_version": "5:25.0.0-1~debian.11~bullseye",
     "os_name": "debian",
     "os_version": "bullseye",
     "os_arch": "arm64"
   },
   {
     "docker_version": "25.0.1",
-    "package_version": "25.0.1-1~debian.11~bullseye",
+    "package_version": "5:25.0.1-1~debian.11~bullseye",
     "os_name": "debian",
     "os_version": "bullseye",
     "os_arch": "arm64"
   },
   {
     "docker_version": "25.0.2",
-    "package_version": "25.0.2-1~debian.11~bullseye",
+    "package_version": "5:25.0.2-1~debian.11~bullseye",
     "os_name": "debian",
     "os_version": "bullseye",
     "os_arch": "arm64"
   },
   {
     "docker_version": "25.0.3",
-    "package_version": "25.0.3-1~debian.11~bullseye",
+    "package_version": "5:25.0.3-1~debian.11~bullseye",
     "os_name": "debian",
     "os_version": "bullseye",
     "os_arch": "arm64"
   },
   {
     "docker_version": "25.0.4",
-    "package_version": "25.0.4-1~debian.11~bullseye",
+    "package_version": "5:25.0.4-1~debian.11~bullseye",
     "os_name": "debian",
     "os_version": "bullseye",
     "os_arch": "arm64"
   },
   {
     "docker_version": "25.0.5",
-    "package_version": "25.0.5-1~debian.11~bullseye",
+    "package_version": "5:25.0.5-1~debian.11~bullseye",
     "os_name": "debian",
     "os_version": "bullseye",
     "os_arch": "arm64"
   },
   {
     "docker_version": "26.0.0",
-    "package_version": "26.0.0-1~debian.11~bullseye",
+    "package_version": "5:26.0.0-1~debian.11~bullseye",
     "os_name": "debian",
     "os_version": "bullseye",
     "os_arch": "arm64"
   },
   {
     "docker_version": "26.0.1",
-    "package_version": "26.0.1-1~debian.11~bullseye",
+    "package_version": "5:26.0.1-1~debian.11~bullseye",
     "os_name": "debian",
     "os_version": "bullseye",
     "os_arch": "arm64"
   },
   {
     "docker_version": "26.0.2",
-    "package_version": "26.0.2-1~debian.11~bullseye",
+    "package_version": "5:26.0.2-1~debian.11~bullseye",
     "os_name": "debian",
     "os_version": "bullseye",
     "os_arch": "arm64"
   },
   {
     "docker_version": "26.1.0",
-    "package_version": "26.1.0-1~debian.11~bullseye",
+    "package_version": "5:26.1.0-1~debian.11~bullseye",
     "os_name": "debian",
     "os_version": "bullseye",
     "os_arch": "arm64"
   },
   {
     "docker_version": "26.1.1",
-    "package_version": "26.1.1-1~debian.11~bullseye",
+    "package_version": "5:26.1.1-1~debian.11~bullseye",
     "os_name": "debian",
     "os_version": "bullseye",
     "os_arch": "arm64"
   },
   {
     "docker_version": "26.1.2",
-    "package_version": "26.1.2-1~debian.11~bullseye",
+    "package_version": "5:26.1.2-1~debian.11~bullseye",
     "os_name": "debian",
     "os_version": "bullseye",
     "os_arch": "arm64"
   },
   {
     "docker_version": "26.1.3",
-    "package_version": "26.1.3-1~debian.11~bullseye",
+    "package_version": "5:26.1.3-1~debian.11~bullseye",
     "os_name": "debian",
     "os_version": "bullseye",
     "os_arch": "arm64"
   },
   {
     "docker_version": "26.1.4",
-    "package_version": "26.1.4-1~debian.11~bullseye",
+    "package_version": "5:26.1.4-1~debian.11~bullseye",
     "os_name": "debian",
     "os_version": "bullseye",
     "os_arch": "arm64"
   },
   {
     "docker_version": "27.0.1",
-    "package_version": "27.0.1-1~debian.11~bullseye",
+    "package_version": "5:27.0.1-1~debian.11~bullseye",
     "os_name": "debian",
     "os_version": "bullseye",
     "os_arch": "arm64"
   },
   {
     "docker_version": "27.0.2",
-    "package_version": "27.0.2-1~debian.11~bullseye",
+    "package_version": "5:27.0.2-1~debian.11~bullseye",
     "os_name": "debian",
     "os_version": "bullseye",
     "os_arch": "arm64"
   },
   {
     "docker_version": "27.0.3",
-    "package_version": "27.0.3-1~debian.11~bullseye",
+    "package_version": "5:27.0.3-1~debian.11~bullseye",
     "os_name": "debian",
     "os_version": "bullseye",
     "os_arch": "arm64"
   },
   {
     "docker_version": "27.1.0",
-    "package_version": "27.1.0-1~debian.11~bullseye",
+    "package_version": "5:27.1.0-1~debian.11~bullseye",
     "os_name": "debian",
     "os_version": "bullseye",
     "os_arch": "arm64"
   },
   {
     "docker_version": "27.1.1",
-    "package_version": "27.1.1-1~debian.11~bullseye",
+    "package_version": "5:27.1.1-1~debian.11~bullseye",
     "os_name": "debian",
     "os_version": "bullseye",
     "os_arch": "arm64"
   },
   {
     "docker_version": "27.1.2",
-    "package_version": "27.1.2-1~debian.11~bullseye",
+    "package_version": "5:27.1.2-1~debian.11~bullseye",
     "os_name": "debian",
     "os_version": "bullseye",
     "os_arch": "arm64"
   },
   {
     "docker_version": "27.2.0",
-    "package_version": "27.2.0-1~debian.11~bullseye",
+    "package_version": "5:27.2.0-1~debian.11~bullseye",
     "os_name": "debian",
     "os_version": "bullseye",
     "os_arch": "arm64"
   },
   {
     "docker_version": "27.2.1",
-    "package_version": "27.2.1-1~debian.11~bullseye",
+    "package_version": "5:27.2.1-1~debian.11~bullseye",
     "os_name": "debian",
     "os_version": "bullseye",
     "os_arch": "arm64"
   },
   {
     "docker_version": "27.3.0",
-    "package_version": "27.3.0-1~debian.11~bullseye",
+    "package_version": "5:27.3.0-1~debian.11~bullseye",
     "os_name": "debian",
     "os_version": "bullseye",
     "os_arch": "arm64"
   },
   {
     "docker_version": "27.3.1",
-    "package_version": "27.3.1-1~debian.11~bullseye",
+    "package_version": "5:27.3.1-1~debian.11~bullseye",
     "os_name": "debian",
     "os_version": "bullseye",
     "os_arch": "arm64"
   },
   {
     "docker_version": "27.4.0",
-    "package_version": "27.4.0-1~debian.11~bullseye",
+    "package_version": "5:27.4.0-1~debian.11~bullseye",
     "os_name": "debian",
     "os_version": "bullseye",
     "os_arch": "arm64"
   },
   {
     "docker_version": "27.4.1",
-    "package_version": "27.4.1-1~debian.11~bullseye",
+    "package_version": "5:27.4.1-1~debian.11~bullseye",
     "os_name": "debian",
     "os_version": "bullseye",
     "os_arch": "arm64"
   },
   {
     "docker_version": "27.5.0",
-    "package_version": "27.5.0-1~debian.11~bullseye",
+    "package_version": "5:27.5.0-1~debian.11~bullseye",
     "os_name": "debian",
     "os_version": "bullseye",
     "os_arch": "arm64"
   },
   {
     "docker_version": "27.5.1",
-    "package_version": "27.5.1-1~debian.11~bullseye",
+    "package_version": "5:27.5.1-1~debian.11~bullseye",
     "os_name": "debian",
     "os_version": "bullseye",
     "os_arch": "arm64"
   },
   {
     "docker_version": "28.0.0",
-    "package_version": "28.0.0-1~debian.11~bullseye",
+    "package_version": "5:28.0.0-1~debian.11~bullseye",
     "os_name": "debian",
     "os_version": "bullseye",
     "os_arch": "arm64"
   },
   {
     "docker_version": "28.0.1",
-    "package_version": "28.0.1-1~debian.11~bullseye",
+    "package_version": "5:28.0.1-1~debian.11~bullseye",
     "os_name": "debian",
     "os_version": "bullseye",
     "os_arch": "arm64"
   },
   {
     "docker_version": "28.0.2",
-    "package_version": "28.0.2-1~debian.11~bullseye",
+    "package_version": "5:28.0.2-1~debian.11~bullseye",
     "os_name": "debian",
     "os_version": "bullseye",
     "os_arch": "arm64"
   },
   {
     "docker_version": "28.0.3",
-    "package_version": "28.0.3-1~debian.11~bullseye",
+    "package_version": "5:28.0.3-1~debian.11~bullseye",
     "os_name": "debian",
     "os_version": "bullseye",
     "os_arch": "arm64"
   },
   {
     "docker_version": "28.0.4",
-    "package_version": "28.0.4-1~debian.11~bullseye",
+    "package_version": "5:28.0.4-1~debian.11~bullseye",
     "os_name": "debian",
     "os_version": "bullseye",
     "os_arch": "arm64"
   },
   {
     "docker_version": "20.10.10",
-    "package_version": "20.10.10~3-0~debian-bullseye",
+    "package_version": "5:20.10.10~3-0~debian-bullseye",
     "os_name": "debian",
     "os_version": "bullseye",
     "os_arch": "armhf"
   },
   {
     "docker_version": "20.10.11",
-    "package_version": "20.10.11~3-0~debian-bullseye",
+    "package_version": "5:20.10.11~3-0~debian-bullseye",
     "os_name": "debian",
     "os_version": "bullseye",
     "os_arch": "armhf"
   },
   {
     "docker_version": "20.10.12",
-    "package_version": "20.10.12~3-0~debian-bullseye",
+    "package_version": "5:20.10.12~3-0~debian-bullseye",
     "os_name": "debian",
     "os_version": "bullseye",
     "os_arch": "armhf"
   },
   {
     "docker_version": "20.10.13",
-    "package_version": "20.10.13~3-0~debian-bullseye",
+    "package_version": "5:20.10.13~3-0~debian-bullseye",
     "os_name": "debian",
     "os_version": "bullseye",
     "os_arch": "armhf"
   },
   {
     "docker_version": "20.10.14",
-    "package_version": "20.10.14~3-0~debian-bullseye",
+    "package_version": "5:20.10.14~3-0~debian-bullseye",
     "os_name": "debian",
     "os_version": "bullseye",
     "os_arch": "armhf"
   },
   {
     "docker_version": "20.10.15",
-    "package_version": "20.10.15~3-0~debian-bullseye",
+    "package_version": "5:20.10.15~3-0~debian-bullseye",
     "os_name": "debian",
     "os_version": "bullseye",
     "os_arch": "armhf"
   },
   {
     "docker_version": "20.10.16",
-    "package_version": "20.10.16~3-0~debian-bullseye",
+    "package_version": "5:20.10.16~3-0~debian-bullseye",
     "os_name": "debian",
     "os_version": "bullseye",
     "os_arch": "armhf"
   },
   {
     "docker_version": "20.10.17",
-    "package_version": "20.10.17~3-0~debian-bullseye",
+    "package_version": "5:20.10.17~3-0~debian-bullseye",
     "os_name": "debian",
     "os_version": "bullseye",
     "os_arch": "armhf"
   },
   {
     "docker_version": "20.10.18",
-    "package_version": "20.10.18~3-0~debian-bullseye",
+    "package_version": "5:20.10.18~3-0~debian-bullseye",
     "os_name": "debian",
     "os_version": "bullseye",
     "os_arch": "armhf"
   },
   {
     "docker_version": "20.10.19",
-    "package_version": "20.10.19~3-0~debian-bullseye",
+    "package_version": "5:20.10.19~3-0~debian-bullseye",
     "os_name": "debian",
     "os_version": "bullseye",
     "os_arch": "armhf"
   },
   {
     "docker_version": "20.10.20",
-    "package_version": "20.10.20~3-0~debian-bullseye",
+    "package_version": "5:20.10.20~3-0~debian-bullseye",
     "os_name": "debian",
     "os_version": "bullseye",
     "os_arch": "armhf"
   },
   {
     "docker_version": "20.10.21",
-    "package_version": "20.10.21~3-0~debian-bullseye",
+    "package_version": "5:20.10.21~3-0~debian-bullseye",
     "os_name": "debian",
     "os_version": "bullseye",
     "os_arch": "armhf"
   },
   {
     "docker_version": "20.10.22",
-    "package_version": "20.10.22~3-0~debian-bullseye",
+    "package_version": "5:20.10.22~3-0~debian-bullseye",
     "os_name": "debian",
     "os_version": "bullseye",
     "os_arch": "armhf"
   },
   {
     "docker_version": "20.10.23",
-    "package_version": "20.10.23~3-0~debian-bullseye",
+    "package_version": "5:20.10.23~3-0~debian-bullseye",
     "os_name": "debian",
     "os_version": "bullseye",
     "os_arch": "armhf"
   },
   {
     "docker_version": "20.10.24",
-    "package_version": "20.10.24~3-0~debian-bullseye",
+    "package_version": "5:20.10.24~3-0~debian-bullseye",
     "os_name": "debian",
     "os_version": "bullseye",
     "os_arch": "armhf"
   },
   {
     "docker_version": "20.10.6",
-    "package_version": "20.10.6~3-0~debian-bullseye",
+    "package_version": "5:20.10.6~3-0~debian-bullseye",
     "os_name": "debian",
     "os_version": "bullseye",
     "os_arch": "armhf"
   },
   {
     "docker_version": "20.10.7",
-    "package_version": "20.10.7~3-0~debian-bullseye",
+    "package_version": "5:20.10.7~3-0~debian-bullseye",
     "os_name": "debian",
     "os_version": "bullseye",
     "os_arch": "armhf"
   },
   {
     "docker_version": "20.10.8",
-    "package_version": "20.10.8~3-0~debian-bullseye",
+    "package_version": "5:20.10.8~3-0~debian-bullseye",
     "os_name": "debian",
     "os_version": "bullseye",
     "os_arch": "armhf"
   },
   {
     "docker_version": "20.10.9",
-    "package_version": "20.10.9~3-0~debian-bullseye",
+    "package_version": "5:20.10.9~3-0~debian-bullseye",
     "os_name": "debian",
     "os_version": "bullseye",
     "os_arch": "armhf"
   },
   {
     "docker_version": "23.0.0",
-    "package_version": "23.0.0-1~debian.11~bullseye",
+    "package_version": "5:23.0.0-1~debian.11~bullseye",
     "os_name": "debian",
     "os_version": "bullseye",
     "os_arch": "armhf"
   },
   {
     "docker_version": "23.0.1",
-    "package_version": "23.0.1-1~debian.11~bullseye",
+    "package_version": "5:23.0.1-1~debian.11~bullseye",
     "os_name": "debian",
     "os_version": "bullseye",
     "os_arch": "armhf"
   },
   {
     "docker_version": "23.0.2",
-    "package_version": "23.0.2-1~debian.11~bullseye",
+    "package_version": "5:23.0.2-1~debian.11~bullseye",
     "os_name": "debian",
     "os_version": "bullseye",
     "os_arch": "armhf"
   },
   {
     "docker_version": "23.0.3",
-    "package_version": "23.0.3-1~debian.11~bullseye",
+    "package_version": "5:23.0.3-1~debian.11~bullseye",
     "os_name": "debian",
     "os_version": "bullseye",
     "os_arch": "armhf"
   },
   {
     "docker_version": "23.0.4",
-    "package_version": "23.0.4-1~debian.11~bullseye",
+    "package_version": "5:23.0.4-1~debian.11~bullseye",
     "os_name": "debian",
     "os_version": "bullseye",
     "os_arch": "armhf"
   },
   {
     "docker_version": "23.0.5",
-    "package_version": "23.0.5-1~debian.11~bullseye",
+    "package_version": "5:23.0.5-1~debian.11~bullseye",
     "os_name": "debian",
     "os_version": "bullseye",
     "os_arch": "armhf"
   },
   {
     "docker_version": "23.0.6",
-    "package_version": "23.0.6-1~debian.11~bullseye",
+    "package_version": "5:23.0.6-1~debian.11~bullseye",
     "os_name": "debian",
     "os_version": "bullseye",
     "os_arch": "armhf"
   },
   {
     "docker_version": "24.0.0",
-    "package_version": "24.0.0-1~debian.11~bullseye",
+    "package_version": "5:24.0.0-1~debian.11~bullseye",
     "os_name": "debian",
     "os_version": "bullseye",
     "os_arch": "armhf"
   },
   {
     "docker_version": "24.0.1",
-    "package_version": "24.0.1-1~debian.11~bullseye",
+    "package_version": "5:24.0.1-1~debian.11~bullseye",
     "os_name": "debian",
     "os_version": "bullseye",
     "os_arch": "armhf"
   },
   {
     "docker_version": "24.0.2",
-    "package_version": "24.0.2-1~debian.11~bullseye",
+    "package_version": "5:24.0.2-1~debian.11~bullseye",
     "os_name": "debian",
     "os_version": "bullseye",
     "os_arch": "armhf"
   },
   {
     "docker_version": "24.0.3",
-    "package_version": "24.0.3-1~debian.11~bullseye",
+    "package_version": "5:24.0.3-1~debian.11~bullseye",
     "os_name": "debian",
     "os_version": "bullseye",
     "os_arch": "armhf"
   },
   {
     "docker_version": "24.0.4",
-    "package_version": "24.0.4-1~debian.11~bullseye",
+    "package_version": "5:24.0.4-1~debian.11~bullseye",
     "os_name": "debian",
     "os_version": "bullseye",
     "os_arch": "armhf"
   },
   {
     "docker_version": "24.0.5",
-    "package_version": "24.0.5-1~debian.11~bullseye",
+    "package_version": "5:24.0.5-1~debian.11~bullseye",
     "os_name": "debian",
     "os_version": "bullseye",
     "os_arch": "armhf"
   },
   {
     "docker_version": "24.0.6",
-    "package_version": "24.0.6-1~debian.11~bullseye",
+    "package_version": "5:24.0.6-1~debian.11~bullseye",
     "os_name": "debian",
     "os_version": "bullseye",
     "os_arch": "armhf"
   },
   {
     "docker_version": "24.0.7",
-    "package_version": "24.0.7-1~debian.11~bullseye",
+    "package_version": "5:24.0.7-1~debian.11~bullseye",
     "os_name": "debian",
     "os_version": "bullseye",
     "os_arch": "armhf"
   },
   {
     "docker_version": "24.0.8",
-    "package_version": "24.0.8-1~debian.11~bullseye",
+    "package_version": "5:24.0.8-1~debian.11~bullseye",
     "os_name": "debian",
     "os_version": "bullseye",
     "os_arch": "armhf"
   },
   {
     "docker_version": "24.0.9",
-    "package_version": "24.0.9-1~debian.11~bullseye",
+    "package_version": "5:24.0.9-1~debian.11~bullseye",
     "os_name": "debian",
     "os_version": "bullseye",
     "os_arch": "armhf"
   },
   {
     "docker_version": "25.0.0",
-    "package_version": "25.0.0-1~debian.11~bullseye",
+    "package_version": "5:25.0.0-1~debian.11~bullseye",
     "os_name": "debian",
     "os_version": "bullseye",
     "os_arch": "armhf"
   },
   {
     "docker_version": "25.0.1",
-    "package_version": "25.0.1-1~debian.11~bullseye",
+    "package_version": "5:25.0.1-1~debian.11~bullseye",
     "os_name": "debian",
     "os_version": "bullseye",
     "os_arch": "armhf"
   },
   {
     "docker_version": "25.0.2",
-    "package_version": "25.0.2-1~debian.11~bullseye",
+    "package_version": "5:25.0.2-1~debian.11~bullseye",
     "os_name": "debian",
     "os_version": "bullseye",
     "os_arch": "armhf"
   },
   {
     "docker_version": "25.0.3",
-    "package_version": "25.0.3-1~debian.11~bullseye",
+    "package_version": "5:25.0.3-1~debian.11~bullseye",
     "os_name": "debian",
     "os_version": "bullseye",
     "os_arch": "armhf"
   },
   {
     "docker_version": "25.0.4",
-    "package_version": "25.0.4-1~debian.11~bullseye",
+    "package_version": "5:25.0.4-1~debian.11~bullseye",
     "os_name": "debian",
     "os_version": "bullseye",
     "os_arch": "armhf"
   },
   {
     "docker_version": "25.0.5",
-    "package_version": "25.0.5-1~debian.11~bullseye",
+    "package_version": "5:25.0.5-1~debian.11~bullseye",
     "os_name": "debian",
     "os_version": "bullseye",
     "os_arch": "armhf"
   },
   {
     "docker_version": "26.0.0",
-    "package_version": "26.0.0-1~debian.11~bullseye",
+    "package_version": "5:26.0.0-1~debian.11~bullseye",
     "os_name": "debian",
     "os_version": "bullseye",
     "os_arch": "armhf"
   },
   {
     "docker_version": "26.0.1",
-    "package_version": "26.0.1-1~debian.11~bullseye",
+    "package_version": "5:26.0.1-1~debian.11~bullseye",
     "os_name": "debian",
     "os_version": "bullseye",
     "os_arch": "armhf"
   },
   {
     "docker_version": "26.0.2",
-    "package_version": "26.0.2-1~debian.11~bullseye",
+    "package_version": "5:26.0.2-1~debian.11~bullseye",
     "os_name": "debian",
     "os_version": "bullseye",
     "os_arch": "armhf"
   },
   {
     "docker_version": "26.1.0",
-    "package_version": "26.1.0-1~debian.11~bullseye",
+    "package_version": "5:26.1.0-1~debian.11~bullseye",
     "os_name": "debian",
     "os_version": "bullseye",
     "os_arch": "armhf"
   },
   {
     "docker_version": "26.1.1",
-    "package_version": "26.1.1-1~debian.11~bullseye",
+    "package_version": "5:26.1.1-1~debian.11~bullseye",
     "os_name": "debian",
     "os_version": "bullseye",
     "os_arch": "armhf"
   },
   {
     "docker_version": "26.1.2",
-    "package_version": "26.1.2-1~debian.11~bullseye",
+    "package_version": "5:26.1.2-1~debian.11~bullseye",
     "os_name": "debian",
     "os_version": "bullseye",
     "os_arch": "armhf"
   },
   {
     "docker_version": "26.1.3",
-    "package_version": "26.1.3-1~debian.11~bullseye",
+    "package_version": "5:26.1.3-1~debian.11~bullseye",
     "os_name": "debian",
     "os_version": "bullseye",
     "os_arch": "armhf"
   },
   {
     "docker_version": "26.1.4",
-    "package_version": "26.1.4-1~debian.11~bullseye",
+    "package_version": "5:26.1.4-1~debian.11~bullseye",
     "os_name": "debian",
     "os_version": "bullseye",
     "os_arch": "armhf"
   },
   {
     "docker_version": "27.0.1",
-    "package_version": "27.0.1-1~debian.11~bullseye",
+    "package_version": "5:27.0.1-1~debian.11~bullseye",
     "os_name": "debian",
     "os_version": "bullseye",
     "os_arch": "armhf"
   },
   {
     "docker_version": "27.0.2",
-    "package_version": "27.0.2-1~debian.11~bullseye",
+    "package_version": "5:27.0.2-1~debian.11~bullseye",
     "os_name": "debian",
     "os_version": "bullseye",
     "os_arch": "armhf"
   },
   {
     "docker_version": "27.0.3",
-    "package_version": "27.0.3-1~debian.11~bullseye",
+    "package_version": "5:27.0.3-1~debian.11~bullseye",
     "os_name": "debian",
     "os_version": "bullseye",
     "os_arch": "armhf"
   },
   {
     "docker_version": "27.1.0",
-    "package_version": "27.1.0-1~debian.11~bullseye",
+    "package_version": "5:27.1.0-1~debian.11~bullseye",
     "os_name": "debian",
     "os_version": "bullseye",
     "os_arch": "armhf"
   },
   {
     "docker_version": "27.1.1",
-    "package_version": "27.1.1-1~debian.11~bullseye",
+    "package_version": "5:27.1.1-1~debian.11~bullseye",
     "os_name": "debian",
     "os_version": "bullseye",
     "os_arch": "armhf"
   },
   {
     "docker_version": "27.1.2",
-    "package_version": "27.1.2-1~debian.11~bullseye",
+    "package_version": "5:27.1.2-1~debian.11~bullseye",
     "os_name": "debian",
     "os_version": "bullseye",
     "os_arch": "armhf"
   },
   {
     "docker_version": "27.2.0",
-    "package_version": "27.2.0-1~debian.11~bullseye",
+    "package_version": "5:27.2.0-1~debian.11~bullseye",
     "os_name": "debian",
     "os_version": "bullseye",
     "os_arch": "armhf"
   },
   {
     "docker_version": "27.2.1",
-    "package_version": "27.2.1-1~debian.11~bullseye",
+    "package_version": "5:27.2.1-1~debian.11~bullseye",
     "os_name": "debian",
     "os_version": "bullseye",
     "os_arch": "armhf"
   },
   {
     "docker_version": "27.3.0",
-    "package_version": "27.3.0-1~debian.11~bullseye",
+    "package_version": "5:27.3.0-1~debian.11~bullseye",
     "os_name": "debian",
     "os_version": "bullseye",
     "os_arch": "armhf"
   },
   {
     "docker_version": "27.3.1",
-    "package_version": "27.3.1-1~debian.11~bullseye",
+    "package_version": "5:27.3.1-1~debian.11~bullseye",
     "os_name": "debian",
     "os_version": "bullseye",
     "os_arch": "armhf"
   },
   {
     "docker_version": "27.4.0",
-    "package_version": "27.4.0-1~debian.11~bullseye",
+    "package_version": "5:27.4.0-1~debian.11~bullseye",
     "os_name": "debian",
     "os_version": "bullseye",
     "os_arch": "armhf"
   },
   {
     "docker_version": "27.4.1",
-    "package_version": "27.4.1-1~debian.11~bullseye",
+    "package_version": "5:27.4.1-1~debian.11~bullseye",
     "os_name": "debian",
     "os_version": "bullseye",
     "os_arch": "armhf"
   },
   {
     "docker_version": "27.5.0",
-    "package_version": "27.5.0-1~debian.11~bullseye",
+    "package_version": "5:27.5.0-1~debian.11~bullseye",
     "os_name": "debian",
     "os_version": "bullseye",
     "os_arch": "armhf"
   },
   {
     "docker_version": "27.5.1",
-    "package_version": "27.5.1-1~debian.11~bullseye",
+    "package_version": "5:27.5.1-1~debian.11~bullseye",
     "os_name": "debian",
     "os_version": "bullseye",
     "os_arch": "armhf"
   },
   {
     "docker_version": "28.0.0",
-    "package_version": "28.0.0-1~debian.11~bullseye",
+    "package_version": "5:28.0.0-1~debian.11~bullseye",
     "os_name": "debian",
     "os_version": "bullseye",
     "os_arch": "armhf"
   },
   {
     "docker_version": "28.0.1",
-    "package_version": "28.0.1-1~debian.11~bullseye",
+    "package_version": "5:28.0.1-1~debian.11~bullseye",
     "os_name": "debian",
     "os_version": "bullseye",
     "os_arch": "armhf"
   },
   {
     "docker_version": "28.0.2",
-    "package_version": "28.0.2-1~debian.11~bullseye",
+    "package_version": "5:28.0.2-1~debian.11~bullseye",
     "os_name": "debian",
     "os_version": "bullseye",
     "os_arch": "armhf"
   },
   {
     "docker_version": "28.0.3",
-    "package_version": "28.0.3-1~debian.11~bullseye",
+    "package_version": "5:28.0.3-1~debian.11~bullseye",
     "os_name": "debian",
     "os_version": "bullseye",
     "os_arch": "armhf"
   },
   {
     "docker_version": "28.0.4",
-    "package_version": "28.0.4-1~debian.11~bullseye",
+    "package_version": "5:28.0.4-1~debian.11~bullseye",
     "os_name": "debian",
     "os_version": "bullseye",
     "os_arch": "armhf"
   },
   {
     "docker_version": "20.10.10",
-    "package_version": "20.10.10~3-0~debian-bullseye",
+    "package_version": "5:20.10.10~3-0~debian-bullseye",
     "os_name": "debian",
     "os_version": "bullseye",
     "os_arch": "ppc64el"
   },
   {
     "docker_version": "20.10.11",
-    "package_version": "20.10.11~3-0~debian-bullseye",
+    "package_version": "5:20.10.11~3-0~debian-bullseye",
     "os_name": "debian",
     "os_version": "bullseye",
     "os_arch": "ppc64el"
   },
   {
     "docker_version": "20.10.12",
-    "package_version": "20.10.12~3-0~debian-bullseye",
+    "package_version": "5:20.10.12~3-0~debian-bullseye",
     "os_name": "debian",
     "os_version": "bullseye",
     "os_arch": "ppc64el"
   },
   {
     "docker_version": "20.10.13",
-    "package_version": "20.10.13~3-0~debian-bullseye",
+    "package_version": "5:20.10.13~3-0~debian-bullseye",
     "os_name": "debian",
     "os_version": "bullseye",
     "os_arch": "ppc64el"
   },
   {
     "docker_version": "20.10.14",
-    "package_version": "20.10.14~3-0~debian-bullseye",
+    "package_version": "5:20.10.14~3-0~debian-bullseye",
     "os_name": "debian",
     "os_version": "bullseye",
     "os_arch": "ppc64el"
   },
   {
     "docker_version": "20.10.15",
-    "package_version": "20.10.15~3-0~debian-bullseye",
+    "package_version": "5:20.10.15~3-0~debian-bullseye",
     "os_name": "debian",
     "os_version": "bullseye",
     "os_arch": "ppc64el"
   },
   {
     "docker_version": "20.10.16",
-    "package_version": "20.10.16~3-0~debian-bullseye",
+    "package_version": "5:20.10.16~3-0~debian-bullseye",
     "os_name": "debian",
     "os_version": "bullseye",
     "os_arch": "ppc64el"
   },
   {
     "docker_version": "20.10.17",
-    "package_version": "20.10.17~3-0~debian-bullseye",
+    "package_version": "5:20.10.17~3-0~debian-bullseye",
     "os_name": "debian",
     "os_version": "bullseye",
     "os_arch": "ppc64el"
   },
   {
     "docker_version": "20.10.18",
-    "package_version": "20.10.18~3-0~debian-bullseye",
+    "package_version": "5:20.10.18~3-0~debian-bullseye",
     "os_name": "debian",
     "os_version": "bullseye",
     "os_arch": "ppc64el"
   },
   {
     "docker_version": "20.10.19",
-    "package_version": "20.10.19~3-0~debian-bullseye",
+    "package_version": "5:20.10.19~3-0~debian-bullseye",
     "os_name": "debian",
     "os_version": "bullseye",
     "os_arch": "ppc64el"
   },
   {
     "docker_version": "20.10.20",
-    "package_version": "20.10.20~3-0~debian-bullseye",
+    "package_version": "5:20.10.20~3-0~debian-bullseye",
     "os_name": "debian",
     "os_version": "bullseye",
     "os_arch": "ppc64el"
   },
   {
     "docker_version": "20.10.21",
-    "package_version": "20.10.21~3-0~debian-bullseye",
+    "package_version": "5:20.10.21~3-0~debian-bullseye",
     "os_name": "debian",
     "os_version": "bullseye",
     "os_arch": "ppc64el"
   },
   {
     "docker_version": "20.10.22",
-    "package_version": "20.10.22~3-0~debian-bullseye",
+    "package_version": "5:20.10.22~3-0~debian-bullseye",
     "os_name": "debian",
     "os_version": "bullseye",
     "os_arch": "ppc64el"
   },
   {
     "docker_version": "20.10.23",
-    "package_version": "20.10.23~3-0~debian-bullseye",
+    "package_version": "5:20.10.23~3-0~debian-bullseye",
     "os_name": "debian",
     "os_version": "bullseye",
     "os_arch": "ppc64el"
   },
   {
     "docker_version": "20.10.24",
-    "package_version": "20.10.24~3-0~debian-bullseye",
+    "package_version": "5:20.10.24~3-0~debian-bullseye",
     "os_name": "debian",
     "os_version": "bullseye",
     "os_arch": "ppc64el"
   },
   {
     "docker_version": "20.10.7",
-    "package_version": "20.10.7~3-0~debian-bullseye",
+    "package_version": "5:20.10.7~3-0~debian-bullseye",
     "os_name": "debian",
     "os_version": "bullseye",
     "os_arch": "ppc64el"
   },
   {
     "docker_version": "20.10.8",
-    "package_version": "20.10.8~3-0~debian-bullseye",
+    "package_version": "5:20.10.8~3-0~debian-bullseye",
     "os_name": "debian",
     "os_version": "bullseye",
     "os_arch": "ppc64el"
   },
   {
     "docker_version": "20.10.9",
-    "package_version": "20.10.9~3-0~debian-bullseye",
+    "package_version": "5:20.10.9~3-0~debian-bullseye",
     "os_name": "debian",
     "os_version": "bullseye",
     "os_arch": "ppc64el"
   },
   {
     "docker_version": "23.0.0",
-    "package_version": "23.0.0-1~debian.11~bullseye",
+    "package_version": "5:23.0.0-1~debian.11~bullseye",
     "os_name": "debian",
     "os_version": "bullseye",
     "os_arch": "ppc64el"
   },
   {
     "docker_version": "23.0.1",
-    "package_version": "23.0.1-1~debian.11~bullseye",
+    "package_version": "5:23.0.1-1~debian.11~bullseye",
     "os_name": "debian",
     "os_version": "bullseye",
     "os_arch": "ppc64el"
   },
   {
     "docker_version": "23.0.2",
-    "package_version": "23.0.2-1~debian.11~bullseye",
+    "package_version": "5:23.0.2-1~debian.11~bullseye",
     "os_name": "debian",
     "os_version": "bullseye",
     "os_arch": "ppc64el"
   },
   {
     "docker_version": "23.0.3",
-    "package_version": "23.0.3-1~debian.11~bullseye",
+    "package_version": "5:23.0.3-1~debian.11~bullseye",
     "os_name": "debian",
     "os_version": "bullseye",
     "os_arch": "ppc64el"
   },
   {
     "docker_version": "23.0.4",
-    "package_version": "23.0.4-1~debian.11~bullseye",
+    "package_version": "5:23.0.4-1~debian.11~bullseye",
     "os_name": "debian",
     "os_version": "bullseye",
     "os_arch": "ppc64el"
   },
   {
     "docker_version": "23.0.5",
-    "package_version": "23.0.5-1~debian.11~bullseye",
+    "package_version": "5:23.0.5-1~debian.11~bullseye",
     "os_name": "debian",
     "os_version": "bullseye",
     "os_arch": "ppc64el"
   },
   {
     "docker_version": "23.0.6",
-    "package_version": "23.0.6-1~debian.11~bullseye",
+    "package_version": "5:23.0.6-1~debian.11~bullseye",
     "os_name": "debian",
     "os_version": "bullseye",
     "os_arch": "ppc64el"
   },
   {
     "docker_version": "24.0.0",
-    "package_version": "24.0.0-1~debian.11~bullseye",
+    "package_version": "5:24.0.0-1~debian.11~bullseye",
     "os_name": "debian",
     "os_version": "bullseye",
     "os_arch": "ppc64el"
   },
   {
     "docker_version": "24.0.1",
-    "package_version": "24.0.1-1~debian.11~bullseye",
+    "package_version": "5:24.0.1-1~debian.11~bullseye",
     "os_name": "debian",
     "os_version": "bullseye",
     "os_arch": "ppc64el"
   },
   {
     "docker_version": "24.0.2",
-    "package_version": "24.0.2-1~debian.11~bullseye",
+    "package_version": "5:24.0.2-1~debian.11~bullseye",
     "os_name": "debian",
     "os_version": "bullseye",
     "os_arch": "ppc64el"
   },
   {
     "docker_version": "24.0.3",
-    "package_version": "24.0.3-1~debian.11~bullseye",
+    "package_version": "5:24.0.3-1~debian.11~bullseye",
     "os_name": "debian",
     "os_version": "bullseye",
     "os_arch": "ppc64el"
   },
   {
     "docker_version": "24.0.4",
-    "package_version": "24.0.4-1~debian.11~bullseye",
+    "package_version": "5:24.0.4-1~debian.11~bullseye",
     "os_name": "debian",
     "os_version": "bullseye",
     "os_arch": "ppc64el"
   },
   {
     "docker_version": "24.0.5",
-    "package_version": "24.0.5-1~debian.11~bullseye",
+    "package_version": "5:24.0.5-1~debian.11~bullseye",
     "os_name": "debian",
     "os_version": "bullseye",
     "os_arch": "ppc64el"
   },
   {
     "docker_version": "24.0.6",
-    "package_version": "24.0.6-1~debian.11~bullseye",
+    "package_version": "5:24.0.6-1~debian.11~bullseye",
     "os_name": "debian",
     "os_version": "bullseye",
     "os_arch": "ppc64el"
   },
   {
     "docker_version": "24.0.7",
-    "package_version": "24.0.7-1~debian.11~bullseye",
+    "package_version": "5:24.0.7-1~debian.11~bullseye",
     "os_name": "debian",
     "os_version": "bullseye",
     "os_arch": "ppc64el"
   },
   {
     "docker_version": "24.0.8",
-    "package_version": "24.0.8-1~debian.11~bullseye",
+    "package_version": "5:24.0.8-1~debian.11~bullseye",
     "os_name": "debian",
     "os_version": "bullseye",
     "os_arch": "ppc64el"
   },
   {
     "docker_version": "24.0.9",
-    "package_version": "24.0.9-1~debian.11~bullseye",
+    "package_version": "5:24.0.9-1~debian.11~bullseye",
     "os_name": "debian",
     "os_version": "bullseye",
     "os_arch": "ppc64el"
   },
   {
     "docker_version": "25.0.2",
-    "package_version": "25.0.2-1~debian.11~bullseye",
+    "package_version": "5:25.0.2-1~debian.11~bullseye",
     "os_name": "debian",
     "os_version": "bullseye",
     "os_arch": "ppc64el"
   },
   {
     "docker_version": "25.0.3",
-    "package_version": "25.0.3-1~debian.11~bullseye",
+    "package_version": "5:25.0.3-1~debian.11~bullseye",
     "os_name": "debian",
     "os_version": "bullseye",
     "os_arch": "ppc64el"
   },
   {
     "docker_version": "25.0.4",
-    "package_version": "25.0.4-1~debian.11~bullseye",
+    "package_version": "5:25.0.4-1~debian.11~bullseye",
     "os_name": "debian",
     "os_version": "bullseye",
     "os_arch": "ppc64el"
   },
   {
     "docker_version": "25.0.5",
-    "package_version": "25.0.5-1~debian.11~bullseye",
+    "package_version": "5:25.0.5-1~debian.11~bullseye",
     "os_name": "debian",
     "os_version": "bullseye",
     "os_arch": "ppc64el"
   },
   {
     "docker_version": "26.0.0",
-    "package_version": "26.0.0-1~debian.11~bullseye",
+    "package_version": "5:26.0.0-1~debian.11~bullseye",
     "os_name": "debian",
     "os_version": "bullseye",
     "os_arch": "ppc64el"
   },
   {
     "docker_version": "26.0.1",
-    "package_version": "26.0.1-1~debian.11~bullseye",
+    "package_version": "5:26.0.1-1~debian.11~bullseye",
     "os_name": "debian",
     "os_version": "bullseye",
     "os_arch": "ppc64el"
   },
   {
     "docker_version": "26.0.2",
-    "package_version": "26.0.2-1~debian.11~bullseye",
+    "package_version": "5:26.0.2-1~debian.11~bullseye",
     "os_name": "debian",
     "os_version": "bullseye",
     "os_arch": "ppc64el"
   },
   {
     "docker_version": "26.1.0",
-    "package_version": "26.1.0-1~debian.11~bullseye",
+    "package_version": "5:26.1.0-1~debian.11~bullseye",
     "os_name": "debian",
     "os_version": "bullseye",
     "os_arch": "ppc64el"
   },
   {
     "docker_version": "26.1.1",
-    "package_version": "26.1.1-1~debian.11~bullseye",
+    "package_version": "5:26.1.1-1~debian.11~bullseye",
     "os_name": "debian",
     "os_version": "bullseye",
     "os_arch": "ppc64el"
   },
   {
     "docker_version": "26.1.2",
-    "package_version": "26.1.2-1~debian.11~bullseye",
+    "package_version": "5:26.1.2-1~debian.11~bullseye",
     "os_name": "debian",
     "os_version": "bullseye",
     "os_arch": "ppc64el"
   },
   {
     "docker_version": "26.1.3",
-    "package_version": "26.1.3-1~debian.11~bullseye",
+    "package_version": "5:26.1.3-1~debian.11~bullseye",
     "os_name": "debian",
     "os_version": "bullseye",
     "os_arch": "ppc64el"
   },
   {
     "docker_version": "26.1.4",
-    "package_version": "26.1.4-1~debian.11~bullseye",
+    "package_version": "5:26.1.4-1~debian.11~bullseye",
     "os_name": "debian",
     "os_version": "bullseye",
     "os_arch": "ppc64el"
   },
   {
     "docker_version": "27.0.1",
-    "package_version": "27.0.1-1~debian.11~bullseye",
+    "package_version": "5:27.0.1-1~debian.11~bullseye",
     "os_name": "debian",
     "os_version": "bullseye",
     "os_arch": "ppc64el"
   },
   {
     "docker_version": "27.0.2",
-    "package_version": "27.0.2-1~debian.11~bullseye",
+    "package_version": "5:27.0.2-1~debian.11~bullseye",
     "os_name": "debian",
     "os_version": "bullseye",
     "os_arch": "ppc64el"
   },
   {
     "docker_version": "27.0.3",
-    "package_version": "27.0.3-1~debian.11~bullseye",
+    "package_version": "5:27.0.3-1~debian.11~bullseye",
     "os_name": "debian",
     "os_version": "bullseye",
     "os_arch": "ppc64el"
   },
   {
     "docker_version": "27.1.0",
-    "package_version": "27.1.0-1~debian.11~bullseye",
+    "package_version": "5:27.1.0-1~debian.11~bullseye",
     "os_name": "debian",
     "os_version": "bullseye",
     "os_arch": "ppc64el"
   },
   {
     "docker_version": "27.1.1",
-    "package_version": "27.1.1-1~debian.11~bullseye",
+    "package_version": "5:27.1.1-1~debian.11~bullseye",
     "os_name": "debian",
     "os_version": "bullseye",
     "os_arch": "ppc64el"
   },
   {
     "docker_version": "27.1.2",
-    "package_version": "27.1.2-1~debian.11~bullseye",
+    "package_version": "5:27.1.2-1~debian.11~bullseye",
     "os_name": "debian",
     "os_version": "bullseye",
     "os_arch": "ppc64el"
@@ -3256,574 +3263,574 @@
   },
   {
     "docker_version": "18.09.0",
-    "package_version": "18.09.0~3-0~debian-buster",
+    "package_version": "5:18.09.0~3-0~debian-buster",
     "os_name": "debian",
     "os_version": "buster",
     "os_arch": "amd64"
   },
   {
     "docker_version": "18.09.1",
-    "package_version": "18.09.1~3-0~debian-buster",
+    "package_version": "5:18.09.1~3-0~debian-buster",
     "os_name": "debian",
     "os_version": "buster",
     "os_arch": "amd64"
   },
   {
     "docker_version": "18.09.2",
-    "package_version": "18.09.2~3-0~debian-buster",
+    "package_version": "5:18.09.2~3-0~debian-buster",
     "os_name": "debian",
     "os_version": "buster",
     "os_arch": "amd64"
   },
   {
     "docker_version": "18.09.3",
-    "package_version": "18.09.3~3-0~debian-buster",
+    "package_version": "5:18.09.3~3-0~debian-buster",
     "os_name": "debian",
     "os_version": "buster",
     "os_arch": "amd64"
   },
   {
     "docker_version": "18.09.4",
-    "package_version": "18.09.4~3-0~debian-buster",
+    "package_version": "5:18.09.4~3-0~debian-buster",
     "os_name": "debian",
     "os_version": "buster",
     "os_arch": "amd64"
   },
   {
     "docker_version": "18.09.5",
-    "package_version": "18.09.5~3-0~debian-buster",
+    "package_version": "5:18.09.5~3-0~debian-buster",
     "os_name": "debian",
     "os_version": "buster",
     "os_arch": "amd64"
   },
   {
     "docker_version": "18.09.6",
-    "package_version": "18.09.6~3-0~debian-buster",
+    "package_version": "5:18.09.6~3-0~debian-buster",
     "os_name": "debian",
     "os_version": "buster",
     "os_arch": "amd64"
   },
   {
     "docker_version": "18.09.7",
-    "package_version": "18.09.7~3-0~debian-buster",
+    "package_version": "5:18.09.7~3-0~debian-buster",
     "os_name": "debian",
     "os_version": "buster",
     "os_arch": "amd64"
   },
   {
     "docker_version": "18.09.8",
-    "package_version": "18.09.8~3-0~debian-buster",
+    "package_version": "5:18.09.8~3-0~debian-buster",
     "os_name": "debian",
     "os_version": "buster",
     "os_arch": "amd64"
   },
   {
     "docker_version": "18.09.9",
-    "package_version": "18.09.9~3-0~debian-buster",
+    "package_version": "5:18.09.9~3-0~debian-buster",
     "os_name": "debian",
     "os_version": "buster",
     "os_arch": "amd64"
   },
   {
     "docker_version": "19.03.0",
-    "package_version": "19.03.0~3-0~debian-buster",
+    "package_version": "5:19.03.0~3-0~debian-buster",
     "os_name": "debian",
     "os_version": "buster",
     "os_arch": "amd64"
   },
   {
     "docker_version": "19.03.10",
-    "package_version": "19.03.10~3-0~debian-buster",
+    "package_version": "5:19.03.10~3-0~debian-buster",
     "os_name": "debian",
     "os_version": "buster",
     "os_arch": "amd64"
   },
   {
     "docker_version": "19.03.11",
-    "package_version": "19.03.11~3-0~debian-buster",
+    "package_version": "5:19.03.11~3-0~debian-buster",
     "os_name": "debian",
     "os_version": "buster",
     "os_arch": "amd64"
   },
   {
     "docker_version": "19.03.12",
-    "package_version": "19.03.12~3-0~debian-buster",
-    "os_name": "debian",
-    "os_version": "buster",
-    "os_arch": "amd64"
-  },
-  {
-    "docker_version": "19.03.1",
-    "package_version": "19.03.1~3-0~debian-buster",
+    "package_version": "5:19.03.12~3-0~debian-buster",
     "os_name": "debian",
     "os_version": "buster",
     "os_arch": "amd64"
   },
   {
     "docker_version": "19.03.13",
-    "package_version": "19.03.13~3-0~debian-buster",
+    "package_version": "5:19.03.13~3-0~debian-buster",
     "os_name": "debian",
     "os_version": "buster",
     "os_arch": "amd64"
   },
   {
     "docker_version": "19.03.14",
-    "package_version": "19.03.14~3-0~debian-buster",
+    "package_version": "5:19.03.14~3-0~debian-buster",
     "os_name": "debian",
     "os_version": "buster",
     "os_arch": "amd64"
   },
   {
     "docker_version": "19.03.15",
-    "package_version": "19.03.15~3-0~debian-buster",
+    "package_version": "5:19.03.15~3-0~debian-buster",
+    "os_name": "debian",
+    "os_version": "buster",
+    "os_arch": "amd64"
+  },
+  {
+    "docker_version": "19.03.1",
+    "package_version": "5:19.03.1~3-0~debian-buster",
     "os_name": "debian",
     "os_version": "buster",
     "os_arch": "amd64"
   },
   {
     "docker_version": "19.03.2",
-    "package_version": "19.03.2~3-0~debian-buster",
+    "package_version": "5:19.03.2~3-0~debian-buster",
     "os_name": "debian",
     "os_version": "buster",
     "os_arch": "amd64"
   },
   {
     "docker_version": "19.03.3",
-    "package_version": "19.03.3~3-0~debian-buster",
+    "package_version": "5:19.03.3~3-0~debian-buster",
     "os_name": "debian",
     "os_version": "buster",
     "os_arch": "amd64"
   },
   {
     "docker_version": "19.03.4",
-    "package_version": "19.03.4~3-0~debian-buster",
+    "package_version": "5:19.03.4~3-0~debian-buster",
     "os_name": "debian",
     "os_version": "buster",
     "os_arch": "amd64"
   },
   {
     "docker_version": "19.03.5",
-    "package_version": "19.03.5~3-0~debian-buster",
+    "package_version": "5:19.03.5~3-0~debian-buster",
     "os_name": "debian",
     "os_version": "buster",
     "os_arch": "amd64"
   },
   {
     "docker_version": "19.03.6",
-    "package_version": "19.03.6~3-0~debian-buster",
+    "package_version": "5:19.03.6~3-0~debian-buster",
     "os_name": "debian",
     "os_version": "buster",
     "os_arch": "amd64"
   },
   {
     "docker_version": "19.03.7",
-    "package_version": "19.03.7~3-0~debian-buster",
+    "package_version": "5:19.03.7~3-0~debian-buster",
     "os_name": "debian",
     "os_version": "buster",
     "os_arch": "amd64"
   },
   {
     "docker_version": "19.03.8",
-    "package_version": "19.03.8~3-0~debian-buster",
+    "package_version": "5:19.03.8~3-0~debian-buster",
     "os_name": "debian",
     "os_version": "buster",
     "os_arch": "amd64"
   },
   {
     "docker_version": "19.03.9",
-    "package_version": "19.03.9~3-0~debian-buster",
+    "package_version": "5:19.03.9~3-0~debian-buster",
     "os_name": "debian",
     "os_version": "buster",
     "os_arch": "amd64"
   },
   {
     "docker_version": "20.10.0",
-    "package_version": "20.10.0~3-0~debian-buster",
+    "package_version": "5:20.10.0~3-0~debian-buster",
     "os_name": "debian",
     "os_version": "buster",
     "os_arch": "amd64"
   },
   {
     "docker_version": "20.10.10",
-    "package_version": "20.10.10~3-0~debian-buster",
+    "package_version": "5:20.10.10~3-0~debian-buster",
     "os_name": "debian",
     "os_version": "buster",
     "os_arch": "amd64"
   },
   {
     "docker_version": "20.10.11",
-    "package_version": "20.10.11~3-0~debian-buster",
+    "package_version": "5:20.10.11~3-0~debian-buster",
     "os_name": "debian",
     "os_version": "buster",
     "os_arch": "amd64"
   },
   {
     "docker_version": "20.10.12",
-    "package_version": "20.10.12~3-0~debian-buster",
-    "os_name": "debian",
-    "os_version": "buster",
-    "os_arch": "amd64"
-  },
-  {
-    "docker_version": "20.10.1",
-    "package_version": "20.10.1~3-0~debian-buster",
+    "package_version": "5:20.10.12~3-0~debian-buster",
     "os_name": "debian",
     "os_version": "buster",
     "os_arch": "amd64"
   },
   {
     "docker_version": "20.10.13",
-    "package_version": "20.10.13~3-0~debian-buster",
+    "package_version": "5:20.10.13~3-0~debian-buster",
     "os_name": "debian",
     "os_version": "buster",
     "os_arch": "amd64"
   },
   {
     "docker_version": "20.10.14",
-    "package_version": "20.10.14~3-0~debian-buster",
+    "package_version": "5:20.10.14~3-0~debian-buster",
     "os_name": "debian",
     "os_version": "buster",
     "os_arch": "amd64"
   },
   {
     "docker_version": "20.10.15",
-    "package_version": "20.10.15~3-0~debian-buster",
+    "package_version": "5:20.10.15~3-0~debian-buster",
     "os_name": "debian",
     "os_version": "buster",
     "os_arch": "amd64"
   },
   {
     "docker_version": "20.10.16",
-    "package_version": "20.10.16~3-0~debian-buster",
+    "package_version": "5:20.10.16~3-0~debian-buster",
     "os_name": "debian",
     "os_version": "buster",
     "os_arch": "amd64"
   },
   {
     "docker_version": "20.10.17",
-    "package_version": "20.10.17~3-0~debian-buster",
+    "package_version": "5:20.10.17~3-0~debian-buster",
     "os_name": "debian",
     "os_version": "buster",
     "os_arch": "amd64"
   },
   {
     "docker_version": "20.10.18",
-    "package_version": "20.10.18~3-0~debian-buster",
+    "package_version": "5:20.10.18~3-0~debian-buster",
     "os_name": "debian",
     "os_version": "buster",
     "os_arch": "amd64"
   },
   {
     "docker_version": "20.10.19",
-    "package_version": "20.10.19~3-0~debian-buster",
+    "package_version": "5:20.10.19~3-0~debian-buster",
+    "os_name": "debian",
+    "os_version": "buster",
+    "os_arch": "amd64"
+  },
+  {
+    "docker_version": "20.10.1",
+    "package_version": "5:20.10.1~3-0~debian-buster",
     "os_name": "debian",
     "os_version": "buster",
     "os_arch": "amd64"
   },
   {
     "docker_version": "20.10.20",
-    "package_version": "20.10.20~3-0~debian-buster",
+    "package_version": "5:20.10.20~3-0~debian-buster",
     "os_name": "debian",
     "os_version": "buster",
     "os_arch": "amd64"
   },
   {
     "docker_version": "20.10.21",
-    "package_version": "20.10.21~3-0~debian-buster",
+    "package_version": "5:20.10.21~3-0~debian-buster",
     "os_name": "debian",
     "os_version": "buster",
     "os_arch": "amd64"
   },
   {
     "docker_version": "20.10.22",
-    "package_version": "20.10.22~3-0~debian-buster",
-    "os_name": "debian",
-    "os_version": "buster",
-    "os_arch": "amd64"
-  },
-  {
-    "docker_version": "20.10.2",
-    "package_version": "20.10.2~3-0~debian-buster",
+    "package_version": "5:20.10.22~3-0~debian-buster",
     "os_name": "debian",
     "os_version": "buster",
     "os_arch": "amd64"
   },
   {
     "docker_version": "20.10.23",
-    "package_version": "20.10.23~3-0~debian-buster",
+    "package_version": "5:20.10.23~3-0~debian-buster",
     "os_name": "debian",
     "os_version": "buster",
     "os_arch": "amd64"
   },
   {
     "docker_version": "20.10.24",
-    "package_version": "20.10.24~3-0~debian-buster",
+    "package_version": "5:20.10.24~3-0~debian-buster",
+    "os_name": "debian",
+    "os_version": "buster",
+    "os_arch": "amd64"
+  },
+  {
+    "docker_version": "20.10.2",
+    "package_version": "5:20.10.2~3-0~debian-buster",
     "os_name": "debian",
     "os_version": "buster",
     "os_arch": "amd64"
   },
   {
     "docker_version": "20.10.3",
-    "package_version": "20.10.3~3-0~debian-buster",
+    "package_version": "5:20.10.3~3-0~debian-buster",
     "os_name": "debian",
     "os_version": "buster",
     "os_arch": "amd64"
   },
   {
     "docker_version": "20.10.4",
-    "package_version": "20.10.4~3-0~debian-buster",
+    "package_version": "5:20.10.4~3-0~debian-buster",
     "os_name": "debian",
     "os_version": "buster",
     "os_arch": "amd64"
   },
   {
     "docker_version": "20.10.5",
-    "package_version": "20.10.5~3-0~debian-buster",
+    "package_version": "5:20.10.5~3-0~debian-buster",
     "os_name": "debian",
     "os_version": "buster",
     "os_arch": "amd64"
   },
   {
     "docker_version": "20.10.6",
-    "package_version": "20.10.6~3-0~debian-buster",
+    "package_version": "5:20.10.6~3-0~debian-buster",
     "os_name": "debian",
     "os_version": "buster",
     "os_arch": "amd64"
   },
   {
     "docker_version": "20.10.7",
-    "package_version": "20.10.7~3-0~debian-buster",
+    "package_version": "5:20.10.7~3-0~debian-buster",
     "os_name": "debian",
     "os_version": "buster",
     "os_arch": "amd64"
   },
   {
     "docker_version": "20.10.8",
-    "package_version": "20.10.8~3-0~debian-buster",
+    "package_version": "5:20.10.8~3-0~debian-buster",
     "os_name": "debian",
     "os_version": "buster",
     "os_arch": "amd64"
   },
   {
     "docker_version": "20.10.9",
-    "package_version": "20.10.9~3-0~debian-buster",
+    "package_version": "5:20.10.9~3-0~debian-buster",
     "os_name": "debian",
     "os_version": "buster",
     "os_arch": "amd64"
   },
   {
     "docker_version": "23.0.0",
-    "package_version": "23.0.0-1~debian.10~buster",
+    "package_version": "5:23.0.0-1~debian.10~buster",
     "os_name": "debian",
     "os_version": "buster",
     "os_arch": "amd64"
   },
   {
     "docker_version": "23.0.1",
-    "package_version": "23.0.1-1~debian.10~buster",
+    "package_version": "5:23.0.1-1~debian.10~buster",
     "os_name": "debian",
     "os_version": "buster",
     "os_arch": "amd64"
   },
   {
     "docker_version": "23.0.2",
-    "package_version": "23.0.2-1~debian.10~buster",
+    "package_version": "5:23.0.2-1~debian.10~buster",
     "os_name": "debian",
     "os_version": "buster",
     "os_arch": "amd64"
   },
   {
     "docker_version": "23.0.3",
-    "package_version": "23.0.3-1~debian.10~buster",
+    "package_version": "5:23.0.3-1~debian.10~buster",
     "os_name": "debian",
     "os_version": "buster",
     "os_arch": "amd64"
   },
   {
     "docker_version": "23.0.4",
-    "package_version": "23.0.4-1~debian.10~buster",
+    "package_version": "5:23.0.4-1~debian.10~buster",
     "os_name": "debian",
     "os_version": "buster",
     "os_arch": "amd64"
   },
   {
     "docker_version": "23.0.5",
-    "package_version": "23.0.5-1~debian.10~buster",
+    "package_version": "5:23.0.5-1~debian.10~buster",
     "os_name": "debian",
     "os_version": "buster",
     "os_arch": "amd64"
   },
   {
     "docker_version": "23.0.6",
-    "package_version": "23.0.6-1~debian.10~buster",
+    "package_version": "5:23.0.6-1~debian.10~buster",
     "os_name": "debian",
     "os_version": "buster",
     "os_arch": "amd64"
   },
   {
     "docker_version": "24.0.0",
-    "package_version": "24.0.0-1~debian.10~buster",
+    "package_version": "5:24.0.0-1~debian.10~buster",
     "os_name": "debian",
     "os_version": "buster",
     "os_arch": "amd64"
   },
   {
     "docker_version": "24.0.1",
-    "package_version": "24.0.1-1~debian.10~buster",
+    "package_version": "5:24.0.1-1~debian.10~buster",
     "os_name": "debian",
     "os_version": "buster",
     "os_arch": "amd64"
   },
   {
     "docker_version": "24.0.2",
-    "package_version": "24.0.2-1~debian.10~buster",
+    "package_version": "5:24.0.2-1~debian.10~buster",
     "os_name": "debian",
     "os_version": "buster",
     "os_arch": "amd64"
   },
   {
     "docker_version": "24.0.3",
-    "package_version": "24.0.3-1~debian.10~buster",
+    "package_version": "5:24.0.3-1~debian.10~buster",
     "os_name": "debian",
     "os_version": "buster",
     "os_arch": "amd64"
   },
   {
     "docker_version": "24.0.4",
-    "package_version": "24.0.4-1~debian.10~buster",
+    "package_version": "5:24.0.4-1~debian.10~buster",
     "os_name": "debian",
     "os_version": "buster",
     "os_arch": "amd64"
   },
   {
     "docker_version": "24.0.5",
-    "package_version": "24.0.5-1~debian.10~buster",
+    "package_version": "5:24.0.5-1~debian.10~buster",
     "os_name": "debian",
     "os_version": "buster",
     "os_arch": "amd64"
   },
   {
     "docker_version": "24.0.6",
-    "package_version": "24.0.6-1~debian.10~buster",
+    "package_version": "5:24.0.6-1~debian.10~buster",
     "os_name": "debian",
     "os_version": "buster",
     "os_arch": "amd64"
   },
   {
     "docker_version": "24.0.7",
-    "package_version": "24.0.7-1~debian.10~buster",
+    "package_version": "5:24.0.7-1~debian.10~buster",
     "os_name": "debian",
     "os_version": "buster",
     "os_arch": "amd64"
   },
   {
     "docker_version": "24.0.8",
-    "package_version": "24.0.8-1~debian.10~buster",
+    "package_version": "5:24.0.8-1~debian.10~buster",
     "os_name": "debian",
     "os_version": "buster",
     "os_arch": "amd64"
   },
   {
     "docker_version": "24.0.9",
-    "package_version": "24.0.9-1~debian.10~buster",
+    "package_version": "5:24.0.9-1~debian.10~buster",
     "os_name": "debian",
     "os_version": "buster",
     "os_arch": "amd64"
   },
   {
     "docker_version": "25.0.0",
-    "package_version": "25.0.0-1~debian.10~buster",
+    "package_version": "5:25.0.0-1~debian.10~buster",
     "os_name": "debian",
     "os_version": "buster",
     "os_arch": "amd64"
   },
   {
     "docker_version": "25.0.1",
-    "package_version": "25.0.1-1~debian.10~buster",
+    "package_version": "5:25.0.1-1~debian.10~buster",
     "os_name": "debian",
     "os_version": "buster",
     "os_arch": "amd64"
   },
   {
     "docker_version": "25.0.2",
-    "package_version": "25.0.2-1~debian.10~buster",
+    "package_version": "5:25.0.2-1~debian.10~buster",
     "os_name": "debian",
     "os_version": "buster",
     "os_arch": "amd64"
   },
   {
     "docker_version": "25.0.3",
-    "package_version": "25.0.3-1~debian.10~buster",
+    "package_version": "5:25.0.3-1~debian.10~buster",
     "os_name": "debian",
     "os_version": "buster",
     "os_arch": "amd64"
   },
   {
     "docker_version": "25.0.4",
-    "package_version": "25.0.4-1~debian.10~buster",
+    "package_version": "5:25.0.4-1~debian.10~buster",
     "os_name": "debian",
     "os_version": "buster",
     "os_arch": "amd64"
   },
   {
     "docker_version": "25.0.5",
-    "package_version": "25.0.5-1~debian.10~buster",
+    "package_version": "5:25.0.5-1~debian.10~buster",
     "os_name": "debian",
     "os_version": "buster",
     "os_arch": "amd64"
   },
   {
     "docker_version": "26.0.0",
-    "package_version": "26.0.0-1~debian.10~buster",
+    "package_version": "5:26.0.0-1~debian.10~buster",
     "os_name": "debian",
     "os_version": "buster",
     "os_arch": "amd64"
   },
   {
     "docker_version": "26.0.1",
-    "package_version": "26.0.1-1~debian.10~buster",
+    "package_version": "5:26.0.1-1~debian.10~buster",
     "os_name": "debian",
     "os_version": "buster",
     "os_arch": "amd64"
   },
   {
     "docker_version": "26.0.2",
-    "package_version": "26.0.2-1~debian.10~buster",
+    "package_version": "5:26.0.2-1~debian.10~buster",
     "os_name": "debian",
     "os_version": "buster",
     "os_arch": "amd64"
   },
   {
     "docker_version": "26.1.0",
-    "package_version": "26.1.0-1~debian.10~buster",
+    "package_version": "5:26.1.0-1~debian.10~buster",
     "os_name": "debian",
     "os_version": "buster",
     "os_arch": "amd64"
   },
   {
     "docker_version": "26.1.1",
-    "package_version": "26.1.1-1~debian.10~buster",
+    "package_version": "5:26.1.1-1~debian.10~buster",
     "os_name": "debian",
     "os_version": "buster",
     "os_arch": "amd64"
   },
   {
     "docker_version": "26.1.2",
-    "package_version": "26.1.2-1~debian.10~buster",
+    "package_version": "5:26.1.2-1~debian.10~buster",
     "os_name": "debian",
     "os_version": "buster",
     "os_arch": "amd64"
   },
   {
     "docker_version": "26.1.3",
-    "package_version": "26.1.3-1~debian.10~buster",
+    "package_version": "5:26.1.3-1~debian.10~buster",
     "os_name": "debian",
     "os_version": "buster",
     "os_arch": "amd64"
   },
   {
     "docker_version": "26.1.4",
-    "package_version": "26.1.4-1~debian.10~buster",
+    "package_version": "5:26.1.4-1~debian.10~buster",
     "os_name": "debian",
     "os_version": "buster",
     "os_arch": "amd64"
@@ -3858,574 +3865,574 @@
   },
   {
     "docker_version": "18.09.0",
-    "package_version": "18.09.0~3-0~debian-buster",
+    "package_version": "5:18.09.0~3-0~debian-buster",
     "os_name": "debian",
     "os_version": "buster",
     "os_arch": "arm64"
   },
   {
     "docker_version": "18.09.1",
-    "package_version": "18.09.1~3-0~debian-buster",
+    "package_version": "5:18.09.1~3-0~debian-buster",
     "os_name": "debian",
     "os_version": "buster",
     "os_arch": "arm64"
   },
   {
     "docker_version": "18.09.2",
-    "package_version": "18.09.2~3-0~debian-buster",
+    "package_version": "5:18.09.2~3-0~debian-buster",
     "os_name": "debian",
     "os_version": "buster",
     "os_arch": "arm64"
   },
   {
     "docker_version": "18.09.3",
-    "package_version": "18.09.3~3-0~debian-buster",
+    "package_version": "5:18.09.3~3-0~debian-buster",
     "os_name": "debian",
     "os_version": "buster",
     "os_arch": "arm64"
   },
   {
     "docker_version": "18.09.4",
-    "package_version": "18.09.4~3-0~debian-buster",
+    "package_version": "5:18.09.4~3-0~debian-buster",
     "os_name": "debian",
     "os_version": "buster",
     "os_arch": "arm64"
   },
   {
     "docker_version": "18.09.5",
-    "package_version": "18.09.5~3-0~debian-buster",
+    "package_version": "5:18.09.5~3-0~debian-buster",
     "os_name": "debian",
     "os_version": "buster",
     "os_arch": "arm64"
   },
   {
     "docker_version": "18.09.6",
-    "package_version": "18.09.6~3-0~debian-buster",
+    "package_version": "5:18.09.6~3-0~debian-buster",
     "os_name": "debian",
     "os_version": "buster",
     "os_arch": "arm64"
   },
   {
     "docker_version": "18.09.7",
-    "package_version": "18.09.7~3-0~debian-buster",
+    "package_version": "5:18.09.7~3-0~debian-buster",
     "os_name": "debian",
     "os_version": "buster",
     "os_arch": "arm64"
   },
   {
     "docker_version": "18.09.8",
-    "package_version": "18.09.8~3-0~debian-buster",
+    "package_version": "5:18.09.8~3-0~debian-buster",
     "os_name": "debian",
     "os_version": "buster",
     "os_arch": "arm64"
   },
   {
     "docker_version": "18.09.9",
-    "package_version": "18.09.9~3-0~debian-buster",
+    "package_version": "5:18.09.9~3-0~debian-buster",
     "os_name": "debian",
     "os_version": "buster",
     "os_arch": "arm64"
   },
   {
     "docker_version": "19.03.0",
-    "package_version": "19.03.0~3-0~debian-buster",
+    "package_version": "5:19.03.0~3-0~debian-buster",
     "os_name": "debian",
     "os_version": "buster",
     "os_arch": "arm64"
   },
   {
     "docker_version": "19.03.10",
-    "package_version": "19.03.10~3-0~debian-buster",
+    "package_version": "5:19.03.10~3-0~debian-buster",
     "os_name": "debian",
     "os_version": "buster",
     "os_arch": "arm64"
   },
   {
     "docker_version": "19.03.11",
-    "package_version": "19.03.11~3-0~debian-buster",
+    "package_version": "5:19.03.11~3-0~debian-buster",
     "os_name": "debian",
     "os_version": "buster",
     "os_arch": "arm64"
   },
   {
     "docker_version": "19.03.12",
-    "package_version": "19.03.12~3-0~debian-buster",
-    "os_name": "debian",
-    "os_version": "buster",
-    "os_arch": "arm64"
-  },
-  {
-    "docker_version": "19.03.1",
-    "package_version": "19.03.1~3-0~debian-buster",
+    "package_version": "5:19.03.12~3-0~debian-buster",
     "os_name": "debian",
     "os_version": "buster",
     "os_arch": "arm64"
   },
   {
     "docker_version": "19.03.13",
-    "package_version": "19.03.13~3-0~debian-buster",
+    "package_version": "5:19.03.13~3-0~debian-buster",
     "os_name": "debian",
     "os_version": "buster",
     "os_arch": "arm64"
   },
   {
     "docker_version": "19.03.14",
-    "package_version": "19.03.14~3-0~debian-buster",
+    "package_version": "5:19.03.14~3-0~debian-buster",
     "os_name": "debian",
     "os_version": "buster",
     "os_arch": "arm64"
   },
   {
     "docker_version": "19.03.15",
-    "package_version": "19.03.15~3-0~debian-buster",
+    "package_version": "5:19.03.15~3-0~debian-buster",
+    "os_name": "debian",
+    "os_version": "buster",
+    "os_arch": "arm64"
+  },
+  {
+    "docker_version": "19.03.1",
+    "package_version": "5:19.03.1~3-0~debian-buster",
     "os_name": "debian",
     "os_version": "buster",
     "os_arch": "arm64"
   },
   {
     "docker_version": "19.03.2",
-    "package_version": "19.03.2~3-0~debian-buster",
+    "package_version": "5:19.03.2~3-0~debian-buster",
     "os_name": "debian",
     "os_version": "buster",
     "os_arch": "arm64"
   },
   {
     "docker_version": "19.03.3",
-    "package_version": "19.03.3~3-0~debian-buster",
+    "package_version": "5:19.03.3~3-0~debian-buster",
     "os_name": "debian",
     "os_version": "buster",
     "os_arch": "arm64"
   },
   {
     "docker_version": "19.03.4",
-    "package_version": "19.03.4~3-0~debian-buster",
+    "package_version": "5:19.03.4~3-0~debian-buster",
     "os_name": "debian",
     "os_version": "buster",
     "os_arch": "arm64"
   },
   {
     "docker_version": "19.03.5",
-    "package_version": "19.03.5~3-0~debian-buster",
+    "package_version": "5:19.03.5~3-0~debian-buster",
     "os_name": "debian",
     "os_version": "buster",
     "os_arch": "arm64"
   },
   {
     "docker_version": "19.03.6",
-    "package_version": "19.03.6~3-0~debian-buster",
+    "package_version": "5:19.03.6~3-0~debian-buster",
     "os_name": "debian",
     "os_version": "buster",
     "os_arch": "arm64"
   },
   {
     "docker_version": "19.03.7",
-    "package_version": "19.03.7~3-0~debian-buster",
+    "package_version": "5:19.03.7~3-0~debian-buster",
     "os_name": "debian",
     "os_version": "buster",
     "os_arch": "arm64"
   },
   {
     "docker_version": "19.03.8",
-    "package_version": "19.03.8~3-0~debian-buster",
+    "package_version": "5:19.03.8~3-0~debian-buster",
     "os_name": "debian",
     "os_version": "buster",
     "os_arch": "arm64"
   },
   {
     "docker_version": "19.03.9",
-    "package_version": "19.03.9~3-0~debian-buster",
+    "package_version": "5:19.03.9~3-0~debian-buster",
     "os_name": "debian",
     "os_version": "buster",
     "os_arch": "arm64"
   },
   {
     "docker_version": "20.10.0",
-    "package_version": "20.10.0~3-0~debian-buster",
+    "package_version": "5:20.10.0~3-0~debian-buster",
     "os_name": "debian",
     "os_version": "buster",
     "os_arch": "arm64"
   },
   {
     "docker_version": "20.10.10",
-    "package_version": "20.10.10~3-0~debian-buster",
+    "package_version": "5:20.10.10~3-0~debian-buster",
     "os_name": "debian",
     "os_version": "buster",
     "os_arch": "arm64"
   },
   {
     "docker_version": "20.10.11",
-    "package_version": "20.10.11~3-0~debian-buster",
+    "package_version": "5:20.10.11~3-0~debian-buster",
     "os_name": "debian",
     "os_version": "buster",
     "os_arch": "arm64"
   },
   {
     "docker_version": "20.10.12",
-    "package_version": "20.10.12~3-0~debian-buster",
-    "os_name": "debian",
-    "os_version": "buster",
-    "os_arch": "arm64"
-  },
-  {
-    "docker_version": "20.10.1",
-    "package_version": "20.10.1~3-0~debian-buster",
+    "package_version": "5:20.10.12~3-0~debian-buster",
     "os_name": "debian",
     "os_version": "buster",
     "os_arch": "arm64"
   },
   {
     "docker_version": "20.10.13",
-    "package_version": "20.10.13~3-0~debian-buster",
+    "package_version": "5:20.10.13~3-0~debian-buster",
     "os_name": "debian",
     "os_version": "buster",
     "os_arch": "arm64"
   },
   {
     "docker_version": "20.10.14",
-    "package_version": "20.10.14~3-0~debian-buster",
+    "package_version": "5:20.10.14~3-0~debian-buster",
     "os_name": "debian",
     "os_version": "buster",
     "os_arch": "arm64"
   },
   {
     "docker_version": "20.10.15",
-    "package_version": "20.10.15~3-0~debian-buster",
+    "package_version": "5:20.10.15~3-0~debian-buster",
     "os_name": "debian",
     "os_version": "buster",
     "os_arch": "arm64"
   },
   {
     "docker_version": "20.10.16",
-    "package_version": "20.10.16~3-0~debian-buster",
+    "package_version": "5:20.10.16~3-0~debian-buster",
     "os_name": "debian",
     "os_version": "buster",
     "os_arch": "arm64"
   },
   {
     "docker_version": "20.10.17",
-    "package_version": "20.10.17~3-0~debian-buster",
+    "package_version": "5:20.10.17~3-0~debian-buster",
     "os_name": "debian",
     "os_version": "buster",
     "os_arch": "arm64"
   },
   {
     "docker_version": "20.10.18",
-    "package_version": "20.10.18~3-0~debian-buster",
+    "package_version": "5:20.10.18~3-0~debian-buster",
     "os_name": "debian",
     "os_version": "buster",
     "os_arch": "arm64"
   },
   {
     "docker_version": "20.10.19",
-    "package_version": "20.10.19~3-0~debian-buster",
+    "package_version": "5:20.10.19~3-0~debian-buster",
+    "os_name": "debian",
+    "os_version": "buster",
+    "os_arch": "arm64"
+  },
+  {
+    "docker_version": "20.10.1",
+    "package_version": "5:20.10.1~3-0~debian-buster",
     "os_name": "debian",
     "os_version": "buster",
     "os_arch": "arm64"
   },
   {
     "docker_version": "20.10.20",
-    "package_version": "20.10.20~3-0~debian-buster",
+    "package_version": "5:20.10.20~3-0~debian-buster",
     "os_name": "debian",
     "os_version": "buster",
     "os_arch": "arm64"
   },
   {
     "docker_version": "20.10.21",
-    "package_version": "20.10.21~3-0~debian-buster",
+    "package_version": "5:20.10.21~3-0~debian-buster",
     "os_name": "debian",
     "os_version": "buster",
     "os_arch": "arm64"
   },
   {
     "docker_version": "20.10.22",
-    "package_version": "20.10.22~3-0~debian-buster",
-    "os_name": "debian",
-    "os_version": "buster",
-    "os_arch": "arm64"
-  },
-  {
-    "docker_version": "20.10.2",
-    "package_version": "20.10.2~3-0~debian-buster",
+    "package_version": "5:20.10.22~3-0~debian-buster",
     "os_name": "debian",
     "os_version": "buster",
     "os_arch": "arm64"
   },
   {
     "docker_version": "20.10.23",
-    "package_version": "20.10.23~3-0~debian-buster",
+    "package_version": "5:20.10.23~3-0~debian-buster",
     "os_name": "debian",
     "os_version": "buster",
     "os_arch": "arm64"
   },
   {
     "docker_version": "20.10.24",
-    "package_version": "20.10.24~3-0~debian-buster",
+    "package_version": "5:20.10.24~3-0~debian-buster",
+    "os_name": "debian",
+    "os_version": "buster",
+    "os_arch": "arm64"
+  },
+  {
+    "docker_version": "20.10.2",
+    "package_version": "5:20.10.2~3-0~debian-buster",
     "os_name": "debian",
     "os_version": "buster",
     "os_arch": "arm64"
   },
   {
     "docker_version": "20.10.3",
-    "package_version": "20.10.3~3-0~debian-buster",
+    "package_version": "5:20.10.3~3-0~debian-buster",
     "os_name": "debian",
     "os_version": "buster",
     "os_arch": "arm64"
   },
   {
     "docker_version": "20.10.4",
-    "package_version": "20.10.4~3-0~debian-buster",
+    "package_version": "5:20.10.4~3-0~debian-buster",
     "os_name": "debian",
     "os_version": "buster",
     "os_arch": "arm64"
   },
   {
     "docker_version": "20.10.5",
-    "package_version": "20.10.5~3-0~debian-buster",
+    "package_version": "5:20.10.5~3-0~debian-buster",
     "os_name": "debian",
     "os_version": "buster",
     "os_arch": "arm64"
   },
   {
     "docker_version": "20.10.6",
-    "package_version": "20.10.6~3-0~debian-buster",
+    "package_version": "5:20.10.6~3-0~debian-buster",
     "os_name": "debian",
     "os_version": "buster",
     "os_arch": "arm64"
   },
   {
     "docker_version": "20.10.7",
-    "package_version": "20.10.7~3-0~debian-buster",
+    "package_version": "5:20.10.7~3-0~debian-buster",
     "os_name": "debian",
     "os_version": "buster",
     "os_arch": "arm64"
   },
   {
     "docker_version": "20.10.8",
-    "package_version": "20.10.8~3-0~debian-buster",
+    "package_version": "5:20.10.8~3-0~debian-buster",
     "os_name": "debian",
     "os_version": "buster",
     "os_arch": "arm64"
   },
   {
     "docker_version": "20.10.9",
-    "package_version": "20.10.9~3-0~debian-buster",
+    "package_version": "5:20.10.9~3-0~debian-buster",
     "os_name": "debian",
     "os_version": "buster",
     "os_arch": "arm64"
   },
   {
     "docker_version": "23.0.0",
-    "package_version": "23.0.0-1~debian.10~buster",
+    "package_version": "5:23.0.0-1~debian.10~buster",
     "os_name": "debian",
     "os_version": "buster",
     "os_arch": "arm64"
   },
   {
     "docker_version": "23.0.1",
-    "package_version": "23.0.1-1~debian.10~buster",
+    "package_version": "5:23.0.1-1~debian.10~buster",
     "os_name": "debian",
     "os_version": "buster",
     "os_arch": "arm64"
   },
   {
     "docker_version": "23.0.2",
-    "package_version": "23.0.2-1~debian.10~buster",
+    "package_version": "5:23.0.2-1~debian.10~buster",
     "os_name": "debian",
     "os_version": "buster",
     "os_arch": "arm64"
   },
   {
     "docker_version": "23.0.3",
-    "package_version": "23.0.3-1~debian.10~buster",
+    "package_version": "5:23.0.3-1~debian.10~buster",
     "os_name": "debian",
     "os_version": "buster",
     "os_arch": "arm64"
   },
   {
     "docker_version": "23.0.4",
-    "package_version": "23.0.4-1~debian.10~buster",
+    "package_version": "5:23.0.4-1~debian.10~buster",
     "os_name": "debian",
     "os_version": "buster",
     "os_arch": "arm64"
   },
   {
     "docker_version": "23.0.5",
-    "package_version": "23.0.5-1~debian.10~buster",
+    "package_version": "5:23.0.5-1~debian.10~buster",
     "os_name": "debian",
     "os_version": "buster",
     "os_arch": "arm64"
   },
   {
     "docker_version": "23.0.6",
-    "package_version": "23.0.6-1~debian.10~buster",
+    "package_version": "5:23.0.6-1~debian.10~buster",
     "os_name": "debian",
     "os_version": "buster",
     "os_arch": "arm64"
   },
   {
     "docker_version": "24.0.0",
-    "package_version": "24.0.0-1~debian.10~buster",
+    "package_version": "5:24.0.0-1~debian.10~buster",
     "os_name": "debian",
     "os_version": "buster",
     "os_arch": "arm64"
   },
   {
     "docker_version": "24.0.1",
-    "package_version": "24.0.1-1~debian.10~buster",
+    "package_version": "5:24.0.1-1~debian.10~buster",
     "os_name": "debian",
     "os_version": "buster",
     "os_arch": "arm64"
   },
   {
     "docker_version": "24.0.2",
-    "package_version": "24.0.2-1~debian.10~buster",
+    "package_version": "5:24.0.2-1~debian.10~buster",
     "os_name": "debian",
     "os_version": "buster",
     "os_arch": "arm64"
   },
   {
     "docker_version": "24.0.3",
-    "package_version": "24.0.3-1~debian.10~buster",
+    "package_version": "5:24.0.3-1~debian.10~buster",
     "os_name": "debian",
     "os_version": "buster",
     "os_arch": "arm64"
   },
   {
     "docker_version": "24.0.4",
-    "package_version": "24.0.4-1~debian.10~buster",
+    "package_version": "5:24.0.4-1~debian.10~buster",
     "os_name": "debian",
     "os_version": "buster",
     "os_arch": "arm64"
   },
   {
     "docker_version": "24.0.5",
-    "package_version": "24.0.5-1~debian.10~buster",
+    "package_version": "5:24.0.5-1~debian.10~buster",
     "os_name": "debian",
     "os_version": "buster",
     "os_arch": "arm64"
   },
   {
     "docker_version": "24.0.6",
-    "package_version": "24.0.6-1~debian.10~buster",
+    "package_version": "5:24.0.6-1~debian.10~buster",
     "os_name": "debian",
     "os_version": "buster",
     "os_arch": "arm64"
   },
   {
     "docker_version": "24.0.7",
-    "package_version": "24.0.7-1~debian.10~buster",
+    "package_version": "5:24.0.7-1~debian.10~buster",
     "os_name": "debian",
     "os_version": "buster",
     "os_arch": "arm64"
   },
   {
     "docker_version": "24.0.8",
-    "package_version": "24.0.8-1~debian.10~buster",
+    "package_version": "5:24.0.8-1~debian.10~buster",
     "os_name": "debian",
     "os_version": "buster",
     "os_arch": "arm64"
   },
   {
     "docker_version": "24.0.9",
-    "package_version": "24.0.9-1~debian.10~buster",
+    "package_version": "5:24.0.9-1~debian.10~buster",
     "os_name": "debian",
     "os_version": "buster",
     "os_arch": "arm64"
   },
   {
     "docker_version": "25.0.0",
-    "package_version": "25.0.0-1~debian.10~buster",
+    "package_version": "5:25.0.0-1~debian.10~buster",
     "os_name": "debian",
     "os_version": "buster",
     "os_arch": "arm64"
   },
   {
     "docker_version": "25.0.1",
-    "package_version": "25.0.1-1~debian.10~buster",
+    "package_version": "5:25.0.1-1~debian.10~buster",
     "os_name": "debian",
     "os_version": "buster",
     "os_arch": "arm64"
   },
   {
     "docker_version": "25.0.2",
-    "package_version": "25.0.2-1~debian.10~buster",
+    "package_version": "5:25.0.2-1~debian.10~buster",
     "os_name": "debian",
     "os_version": "buster",
     "os_arch": "arm64"
   },
   {
     "docker_version": "25.0.3",
-    "package_version": "25.0.3-1~debian.10~buster",
+    "package_version": "5:25.0.3-1~debian.10~buster",
     "os_name": "debian",
     "os_version": "buster",
     "os_arch": "arm64"
   },
   {
     "docker_version": "25.0.4",
-    "package_version": "25.0.4-1~debian.10~buster",
+    "package_version": "5:25.0.4-1~debian.10~buster",
     "os_name": "debian",
     "os_version": "buster",
     "os_arch": "arm64"
   },
   {
     "docker_version": "25.0.5",
-    "package_version": "25.0.5-1~debian.10~buster",
+    "package_version": "5:25.0.5-1~debian.10~buster",
     "os_name": "debian",
     "os_version": "buster",
     "os_arch": "arm64"
   },
   {
     "docker_version": "26.0.0",
-    "package_version": "26.0.0-1~debian.10~buster",
+    "package_version": "5:26.0.0-1~debian.10~buster",
     "os_name": "debian",
     "os_version": "buster",
     "os_arch": "arm64"
   },
   {
     "docker_version": "26.0.1",
-    "package_version": "26.0.1-1~debian.10~buster",
+    "package_version": "5:26.0.1-1~debian.10~buster",
     "os_name": "debian",
     "os_version": "buster",
     "os_arch": "arm64"
   },
   {
     "docker_version": "26.0.2",
-    "package_version": "26.0.2-1~debian.10~buster",
+    "package_version": "5:26.0.2-1~debian.10~buster",
     "os_name": "debian",
     "os_version": "buster",
     "os_arch": "arm64"
   },
   {
     "docker_version": "26.1.0",
-    "package_version": "26.1.0-1~debian.10~buster",
+    "package_version": "5:26.1.0-1~debian.10~buster",
     "os_name": "debian",
     "os_version": "buster",
     "os_arch": "arm64"
   },
   {
     "docker_version": "26.1.1",
-    "package_version": "26.1.1-1~debian.10~buster",
+    "package_version": "5:26.1.1-1~debian.10~buster",
     "os_name": "debian",
     "os_version": "buster",
     "os_arch": "arm64"
   },
   {
     "docker_version": "26.1.2",
-    "package_version": "26.1.2-1~debian.10~buster",
+    "package_version": "5:26.1.2-1~debian.10~buster",
     "os_name": "debian",
     "os_version": "buster",
     "os_arch": "arm64"
   },
   {
     "docker_version": "26.1.3",
-    "package_version": "26.1.3-1~debian.10~buster",
+    "package_version": "5:26.1.3-1~debian.10~buster",
     "os_name": "debian",
     "os_version": "buster",
     "os_arch": "arm64"
   },
   {
     "docker_version": "26.1.4",
-    "package_version": "26.1.4-1~debian.10~buster",
+    "package_version": "5:26.1.4-1~debian.10~buster",
     "os_name": "debian",
     "os_version": "buster",
     "os_arch": "arm64"
@@ -4488,651 +4495,651 @@
   },
   {
     "docker_version": "18.09.0",
-    "package_version": "18.09.0~3-0~debian-buster",
+    "package_version": "5:18.09.0~3-0~debian-buster",
     "os_name": "debian",
     "os_version": "buster",
     "os_arch": "armhf"
   },
   {
     "docker_version": "18.09.1",
-    "package_version": "18.09.1~3-0~debian-buster",
+    "package_version": "5:18.09.1~3-0~debian-buster",
     "os_name": "debian",
     "os_version": "buster",
     "os_arch": "armhf"
   },
   {
     "docker_version": "18.09.2",
-    "package_version": "18.09.2~3-0~debian-buster",
+    "package_version": "5:18.09.2~3-0~debian-buster",
     "os_name": "debian",
     "os_version": "buster",
     "os_arch": "armhf"
   },
   {
     "docker_version": "18.09.3",
-    "package_version": "18.09.3~3-0~debian-buster",
+    "package_version": "5:18.09.3~3-0~debian-buster",
     "os_name": "debian",
     "os_version": "buster",
     "os_arch": "armhf"
   },
   {
     "docker_version": "18.09.4",
-    "package_version": "18.09.4~3-0~debian-buster",
+    "package_version": "5:18.09.4~3-0~debian-buster",
     "os_name": "debian",
     "os_version": "buster",
     "os_arch": "armhf"
   },
   {
     "docker_version": "18.09.5",
-    "package_version": "18.09.5~3-0~debian-buster",
+    "package_version": "5:18.09.5~3-0~debian-buster",
     "os_name": "debian",
     "os_version": "buster",
     "os_arch": "armhf"
   },
   {
     "docker_version": "18.09.6",
-    "package_version": "18.09.6~3-0~debian-buster",
+    "package_version": "5:18.09.6~3-0~debian-buster",
     "os_name": "debian",
     "os_version": "buster",
     "os_arch": "armhf"
   },
   {
     "docker_version": "18.09.7",
-    "package_version": "18.09.7~3-0~debian-buster",
+    "package_version": "5:18.09.7~3-0~debian-buster",
     "os_name": "debian",
     "os_version": "buster",
     "os_arch": "armhf"
   },
   {
     "docker_version": "18.09.8",
-    "package_version": "18.09.8~3-0~debian-buster",
+    "package_version": "5:18.09.8~3-0~debian-buster",
     "os_name": "debian",
     "os_version": "buster",
     "os_arch": "armhf"
   },
   {
     "docker_version": "18.09.9",
-    "package_version": "18.09.9~3-0~debian-buster",
+    "package_version": "5:18.09.9~3-0~debian-buster",
     "os_name": "debian",
     "os_version": "buster",
     "os_arch": "armhf"
   },
   {
     "docker_version": "19.03.0",
-    "package_version": "19.03.0~3-0~debian-buster",
+    "package_version": "5:19.03.0~3-0~debian-buster",
     "os_name": "debian",
     "os_version": "buster",
     "os_arch": "armhf"
   },
   {
     "docker_version": "19.03.10",
-    "package_version": "19.03.10~3-0~debian-buster",
+    "package_version": "5:19.03.10~3-0~debian-buster",
     "os_name": "debian",
     "os_version": "buster",
     "os_arch": "armhf"
   },
   {
     "docker_version": "19.03.11",
-    "package_version": "19.03.11~3-0~debian-buster",
+    "package_version": "5:19.03.11~3-0~debian-buster",
     "os_name": "debian",
     "os_version": "buster",
     "os_arch": "armhf"
   },
   {
     "docker_version": "19.03.12",
-    "package_version": "19.03.12~3-0~debian-buster",
-    "os_name": "debian",
-    "os_version": "buster",
-    "os_arch": "armhf"
-  },
-  {
-    "docker_version": "19.03.1",
-    "package_version": "19.03.1~3-0~debian-buster",
+    "package_version": "5:19.03.12~3-0~debian-buster",
     "os_name": "debian",
     "os_version": "buster",
     "os_arch": "armhf"
   },
   {
     "docker_version": "19.03.13",
-    "package_version": "19.03.13~3-0~debian-buster",
+    "package_version": "5:19.03.13~3-0~debian-buster",
     "os_name": "debian",
     "os_version": "buster",
     "os_arch": "armhf"
   },
   {
     "docker_version": "19.03.14",
-    "package_version": "19.03.14~3-0~debian-buster",
+    "package_version": "5:19.03.14~3-0~debian-buster",
     "os_name": "debian",
     "os_version": "buster",
     "os_arch": "armhf"
   },
   {
     "docker_version": "19.03.15",
-    "package_version": "19.03.15~3-0~debian-buster",
+    "package_version": "5:19.03.15~3-0~debian-buster",
+    "os_name": "debian",
+    "os_version": "buster",
+    "os_arch": "armhf"
+  },
+  {
+    "docker_version": "19.03.1",
+    "package_version": "5:19.03.1~3-0~debian-buster",
     "os_name": "debian",
     "os_version": "buster",
     "os_arch": "armhf"
   },
   {
     "docker_version": "19.03.2",
-    "package_version": "19.03.2~3-0~debian-buster",
+    "package_version": "5:19.03.2~3-0~debian-buster",
     "os_name": "debian",
     "os_version": "buster",
     "os_arch": "armhf"
   },
   {
     "docker_version": "19.03.3",
-    "package_version": "19.03.3~3-0~debian-buster",
+    "package_version": "5:19.03.3~3-0~debian-buster",
     "os_name": "debian",
     "os_version": "buster",
     "os_arch": "armhf"
   },
   {
     "docker_version": "19.03.4",
-    "package_version": "19.03.4~3-0~debian-buster",
+    "package_version": "5:19.03.4~3-0~debian-buster",
     "os_name": "debian",
     "os_version": "buster",
     "os_arch": "armhf"
   },
   {
     "docker_version": "19.03.5",
-    "package_version": "19.03.5~3-0~debian-buster",
+    "package_version": "5:19.03.5~3-0~debian-buster",
     "os_name": "debian",
     "os_version": "buster",
     "os_arch": "armhf"
   },
   {
     "docker_version": "19.03.6",
-    "package_version": "19.03.6~3-0~debian-buster",
+    "package_version": "5:19.03.6~3-0~debian-buster",
     "os_name": "debian",
     "os_version": "buster",
     "os_arch": "armhf"
   },
   {
     "docker_version": "19.03.7",
-    "package_version": "19.03.7~3-0~debian-buster",
+    "package_version": "5:19.03.7~3-0~debian-buster",
     "os_name": "debian",
     "os_version": "buster",
     "os_arch": "armhf"
   },
   {
     "docker_version": "19.03.8",
-    "package_version": "19.03.8~3-0~debian-buster",
+    "package_version": "5:19.03.8~3-0~debian-buster",
     "os_name": "debian",
     "os_version": "buster",
     "os_arch": "armhf"
   },
   {
     "docker_version": "19.03.9",
-    "package_version": "19.03.9~3-0~debian-buster",
+    "package_version": "5:19.03.9~3-0~debian-buster",
     "os_name": "debian",
     "os_version": "buster",
     "os_arch": "armhf"
   },
   {
     "docker_version": "20.10.0",
-    "package_version": "20.10.0~3-0~debian-buster",
+    "package_version": "5:20.10.0~3-0~debian-buster",
     "os_name": "debian",
     "os_version": "buster",
     "os_arch": "armhf"
   },
   {
     "docker_version": "20.10.10",
-    "package_version": "20.10.10~3-0~debian-buster",
+    "package_version": "5:20.10.10~3-0~debian-buster",
     "os_name": "debian",
     "os_version": "buster",
     "os_arch": "armhf"
   },
   {
     "docker_version": "20.10.11",
-    "package_version": "20.10.11~3-0~debian-buster",
+    "package_version": "5:20.10.11~3-0~debian-buster",
     "os_name": "debian",
     "os_version": "buster",
     "os_arch": "armhf"
   },
   {
     "docker_version": "20.10.12",
-    "package_version": "20.10.12~3-0~debian-buster",
-    "os_name": "debian",
-    "os_version": "buster",
-    "os_arch": "armhf"
-  },
-  {
-    "docker_version": "20.10.1",
-    "package_version": "20.10.1~3-0~debian-buster",
+    "package_version": "5:20.10.12~3-0~debian-buster",
     "os_name": "debian",
     "os_version": "buster",
     "os_arch": "armhf"
   },
   {
     "docker_version": "20.10.13",
-    "package_version": "20.10.13~3-0~debian-buster",
+    "package_version": "5:20.10.13~3-0~debian-buster",
     "os_name": "debian",
     "os_version": "buster",
     "os_arch": "armhf"
   },
   {
     "docker_version": "20.10.14",
-    "package_version": "20.10.14~3-0~debian-buster",
+    "package_version": "5:20.10.14~3-0~debian-buster",
     "os_name": "debian",
     "os_version": "buster",
     "os_arch": "armhf"
   },
   {
     "docker_version": "20.10.15",
-    "package_version": "20.10.15~3-0~debian-buster",
+    "package_version": "5:20.10.15~3-0~debian-buster",
     "os_name": "debian",
     "os_version": "buster",
     "os_arch": "armhf"
   },
   {
     "docker_version": "20.10.16",
-    "package_version": "20.10.16~3-0~debian-buster",
+    "package_version": "5:20.10.16~3-0~debian-buster",
     "os_name": "debian",
     "os_version": "buster",
     "os_arch": "armhf"
   },
   {
     "docker_version": "20.10.17",
-    "package_version": "20.10.17~3-0~debian-buster",
+    "package_version": "5:20.10.17~3-0~debian-buster",
     "os_name": "debian",
     "os_version": "buster",
     "os_arch": "armhf"
   },
   {
     "docker_version": "20.10.18",
-    "package_version": "20.10.18~3-0~debian-buster",
+    "package_version": "5:20.10.18~3-0~debian-buster",
     "os_name": "debian",
     "os_version": "buster",
     "os_arch": "armhf"
   },
   {
     "docker_version": "20.10.19",
-    "package_version": "20.10.19~3-0~debian-buster",
+    "package_version": "5:20.10.19~3-0~debian-buster",
+    "os_name": "debian",
+    "os_version": "buster",
+    "os_arch": "armhf"
+  },
+  {
+    "docker_version": "20.10.1",
+    "package_version": "5:20.10.1~3-0~debian-buster",
     "os_name": "debian",
     "os_version": "buster",
     "os_arch": "armhf"
   },
   {
     "docker_version": "20.10.20",
-    "package_version": "20.10.20~3-0~debian-buster",
+    "package_version": "5:20.10.20~3-0~debian-buster",
     "os_name": "debian",
     "os_version": "buster",
     "os_arch": "armhf"
   },
   {
     "docker_version": "20.10.21",
-    "package_version": "20.10.21~3-0~debian-buster",
+    "package_version": "5:20.10.21~3-0~debian-buster",
     "os_name": "debian",
     "os_version": "buster",
     "os_arch": "armhf"
   },
   {
     "docker_version": "20.10.22",
-    "package_version": "20.10.22~3-0~debian-buster",
-    "os_name": "debian",
-    "os_version": "buster",
-    "os_arch": "armhf"
-  },
-  {
-    "docker_version": "20.10.2",
-    "package_version": "20.10.2~3-0~debian-buster",
+    "package_version": "5:20.10.22~3-0~debian-buster",
     "os_name": "debian",
     "os_version": "buster",
     "os_arch": "armhf"
   },
   {
     "docker_version": "20.10.23",
-    "package_version": "20.10.23~3-0~debian-buster",
+    "package_version": "5:20.10.23~3-0~debian-buster",
     "os_name": "debian",
     "os_version": "buster",
     "os_arch": "armhf"
   },
   {
     "docker_version": "20.10.24",
-    "package_version": "20.10.24~3-0~debian-buster",
+    "package_version": "5:20.10.24~3-0~debian-buster",
+    "os_name": "debian",
+    "os_version": "buster",
+    "os_arch": "armhf"
+  },
+  {
+    "docker_version": "20.10.2",
+    "package_version": "5:20.10.2~3-0~debian-buster",
     "os_name": "debian",
     "os_version": "buster",
     "os_arch": "armhf"
   },
   {
     "docker_version": "20.10.3",
-    "package_version": "20.10.3~3-0~debian-buster",
+    "package_version": "5:20.10.3~3-0~debian-buster",
     "os_name": "debian",
     "os_version": "buster",
     "os_arch": "armhf"
   },
   {
     "docker_version": "20.10.4",
-    "package_version": "20.10.4~3-0~debian-buster",
+    "package_version": "5:20.10.4~3-0~debian-buster",
     "os_name": "debian",
     "os_version": "buster",
     "os_arch": "armhf"
   },
   {
     "docker_version": "20.10.5",
-    "package_version": "20.10.5~3-0~debian-buster",
+    "package_version": "5:20.10.5~3-0~debian-buster",
     "os_name": "debian",
     "os_version": "buster",
     "os_arch": "armhf"
   },
   {
     "docker_version": "20.10.6",
-    "package_version": "20.10.6~3-0~debian-buster",
+    "package_version": "5:20.10.6~3-0~debian-buster",
     "os_name": "debian",
     "os_version": "buster",
     "os_arch": "armhf"
   },
   {
     "docker_version": "20.10.7",
-    "package_version": "20.10.7~3-0~debian-buster",
+    "package_version": "5:20.10.7~3-0~debian-buster",
     "os_name": "debian",
     "os_version": "buster",
     "os_arch": "armhf"
   },
   {
     "docker_version": "20.10.8",
-    "package_version": "20.10.8~3-0~debian-buster",
+    "package_version": "5:20.10.8~3-0~debian-buster",
     "os_name": "debian",
     "os_version": "buster",
     "os_arch": "armhf"
   },
   {
     "docker_version": "20.10.9",
-    "package_version": "20.10.9~3-0~debian-buster",
+    "package_version": "5:20.10.9~3-0~debian-buster",
     "os_name": "debian",
     "os_version": "buster",
     "os_arch": "armhf"
   },
   {
     "docker_version": "23.0.0",
-    "package_version": "23.0.0-1~debian.10~buster",
+    "package_version": "5:23.0.0-1~debian.10~buster",
     "os_name": "debian",
     "os_version": "buster",
     "os_arch": "armhf"
   },
   {
     "docker_version": "23.0.1",
-    "package_version": "23.0.1-1~debian.10~buster",
+    "package_version": "5:23.0.1-1~debian.10~buster",
     "os_name": "debian",
     "os_version": "buster",
     "os_arch": "armhf"
   },
   {
     "docker_version": "23.0.2",
-    "package_version": "23.0.2-1~debian.10~buster",
+    "package_version": "5:23.0.2-1~debian.10~buster",
     "os_name": "debian",
     "os_version": "buster",
     "os_arch": "armhf"
   },
   {
     "docker_version": "23.0.3",
-    "package_version": "23.0.3-1~debian.10~buster",
+    "package_version": "5:23.0.3-1~debian.10~buster",
     "os_name": "debian",
     "os_version": "buster",
     "os_arch": "armhf"
   },
   {
     "docker_version": "23.0.4",
-    "package_version": "23.0.4-1~debian.10~buster",
+    "package_version": "5:23.0.4-1~debian.10~buster",
     "os_name": "debian",
     "os_version": "buster",
     "os_arch": "armhf"
   },
   {
     "docker_version": "23.0.5",
-    "package_version": "23.0.5-1~debian.10~buster",
+    "package_version": "5:23.0.5-1~debian.10~buster",
     "os_name": "debian",
     "os_version": "buster",
     "os_arch": "armhf"
   },
   {
     "docker_version": "23.0.6",
-    "package_version": "23.0.6-1~debian.10~buster",
+    "package_version": "5:23.0.6-1~debian.10~buster",
     "os_name": "debian",
     "os_version": "buster",
     "os_arch": "armhf"
   },
   {
     "docker_version": "24.0.0",
-    "package_version": "24.0.0-1~debian.10~buster",
+    "package_version": "5:24.0.0-1~debian.10~buster",
     "os_name": "debian",
     "os_version": "buster",
     "os_arch": "armhf"
   },
   {
     "docker_version": "24.0.1",
-    "package_version": "24.0.1-1~debian.10~buster",
+    "package_version": "5:24.0.1-1~debian.10~buster",
     "os_name": "debian",
     "os_version": "buster",
     "os_arch": "armhf"
   },
   {
     "docker_version": "24.0.2",
-    "package_version": "24.0.2-1~debian.10~buster",
+    "package_version": "5:24.0.2-1~debian.10~buster",
     "os_name": "debian",
     "os_version": "buster",
     "os_arch": "armhf"
   },
   {
     "docker_version": "24.0.3",
-    "package_version": "24.0.3-1~debian.10~buster",
+    "package_version": "5:24.0.3-1~debian.10~buster",
     "os_name": "debian",
     "os_version": "buster",
     "os_arch": "armhf"
   },
   {
     "docker_version": "24.0.4",
-    "package_version": "24.0.4-1~debian.10~buster",
+    "package_version": "5:24.0.4-1~debian.10~buster",
     "os_name": "debian",
     "os_version": "buster",
     "os_arch": "armhf"
   },
   {
     "docker_version": "24.0.5",
-    "package_version": "24.0.5-1~debian.10~buster",
+    "package_version": "5:24.0.5-1~debian.10~buster",
     "os_name": "debian",
     "os_version": "buster",
     "os_arch": "armhf"
   },
   {
     "docker_version": "24.0.6",
-    "package_version": "24.0.6-1~debian.10~buster",
+    "package_version": "5:24.0.6-1~debian.10~buster",
     "os_name": "debian",
     "os_version": "buster",
     "os_arch": "armhf"
   },
   {
     "docker_version": "24.0.7",
-    "package_version": "24.0.7-1~debian.10~buster",
+    "package_version": "5:24.0.7-1~debian.10~buster",
     "os_name": "debian",
     "os_version": "buster",
     "os_arch": "armhf"
   },
   {
     "docker_version": "24.0.8",
-    "package_version": "24.0.8-1~debian.10~buster",
+    "package_version": "5:24.0.8-1~debian.10~buster",
     "os_name": "debian",
     "os_version": "buster",
     "os_arch": "armhf"
   },
   {
     "docker_version": "24.0.9",
-    "package_version": "24.0.9-1~debian.10~buster",
+    "package_version": "5:24.0.9-1~debian.10~buster",
     "os_name": "debian",
     "os_version": "buster",
     "os_arch": "armhf"
   },
   {
     "docker_version": "25.0.0",
-    "package_version": "25.0.0-1~debian.10~buster",
+    "package_version": "5:25.0.0-1~debian.10~buster",
     "os_name": "debian",
     "os_version": "buster",
     "os_arch": "armhf"
   },
   {
     "docker_version": "25.0.1",
-    "package_version": "25.0.1-1~debian.10~buster",
+    "package_version": "5:25.0.1-1~debian.10~buster",
     "os_name": "debian",
     "os_version": "buster",
     "os_arch": "armhf"
   },
   {
     "docker_version": "25.0.2",
-    "package_version": "25.0.2-1~debian.10~buster",
+    "package_version": "5:25.0.2-1~debian.10~buster",
     "os_name": "debian",
     "os_version": "buster",
     "os_arch": "armhf"
   },
   {
     "docker_version": "25.0.3",
-    "package_version": "25.0.3-1~debian.10~buster",
+    "package_version": "5:25.0.3-1~debian.10~buster",
     "os_name": "debian",
     "os_version": "buster",
     "os_arch": "armhf"
   },
   {
     "docker_version": "25.0.4",
-    "package_version": "25.0.4-1~debian.10~buster",
+    "package_version": "5:25.0.4-1~debian.10~buster",
     "os_name": "debian",
     "os_version": "buster",
     "os_arch": "armhf"
   },
   {
     "docker_version": "25.0.5",
-    "package_version": "25.0.5-1~debian.10~buster",
+    "package_version": "5:25.0.5-1~debian.10~buster",
     "os_name": "debian",
     "os_version": "buster",
     "os_arch": "armhf"
   },
   {
     "docker_version": "26.0.0",
-    "package_version": "26.0.0-1~debian.10~buster",
+    "package_version": "5:26.0.0-1~debian.10~buster",
     "os_name": "debian",
     "os_version": "buster",
     "os_arch": "armhf"
   },
   {
     "docker_version": "26.0.1",
-    "package_version": "26.0.1-1~debian.10~buster",
+    "package_version": "5:26.0.1-1~debian.10~buster",
     "os_name": "debian",
     "os_version": "buster",
     "os_arch": "armhf"
   },
   {
     "docker_version": "26.0.2",
-    "package_version": "26.0.2-1~debian.10~buster",
+    "package_version": "5:26.0.2-1~debian.10~buster",
     "os_name": "debian",
     "os_version": "buster",
     "os_arch": "armhf"
   },
   {
     "docker_version": "26.1.0",
-    "package_version": "26.1.0-1~debian.10~buster",
+    "package_version": "5:26.1.0-1~debian.10~buster",
     "os_name": "debian",
     "os_version": "buster",
     "os_arch": "armhf"
   },
   {
     "docker_version": "26.1.1",
-    "package_version": "26.1.1-1~debian.10~buster",
+    "package_version": "5:26.1.1-1~debian.10~buster",
     "os_name": "debian",
     "os_version": "buster",
     "os_arch": "armhf"
   },
   {
     "docker_version": "26.1.2",
-    "package_version": "26.1.2-1~debian.10~buster",
+    "package_version": "5:26.1.2-1~debian.10~buster",
     "os_name": "debian",
     "os_version": "buster",
     "os_arch": "armhf"
   },
   {
     "docker_version": "26.1.3",
-    "package_version": "26.1.3-1~debian.10~buster",
+    "package_version": "5:26.1.3-1~debian.10~buster",
     "os_name": "debian",
     "os_version": "buster",
     "os_arch": "armhf"
   },
   {
     "docker_version": "26.1.4",
-    "package_version": "26.1.4-1~debian.10~buster",
+    "package_version": "5:26.1.4-1~debian.10~buster",
     "os_name": "debian",
     "os_version": "buster",
     "os_arch": "armhf"
   },
   {
     "docker_version": "20.10.10",
-    "package_version": "20.10.10~3-0~debian-buster",
+    "package_version": "5:20.10.10~3-0~debian-buster",
     "os_name": "debian",
     "os_version": "buster",
     "os_arch": "ppc64el"
   },
   {
     "docker_version": "20.10.11",
-    "package_version": "20.10.11~3-0~debian-buster",
+    "package_version": "5:20.10.11~3-0~debian-buster",
     "os_name": "debian",
     "os_version": "buster",
     "os_arch": "ppc64el"
   },
   {
     "docker_version": "20.10.12",
-    "package_version": "20.10.12~3-0~debian-buster",
+    "package_version": "5:20.10.12~3-0~debian-buster",
     "os_name": "debian",
     "os_version": "buster",
     "os_arch": "ppc64el"
   },
   {
     "docker_version": "20.10.13",
-    "package_version": "20.10.13~3-0~debian-buster",
+    "package_version": "5:20.10.13~3-0~debian-buster",
     "os_name": "debian",
     "os_version": "buster",
     "os_arch": "ppc64el"
   },
   {
     "docker_version": "20.10.14",
-    "package_version": "20.10.14~3-0~debian-buster",
+    "package_version": "5:20.10.14~3-0~debian-buster",
     "os_name": "debian",
     "os_version": "buster",
     "os_arch": "ppc64el"
   },
   {
     "docker_version": "20.10.15",
-    "package_version": "20.10.15~3-0~debian-buster",
+    "package_version": "5:20.10.15~3-0~debian-buster",
     "os_name": "debian",
     "os_version": "buster",
     "os_arch": "ppc64el"
   },
   {
     "docker_version": "20.10.16",
-    "package_version": "20.10.16~3-0~debian-buster",
+    "package_version": "5:20.10.16~3-0~debian-buster",
     "os_name": "debian",
     "os_version": "buster",
     "os_arch": "ppc64el"
   },
   {
     "docker_version": "20.10.17",
-    "package_version": "20.10.17~3-0~debian-buster",
+    "package_version": "5:20.10.17~3-0~debian-buster",
     "os_name": "debian",
     "os_version": "buster",
     "os_arch": "ppc64el"
   },
   {
     "docker_version": "20.10.7",
-    "package_version": "20.10.7~3-0~debian-buster",
+    "package_version": "5:20.10.7~3-0~debian-buster",
     "os_name": "debian",
     "os_version": "buster",
     "os_arch": "ppc64el"
   },
   {
     "docker_version": "20.10.8",
-    "package_version": "20.10.8~3-0~debian-buster",
+    "package_version": "5:20.10.8~3-0~debian-buster",
     "os_name": "debian",
     "os_version": "buster",
     "os_arch": "ppc64el"
   },
   {
     "docker_version": "20.10.9",
-    "package_version": "20.10.9~3-0~debian-buster",
+    "package_version": "5:20.10.9~3-0~debian-buster",
     "os_name": "debian",
     "os_version": "buster",
     "os_arch": "ppc64el"
@@ -5257,8 +5264,8 @@
     "os_arch": "amd64"
   },
   {
-    "docker_version": "17.12.0",
-    "package_version": "17.12.0~ce-0~debian",
+    "docker_version": "18.03.0",
+    "package_version": "18.03.0~ce-0~debian",
     "os_name": "debian",
     "os_version": "jessie",
     "os_arch": "arm64"
@@ -5271,8 +5278,8 @@
     "os_arch": "arm64"
   },
   {
-    "docker_version": "18.03.0",
-    "package_version": "18.03.0~ce-0~debian",
+    "docker_version": "17.12.0",
+    "package_version": "17.12.0~ce-0~debian",
     "os_name": "debian",
     "os_version": "jessie",
     "os_arch": "arm64"
@@ -5517,182 +5524,182 @@
   },
   {
     "docker_version": "18.09.0",
-    "package_version": "18.09.0~3-0~debian-stretch",
+    "package_version": "5:18.09.0~3-0~debian-stretch",
     "os_name": "debian",
     "os_version": "stretch",
     "os_arch": "amd64"
   },
   {
     "docker_version": "18.09.1",
-    "package_version": "18.09.1~3-0~debian-stretch",
+    "package_version": "5:18.09.1~3-0~debian-stretch",
     "os_name": "debian",
     "os_version": "stretch",
     "os_arch": "amd64"
   },
   {
     "docker_version": "18.09.2",
-    "package_version": "18.09.2~3-0~debian-stretch",
+    "package_version": "5:18.09.2~3-0~debian-stretch",
     "os_name": "debian",
     "os_version": "stretch",
     "os_arch": "amd64"
   },
   {
     "docker_version": "18.09.3",
-    "package_version": "18.09.3~3-0~debian-stretch",
+    "package_version": "5:18.09.3~3-0~debian-stretch",
     "os_name": "debian",
     "os_version": "stretch",
     "os_arch": "amd64"
   },
   {
     "docker_version": "18.09.4",
-    "package_version": "18.09.4~3-0~debian-stretch",
+    "package_version": "5:18.09.4~3-0~debian-stretch",
     "os_name": "debian",
     "os_version": "stretch",
     "os_arch": "amd64"
   },
   {
     "docker_version": "18.09.5",
-    "package_version": "18.09.5~3-0~debian-stretch",
+    "package_version": "5:18.09.5~3-0~debian-stretch",
     "os_name": "debian",
     "os_version": "stretch",
     "os_arch": "amd64"
   },
   {
     "docker_version": "18.09.6",
-    "package_version": "18.09.6~3-0~debian-stretch",
+    "package_version": "5:18.09.6~3-0~debian-stretch",
     "os_name": "debian",
     "os_version": "stretch",
     "os_arch": "amd64"
   },
   {
     "docker_version": "18.09.7",
-    "package_version": "18.09.7~3-0~debian-stretch",
+    "package_version": "5:18.09.7~3-0~debian-stretch",
     "os_name": "debian",
     "os_version": "stretch",
     "os_arch": "amd64"
   },
   {
     "docker_version": "18.09.8",
-    "package_version": "18.09.8~3-0~debian-stretch",
+    "package_version": "5:18.09.8~3-0~debian-stretch",
     "os_name": "debian",
     "os_version": "stretch",
     "os_arch": "amd64"
   },
   {
     "docker_version": "18.09.9",
-    "package_version": "18.09.9~3-0~debian-stretch",
+    "package_version": "5:18.09.9~3-0~debian-stretch",
     "os_name": "debian",
     "os_version": "stretch",
     "os_arch": "amd64"
   },
   {
     "docker_version": "19.03.0",
-    "package_version": "19.03.0~3-0~debian-stretch",
+    "package_version": "5:19.03.0~3-0~debian-stretch",
     "os_name": "debian",
     "os_version": "stretch",
     "os_arch": "amd64"
   },
   {
     "docker_version": "19.03.10",
-    "package_version": "19.03.10~3-0~debian-stretch",
+    "package_version": "5:19.03.10~3-0~debian-stretch",
     "os_name": "debian",
     "os_version": "stretch",
     "os_arch": "amd64"
   },
   {
     "docker_version": "19.03.11",
-    "package_version": "19.03.11~3-0~debian-stretch",
+    "package_version": "5:19.03.11~3-0~debian-stretch",
     "os_name": "debian",
     "os_version": "stretch",
     "os_arch": "amd64"
   },
   {
     "docker_version": "19.03.12",
-    "package_version": "19.03.12~3-0~debian-stretch",
-    "os_name": "debian",
-    "os_version": "stretch",
-    "os_arch": "amd64"
-  },
-  {
-    "docker_version": "19.03.1",
-    "package_version": "19.03.1~3-0~debian-stretch",
+    "package_version": "5:19.03.12~3-0~debian-stretch",
     "os_name": "debian",
     "os_version": "stretch",
     "os_arch": "amd64"
   },
   {
     "docker_version": "19.03.13",
-    "package_version": "19.03.13~3-0~debian-stretch",
+    "package_version": "5:19.03.13~3-0~debian-stretch",
     "os_name": "debian",
     "os_version": "stretch",
     "os_arch": "amd64"
   },
   {
     "docker_version": "19.03.14",
-    "package_version": "19.03.14~3-0~debian-stretch",
+    "package_version": "5:19.03.14~3-0~debian-stretch",
     "os_name": "debian",
     "os_version": "stretch",
     "os_arch": "amd64"
   },
   {
     "docker_version": "19.03.15",
-    "package_version": "19.03.15~3-0~debian-stretch",
+    "package_version": "5:19.03.15~3-0~debian-stretch",
+    "os_name": "debian",
+    "os_version": "stretch",
+    "os_arch": "amd64"
+  },
+  {
+    "docker_version": "19.03.1",
+    "package_version": "5:19.03.1~3-0~debian-stretch",
     "os_name": "debian",
     "os_version": "stretch",
     "os_arch": "amd64"
   },
   {
     "docker_version": "19.03.2",
-    "package_version": "19.03.2~3-0~debian-stretch",
+    "package_version": "5:19.03.2~3-0~debian-stretch",
     "os_name": "debian",
     "os_version": "stretch",
     "os_arch": "amd64"
   },
   {
     "docker_version": "19.03.3",
-    "package_version": "19.03.3~3-0~debian-stretch",
+    "package_version": "5:19.03.3~3-0~debian-stretch",
     "os_name": "debian",
     "os_version": "stretch",
     "os_arch": "amd64"
   },
   {
     "docker_version": "19.03.4",
-    "package_version": "19.03.4~3-0~debian-stretch",
+    "package_version": "5:19.03.4~3-0~debian-stretch",
     "os_name": "debian",
     "os_version": "stretch",
     "os_arch": "amd64"
   },
   {
     "docker_version": "19.03.5",
-    "package_version": "19.03.5~3-0~debian-stretch",
+    "package_version": "5:19.03.5~3-0~debian-stretch",
     "os_name": "debian",
     "os_version": "stretch",
     "os_arch": "amd64"
   },
   {
     "docker_version": "19.03.6",
-    "package_version": "19.03.6~3-0~debian-stretch",
+    "package_version": "5:19.03.6~3-0~debian-stretch",
     "os_name": "debian",
     "os_version": "stretch",
     "os_arch": "amd64"
   },
   {
     "docker_version": "19.03.7",
-    "package_version": "19.03.7~3-0~debian-stretch",
+    "package_version": "5:19.03.7~3-0~debian-stretch",
     "os_name": "debian",
     "os_version": "stretch",
     "os_arch": "amd64"
   },
   {
     "docker_version": "19.03.8",
-    "package_version": "19.03.8~3-0~debian-stretch",
+    "package_version": "5:19.03.8~3-0~debian-stretch",
     "os_name": "debian",
     "os_version": "stretch",
     "os_arch": "amd64"
   },
   {
     "docker_version": "19.03.9",
-    "package_version": "19.03.9~3-0~debian-stretch",
+    "package_version": "5:19.03.9~3-0~debian-stretch",
     "os_name": "debian",
     "os_version": "stretch",
     "os_arch": "amd64"
@@ -5755,182 +5762,182 @@
   },
   {
     "docker_version": "18.09.0",
-    "package_version": "18.09.0~3-0~debian-stretch",
+    "package_version": "5:18.09.0~3-0~debian-stretch",
     "os_name": "debian",
     "os_version": "stretch",
     "os_arch": "arm64"
   },
   {
     "docker_version": "18.09.1",
-    "package_version": "18.09.1~3-0~debian-stretch",
+    "package_version": "5:18.09.1~3-0~debian-stretch",
     "os_name": "debian",
     "os_version": "stretch",
     "os_arch": "arm64"
   },
   {
     "docker_version": "18.09.2",
-    "package_version": "18.09.2~3-0~debian-stretch",
+    "package_version": "5:18.09.2~3-0~debian-stretch",
     "os_name": "debian",
     "os_version": "stretch",
     "os_arch": "arm64"
   },
   {
     "docker_version": "18.09.3",
-    "package_version": "18.09.3~3-0~debian-stretch",
+    "package_version": "5:18.09.3~3-0~debian-stretch",
     "os_name": "debian",
     "os_version": "stretch",
     "os_arch": "arm64"
   },
   {
     "docker_version": "18.09.4",
-    "package_version": "18.09.4~3-0~debian-stretch",
+    "package_version": "5:18.09.4~3-0~debian-stretch",
     "os_name": "debian",
     "os_version": "stretch",
     "os_arch": "arm64"
   },
   {
     "docker_version": "18.09.5",
-    "package_version": "18.09.5~3-0~debian-stretch",
+    "package_version": "5:18.09.5~3-0~debian-stretch",
     "os_name": "debian",
     "os_version": "stretch",
     "os_arch": "arm64"
   },
   {
     "docker_version": "18.09.6",
-    "package_version": "18.09.6~3-0~debian-stretch",
+    "package_version": "5:18.09.6~3-0~debian-stretch",
     "os_name": "debian",
     "os_version": "stretch",
     "os_arch": "arm64"
   },
   {
     "docker_version": "18.09.7",
-    "package_version": "18.09.7~3-0~debian-stretch",
+    "package_version": "5:18.09.7~3-0~debian-stretch",
     "os_name": "debian",
     "os_version": "stretch",
     "os_arch": "arm64"
   },
   {
     "docker_version": "18.09.8",
-    "package_version": "18.09.8~3-0~debian-stretch",
+    "package_version": "5:18.09.8~3-0~debian-stretch",
     "os_name": "debian",
     "os_version": "stretch",
     "os_arch": "arm64"
   },
   {
     "docker_version": "18.09.9",
-    "package_version": "18.09.9~3-0~debian-stretch",
+    "package_version": "5:18.09.9~3-0~debian-stretch",
     "os_name": "debian",
     "os_version": "stretch",
     "os_arch": "arm64"
   },
   {
     "docker_version": "19.03.0",
-    "package_version": "19.03.0~3-0~debian-stretch",
+    "package_version": "5:19.03.0~3-0~debian-stretch",
     "os_name": "debian",
     "os_version": "stretch",
     "os_arch": "arm64"
   },
   {
     "docker_version": "19.03.10",
-    "package_version": "19.03.10~3-0~debian-stretch",
+    "package_version": "5:19.03.10~3-0~debian-stretch",
     "os_name": "debian",
     "os_version": "stretch",
     "os_arch": "arm64"
   },
   {
     "docker_version": "19.03.11",
-    "package_version": "19.03.11~3-0~debian-stretch",
+    "package_version": "5:19.03.11~3-0~debian-stretch",
     "os_name": "debian",
     "os_version": "stretch",
     "os_arch": "arm64"
   },
   {
     "docker_version": "19.03.12",
-    "package_version": "19.03.12~3-0~debian-stretch",
-    "os_name": "debian",
-    "os_version": "stretch",
-    "os_arch": "arm64"
-  },
-  {
-    "docker_version": "19.03.1",
-    "package_version": "19.03.1~3-0~debian-stretch",
+    "package_version": "5:19.03.12~3-0~debian-stretch",
     "os_name": "debian",
     "os_version": "stretch",
     "os_arch": "arm64"
   },
   {
     "docker_version": "19.03.13",
-    "package_version": "19.03.13~3-0~debian-stretch",
+    "package_version": "5:19.03.13~3-0~debian-stretch",
     "os_name": "debian",
     "os_version": "stretch",
     "os_arch": "arm64"
   },
   {
     "docker_version": "19.03.14",
-    "package_version": "19.03.14~3-0~debian-stretch",
+    "package_version": "5:19.03.14~3-0~debian-stretch",
     "os_name": "debian",
     "os_version": "stretch",
     "os_arch": "arm64"
   },
   {
     "docker_version": "19.03.15",
-    "package_version": "19.03.15~3-0~debian-stretch",
+    "package_version": "5:19.03.15~3-0~debian-stretch",
+    "os_name": "debian",
+    "os_version": "stretch",
+    "os_arch": "arm64"
+  },
+  {
+    "docker_version": "19.03.1",
+    "package_version": "5:19.03.1~3-0~debian-stretch",
     "os_name": "debian",
     "os_version": "stretch",
     "os_arch": "arm64"
   },
   {
     "docker_version": "19.03.2",
-    "package_version": "19.03.2~3-0~debian-stretch",
+    "package_version": "5:19.03.2~3-0~debian-stretch",
     "os_name": "debian",
     "os_version": "stretch",
     "os_arch": "arm64"
   },
   {
     "docker_version": "19.03.3",
-    "package_version": "19.03.3~3-0~debian-stretch",
+    "package_version": "5:19.03.3~3-0~debian-stretch",
     "os_name": "debian",
     "os_version": "stretch",
     "os_arch": "arm64"
   },
   {
     "docker_version": "19.03.4",
-    "package_version": "19.03.4~3-0~debian-stretch",
+    "package_version": "5:19.03.4~3-0~debian-stretch",
     "os_name": "debian",
     "os_version": "stretch",
     "os_arch": "arm64"
   },
   {
     "docker_version": "19.03.5",
-    "package_version": "19.03.5~3-0~debian-stretch",
+    "package_version": "5:19.03.5~3-0~debian-stretch",
     "os_name": "debian",
     "os_version": "stretch",
     "os_arch": "arm64"
   },
   {
     "docker_version": "19.03.6",
-    "package_version": "19.03.6~3-0~debian-stretch",
+    "package_version": "5:19.03.6~3-0~debian-stretch",
     "os_name": "debian",
     "os_version": "stretch",
     "os_arch": "arm64"
   },
   {
     "docker_version": "19.03.7",
-    "package_version": "19.03.7~3-0~debian-stretch",
+    "package_version": "5:19.03.7~3-0~debian-stretch",
     "os_name": "debian",
     "os_version": "stretch",
     "os_arch": "arm64"
   },
   {
     "docker_version": "19.03.8",
-    "package_version": "19.03.8~3-0~debian-stretch",
+    "package_version": "5:19.03.8~3-0~debian-stretch",
     "os_name": "debian",
     "os_version": "stretch",
     "os_arch": "arm64"
   },
   {
     "docker_version": "19.03.9",
-    "package_version": "19.03.9~3-0~debian-stretch",
+    "package_version": "5:19.03.9~3-0~debian-stretch",
     "os_name": "debian",
     "os_version": "stretch",
     "os_arch": "arm64"
@@ -6028,189 +6035,210 @@
   },
   {
     "docker_version": "18.09.0",
-    "package_version": "18.09.0~3-0~debian-stretch",
+    "package_version": "5:18.09.0~3-0~debian-stretch",
     "os_name": "debian",
     "os_version": "stretch",
     "os_arch": "armhf"
   },
   {
     "docker_version": "18.09.1",
-    "package_version": "18.09.1~3-0~debian-stretch",
+    "package_version": "5:18.09.1~3-0~debian-stretch",
     "os_name": "debian",
     "os_version": "stretch",
     "os_arch": "armhf"
   },
   {
     "docker_version": "18.09.2",
-    "package_version": "18.09.2~3-0~debian-stretch",
+    "package_version": "5:18.09.2~3-0~debian-stretch",
     "os_name": "debian",
     "os_version": "stretch",
     "os_arch": "armhf"
   },
   {
     "docker_version": "18.09.3",
-    "package_version": "18.09.3~3-0~debian-stretch",
+    "package_version": "5:18.09.3~3-0~debian-stretch",
     "os_name": "debian",
     "os_version": "stretch",
     "os_arch": "armhf"
   },
   {
     "docker_version": "18.09.4",
-    "package_version": "18.09.4~3-0~debian-stretch",
+    "package_version": "5:18.09.4~3-0~debian-stretch",
     "os_name": "debian",
     "os_version": "stretch",
     "os_arch": "armhf"
   },
   {
     "docker_version": "18.09.5",
-    "package_version": "18.09.5~3-0~debian-stretch",
+    "package_version": "5:18.09.5~3-0~debian-stretch",
     "os_name": "debian",
     "os_version": "stretch",
     "os_arch": "armhf"
   },
   {
     "docker_version": "18.09.6",
-    "package_version": "18.09.6~3-0~debian-stretch",
+    "package_version": "5:18.09.6~3-0~debian-stretch",
     "os_name": "debian",
     "os_version": "stretch",
     "os_arch": "armhf"
   },
   {
     "docker_version": "18.09.7",
-    "package_version": "18.09.7~3-0~debian-stretch",
+    "package_version": "5:18.09.7~3-0~debian-stretch",
     "os_name": "debian",
     "os_version": "stretch",
     "os_arch": "armhf"
   },
   {
     "docker_version": "18.09.8",
-    "package_version": "18.09.8~3-0~debian-stretch",
+    "package_version": "5:18.09.8~3-0~debian-stretch",
     "os_name": "debian",
     "os_version": "stretch",
     "os_arch": "armhf"
   },
   {
     "docker_version": "18.09.9",
-    "package_version": "18.09.9~3-0~debian-stretch",
+    "package_version": "5:18.09.9~3-0~debian-stretch",
     "os_name": "debian",
     "os_version": "stretch",
     "os_arch": "armhf"
   },
   {
     "docker_version": "19.03.0",
-    "package_version": "19.03.0~3-0~debian-stretch",
+    "package_version": "5:19.03.0~3-0~debian-stretch",
     "os_name": "debian",
     "os_version": "stretch",
     "os_arch": "armhf"
   },
   {
     "docker_version": "19.03.10",
-    "package_version": "19.03.10~3-0~debian-stretch",
+    "package_version": "5:19.03.10~3-0~debian-stretch",
     "os_name": "debian",
     "os_version": "stretch",
     "os_arch": "armhf"
   },
   {
     "docker_version": "19.03.11",
-    "package_version": "19.03.11~3-0~debian-stretch",
+    "package_version": "5:19.03.11~3-0~debian-stretch",
     "os_name": "debian",
     "os_version": "stretch",
     "os_arch": "armhf"
   },
   {
     "docker_version": "19.03.12",
-    "package_version": "19.03.12~3-0~debian-stretch",
-    "os_name": "debian",
-    "os_version": "stretch",
-    "os_arch": "armhf"
-  },
-  {
-    "docker_version": "19.03.1",
-    "package_version": "19.03.1~3-0~debian-stretch",
+    "package_version": "5:19.03.12~3-0~debian-stretch",
     "os_name": "debian",
     "os_version": "stretch",
     "os_arch": "armhf"
   },
   {
     "docker_version": "19.03.13",
-    "package_version": "19.03.13~3-0~debian-stretch",
+    "package_version": "5:19.03.13~3-0~debian-stretch",
     "os_name": "debian",
     "os_version": "stretch",
     "os_arch": "armhf"
   },
   {
     "docker_version": "19.03.14",
-    "package_version": "19.03.14~3-0~debian-stretch",
+    "package_version": "5:19.03.14~3-0~debian-stretch",
     "os_name": "debian",
     "os_version": "stretch",
     "os_arch": "armhf"
   },
   {
     "docker_version": "19.03.15",
-    "package_version": "19.03.15~3-0~debian-stretch",
+    "package_version": "5:19.03.15~3-0~debian-stretch",
+    "os_name": "debian",
+    "os_version": "stretch",
+    "os_arch": "armhf"
+  },
+  {
+    "docker_version": "19.03.1",
+    "package_version": "5:19.03.1~3-0~debian-stretch",
     "os_name": "debian",
     "os_version": "stretch",
     "os_arch": "armhf"
   },
   {
     "docker_version": "19.03.2",
-    "package_version": "19.03.2~3-0~debian-stretch",
+    "package_version": "5:19.03.2~3-0~debian-stretch",
     "os_name": "debian",
     "os_version": "stretch",
     "os_arch": "armhf"
   },
   {
     "docker_version": "19.03.3",
-    "package_version": "19.03.3~3-0~debian-stretch",
+    "package_version": "5:19.03.3~3-0~debian-stretch",
     "os_name": "debian",
     "os_version": "stretch",
     "os_arch": "armhf"
   },
   {
     "docker_version": "19.03.4",
-    "package_version": "19.03.4~3-0~debian-stretch",
+    "package_version": "5:19.03.4~3-0~debian-stretch",
     "os_name": "debian",
     "os_version": "stretch",
     "os_arch": "armhf"
   },
   {
     "docker_version": "19.03.5",
-    "package_version": "19.03.5~3-0~debian-stretch",
+    "package_version": "5:19.03.5~3-0~debian-stretch",
     "os_name": "debian",
     "os_version": "stretch",
     "os_arch": "armhf"
   },
   {
     "docker_version": "19.03.6",
-    "package_version": "19.03.6~3-0~debian-stretch",
+    "package_version": "5:19.03.6~3-0~debian-stretch",
     "os_name": "debian",
     "os_version": "stretch",
     "os_arch": "armhf"
   },
   {
     "docker_version": "19.03.7",
-    "package_version": "19.03.7~3-0~debian-stretch",
+    "package_version": "5:19.03.7~3-0~debian-stretch",
     "os_name": "debian",
     "os_version": "stretch",
     "os_arch": "armhf"
   },
   {
     "docker_version": "19.03.8",
-    "package_version": "19.03.8~3-0~debian-stretch",
+    "package_version": "5:19.03.8~3-0~debian-stretch",
     "os_name": "debian",
     "os_version": "stretch",
     "os_arch": "armhf"
   },
   {
     "docker_version": "19.03.9",
-    "package_version": "19.03.9~3-0~debian-stretch",
+    "package_version": "5:19.03.9~3-0~debian-stretch",
     "os_name": "debian",
     "os_version": "stretch",
     "os_arch": "armhf"
   },
   {
-    "docker_version": "17.03.0",
-    "package_version": "17.03.0~ce-0~debian-wheezy",
+    "docker_version": "18.03.1",
+    "package_version": "18.03.1~ce-0~debian",
+    "os_name": "debian",
+    "os_version": "wheezy",
+    "os_arch": "amd64"
+  },
+  {
+    "docker_version": "17.09.1",
+    "package_version": "17.09.1~ce-0~debian",
+    "os_name": "debian",
+    "os_version": "wheezy",
+    "os_arch": "amd64"
+  },
+  {
+    "docker_version": "17.06.2",
+    "package_version": "17.06.2~ce-0~debian",
+    "os_name": "debian",
+    "os_version": "wheezy",
+    "os_arch": "amd64"
+  },
+  {
+    "docker_version": "18.03.0",
+    "package_version": "18.03.0~ce-0~debian",
     "os_name": "debian",
     "os_version": "wheezy",
     "os_arch": "amd64"
@@ -6223,50 +6251,8 @@
     "os_arch": "amd64"
   },
   {
-    "docker_version": "17.03.2",
-    "package_version": "17.03.2~ce-0~debian-wheezy",
-    "os_name": "debian",
-    "os_version": "wheezy",
-    "os_arch": "amd64"
-  },
-  {
     "docker_version": "17.06.0",
     "package_version": "17.06.0~ce-0~debian",
-    "os_name": "debian",
-    "os_version": "wheezy",
-    "os_arch": "amd64"
-  },
-  {
-    "docker_version": "17.06.1",
-    "package_version": "17.06.1~ce-0~debian",
-    "os_name": "debian",
-    "os_version": "wheezy",
-    "os_arch": "amd64"
-  },
-  {
-    "docker_version": "17.06.2",
-    "package_version": "17.06.2~ce-0~debian",
-    "os_name": "debian",
-    "os_version": "wheezy",
-    "os_arch": "amd64"
-  },
-  {
-    "docker_version": "17.09.0",
-    "package_version": "17.09.0~ce-0~debian",
-    "os_name": "debian",
-    "os_version": "wheezy",
-    "os_arch": "amd64"
-  },
-  {
-    "docker_version": "17.09.1",
-    "package_version": "17.09.1~ce-0~debian",
-    "os_name": "debian",
-    "os_version": "wheezy",
-    "os_arch": "amd64"
-  },
-  {
-    "docker_version": "17.12.0",
-    "package_version": "17.12.0~ce-0~debian",
     "os_name": "debian",
     "os_version": "wheezy",
     "os_arch": "amd64"
@@ -6279,15 +6265,36 @@
     "os_arch": "amd64"
   },
   {
-    "docker_version": "18.03.0",
-    "package_version": "18.03.0~ce-0~debian",
+    "docker_version": "17.09.0",
+    "package_version": "17.09.0~ce-0~debian",
     "os_name": "debian",
     "os_version": "wheezy",
     "os_arch": "amd64"
   },
   {
-    "docker_version": "18.03.1",
-    "package_version": "18.03.1~ce-0~debian",
+    "docker_version": "17.03.2",
+    "package_version": "17.03.2~ce-0~debian-wheezy",
+    "os_name": "debian",
+    "os_version": "wheezy",
+    "os_arch": "amd64"
+  },
+  {
+    "docker_version": "17.12.0",
+    "package_version": "17.12.0~ce-0~debian",
+    "os_name": "debian",
+    "os_version": "wheezy",
+    "os_arch": "amd64"
+  },
+  {
+    "docker_version": "17.06.1",
+    "package_version": "17.06.1~ce-0~debian",
+    "os_name": "debian",
+    "os_version": "wheezy",
+    "os_arch": "amd64"
+  },
+  {
+    "docker_version": "17.03.0",
+    "package_version": "17.03.0~ce-0~debian-wheezy",
     "os_name": "debian",
     "os_version": "wheezy",
     "os_arch": "amd64"

@@ -113,22 +113,25 @@ paths+=("plucky/25.04/armhf")
 for path in "${paths[@]}"; do
     IFS='/' read -r os_version os_version2 os_arch <<< "$path"
 
-    while IFS= read -r line; do
-        if [[ "$line" =~ ^docker-ce_[0-9]+ ]]; then
-            package_version="${line#docker-ce_}"
-            package_version="${package_version%.deb}"
-            package_version="${package_version%_$os_arch}"
-            # package_version="${package_version%~$os_version}"
-            # package_version="${package_version%~$os_version2}"
-
-            IFS='-' read -r docker_version p <<< "$package_version"
-            IFS='~' read -r docker_version p <<< "$docker_version"
-            docker_version="${docker_version%.ce}"
-
-            json_obj="{\"docker_version\": \"$docker_version\", \"package_version\": \"$package_version\", \"os_name\": \"$os_name\", \"os_version\": \"$os_version\", \"os_arch\": \"$os_arch\"}"
-            json_array+=("$json_obj")
+    while read -r package_version; do
+        if [[ "$package_version" == *:* ]]; then
+            epoch="${package_version%%:*}"
+            upstream_version="${package_version#*:}"
+        else
+            epoch="0"
+            upstream_version="$package_version"
         fi
-    done < <(curl -s https://download.docker.com/linux/$os_name/dists/$os_version/pool/stable/$os_arch/ | grep -oP 'href="\K[^"]+' | sort)
+
+        docker_version="${upstream_version%%~*}"
+        docker_version="${docker_version%%-*}"
+
+        json_obj="{\"docker_version\": \"$docker_version\", \"package_version\": \"$package_version\", \"os_name\": \"$os_name\", \"os_version\": \"$os_version\", \"os_arch\": \"$os_arch\"}"
+        json_array+=("$json_obj")
+    done < <(curl -s "https://download.docker.com/linux/$os_name/dists/$os_version/stable/binary-$os_arch/Packages" | awk '
+        $1 == "Package:" && $2 == "docker-ce" { in_block = 1; next }
+        $1 == "Package:" { in_block = 0 }
+        in_block && $1 == "Version:" { print $2 }
+    ')
 done
 
 if [[ "$STDOUT_JSON" == "true" ]]; then
