@@ -7,5 +7,7 @@
   become: true
   when:
     - docker_service_name is defined
-    - docker_service_name
+    # NOT working ansible 2.9
+    # - docker_service_name
+    - docker_service_name is not none
   listen: "restart docker"
