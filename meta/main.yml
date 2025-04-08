@@ -64,6 +64,12 @@ galaxy_info:
         - jammy
         # 24.04
         - noble
+    - name: Synology
+      versions:
+        - "6.2"
+        - "7.0"
+        - "7.1"
+        - "7.2"
 
   galaxy_tags:
     - cloud
