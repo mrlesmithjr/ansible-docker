@@ -106,6 +106,45 @@
                 "[ -f /sys/fs/cgroup/cgroup.controllers ] || { echo 'not cgroupv2 host'; exit 1; }",
                 "&& tox -c tox.ini"
             ]
+        },
+        {
+            "label": "molecule: create dsm*-container@any",
+            "type": "shell",
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "command": [
+                "molecule create --scenario-name dsm62-container@any",
+                "&& molecule create --scenario-name dsm70-container@any",
+                "&& molecule create --scenario-name dsm71-container@any",
+                "&& molecule create --scenario-name dsm72-container@any"
+            ]
+        },
+        {
+            "label": "molecule: test dsm*-test@any",
+            "type": "shell",
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "command": [
+                "molecule test --scenario-name dsm62-test@any",
+                "&& molecule test --scenario-name dsm70-test@any",
+                "&& molecule test --scenario-name dsm71-test@any",
+                "&& molecule test --scenario-name dsm72-test@any"
+            ]
+        },
+        {
+            "label": "molecule: destroy dsm*-container@any",
+            "type": "shell",
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "command": [
+                "molecule destroy --scenario-name dsm62-container@any",
+                "&& molecule destroy --scenario-name dsm70-container@any",
+                "&& molecule destroy --scenario-name dsm71-container@any",
+                "&& molecule destroy --scenario-name dsm72-container@any"
+            ]
         }
     ]
 }
