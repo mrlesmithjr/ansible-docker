@@ -1,6 +1,7 @@
 ---
 - name: dsm | Checking for existing docker # noqa: no-handler
   ansible.builtin.command: "synopkg version {{ docker_dsm_synopkg_check_package }}"
+  become: true
   ignore_errors: true
   register: version_docker
   changed_when: false
