@@ -3,7 +3,7 @@
 
 docker_install_bridge_utils: false
 
-docker_service_name: ""
+docker_service_name: null
 
 docker_architecture_mapping:
   x86_64: x64
