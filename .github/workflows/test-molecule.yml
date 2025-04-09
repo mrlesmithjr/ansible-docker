@@ -30,23 +30,23 @@ jobs:
           - debian11
           - debian12
           - debian13
-          # `jrei/systemd-fedora:latest` rolling release image too new for this
-          # - fedora
-          - ubuntu1604
+          # - ubuntu1604
           - ubuntu1804
           - ubuntu2004
           - ubuntu2204
           - ubuntu2404
           - opensuseleap15
-          - amazonlinux2
+          # - amazonlinux2
           - amazonlinux2023
           - alpine317
           - alpine318
           - alpine319
           - alpine320
           - alpine321
-          - fedora24
-          - fedora27
+          # `jrei/systemd-fedora:latest` rolling release image too new for this
+          # - fedora
+          # - fedora24
+          # - fedora27
           - fedora29
           - fedora30
           - fedora31
@@ -64,32 +64,32 @@ jobs:
         # For other tests, refer to the Tox tests.
         include:
           - molecule_distro: centos7
-            runs-on: ubuntu-20.04
-            cgroup: '@cgroupv1'
+            runs-on: ubuntu-22.04
+            cgroup: '@cgroupv2'
             python-version: "3.8"
             group-python: "py38"
-            group-ansible: "ansible29"
+            group-ansible: "ansible210"
             ansible-config: "./molecule/ansible.old-galaxy.cfg"
           - molecule_distro: centos8
-            runs-on: ubuntu-20.04
-            cgroup: '@cgroupv1'
+            runs-on: ubuntu-22.04
+            cgroup: '@cgroupv2'
             python-version: "3.8"
             group-python: "py38"
-            group-ansible: "ansible29"
+            group-ansible: "ansible210"
             ansible-config: "./molecule/ansible.old-galaxy.cfg"
           - molecule_distro: centos-stream8
-            runs-on: ubuntu-20.04
-            cgroup: '@cgroupv1'
+            runs-on: ubuntu-22.04
+            cgroup: '@cgroupv2'
             python-version: "3.8"
             group-python: "py38"
-            group-ansible: "ansible29"
+            group-ansible: "ansible210"
             ansible-config: "./molecule/ansible.old-galaxy.cfg"
           - molecule_distro: centos-stream9
-            runs-on: ubuntu-20.04
-            cgroup: '@cgroupv1'
+            runs-on: ubuntu-22.04
+            cgroup: '@cgroupv2'
             python-version: "3.8"
             group-python: "py38"
-            group-ansible: "ansible29"
+            group-ansible: "ansible210"
             ansible-config: "./molecule/ansible.old-galaxy.cfg"
           - molecule_distro: centos-stream10
             runs-on: ubuntu-22.04
@@ -98,245 +98,250 @@ jobs:
             group-python: "py311"
             group-ansible: "ansible216"
           - molecule_distro: rockylinux8
-            runs-on: ubuntu-20.04
-            cgroup: '@cgroupv1'
+            runs-on: ubuntu-22.04
+            cgroup: '@cgroupv2'
             python-version: "3.8"
             group-python: "py38"
-            group-ansible: "ansible29"
+            group-ansible: "ansible210"
             ansible-config: "./molecule/ansible.old-galaxy.cfg"
           - molecule_distro: rockylinux9
-            runs-on: ubuntu-20.04
-            cgroup: '@cgroupv1'
+            runs-on: ubuntu-22.04
+            cgroup: '@cgroupv2'
             python-version: "3.8"
             group-python: "py38"
             group-ansible: "ansible210"
             ansible-config: "./molecule/ansible.old-galaxy.cfg"
           - molecule_distro: almalinux8
-            runs-on: ubuntu-20.04
-            cgroup: '@cgroupv1'
+            runs-on: ubuntu-22.04
+            cgroup: '@cgroupv2'
             python-version: "3.8"
             group-python: "py38"
             group-ansible: "ansible210"
             ansible-config: "./molecule/ansible.old-galaxy.cfg"
           - molecule_distro: almalinux9
-            runs-on: ubuntu-20.04
-            cgroup: '@cgroupv1'
+            runs-on: ubuntu-22.04
+            cgroup: '@cgroupv2'
             python-version: "3.8"
             group-python: "py38"
             group-ansible: "ansible210"
             ansible-config: "./molecule/ansible.old-galaxy.cfg"
           - molecule_distro: debian9
-            runs-on: ubuntu-20.04
-            cgroup: '@cgroupv1'
+            runs-on: ubuntu-22.04
+            cgroup: '@cgroupv2'
             python-version: "3.8"
             group-python: "py38"
-            group-ansible: "ansible29"
+            group-ansible: "ansible210"
             ansible-config: "./molecule/ansible.old-galaxy.cfg"
           - molecule_distro: debian10
-            runs-on: ubuntu-20.04
-            cgroup: '@cgroupv1'
+            runs-on: ubuntu-22.04
+            cgroup: '@cgroupv2'
             python-version: "3.8"
             group-python: "py38"
-            group-ansible: "ansible29"
+            group-ansible: "ansible210"
             ansible-config: "./molecule/ansible.old-galaxy.cfg"
           - molecule_distro: debian11
-            runs-on: ubuntu-20.04
-            cgroup: '@cgroupv1'
+            runs-on: ubuntu-22.04
+            cgroup: '@cgroupv2'
             python-version: "3.8"
             group-python: "py38"
-            group-ansible: "ansible29"
+            group-ansible: "ansible210"
             ansible-config: "./molecule/ansible.old-galaxy.cfg"
           - molecule_distro: debian12
-            runs-on: ubuntu-20.04
-            cgroup: '@cgroupv1'
+            runs-on: ubuntu-22.04
+            cgroup: '@cgroupv2'
             python-version: "3.8"
             group-python: "py38"
-            group-ansible: "ansible29"
+            group-ansible: "ansible210"
             ansible-config: "./molecule/ansible.old-galaxy.cfg"
           - molecule_distro: debian13
-            runs-on: ubuntu-20.04
-            cgroup: '@cgroupv1'
+            runs-on: ubuntu-22.04
+            cgroup: '@cgroupv2'
             python-version: "3.11"
             group-python: "py311"
             group-ansible: "ansible218"
-          - molecule_distro: ubuntu1604
-            runs-on: ubuntu-20.04
-            cgroup: '@cgroupv1'
-            python-version: "3.8"
-            group-python: "py38"
-            group-ansible: "ansible29"
-            ansible-config: "./molecule/ansible.old-galaxy.cfg"
+          # not supported
+          # - molecule_distro: ubuntu1604
+          #   runs-on: ubuntu-22.04
+          #   cgroup: '@cgroupv2'
+          #   python-version: "3.8"
+          #   group-python: "py38"
+          #   group-ansible: "ansible210"
+          #   ansible-config: "./molecule/ansible.old-galaxy.cfg"
           - molecule_distro: ubuntu1804
-            runs-on: ubuntu-20.04
-            cgroup: '@cgroupv1'
+            runs-on: ubuntu-22.04
+            cgroup: '@cgroupv2'
             python-version: "3.8"
             group-python: "py38"
-            group-ansible: "ansible29"
+            group-ansible: "ansible210"
             ansible-config: "./molecule/ansible.old-galaxy.cfg"
           - molecule_distro: ubuntu2004
-            runs-on: ubuntu-20.04
-            cgroup: '@cgroupv1'
+            runs-on: ubuntu-22.04
+            cgroup: '@cgroupv2'
             python-version: "3.8"
             group-python: "py38"
-            group-ansible: "ansible29"
+            group-ansible: "ansible210"
             ansible-config: "./molecule/ansible.old-galaxy.cfg"
           - molecule_distro: ubuntu2204
-            runs-on: ubuntu-20.04
-            cgroup: '@cgroupv1'
+            runs-on: ubuntu-22.04
+            cgroup: '@cgroupv2'
             python-version: "3.8"
             group-python: "py38"
-            group-ansible: "ansible29"
+            group-ansible: "ansible210"
             ansible-config: "./molecule/ansible.old-galaxy.cfg"
           - molecule_distro: ubuntu2404
-            runs-on: ubuntu-20.04
-            cgroup: '@cgroupv1'
+            runs-on: ubuntu-22.04
+            cgroup: '@cgroupv2'
             python-version: "3.11"
             group-python: "py311"
             group-ansible: "ansible216"
           - molecule_distro: opensuseleap15
-            runs-on: ubuntu-20.04
-            cgroup: '@cgroupv1'
+            runs-on: ubuntu-22.04
+            cgroup: '@cgroupv2'
             python-version: "3.8"
             group-python: "py38"
-            group-ansible: "ansible29"
+            group-ansible: "ansible210"
             ansible-config: "./molecule/ansible.old-galaxy.cfg"
-          - molecule_distro: amazonlinux2
-            runs-on: ubuntu-20.04
-            cgroup: '@cgroupv1'
-            python-version: "3.8"
-            group-python: "py38"
-            group-ansible: "ansible29"
-            ansible-config: "./molecule/ansible.old-galaxy.cfg"
+          # not supported
+          # - molecule_distro: amazonlinux2
+          #   runs-on: ubuntu-22.04
+          #   cgroup: '@cgroupv2'
+          #   python-version: "3.8"
+          #   group-python: "py38"
+          #   group-ansible: "ansible210"
+          #   ansible-config: "./molecule/ansible.old-galaxy.cfg"
           - molecule_distro: amazonlinux2023
-            runs-on: ubuntu-20.04
-            cgroup: '@cgroupv1'
+            runs-on: ubuntu-22.04
+            cgroup: '@cgroupv2'
             python-version: "3.8"
             group-python: "py38"
             group-ansible: "ansible210"
             ansible-config: "./molecule/ansible.old-galaxy.cfg"
           - molecule_distro: alpine317
-            runs-on: ubuntu-20.04
-            cgroup: '@cgroupv1'
+            runs-on: ubuntu-22.04
+            cgroup: '@cgroupv2'
             python-version: "3.8"
             group-python: "py38"
             group-ansible: "ansible212"
           - molecule_distro: alpine318
-            runs-on: ubuntu-20.04
-            cgroup: '@cgroupv1'
+            runs-on: ubuntu-22.04
+            cgroup: '@cgroupv2'
             python-version: "3.11"
             group-python: "py311"
             group-ansible: "ansible214"
           - molecule_distro: alpine319
-            runs-on: ubuntu-20.04
-            cgroup: '@cgroupv1'
+            runs-on: ubuntu-22.04
+            cgroup: '@cgroupv2'
             python-version: "3.11"
             group-python: "py311"
             group-ansible: "ansible214"
           - molecule_distro: alpine320
-            runs-on: ubuntu-20.04
+            runs-on: ubuntu-22.04
             cgroup: '@cgroupv2'
             python-version: "3.11"
             group-python: "py311"
             group-ansible: "ansible216"
           - molecule_distro: alpine321
-            runs-on: ubuntu-20.04
+            runs-on: ubuntu-22.04
             cgroup: '@cgroupv2'
             python-version: "3.11"
             group-python: "py311"
             group-ansible: "ansible216"
-          - molecule_distro: fedora24
-            runs-on: ubuntu-20.04
-            cgroup: '@cgroupv1'
-            python-version: "3.8"
-            group-python: "py38"
-            group-ansible: "ansible29"
-            ansible-config: "./molecule/ansible.old-galaxy.cfg"
-          - molecule_distro: fedora27
-            runs-on: ubuntu-20.04
-            cgroup: '@cgroupv1'
-            python-version: "3.8"
-            group-python: "py38"
-            group-ansible: "ansible29"
-            ansible-config: "./molecule/ansible.old-galaxy.cfg"
+          # not supported
+          # - molecule_distro: fedora24
+          #   runs-on: ubuntu-22.04
+          #   cgroup: '@cgroupv2'
+          #   python-version: "3.8"
+          #   group-python: "py38"
+          #   group-ansible: "ansible210"
+          #   ansible-config: "./molecule/ansible.old-galaxy.cfg"
+          # not supported
+          # - molecule_distro: fedora27
+          #   runs-on: ubuntu-22.04
+          #   cgroup: '@cgroupv2'
+          #   python-version: "3.8"
+          #   group-python: "py38"
+          #   group-ansible: "ansible210"
+          #   ansible-config: "./molecule/ansible.old-galaxy.cfg"
           - molecule_distro: fedora29
-            runs-on: ubuntu-20.04
-            cgroup: '@cgroupv1'
+            runs-on: ubuntu-22.04
+            cgroup: '@cgroupv2'
             python-version: "3.8"
             group-python: "py38"
-            group-ansible: "ansible29"
+            group-ansible: "ansible210"
+            ansible-config: "./molecule/ansible.old-galaxy.cfg"
           - molecule_distro: fedora30
-            runs-on: ubuntu-20.04
-            cgroup: '@cgroupv1'
+            runs-on: ubuntu-22.04
+            cgroup: '@cgroupv2'
             python-version: "3.8"
             group-python: "py38"
-            group-ansible: "ansible29"
+            group-ansible: "ansible210"
             ansible-config: "./molecule/ansible.old-galaxy.cfg"
           - molecule_distro: fedora31
-            runs-on: ubuntu-20.04
-            cgroup: '@cgroupv1'
+            runs-on: ubuntu-22.04
+            cgroup: '@cgroupv2'
             python-version: "3.8"
             group-python: "py38"
-            group-ansible: "ansible29"
+            group-ansible: "ansible210"
             ansible-config: "./molecule/ansible.old-galaxy.cfg"
           - molecule_distro: fedora32
-            runs-on: ubuntu-20.04
-            cgroup: '@cgroupv1'
+            runs-on: ubuntu-22.04
+            cgroup: '@cgroupv2'
             python-version: "3.8"
             group-python: "py38"
-            group-ansible: "ansible29"
+            group-ansible: "ansible210"
             ansible-config: "./molecule/ansible.old-galaxy.cfg"
           - molecule_distro: fedora33
-            runs-on: ubuntu-20.04
-            cgroup: '@cgroupv1'
+            runs-on: ubuntu-22.04
+            cgroup: '@cgroupv2'
             python-version: "3.8"
             group-python: "py38"
             group-ansible: "ansible210"
             ansible-config: "./molecule/ansible.old-galaxy.cfg"
           - molecule_distro: fedora34
-            runs-on: ubuntu-20.04
-            cgroup: '@cgroupv1'
+            runs-on: ubuntu-22.04
+            cgroup: '@cgroupv2'
             python-version: "3.8"
             group-python: "py38"
             group-ansible: "ansible210"
             ansible-config: "./molecule/ansible.old-galaxy.cfg"
           - molecule_distro: fedora35
-            runs-on: ubuntu-20.04
-            cgroup: '@cgroupv1'
+            runs-on: ubuntu-22.04
+            cgroup: '@cgroupv2'
             python-version: "3.8"
             group-python: "py38"
             group-ansible: "ansible212"
           - molecule_distro: fedora36
-            runs-on: ubuntu-20.04
-            cgroup: '@cgroupv1'
+            runs-on: ubuntu-22.04
+            cgroup: '@cgroupv2'
             python-version: "3.8"
             group-python: "py38"
             group-ansible: "ansible212"
           - molecule_distro: fedora37
-            runs-on: ubuntu-20.04
-            cgroup: '@cgroupv1'
+            runs-on: ubuntu-22.04
+            cgroup: '@cgroupv2'
             python-version: "3.11"
             group-python: "py311"
             group-ansible: "ansible214"
           - molecule_distro: fedora38
-            runs-on: ubuntu-20.04
-            cgroup: '@cgroupv1'
+            runs-on: ubuntu-22.04
+            cgroup: '@cgroupv2'
             python-version: "3.11"
             group-python: "py311"
             group-ansible: "ansible214"
           - molecule_distro: fedora39
-            runs-on: ubuntu-20.04
+            runs-on: ubuntu-22.04
             cgroup: '@cgroupv2'
             python-version: "3.11"
             group-python: "py311"
             group-ansible: "ansible216"
           - molecule_distro: fedora40
-            runs-on: ubuntu-20.04
+            runs-on: ubuntu-22.04
             cgroup: '@cgroupv2'
             python-version: "3.11"
             group-python: "py311"
             group-ansible: "ansible216"
           - molecule_distro: fedora41
-            runs-on: ubuntu-20.04
+            runs-on: ubuntu-22.04
             cgroup: '@cgroupv2'
             python-version: "3.11"
             group-python: "py311"
