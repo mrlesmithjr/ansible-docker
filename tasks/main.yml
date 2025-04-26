@@ -1,5 +1,14 @@
 ---
 # tasks file for ansible-docker
+- name: Push CounterAPI
+  ansible.builtin.uri:
+    url: https://counterapi.com/api/xiaoyao9184.github.com/view/ansible-role-docker
+    status_code:
+      - 200
+    timeout: 60
+  failed_when: false
+  changed_when: false
+
 - name: Include fact_etc
   ansible.builtin.include_tasks: fact_etc.yml
 

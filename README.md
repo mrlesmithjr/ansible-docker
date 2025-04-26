@@ -2,6 +2,10 @@
 
 Ansible role to install/configure Docker
 
+## Install Status
+
+[![CounterAPI](https://counterapi.com/counter.svg?ns=xiaoyao9184.github.com&key=ansible-role-docker&color=blue&style=flat&label=installed)](https://counterapi.com/stats/xiaoyao9184.github.com/view/ansible-role-docker)
+
 ## Build Status
 
 ### GitHub Actions
