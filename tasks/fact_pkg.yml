@@ -7,28 +7,32 @@
   when:
     - docker_config_service | bool
 
-- name: fact_pkg | Fact Docker version file
+- name: fact_pkg | Fact Docker version pkg and file
   ansible.builtin.set_fact:
+    role_docker_version_pkg: "{{ docker_version }}"
     role_docker_version_file: "{{ lookup('first_found', params) }}"
   vars:
     params:
       files:
         - "{{ docker_version_file }}.json"
         - "docker-distribution={{ docker_distribution }}.json"
-        - "NONE"
+        - "/dev/null"
       paths:
         - 'files/version-file'
   when:
     - docker_version | lower != "latest"
     - docker_os_specific_vars_included | default(true)
 
-- name: fact_pkg | Fact pkg version
-  ansible.builtin.set_fact:
-    role_docker_version_pkg: "{{ lookup('file', role_docker_version_file) | from_json | json_query(query) }}"
+- name: fact_pkg | ReFact pkg version from file
   vars:
     query: "[?docker_version=='{{ docker_version }}' && os_name=='{{ docker_distribution }}' && os_version=='{{ docker_codename }}' && os_arch=='{{ docker_architecture }}'].package_version | [0]"
+    lookup_version: "{{ lookup('file', role_docker_version_file) | from_json | json_query(query) }}"
+  ansible.builtin.set_fact:
+    role_docker_version_pkg: "{{ lookup_version }}"
   when:
     - docker_version | lower != "latest"
+    - role_docker_version_file != '/dev/null'
+    - lookup_version is defined
 
 - name: fact_pkg | Assert Docker version range
   ansible.builtin.assert:
