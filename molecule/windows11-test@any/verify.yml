@@ -1,0 +1,30 @@
+---
+# This is an example playbook to execute Ansible tests.
+
+- name: Verify
+  hosts: all
+  vars:
+    package: Docker
+  tasks:
+    - name: Read daemon.json
+      ansible.builtin.slurp:
+        src: "%userprofile%\\.docker\\daemon.json"
+      register: daemon_json_content
+
+    - name: Parse JSON and check values
+      ansible.builtin.set_fact:
+        daemon_json: "{{ daemon_json_content['content'] | b64decode | from_json }}"
+
+    - name: Ensure builder.gc.enabled is defined
+      ansible.builtin.assert:
+        that:
+          - daemon_json.builder.gc.enabled is defined
+          - daemon_json.builder.gc.enabled | bool
+        fail_msg: "'builder.gc.enabled' must be set to 'true' in '%userprofile%\\.docker\\daemon.json'"
+
+    - name: Ensure insecure-registries contains http://nexus.lan:8082
+      ansible.builtin.assert:
+        that:
+          - "'insecure-registries' in daemon_json"
+          - "'http://nexus.lan:8082' in daemon_json['insecure-registries']"
+        fail_msg: "'http://nexus.lan:8082' is missing from insecure-registries in '%userprofile%\\.docker\\daemon.json'"

@@ -1,0 +1,24 @@
+---
+- name: Converge
+  hosts: all
+  vars:
+    docker_config_service: true
+    docker_daemon_file: "%userprofile%\\.docker\\daemon.json"
+    docker_opts:
+      builder:
+        gc:
+          defaultKeepStorage: 20GB
+          enabled: true
+      experimental: false
+      features:
+        buildkit: true
+      insecure-registries:
+        - http://nexus.lan:8082
+    docker_version: 4.39.0
+    # NOTE: TianoCore may hang during boot;
+    # make sure to allow sufficient wait time.
+    docker_windows_reboot_timeout: 86400
+  tasks:
+    - name: Include docker
+      ansible.builtin.include_role:
+        name: docker

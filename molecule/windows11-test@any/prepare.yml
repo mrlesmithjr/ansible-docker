@@ -1,0 +1,16 @@
+---
+- name: Prepare
+  hosts: localhost
+  connection: local
+  tasks:
+    - name: Debug ansible_python_interpreter
+      ansible.builtin.debug:
+        msg: "{{ ansible_python_interpreter }}"
+
+    - name: Install winrm
+      ansible.builtin.pip:
+        name: pywinrm==0.4.3
+        state: present
+
+- name: Include shared prepare
+  ansible.builtin.import_playbook: ../shared/prepare.yml

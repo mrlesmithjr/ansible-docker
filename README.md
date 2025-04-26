@@ -340,3 +340,4 @@ If you would like to perform testing, you need to follow the steps in the table 
 | target | *-container@any | *-test@any |
 |-----|-----|-----|
 | Windows 2025 | [windows2025-container@any](molecule/windows2025-container@any/README.md) | [windows2025-test@any](molecule/windows2025-test@any/README.md) |
+| Windows 11 | [windows11-container@any](molecule/windows11-container@any/README.md) | [windows11-test@any](molecule/windows11-test@any/README.md) |

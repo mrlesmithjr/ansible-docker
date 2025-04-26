@@ -1,0 +1,34 @@
+---
+# skip role name check
+# see https://github.com/ansible/ansible-compat/issues/78
+role_name_check: 1
+dependency:
+  name: galaxy
+  # need update `community.docker` support `cgroupns_mode` by molecule-plugins[docker]
+  enabled: true
+  options:
+    role-file: requirements.yml
+driver:
+  # Automatically use the default driver to ensure compatibility with both pre-Molecule 6 and post-Molecule 6 versions.
+  # name: delegated
+  options:
+    managed: False
+    ansible_connection_options:
+      ansible_host: localhost
+      ansible_connection: winrm
+      ansible_winrm_scheme: http
+      ansible_port: "11985"
+      ansible_winrm_transport: ntlm
+      ansible_user: docker
+      ansible_password: 4Test@ansible
+      ansible_become_password: 4Test@ansible
+      ansible_winrm_server_cert_validation: ignore
+platforms:
+  - name: windows11-test
+provisioner:
+  name: ansible
+  playbooks:
+    prepare: ./prepare.yml
+    converge: ./converge.yml
+verifier:
+  name: ansible
