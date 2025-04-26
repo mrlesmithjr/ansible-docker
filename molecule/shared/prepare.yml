@@ -16,3 +16,12 @@
           - "distribution={{ ansible_distribution }}+version={{ ansible_distribution_version }}"
           - "python={{ ansible_python_version }}"
           - "pkg={{ ansible_pkg_mgr }}"
+
+    # fix apt `Unable to locate package`
+    # molecule docker task `Build an Ansible compatible image (new)`
+    # run `rm -rf /var/lib/apt/lists/*` in dockerfile will make `apt update` cache clean
+    - name: Updating apt-cache
+      ansible.builtin.apt:
+        update_cache: true
+      become: true
+      when: ansible_os_family == "Debian"
