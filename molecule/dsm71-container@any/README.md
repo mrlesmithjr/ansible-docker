@@ -1,6 +1,6 @@
 # dsm71-container@any
 
-NOTE: only support molecule `create` sequence, cat test `converge` automatically.README.md).
+NOTE: only support molecule `create` sequence, cant test `converge` automatically.
 
 ```bash
 molecule --debug -vvv create --scenario-name dsm71-container@any
