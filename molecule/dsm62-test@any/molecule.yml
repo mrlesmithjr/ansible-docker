@@ -9,7 +9,8 @@ dependency:
   options:
     role-file: requirements.yml
 driver:
-  name: delegated
+  # Automatically use the default driver to ensure compatibility with both pre-Molecule 6 and post-Molecule 6 versions.
+  # name: delegated
   options:
     managed: False
     ansible_connection_options:
