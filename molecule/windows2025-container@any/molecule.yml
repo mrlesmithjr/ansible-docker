@@ -1,0 +1,44 @@
+---
+# skip role name check
+# see https://github.com/ansible/ansible-compat/issues/78
+role_name_check: 1
+dependency:
+  name: galaxy
+  # need update `community.docker` support `cgroupns_mode` by molecule-plugins[docker]
+  enabled: true
+  options:
+    role-file: requirements.yml
+driver:
+  name: docker
+platforms:
+  - name: windows2025-container
+    image: dockurr/windows
+    privileged: true
+    override_command: false
+    env:
+      DISK_SIZE: "16G"
+      VERSION: "2025"
+      USERNAME: "docker"
+      PASSWORD: "4Test@ansible"
+      VMX: "Y"
+    devices:
+      - /dev/kvm
+      - /dev/net/tun
+    capabilities:
+      - NET_ADMIN
+    published_ports:
+      - 8256:8006
+      - 25389:3389/tcp
+      - 25389:3389/udp
+      - 25985:5985
+    volumes:
+      - ${MOLECULE_SCENARIO_DIRECTORY}/install.bat:/oem/install.bat
+      # some file permission cant auto cleanup need manual remove
+      - $MOLECULE_EPHEMERAL_DIRECTORY/.storage:/storage
+    cgroupns_mode: host
+provisioner:
+  name: ansible
+  playbooks:
+    cleanup: ../shared/cleanup.yml
+verifier:
+  name: ansible

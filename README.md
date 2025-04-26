@@ -320,3 +320,23 @@ If you would like to perform testing, you need to follow the steps in the table 
 | target | *-container@any | *-test@any |
 |-----|-----|-----|
 | Openwrt 24 | [openwrt24-container@any](molecule/openwrt24-container@any/README.md) | [openwrt24-test@any](molecule/openwrt24-test@any/README.md) |
+
+### Windows
+
+The current Windows system can run inside Docker,
+supported by the [dockurr/windows](https://github.com/dockur/windows) project.
+Since dockurr/windows uses QEMU virtualization, Windows actually runs within the QEMU virtual machine.
+Ansible Molecule, when using the [docker-connection](https://docs.ansible.com/ansible/latest/collections/community/docker/docker_connection.html),
+can only access the base container running QEMU and cannot connect deeper into the Windows system.
+Therefore, fully unattended automated testing is currently not feasible.
+
+If you would like to perform testing, you need to follow the steps in the table below and manually handle some tasks between the two scenarios.
+
+- First, use *-container@any to create the container
+- Then access the Windows web interface make sure enable WinRM
+- Next, use *-test@any to run the test
+- Finally use *-container@any to remove the container
+
+| target | *-container@any | *-test@any |
+|-----|-----|-----|
+| Windows 2025 | [windows2025-container@any](molecule/windows2025-container@any/README.md) | [windows2025-test@any](molecule/windows2025-test@any/README.md) |
