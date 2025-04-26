@@ -278,6 +278,8 @@ $(poetry env activate)
 
 ## Test non-automated (manual)
 
+### Synology DSM
+
 The current Synology DSM system can run inside Docker,
 supported by the [virtual-dsm](https://github.com/vdsm/virtual-dsm) project.
 Since virtual-dsm uses QEMU virtualization, DSM actually runs within the QEMU virtual machine.
@@ -297,4 +299,24 @@ If you would like to perform testing, you need to follow the steps in the table 
 | DSM 6.2 | [dsm62-container@any](molecule/dsm62-container@any/README.md) | [dsm62-test@any](molecule/dsm62-test@any/README.md) |
 | DSM 7.0 | [dsm70-container@any](molecule/dsm70-container@any/README.md) | [dsm70-test@any](molecule/dsm70-test@any/README.md) |
 | DSM 7.1 | [dsm71-container@any](molecule/dsm71-container@any/README.md) | [dsm71-test@any](molecule/dsm71-test@any/README.md) |
-| DSM 7.2 | [dsm72-container@any](molecule/dsm72-container@any/) | [dsm72-test@any](molecule/dsm72-test@any/) |
+| DSM 7.2 | [dsm72-container@any](molecule/dsm72-container@any/README.md) | [dsm72-test@any](molecule/dsm72-test@any/README.md) |
+
+### Openwrt
+
+The current Openwrt system can run inside Docker,
+supported by the [albrechtloh/openwrt-docker](https://github.com/AlbrechtL/openwrt-docker) project.
+Since openwrt-docker uses QEMU virtualization, Openwrt actually runs within the QEMU virtual machine.
+Ansible Molecule, when using the [docker-connection](https://docs.ansible.com/ansible/latest/collections/community/docker/docker_connection.html),
+can only access the base container running QEMU and cannot connect deeper into the Openwrt system.
+Therefore, fully unattended automated testing is currently not feasible.
+
+If you would like to perform testing, you need to follow the steps in the table below and manually handle some tasks between the two scenarios.
+
+- First, use *-container@any to create the container
+- Then access the Openwrt web interface make sure enable SSH
+- Next, use *-test@any to run the test
+- Finally use *-container@any to remove the container
+
+| target | *-container@any | *-test@any |
+|-----|-----|-----|
+| Openwrt 24 | [openwrt24-container@any](molecule/openwrt24-container@any/README.md) | [openwrt24-test@any](molecule/openwrt24-test@any/README.md) |

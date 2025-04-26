@@ -1,0 +1,32 @@
+---
+# skip role name check
+# see https://github.com/ansible/ansible-compat/issues/78
+role_name_check: 1
+dependency:
+  name: galaxy
+  # need update `community.docker` support `cgroupns_mode` by molecule-plugins[docker]
+  enabled: true
+  options:
+    role-file: ${MOLECULE_SCENARIO_DIRECTORY}/requirements.yml
+driver:
+  # Automatically use the default driver to ensure compatibility with both pre-Molecule 6 and post-Molecule 6 versions.
+  # name: delegated
+  options:
+    managed: False
+    ansible_connection_options:
+      ansible_host: localhost
+      ansible_port: "24022"
+      ansible_user: root
+      ansible_password: 4Test@ansible
+      ansible_become_password: 4Test@ansible
+      # OpenSSH 9 deprecated SCP
+      ansible_scp_extra_args: "-O"
+platforms:
+  - name: openwrt24-test
+provisioner:
+  name: ansible
+  playbooks:
+    prepare: ./prepare.yml
+    converge: ./converge.yml
+verifier:
+  name: ansible

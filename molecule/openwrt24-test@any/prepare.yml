@@ -1,0 +1,39 @@
+---
+- name: Prepare
+  hosts: localhost
+  connection: local
+  tasks:
+    - name: Debug ansible_python_interpreter
+      ansible.builtin.debug:
+        msg: "{{ ansible_python_interpreter }}"
+
+- name: Expand root & Init python3
+  hosts: all
+  gather_facts: false
+  tasks:
+    - name: Install dependencies
+      ansible.builtin.raw: "opkg update && opkg install python3 parted losetup resize2fs"
+      changed_when: false
+
+    - name: Download expand_root
+      ansible.builtin.raw: "wget -U '' -O expand-root.sh https://openwrt.org/_export/code/docs/guide-user/advanced/expand_root?codeblock=0"
+      changed_when: false
+
+    - name: Run expand_root
+      ansible.builtin.raw: ". ./expand-root.sh"
+      changed_when: false
+
+    - name: Reboot OpenWRT using raw
+      ansible.builtin.raw: reboot
+      async: 0
+      poll: 0
+      changed_when: false
+      failed_when: false
+
+    - name: Wait for OpenWRT to come back after reboot
+      ansible.builtin.wait_for_connection:
+        delay: 10
+        timeout: 600
+
+- name: Include shared prepare
+  ansible.builtin.import_playbook: ../shared/prepare.yml

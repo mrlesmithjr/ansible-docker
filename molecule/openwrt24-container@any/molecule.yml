@@ -1,0 +1,42 @@
+---
+# skip role name check
+# see https://github.com/ansible/ansible-compat/issues/78
+role_name_check: 1
+dependency:
+  name: galaxy
+  # need update `community.docker` support `cgroupns_mode` by molecule-plugins[docker]
+  enabled: true
+  options:
+    role-file: requirements.yml
+driver:
+  name: docker
+platforms:
+  - name: openwrt24-container
+    image: albrechtloh/openwrt-docker:openwrt-24.10.0-f30ef2f
+    privileged: true
+    override_command: false
+    env:
+      WAN_IF: "host"
+      LAN_IF: "host"
+      IMAGE_SIZE_ON_INIT: "512"
+      OPENWRT_AFTER_BOOT_CMD: "/usr/bin/fw_wan_open_http; /usr/bin/fw_wan_open_ssh"
+    devices:
+      - /dev/kvm
+      - /dev/net/tun
+    capabilities:
+      - NET_ADMIN
+    published_ports:
+      - 24006:8006
+      - 24000:8000
+      - 24022:8022
+    volumes:
+      # some file permission cant auto cleanup need manual remove
+      - $MOLECULE_EPHEMERAL_DIRECTORY/.storage:/storage
+      - /dev:/dev
+    cgroupns_mode: host
+provisioner:
+  name: ansible
+  playbooks:
+    cleanup: ../shared/cleanup.yml
+verifier:
+  name: ansible

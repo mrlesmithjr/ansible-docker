@@ -1,0 +1,17 @@
+---
+# This is an example playbook to execute Ansible tests.
+
+- name: Verify
+  hosts: all
+  tasks:
+    - name: Status dockerd
+      ansible.builtin.command:
+        cmd: "opkg status dockerd"
+      changed_when: false
+      register: docker_info
+
+    - name: Ensure dockerd installed
+      ansible.builtin.assert:
+        that:
+          - "'Status: install ok installed' in docker_info.stdout or 'Status: install user installed' in docker_info.stdout"
+        fail_msg: "dockerd is not installed"
