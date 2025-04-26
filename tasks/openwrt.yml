@@ -1,0 +1,31 @@
+---
+- name: openwrt | Updating opkg # noqa: command-instead-of-module
+  ansible.builtin.command: "opkg update"
+  register: result
+  until: result is successful
+  changed_when: false
+
+- name: openwrt | Checking for existing docker # noqa: command-instead-of-module
+  ansible.builtin.command: "opkg status {{ docker_openwrt_opkg_check_package }}"
+  register: has_docker
+  changed_when: false
+  ignore_errors: true
+
+- name: openwrt | Assert not versioned
+  ansible.builtin.assert:
+    that:
+      - docker_version | lower != "latest"
+      - docker_version | lower != "any"
+    fail_msg: "docker versioned is not supported on OpenWrt"
+  when:
+    - docker_version | lower != "latest" and docker_version | lower != "any"
+
+- name: openwrt | Installing Docker latest
+  ansible.builtin.command:
+    cmd: "opkg install {{ docker_openwrt_opkg_present_latest_packages | join(' ') }}"
+  register: result
+  until: result is successful
+  changed_when: "'Downloading' in result.stdout"
+  when: >
+    docker_version | lower == "latest"
+    or (docker_version | lower == "any" and has_docker is failed)

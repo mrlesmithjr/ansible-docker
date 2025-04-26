@@ -304,6 +304,16 @@ docker_dsm_synopkg_repo_url: "https://global.synologydownload.com/download/Packa
 # Defines dsm installing version package
 docker_dsm_synopkg_present_versioned_package: "{{ role_docker_version_pkg }}"
 
+# Defines openwrt opkg package name for check exists
+docker_openwrt_opkg_check_package: dockerd
+
+# Defines openwrt opkg installing latest package
+docker_openwrt_opkg_present_latest_packages:
+  - dockerd
+  - docker
+  - docker-compose
+  - luci-app-dockerman
+
 # Defines if Linux birdge-utils will get installed.
 docker_install_bridge_utils: true
 

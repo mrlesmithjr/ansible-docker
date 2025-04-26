@@ -6,6 +6,18 @@
     state: restarted
   become: true
   when:
+    - ansible_os_family != "OpenWrt"
+    - docker_service_name is defined
+    # NOT working ansible 2.9
+    # - docker_service_name
+    - docker_service_name is not none
+  listen: "restart docker"
+
+- name: Restart docker # noqa: command-instead-of-module
+  ansible.builtin.command:
+    cmd: "service {{ docker_service_name }} restart"
+  when:
+    - ansible_os_family == "OpenWrt"
     - docker_service_name is defined
     # NOT working ansible 2.9
     # - docker_service_name

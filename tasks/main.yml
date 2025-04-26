@@ -45,6 +45,11 @@
   when:
     - ansible_os_family == "RedHat" or ansible_os_family == "Rocky"
 
+- name: Include suse
+  ansible.builtin.include_tasks: suse.yml
+  when:
+    - ansible_os_family == "Suse"
+
 - name: Include dsm
   ansible.builtin.include_tasks: dsm.yml
   when:
@@ -53,10 +58,10 @@
       or docker_service_name == "pkg-Docker-dockerd.service"
       or docker_service_name == "pkg-ContainerManager-dockerd.service"
 
-- name: Include suse
-  ansible.builtin.include_tasks: suse.yml
+- name: Include openwrt
+  ansible.builtin.include_tasks: openwrt.yml
   when:
-    - ansible_os_family == "Suse"
+    - ansible_os_family == "OpenWrt"
 
 - name: Include config_docker
   ansible.builtin.include_tasks: config_docker.yml

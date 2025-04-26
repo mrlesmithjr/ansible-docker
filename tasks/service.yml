@@ -6,6 +6,18 @@
     enabled: true
   become: true
   when:
+    - ansible_os_family != "OpenWrt"
+    - docker_service_name is defined
+    # NOT working ansible 2.9
+    # - docker_service_name
+    - docker_service_name is not none
+
+- name: service | Ensuring Docker Service Is Started And Enabled On Boot # noqa: command-instead-of-module
+  ansible.builtin.command:
+    cmd: "service {{ docker_service_name }} enable"
+  changed_when: false
+  when:
+    - ansible_os_family == "OpenWrt"
     - docker_service_name is defined
     # NOT working ansible 2.9
     # - docker_service_name

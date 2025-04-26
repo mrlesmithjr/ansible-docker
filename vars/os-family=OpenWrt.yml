@@ -1,0 +1,6 @@
+---
+# Used only for OpenWrt os family
+
+docker_service_name: dockerd
+
+docker_config_users: false
