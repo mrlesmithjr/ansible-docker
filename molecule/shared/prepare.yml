@@ -11,11 +11,11 @@
         msg:
           - "os-family={{ ansible_os_family }}"
           - "distribution={{ ansible_distribution }}"
-          - "distribution={{ ansible_distribution }}+major={{ ansible_distribution_major_version }}"
-          - "distribution={{ ansible_distribution }}+release={{ ansible_distribution_release }}"
-          - "distribution={{ ansible_distribution }}+version={{ ansible_distribution_version }}"
-          - "python={{ ansible_python_version }}"
-          - "pkg={{ ansible_pkg_mgr }}"
+          - "distribution={{ ansible_distribution }}+major={{ ansible_distribution_major_version | default('NONE') }}"
+          - "distribution={{ ansible_distribution }}+release={{ ansible_distribution_release | default('NONE') }}"
+          - "distribution={{ ansible_distribution }}+version={{ ansible_distribution_version | default('NONE') }}"
+          - "python={{ ansible_python_version | default('NONE') }}"
+          - "pkg={{ ansible_pkg_mgr | default('NONE') }}"
 
     # fix apt `Unable to locate package`
     # molecule docker task `Build an Ansible compatible image (new)`

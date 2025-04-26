@@ -1,0 +1,25 @@
+---
+- name: config_docker_windows | Ensuring Daemon Folder Exists
+  ansible.builtin.win_file:
+    path: "{{ docker_daemon_file | win_dirname }}"
+    state: directory
+  when:
+    - docker_daemon_file is defined
+
+# some time restart system or docker will make daemon.json changed
+# https://github.com/ansible-collections/ansible.windows/issues/16
+- name: config_docker_windows | Temporary Daemon file
+  ansible.builtin.win_template:
+    src: etc/docker/daemon.json.j2
+    dest: "{{ docker_daemon_file }}.by-ansible"
+  register: daemon_template
+  notify: restart docker
+  when:
+    - docker_daemon_file is defined
+
+- name: config_docker_windows | Configuring Daemon file # noqa: no-handler
+  ansible.builtin.win_template:
+    src: etc/docker/daemon.json.j2
+    dest: "{{ docker_daemon_file }}"
+  when:
+    - daemon_template is changed

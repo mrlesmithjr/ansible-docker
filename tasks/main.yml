@@ -17,8 +17,8 @@
   vars:
     params:
       files:
-        - "distribution={{ ansible_distribution }}+version={{ ansible_distribution_version }}.yml"
-        - "distribution={{ ansible_distribution }}+release={{ ansible_distribution_release }}.yml"
+        - "distribution={{ ansible_distribution }}+version={{ ansible_distribution_version | default('NONE') }}.yml"
+        - "distribution={{ ansible_distribution }}+release={{ ansible_distribution_release | default('NONE') }}.yml"
         - "distribution={{ ansible_distribution }}+major={{ ansible_distribution_major_version }}.yml"
         - "distribution={{ ansible_distribution }}.yml"
         - "os-family={{ ansible_os_family }}.yml"
@@ -62,6 +62,11 @@
   ansible.builtin.include_tasks: openwrt.yml
   when:
     - ansible_os_family == "OpenWrt"
+
+- name: Include windows
+  ansible.builtin.include_tasks: windows.yml
+  when:
+    - ansible_os_family == "Windows"
 
 - name: Include config_docker
   ansible.builtin.include_tasks: config_docker.yml

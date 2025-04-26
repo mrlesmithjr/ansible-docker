@@ -4,3 +4,9 @@
     - >
       ansible_facts.cmdline.syno_hw_version is defined
   ansible.builtin.include_tasks: fact_etc_dsm.yml
+
+- name: fact_etc | Include Windows
+  when:
+    - >
+      ansible_os_family == "Windows"
+  ansible.builtin.include_tasks: fact_etc_windows.yml

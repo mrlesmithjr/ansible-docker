@@ -1,0 +1,84 @@
+---
+- name: windows | Enabling virtual features
+  ansible.builtin.win_optional_feature:
+    name: VirtualMachinePlatform
+    state: present
+
+- name: windows | Update winget sources # noqa: command-instead-of-module
+  ansible.builtin.win_command: >-
+    winget source update
+  register: result
+  until: result is successful and 'Cancelled' not in result.stdout
+  changed_when: false
+
+- name: windows | Installing pre-reqs # noqa: command-instead-of-module
+  ansible.builtin.win_command: >-
+    winget install
+    --accept-package-agreements
+    --accept-source-agreements
+    {%- for package in docker_windows_winget_pre_reqs %}
+    {%-  if package.id is defined %}
+    --id {{ package.id }}
+    {%-  elif package.name is defined %}
+    "{{ package.name }}"
+    {%-  else %}
+    "{{ package }}"
+    {%-  endif %}
+    {%- endfor %}
+  register: result
+  until: result is successful or 'already installed' in result.stdout
+  failed_when: result is failed and 'already installed' not in result.stdout
+  changed_when: result is successful and 'already installed' not in result.stdout
+  when:
+    - docker_windows_winget_pre_reqs | default([],true) | length > 0
+
+- name: windows | Status wsl
+  ansible.builtin.win_command: >-
+    wsl --status
+  environment:
+    # ending of wsl
+    # see https://github.com/microsoft/WSL/issues/9748
+    WSL_UTF8: "1"
+  register: status_wsl
+  ignore_errors: true
+  changed_when: >
+    ('WSL2 is not supported with your current machine configuration.' in status_wsl.stdout)
+    or 'https://aka.ms/enablevirtualization' in status_wsl.stdout
+  notify: reboot system
+
+- name: windows | Checking for existing docker # noqa: command-instead-of-module
+  ansible.builtin.win_command: >-
+    winget list --id {{ docker_windows_winget_check_package }}
+  ignore_errors: true
+  register: has_docker
+  changed_when: false
+
+- name: windows | Installing docker versioned
+  ansible.builtin.win_command: >-
+    winget install
+    --accept-package-agreements
+    --accept-source-agreements
+    --id {{ docker_windows_winget_check_package }}
+    --version {{ role_docker_version_pkg }}
+    --custom "{{ docker_windows_winget_custom }}"
+  register: result
+  until: result is successful or 'already installed' in result.stdout
+  failed_when: result.rc != 0 and 'already installed' not in result.stdout
+  changed_when: result.rc == 0 and 'already installed' not in result.stdout
+  when:
+    - docker_version | lower != "latest" and docker_version | lower != "any"
+
+- name: windows | Installing Docker latest
+  ansible.builtin.win_command: >-
+    winget install
+    --accept-package-agreements
+    --accept-source-agreements
+    --id {{ docker_windows_winget_check_package }}
+    --custom "{{ docker_windows_winget_custom }}"
+  register: result
+  until: result is successful or 'already installed' in result.stdout
+  failed_when: result.rc != 0 and 'already installed' not in result.stdout
+  changed_when: result.rc == 0 and 'already installed' not in result.stdout
+  when: >
+    docker_version | lower == "latest"
+    or (docker_version | lower == "any" and has_docker is failed)

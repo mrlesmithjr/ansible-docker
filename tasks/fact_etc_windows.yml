@@ -1,0 +1,4 @@
+---
+- name: fact_etc_windows | ReFact ansible_distribution_release
+  ansible.builtin.set_fact:
+    ansible_distribution_release: "NA"

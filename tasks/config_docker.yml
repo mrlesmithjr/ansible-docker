@@ -1,32 +1,10 @@
 ---
-- name: config_docker | Configuring Docker Service (Debian)
-  ansible.builtin.template:
-    src: etc/default/docker.j2
-    dest: "{{ docker_default_file }}"
-    owner: root
-    group: root
-    mode: 0644
-  notify: restart docker
-  become: true
+- name: config_docker | Include tasks for Linux
+  ansible.builtin.include_tasks: config_docker_linux.yml
   when:
-    - ansible_os_family == "Debian"
-    - docker_default_file is defined
+    - ansible_os_family != 'Windows'
 
-- name: config_docker | Ensuring Daemon Folder Exists
-  ansible.builtin.file:
-    path: "{{ docker_daemon_file | dirname }}"
-    state: directory
-    mode: 0644
-  become: true
+- name: config_docker | Include tasks for Windows
+  ansible.builtin.include_tasks: config_docker_windows.yml
   when:
-    - docker_daemon_file is defined
-
-- name: config_docker | Configuring Docker
-  ansible.builtin.template:
-    src: etc/docker/daemon.json.j2
-    dest: "{{ docker_daemon_file }}"
-    mode: 0644
-  notify: restart docker
-  become: true
-  when:
-    - docker_daemon_file is defined
+    - ansible_os_family == 'Windows'

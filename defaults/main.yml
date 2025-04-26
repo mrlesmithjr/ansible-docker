@@ -314,6 +314,19 @@ docker_openwrt_opkg_present_latest_packages:
   - docker-compose
   - luci-app-dockerman
 
+# Defines windows winget pre-reqs
+docker_windows_winget_pre_reqs:
+  - id: Microsoft.WSL
+
+# Defines windows winget name for check exists
+docker_windows_winget_check_package: Docker.DockerDesktop
+
+# Defines windows winget custom options for docker
+docker_windows_winget_custom: "--accept-license --always-run-service"
+
+# Defines windows timeout for reboot
+docker_windows_reboot_timeout: 600
+
 # Defines if Linux birdge-utils will get installed.
 docker_install_bridge_utils: true
 

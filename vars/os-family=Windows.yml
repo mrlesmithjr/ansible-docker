@@ -1,0 +1,10 @@
+---
+# Used only for Windows os family
+
+docker_service_name: com.docker.service
+
+docker_codename: NA
+
+docker_config_users: false
+
+docker_pull_images: false

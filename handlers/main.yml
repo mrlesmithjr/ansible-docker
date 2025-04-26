@@ -7,6 +7,7 @@
   become: true
   when:
     - ansible_os_family != "OpenWrt"
+    - ansible_os_family != "Windows"
     - docker_service_name is defined
     # NOT working ansible 2.9
     # - docker_service_name
@@ -23,3 +24,34 @@
     # - docker_service_name
     - docker_service_name is not none
   listen: "restart docker"
+
+- name: Restart docker
+  ansible.builtin.win_service:
+    name: "{{ docker_service_name }}"
+    state: restarted
+  when:
+    - ansible_os_family == "Windows"
+    - docker_service_name is defined
+    # NOT working ansible 2.9
+    # - docker_service_name
+    - docker_service_name is not none
+  listen: "restart docker"
+
+- name: Reboot system
+  ansible.builtin.win_reboot:
+    connect_timeout: 30
+    reboot_timeout: "{{ docker_windows_reboot_timeout }}"
+  when:
+    - ansible_os_family == "Windows"
+  listen: "reboot system"
+
+- name: Restart docker desktop
+  ansible.builtin.win_shell: |
+    $exe = "C:\Program Files\Docker\Docker\Docker Desktop.exe"
+    $running = Get-Process | Where-Object { $_.Path -eq $exe }
+    if (-not $running) {
+        Start-Process -FilePath $exe
+    }
+  when:
+    - ansible_os_family == "Windows"
+  listen: "reboot system"

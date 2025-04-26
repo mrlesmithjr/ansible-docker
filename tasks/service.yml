@@ -7,6 +7,7 @@
   become: true
   when:
     - ansible_os_family != "OpenWrt"
+    - ansible_os_family != "Windows"
     - docker_service_name is defined
     # NOT working ansible 2.9
     # - docker_service_name
@@ -18,6 +19,32 @@
   changed_when: false
   when:
     - ansible_os_family == "OpenWrt"
+    - docker_service_name is defined
+    # NOT working ansible 2.9
+    # - docker_service_name
+    - docker_service_name is not none
+
+- name: service | Ensuring Docker Service Is Started And Enabled On Boot
+  ansible.builtin.win_service:
+    name: "{{ docker_service_name }}"
+    state: started
+    start_mode: auto
+  when:
+    - ansible_os_family == "Windows"
+    - docker_service_name is defined
+    # NOT working ansible 2.9
+    # - docker_service_name
+    - docker_service_name is not none
+
+- name: service | Ensuring Docker Desktop Is Autostart On Boot
+  ansible.builtin.win_regedit:
+    path: HKCU:\Software\Microsoft\Windows\CurrentVersion\Run
+    name: Docker Desktop
+    data: C:\Program Files\Docker\Docker\Docker Desktop.exe -Autostart
+    type: string
+    state: present
+  when:
+    - ansible_os_family == "Windows"
     - docker_service_name is defined
     # NOT working ansible 2.9
     # - docker_service_name
