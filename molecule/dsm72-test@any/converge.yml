@@ -13,5 +13,5 @@
     docker_version: 24.0.2-1535
   tasks:
     - name: Include docker
-      include_role:
+      ansible.builtin.include_role:
         name: docker
