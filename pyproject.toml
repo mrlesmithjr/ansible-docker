@@ -43,7 +43,8 @@ ansible218 = [
     "ansible-lint",
     "ansible-core>=2.18.0,<2.19.0",
     "ansible>=11.0.0,<12.0.0",
-    "jmespath"
+    "jmespath",
+    "pywinrm==0.4.3"
 ]
 ansible217 = [
     "molecule",
@@ -54,7 +55,8 @@ ansible217 = [
     "ansible-lint",
     "ansible-core>=2.17.0,<2.18.0",
     "ansible>=10.0.0,<11.0.0",
-    "jmespath"
+    "jmespath",
+    "pywinrm==0.4.3"
 ]
 ansible216 = [
     "molecule",
@@ -65,7 +67,8 @@ ansible216 = [
     "ansible-lint",
     "ansible-core>=2.16.0,<2.17.0",
     "ansible>=9.0.0,<10.0.0",
-    "jmespath"
+    "jmespath",
+    "pywinrm==0.4.3"
 ]
 ansible215 = [
     "molecule",
@@ -76,7 +79,8 @@ ansible215 = [
     "ansible-lint",
     "ansible-core>=2.15.0,<2.16.0",
     "ansible>=8.0.0,<9.0.0",
-    "jmespath"
+    "jmespath",
+    "pywinrm==0.4.3"
 ]
 ansible214 = [
     "molecule",
@@ -87,7 +91,8 @@ ansible214 = [
     "ansible-lint",
     "ansible-core>=2.14.0,<2.15.0",
     "ansible>=7.0.0,<8.0.0",
-    "jmespath"
+    "jmespath",
+    "pywinrm==0.4.3"
 ]
 ansible213 = [
     "molecule",
@@ -98,7 +103,8 @@ ansible213 = [
     "ansible-lint",
     "ansible-core>=2.13.0,<2.14.0",
     "ansible>=6.0.0,<7.0.0",
-    "jmespath"
+    "jmespath",
+    "pywinrm==0.4.3"
 ]
 ansible212 = [
     "molecule",
@@ -109,7 +115,8 @@ ansible212 = [
     "ansible-lint",
     "ansible-core>=2.12.0,<2.13.0",
     "ansible>=5.0.0,<6.0.0",
-    "jmespath"
+    "jmespath",
+    "pywinrm==0.4.3"
 ]
 ansible211 = [
     "molecule",
@@ -120,7 +127,8 @@ ansible211 = [
     "ansible-lint",
     "ansible-core>=2.11.0,<2.12.0",
     "ansible>=4.0.0,<5.0.0",
-    "jmespath"
+    "jmespath",
+    "pywinrm==0.4.3"
 ]
 ansible210 = [
     "molecule[docker]<5.0.0",
@@ -138,7 +146,8 @@ ansible210 = [
     # fix dependencies `rich` break change
     #  see https://github.com/ansible/ansible-lint/issues/1795
     "rich==10.11.0",
-    "jmespath"
+    "jmespath",
+    "pywinrm==0.4.3"
 ]
 ansible29 = [
     "molecule",
@@ -154,5 +163,6 @@ ansible29 = [
     # fix dependencies `rich` break change
     # see https://github.com/ansible/ansible-lint/issues/1795
     "rich==10.11.0",
-    "jmespath"
+    "jmespath",
+    "pywinrm==0.4.3"
 ]
