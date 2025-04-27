@@ -1,4 +1,7 @@
 ---
+# skip role name check
+# see https://github.com/ansible/ansible-compat/issues/78
+role_name_check: 1
 dependency:
   name: galaxy
   enabled: false
@@ -13,13 +16,13 @@ lint: |
 platforms:
   - name: debian9
     image: jrei/systemd-debian:9
+    pre_build_image: false
     privileged: true
     command: /lib/systemd/systemd
-    # tmpfs:
-    #   - /run
-    #   - /tmp
-    volumes:
-      - /sys/fs/cgroup:/sys/fs/cgroup:ro
+    tmpfs:
+      - /run
+      - /run/lock
+      - /sys/fs/cgroup
 provisioner:
   name: ansible
   playbooks:
