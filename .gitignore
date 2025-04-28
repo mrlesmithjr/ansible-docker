@@ -1,4 +1,4 @@
-# Environments
+# Python Environments
 .env
 .venv
 env/
@@ -7,4 +7,24 @@ ENV/
 env.bak/
 venv.bak/
 
-poetry.lock
+# macOS System Files
+.DS_Store
+
+# Ansible specific
+*.retry
+
+# Molecule and testing artifacts
+.molecule/
+.pytest_cache/
+
+# Other common
+.cache/
+__pycache__/
+*.py[cod]
+*.log
+*.tar.gz
+*.egg-info/
+dist/
+build/
+coverage.xml
+htmlcov/
