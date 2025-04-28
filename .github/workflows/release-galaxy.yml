@@ -19,14 +19,14 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        python-version: [3.8]
+        python-version: [3.9]
 
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
         with:
           submodules: recursive
       - name: Set up Python ${{ matrix.python-version }}
-        uses: actions/setup-python@v2
+        uses: actions/setup-python@v4
         with:
           python-version: ${{ matrix.python-version }}
       - uses: actions/cache@v4
@@ -46,4 +46,4 @@ jobs:
           pipx inject poetry poetry-plugin-export
           poetry install
       - name: Trigger a new import on Galaxy.
-        run: ansible-galaxy role import --api-key ${{ secrets.GALAXY_API_KEY }} mrlesmithjr ansible-docker
+        run: ansible-galaxy role import --api-key ${{ secrets.GALAXY_API_KEY }} mrlesmithjr ansible-docker || exit 1

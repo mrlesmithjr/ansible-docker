@@ -45,7 +45,7 @@ Larry Smith Jr.
 ```bash
 pip install pipx
 pipx ensurepath
-pipx install 'poetry>=2.0.0'
+pipx install poetry
 pipx inject poetry poetry-plugin-export
 ```
 
@@ -54,8 +54,8 @@ pipx inject poetry poetry-plugin-export
 ```bash
 # auto find system python verison by [tool.poetry.dependencies]
 poetry env use
-# OR use pyenv to find the path to the python3.8 executable
-poetry env use $(pyenv which python3.8)
+# OR use pyenv to find the path to the python3.9 executable
+poetry env use $(pyenv which python3.9)
 ```
 
 ### Install dependencies

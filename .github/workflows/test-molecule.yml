@@ -27,14 +27,14 @@ jobs:
           - ubuntu1604
           - ubuntu1804
           - ubuntu2004
-        python-version: [3.8]
+        python-version: [3.9]
 
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
         with:
           path: 'ansible-role-docker'
       - name: Set up Python ${{ matrix.python-version }}
-        uses: actions/setup-python@v2
+        uses: actions/setup-python@v4
         with:
           python-version: ${{ matrix.python-version }}
       - uses: actions/cache@v4
