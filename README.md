@@ -17,11 +17,37 @@ For any required Ansible roles, review:
 
 [defaults/main.yml](defaults/main.yml)
 
+### Storage driver
+
+| Variable | Default | Description |
+|----------|---------|-------------|
+| `docker_storage_driver` | `""` | Storage driver Docker should use. Empty string (default) means no `storage-driver` key is written to `daemon.json` and Docker picks its own default (overlay2 on most systems). Set to `"zfs"` to enable ZFS prerequisites and inject the key. Other accepted values: `overlay2`, `aufs`, `devicemapper`, `btrfs`. |
+| `docker_zfs_dataset` | `""` | ZFS dataset path for Docker's data-root when `docker_storage_driver == "zfs"`. If set, the role checks whether the dataset exists and creates it if missing. Leave empty to use Docker's default data-root (`/var/lib/docker`). Example: `tank/docker`. |
+
+**ZFS platform requirement:** `docker_storage_driver: "zfs"` is supported on Debian and Ubuntu only. The role will fail with an explicit error message if this driver is selected on a RHEL-family host.
+
 ## Dependencies
 
 ## Example Playbook
 
 [playbook.yml](playbook.yml)
+
+### ZFS storage driver example
+
+```yaml
+- hosts: docker_hosts
+  roles:
+    - role: ansible-docker
+      vars:
+        docker_storage_driver: "zfs"
+        docker_zfs_dataset: "tank/docker"
+```
+
+When `docker_storage_driver` is `"zfs"`, the role will:
+1. Fail immediately on RHEL-family hosts with a clear error.
+2. Install `zfsutils-linux` via apt before Docker starts.
+3. Create the ZFS dataset named by `docker_zfs_dataset` if it does not exist (skipped when `docker_zfs_dataset` is empty).
+4. Inject `"storage-driver": "zfs"` into `/etc/docker/daemon.json`.
 
 ## License
 
