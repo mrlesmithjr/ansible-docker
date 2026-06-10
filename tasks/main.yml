@@ -11,6 +11,10 @@
 - include_tasks: redhat.yml
   when: ansible_os_family == "RedHat"
 
+- ansible.builtin.include_tasks:
+    file: zfs.yml
+  when: docker_storage_driver == "zfs"
+
 - include_tasks: config_docker.yml
   when: docker_config_service|bool
 

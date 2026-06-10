@@ -1,3 +1,7 @@
 {% if docker_opts is defined %}
-{{ docker_opts|to_nice_json }}
+{% set _daemon = docker_opts | combine({}) %}
+{% if docker_storage_driver is defined and docker_storage_driver | length > 0 %}
+{% set _daemon = _daemon | combine({"storage-driver": docker_storage_driver}) %}
+{% endif %}
+{{ _daemon | to_nice_json }}
 {% endif %}

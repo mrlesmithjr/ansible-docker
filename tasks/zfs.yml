@@ -1,0 +1,39 @@
+---
+# ZFS pre-requisite tasks -- only included when docker_storage_driver == "zfs"
+
+- name: zfs | Assert ZFS driver is supported on this OS family
+  ansible.builtin.fail:
+    msg: "docker_storage_driver: zfs is only supported on Debian/Ubuntu. Detected OS family: {{ ansible_os_family }}"
+  when: ansible_os_family != "Debian"
+
+- name: zfs | Install zfsutils-linux before Docker starts
+  ansible.builtin.apt:
+    name: zfsutils-linux
+    state: present
+    update_cache: false
+  become: true
+  register: result
+  until: result is successful
+  when: ansible_os_family == "Debian"
+
+- name: zfs | Check whether ZFS dataset exists
+  ansible.builtin.command:
+    cmd: "zfs list -H -o name {{ docker_zfs_dataset }}"
+  register: _docker_zfs_dataset_check
+  changed_when: false
+  failed_when: false
+  become: true
+  when:
+    - docker_zfs_dataset is defined
+    - docker_zfs_dataset | length > 0
+
+- name: zfs | Create ZFS dataset for Docker storage
+  community.general.zfs:
+    name: "{{ docker_zfs_dataset }}"
+    state: present
+  become: true
+  when:
+    - docker_zfs_dataset is defined
+    - docker_zfs_dataset | length > 0
+    - _docker_zfs_dataset_check is defined
+    - _docker_zfs_dataset_check.rc != 0

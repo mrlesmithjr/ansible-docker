@@ -1,6 +1,23 @@
 ---
 # defaults file for ansible-docker
 
+# Defines the storage driver Docker should use.
+# Leave empty (default) to let Docker choose its own default (overlay2 on most systems).
+# No storage-driver key is injected into daemon.json when this is empty, preserving
+# existing daemon.json state and avoiding unexpected Docker restarts.
+# Set to "zfs" to install zfsutils-linux and inject "storage-driver": "zfs" into
+# daemon.json before Docker starts.
+# Other accepted values: overlay2, aufs, devicemapper, btrfs
+docker_storage_driver: ""
+
+# Defines the ZFS dataset path to use as Docker's data-root when
+# docker_storage_driver is "zfs".  Leave unset (or empty) to let Docker use
+# the default data-root path (/var/lib/docker).
+# When defined, the role validates that the dataset exists (via zfs list) and
+# creates it if missing before the Docker daemon starts.
+# Example: docker_zfs_dataset: "tank/docker"
+docker_zfs_dataset: ""
+
 # Ensure this exists if setting docker to alternate data directory
 # We do not create this to ensure any add'l mounts do not overlay this path
 # Service may fail to start if not.
