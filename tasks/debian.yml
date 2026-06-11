@@ -122,7 +122,7 @@
   ansible.builtin.command: update-grub
   become: true
   changed_when: true
-  when: grub_updated['changed']
+  when: grub_updated is defined and grub_updated['changed']
 
 - name: Debian | Installing bridge-utils
   ansible.builtin.apt:

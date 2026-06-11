@@ -17,6 +17,7 @@ jobs:
         with:
           python-version: '3.x'
       - run: pip install ansible-lint yamllint
+      - run: ansible-galaxy collection install -r requirements.yml
       - run: yamllint .
       - run: ansible-lint
   syntax-check:
