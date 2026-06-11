@@ -1,7 +1,8 @@
 ---
-- name: images | ensuring docker images are present
-  docker_image:
+- name: Images | Ensuring Docker images are present
+  community.docker.docker_image:
     name: "{{ item['name'] }}"
     state: "{{ item['state'] }}"
+    source: pull
   become: true
   loop: "{{ docker_images }}"

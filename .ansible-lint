@@ -1,2 +1,6 @@
+---
+profile: production
 skip_list:
-  - 'role-name'
+  - role-name
+exclude_paths:
+  - tests/

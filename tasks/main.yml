@@ -1,31 +1,48 @@
 ---
 # tasks file for ansible-docker
-- include_tasks: set_facts.yml
+- name: Include set_facts tasks
+  ansible.builtin.include_tasks:
+    file: set_facts.yml
 
-- include_tasks: alpine.yml
+- name: Include Alpine tasks
+  ansible.builtin.include_tasks:
+    file: alpine.yml
   when: ansible_os_family == "Alpine"
 
-- include_tasks: debian.yml
+- name: Include Debian tasks
+  ansible.builtin.include_tasks:
+    file: debian.yml
   when: ansible_os_family == "Debian"
 
-- include_tasks: redhat.yml
+- name: Include RedHat tasks
+  ansible.builtin.include_tasks:
+    file: redhat.yml
   when: ansible_os_family == "RedHat"
 
-- ansible.builtin.include_tasks:
+- name: Include ZFS tasks
+  ansible.builtin.include_tasks:
     file: zfs.yml
   when: docker_storage_driver == "zfs"
 
-- include_tasks: config_docker.yml
-  when: docker_config_service|bool
+- name: Include config_docker tasks
+  ansible.builtin.include_tasks:
+    file: config_docker.yml
+  when: docker_config_service | bool
 
-- include_tasks: service.yml
+- name: Include service tasks
+  ansible.builtin.include_tasks:
+    file: service.yml
 
-- include_tasks: users.yml
+- name: Include users tasks
+  ansible.builtin.include_tasks:
+    file: users.yml
   when:
     - docker_config_users is defined
-    - docker_config_users|bool
+    - docker_config_users | bool
 
-- include_tasks: images.yml
+- name: Include images tasks
+  ansible.builtin.include_tasks:
+    file: images.yml
   when:
-    - docker_manage_images|bool
+    - docker_manage_images | bool
     - docker_images is defined

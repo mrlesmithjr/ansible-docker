@@ -1,8 +1,8 @@
 ---
-- name: users | adding docker users (for use without sudo)
-  user:
+- name: Users | Adding Docker users (for use without sudo)
+  ansible.builtin.user:
     name: "{{ item }}"
-    append: yes
+    append: true
     groups: docker
   become: true
   loop: "{{ docker_users }}"

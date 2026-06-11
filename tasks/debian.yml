@@ -1,14 +1,14 @@
 ---
-- name: debian | updating apt-cache
-  apt:
+- name: Debian | Updating apt-cache
+  ansible.builtin.apt:
     update_cache: true
     cache_valid_time: 86400
   become: true
   register: result
   until: result is successful
 
-- name: debian | installing pre-reqs
-  apt:
+- name: Debian | Installing pre-reqs
+  ansible.builtin.apt:
     name:
       - apt-transport-https
       - ca-certificates
@@ -21,22 +21,22 @@
   until: result is successful
 
 # We are removing the old Docker info
-- name: debian | Removing Legacy Docker apt-key
-  apt_key:
+- name: Debian | Removing legacy Docker apt-key
+  ansible.builtin.apt_key:
     keyserver: hkp://p80.pool.sks-keyservers.net:80
     id: 58118E89F3A912897C070ADBF76221572C52609D
     state: absent
   become: true
 
 # We are removing the old Docker info
-- name: debian | Removing Legacy Docker Repo
-  apt_repository:
+- name: Debian | Removing legacy Docker repo
+  ansible.builtin.apt_repository:
     repo: "deb https://apt.dockerproject.org/repo {{ ansible_distribution | lower }}-{{ ansible_distribution_release }} main"
     state: absent
   become: true
 
-- name: debian | adding docker apt-key
-  apt_key:
+- name: Debian | Adding Docker apt-key
+  ansible.builtin.apt_key:
     url: "{{ docker_ubuntu_repo_info['url'] }}"
     id: "{{ docker_ubuntu_repo_info['id'] }}"
     state: present
@@ -44,8 +44,8 @@
   register: result
   until: result is successful
 
-- name: debian | adding docker repo
-  apt_repository:
+- name: Debian | Adding Docker repo
+  ansible.builtin.apt_repository:
     repo: "{{ docker_ubuntu_repo_info['repo'] }}"
     state: present
   become: true
@@ -54,8 +54,8 @@
 
 # We remove docker-engine as this is old package to install. The new package is
 # docker-ce
-- name: debian | uninstalling old docker packages (if exists)
-  apt:
+- name: Debian | Uninstalling old Docker packages (if exists)
+  ansible.builtin.apt:
     name:
       - containerd
       - docker
@@ -69,14 +69,14 @@
   register: result
   until: result is successful
 
-- name: debian | checking for existing docker # noqa 305
-  shell: dpkg-query -W 'docker-ce'
+- name: Debian | Checking for existing Docker # noqa command-instead-of-shell
+  ansible.builtin.shell: dpkg-query -W 'docker-ce'
   ignore_errors: true
   register: has_docker
   changed_when: false
 
-- name: debian | installing docker
-  apt:
+- name: Debian | Installing Docker (pinned version)
+  ansible.builtin.apt:
     name:
       - containerd.io
       - "docker-ce={{ docker_version_debian }}"
@@ -85,11 +85,11 @@
   register: result
   until: result is successful
   when:
-    - docker_version|lower != "latest"
+    - docker_version | lower != "latest"
     - has_docker is failed
 
-- name: debian | installing docker
-  apt:
+- name: Debian | Installing Docker (latest)
+  ansible.builtin.apt:
     name:
       - containerd.io
       - docker-ce
@@ -98,16 +98,16 @@
   register: result
   until: result is successful
   when:
-    - docker_version|lower == "latest"
+    - docker_version | lower == "latest"
     - has_docker is failed
 
-- name: debian | Checking For /etc/default/grub
-  stat:
+- name: Debian | Checking for /etc/default/grub
+  ansible.builtin.stat:
     path: /etc/default/grub
   register: _docker_grub_check
 
-- name: debian | setting grub memory limit (if set)
-  lineinfile:
+- name: Debian | Setting grub memory limit (if set)
+  ansible.builtin.lineinfile:
     dest: /etc/default/grub
     regexp: "^GRUB_CMDLINE_LINUX_DEFAULT"
     line: 'GRUB_CMDLINE_LINUX_DEFAULT="cgroup_enable=memory swapaccount=1"'
@@ -118,13 +118,14 @@
     - docker_set_grub_memory_limit is defined
     - docker_set_grub_memory_limit
 
-- name: debian | updating grub (if updated) # noqa 503
-  command: update-grub
+- name: Debian | Updating grub (if updated) # noqa no-handler
+  ansible.builtin.command: update-grub
   become: true
+  changed_when: true
   when: grub_updated['changed']
 
-- name: debian | Installing bridge-utils
-  apt:
+- name: Debian | Installing bridge-utils
+  ansible.builtin.apt:
     name: bridge-utils
     state: present
   become: true

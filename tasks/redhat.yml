@@ -1,6 +1,6 @@
 ---
-- name: redhat | Uninstalling Old Docker Package (if exists)
-  package:
+- name: RedHat | Uninstalling old Docker packages (if exists)
+  ansible.builtin.package:
     name:
       - docker
       - docker-client
@@ -16,8 +16,8 @@
   until: result is successful
   when: ansible_distribution != "Fedora"
 
-- name: redhat | Uninstalling Old Docker Package (if exists)
-  package:
+- name: RedHat | Uninstalling old Docker packages on Fedora (if exists)
+  ansible.builtin.package:
     name:
       - docker
       - docker-client
@@ -35,18 +35,21 @@
   until: result is successful
   when: ansible_distribution == "Fedora"
 
-- name: redhat | adding Docker repo
-  template:
+- name: RedHat | Adding Docker repo
+  ansible.builtin.template:
     src: etc/yum.repos.d/docker.repo.j2
     dest: /etc/yum.repos.d/docker.repo
+    owner: root
+    group: root
+    mode: "0644"
   become: true
   when: >
     ansible_distribution != "Fedora" or
     (ansible_distribution == "Fedora" and
     ansible_distribution_version is version('31', '<'))
 
-- name: redhat | installing Docker
-  package:
+- name: RedHat | Installing Docker (pinned version)
+  ansible.builtin.package:
     name:
       - "docker-ce-{{ docker_version_redhat }}"
       - containerd.io
@@ -55,13 +58,13 @@
   register: result
   until: result is successful
   when: >
-    docker_version|lower != "latest" and
+    docker_version | lower != "latest" and
     (ansible_distribution != "Fedora" or
     (ansible_distribution == "Fedora" and
     ansible_distribution_version is version('31', '<')))
 
-- name: redhat | installing Docker
-  package:
+- name: RedHat | Installing Docker (latest)
+  ansible.builtin.package:
     name:
       - docker-ce
       - containerd.io
@@ -70,13 +73,13 @@
   register: result
   until: result is successful
   when: >
-    docker_version|lower == "latest" and
+    docker_version | lower == "latest" and
     (ansible_distribution != "Fedora" or
     (ansible_distribution == "Fedora" and
     ansible_distribution_version is version('31', '<')))
 
-- name: redhat | Installing bridge-utils
-  package:
+- name: RedHat | Installing bridge-utils
+  ansible.builtin.package:
     name: bridge-utils
     state: present
   become: true
@@ -87,8 +90,8 @@
     - docker_install_bridge_utils
 
 # https://fedoramagazine.org/docker-and-fedora-32/
-- name: redhat | installing Docker
-  package:
+- name: RedHat | Installing Docker on Fedora 31+
+  ansible.builtin.package:
     name:
       - docker-compose
       - moby-engine
@@ -101,8 +104,8 @@
     - ansible_distribution_version is version('31', '>=')
 
 # https://fedoramagazine.org/docker-and-fedora-32/
-- name: redhat | Configuring FirewallD
-  firewalld:
+- name: RedHat | Configuring FirewallD docker0 interface
+  ansible.posix.firewalld:
     interface: docker0
     permanent: true
     state: enabled
@@ -113,8 +116,8 @@
     - ansible_distribution_version is version('32', '>=')
 
 # https://fedoramagazine.org/docker-and-fedora-32/
-- name: redhat | Configuring FirewallD
-  firewalld:
+- name: RedHat | Configuring FirewallD masquerade
+  ansible.posix.firewalld:
     masquerade: "true"
     permanent: true
     state: enabled
