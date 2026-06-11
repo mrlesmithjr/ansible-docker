@@ -1,5 +1,5 @@
 ---
-- name: Debian | Updating apt-cache
+- name: Debian | Update apt cache
   ansible.builtin.apt:
     update_cache: true
     cache_valid_time: 86400
@@ -7,54 +7,71 @@
   register: result
   until: result is successful
 
-- name: Debian | Installing pre-reqs
+- name: Debian | Install prerequisites
   ansible.builtin.apt:
     name:
-      - apt-transport-https
       - ca-certificates
       - curl
-      - gnupg-agent
-      - software-properties-common
     state: present
   become: true
   register: result
   until: result is successful
 
-# We are removing the old Docker info
-- name: Debian | Removing legacy Docker apt-key
+# Remove legacy apt-key and repo entries if present
+- name: Debian | Remove legacy Docker apt-key
   ansible.builtin.apt_key:
     keyserver: hkp://p80.pool.sks-keyservers.net:80
     id: 58118E89F3A912897C070ADBF76221572C52609D
     state: absent
   become: true
 
-# We are removing the old Docker info
-- name: Debian | Removing legacy Docker repo
+- name: Debian | Remove legacy Docker repo
   ansible.builtin.apt_repository:
     repo: "deb https://apt.dockerproject.org/repo {{ ansible_distribution | lower }}-{{ ansible_distribution_release }} main"
     state: absent
   become: true
 
-- name: Debian | Adding Docker apt-key
+- name: Debian | Remove legacy Docker trusted.gpg keyring entry
   ansible.builtin.apt_key:
-    url: "{{ docker_ubuntu_repo_info['url'] }}"
-    id: "{{ docker_ubuntu_repo_info['id'] }}"
-    state: present
+    url: "https://download.docker.com/linux/{{ ansible_distribution | lower }}/gpg"
+    state: absent
+  become: true
+  failed_when: false
+
+- name: Debian | Create apt keyrings directory
+  ansible.builtin.file:
+    path: /etc/apt/keyrings
+    state: directory
+    owner: root
+    group: root
+    mode: "0755"
+  become: true
+
+- name: Debian | Download Docker GPG key
+  ansible.builtin.get_url:
+    url: "https://download.docker.com/linux/{{ ansible_distribution | lower }}/gpg"
+    dest: /etc/apt/keyrings/docker.asc
+    owner: root
+    group: root
+    mode: "0644"
   become: true
   register: result
   until: result is successful
 
-- name: Debian | Adding Docker repo
+- name: Debian | Add Docker apt repository
   ansible.builtin.apt_repository:
-    repo: "{{ docker_ubuntu_repo_info['repo'] }}"
+    repo: >-
+      deb [arch={{ ansible_architecture | replace('x86_64', 'amd64') | replace('aarch64', 'arm64') }}
+      signed-by=/etc/apt/keyrings/docker.asc]
+      https://download.docker.com/linux/{{ ansible_distribution | lower }}
+      {{ ansible_distribution_release | lower }} {{ docker_release_channel }}
+    filename: docker
     state: present
   become: true
   register: result
   until: result is successful
 
-# We remove docker-engine as this is old package to install. The new package is
-# docker-ce
-- name: Debian | Uninstalling old Docker packages (if exists)
+- name: Debian | Remove old Docker packages
   ansible.builtin.apt:
     name:
       - containerd
@@ -69,16 +86,17 @@
   register: result
   until: result is successful
 
-- name: Debian | Checking for existing Docker # noqa command-instead-of-shell
-  ansible.builtin.shell: dpkg-query -W 'docker-ce'
+- name: Debian | Check for existing Docker installation
+  ansible.builtin.command: dpkg-query -W docker-ce
   ignore_errors: true
   register: has_docker
   changed_when: false
 
-- name: Debian | Installing Docker (pinned version)
+- name: Debian | Install Docker (pinned version)
   ansible.builtin.apt:
     name:
       - containerd.io
+      - docker-ce-cli
       - "docker-ce={{ docker_version_debian }}"
     state: present
   become: true
@@ -88,10 +106,11 @@
     - docker_version | lower != "latest"
     - has_docker is failed
 
-- name: Debian | Installing Docker (latest)
+- name: Debian | Install Docker (latest)
   ansible.builtin.apt:
     name:
       - containerd.io
+      - docker-ce-cli
       - docker-ce
     state: present
   become: true
@@ -101,12 +120,12 @@
     - docker_version | lower == "latest"
     - has_docker is failed
 
-- name: Debian | Checking for /etc/default/grub
+- name: Debian | Check for /etc/default/grub
   ansible.builtin.stat:
     path: /etc/default/grub
   register: _docker_grub_check
 
-- name: Debian | Setting grub memory limit (if set)
+- name: Debian | Set grub memory limit
   ansible.builtin.lineinfile:
     dest: /etc/default/grub
     regexp: "^GRUB_CMDLINE_LINUX_DEFAULT"
@@ -114,17 +133,17 @@
   register: grub_updated
   become: true
   when:
-    - _docker_grub_check['stat']['exists']
+    - _docker_grub_check.stat.exists
     - docker_set_grub_memory_limit is defined
     - docker_set_grub_memory_limit
 
-- name: Debian | Updating grub (if updated) # noqa no-handler
+- name: Debian | Update grub
   ansible.builtin.command: update-grub
   become: true
   changed_when: true
-  when: grub_updated is defined and grub_updated['changed']
+  when: grub_updated is defined and grub_updated.changed
 
-- name: Debian | Installing bridge-utils
+- name: Debian | Install bridge-utils
   ansible.builtin.apt:
     name: bridge-utils
     state: present
