@@ -12,6 +12,20 @@ ansible-galaxy install mrlesmithjr.docker
 
 Run with `become: true`.
 
+### Collections
+
+Install required collections before running the role:
+
+```bash
+ansible-galaxy collection install -r requirements.yml
+```
+
+| Collection | Minimum Version |
+|------------|----------------|
+| `community.docker` | 3.0.0 |
+| `community.general` | 7.0.0 |
+| `ansible.posix` | 1.5.0 |
+
 ## Role Variables
 
 See [defaults/main.yml](defaults/main.yml) for the full variable reference.
@@ -50,9 +64,18 @@ When `docker_storage_driver: "zfs"`, the role installs `zfsutils-linux`, creates
 
 ## Testing
 
+The role is validated by GitHub Actions (`.github/workflows/default.yml`) on every push and pull request. CI runs two jobs:
+
+- **Lint**: `yamllint` and `ansible-lint` (production profile) after installing collections from `requirements.yml`
+- **Syntax Check**: `ansible-playbook tests/test.yml --syntax-check` across ansible-core 2.15, 2.16, 2.17, and 2.18
+
+To run the same checks locally:
+
 ```bash
-pip install molecule molecule-docker
-molecule test
+pip install ansible-lint yamllint
+ansible-galaxy collection install -r requirements.yml
+yamllint .
+ansible-lint
 ```
 
 ## License
