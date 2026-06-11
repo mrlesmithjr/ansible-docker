@@ -1,0 +1,6 @@
+---
+- name: Test ansible-docker role
+  hosts: localhost
+  connection: local
+  roles:
+    - role: ansible-docker
